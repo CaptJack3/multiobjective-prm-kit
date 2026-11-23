@@ -19,8 +19,7 @@ for regression comparison, not used by the runtime. The new two-link URDF is
 an analytical example authored for this distribution.
 
 Dependency packages retain their own licenses and are installed separately;
-their binaries are not bundled in the source archive. No new project-wide
-software license has been selected by this packaging work.
+their binaries are not bundled in the source archive.
 
 The optional `examples/research_showcase/` collection includes archived native
 UR5e USD visuals and research media/trajectories. Preserve its `licenses/` folder

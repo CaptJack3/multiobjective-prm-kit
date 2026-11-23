@@ -104,14 +104,15 @@ queries are not implemented. Start with small N/K before scaling up.
 See [validation evidence](VALIDATION.md), [release checks](docs/RELEASE_VALIDATION.md)
 and the [documented limits](docs/CAPABILITIES.md#boundaries).
 
-## Attribution and use
+## Attribution
 
-Developed from Yaacov's multiobjective planning research for use by the lab's
-students and researchers. Source and asset origins are recorded in
+Originally developed by Yaacov as part of his Master's final project at the Technion,
+under the supervision of Prof. Oren Salzman, for research in multiobjective motion
+planning and preference-conditioned robotic manipulation.
+
+Source and asset origins are documented in
 [PROVENANCE.json](PROVENANCE.json) and
-[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Preserve the bundled asset
-licenses. A project-wide software license has not yet been selected; access to
-this repository does not itself grant an open-source redistribution license.
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 Questions or problems? [Open an issue](https://github.com/CaptJack3/multiobjective-prm-kit/issues/new/choose)
 with your configuration, `prmkit doctor` output and the relevant error.

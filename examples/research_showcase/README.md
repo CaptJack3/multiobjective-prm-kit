@@ -144,8 +144,7 @@ provenance; they are not required runtime dependencies.
 
 Preserve `licenses/` and the kit's [THIRD_PARTY_NOTICES.md](../../THIRD_PARTY_NOTICES.md).
 The later robot assembly's three license files are already included under
-`src/prmkit/resources/assets/mounted_ur5e/`. No new project-wide license is selected
-by this example packaging work.
+`src/prmkit/resources/assets/mounted_ur5e/`.
 
 `PORTABILITY_CHECK.json` records the delivery checks and their limits. Repeat the
 asset, geometry and portability checks without Isaac or a PRM build:
