@@ -1,22 +1,34 @@
-# Add the project video
+# Present the project
 
-The root README already reserves its opening visual block for the project video.
-Until the final video is ready, it shows a real kitchen example linked to the
-research-example guide. There is no broken placeholder URL.
+The README opens with the project title, navigation, the uploaded project video
+and a three-scene image gallery. The installation instructions follow this visual
+introduction. Click a gallery image to inspect it at full size.
 
-1. Upload the final video to its chosen host, or attach it to a GitHub release.
-2. Add a representative poster image under `docs/media/` (or reuse an existing preview).
-3. Replace the image/link directly below `PROJECT_VIDEO_START` in `README.md`:
+## Update the video
+
+1. Upload the replacement video using GitHub's Markdown attachment uploader.
+2. Copy its `https://github.com/user-attachments/assets/...` URL.
+3. Replace the standalone URL between `PROJECT_VIDEO_START` and
+   `PROJECT_VIDEO_END` in the root `README.md`.
+
+Keep the URL on its own line, with blank lines around it, outside HTML blocks
+and code fences. This preserves GitHub's attachment rendering. The video is
+hosted on GitHub; it is not bundled in a source ZIP or an offline clone.
+
+If the video moves to a different host, use a linked poster image instead:
 
 ```markdown
 [![Watch the PRM Kit project video](docs/media/project-video.jpg)](VIDEO_URL)
 ```
 
-Use the actual URL in place of `VIDEO_URL`. Keep a one-line caption describing
-what the viewer will see. A linked thumbnail works without requiring GitHub's
-Markdown renderer to play an arbitrary relative MP4 embed. Keep the quickstart
-immediately below the visual block so newcomers can run the code after watching.
+Add the real poster file and replace `VIDEO_URL` before committing that change.
 
-The current research videos are kept with their scene data. Their recordings
-show different historical hardware revisions, so preserve the gallery's labels
-when selecting clips for the project video.
+## Update the gallery
+
+The three README images link to the original multiview previews for the kitchen,
+workbench and shelf scenes. Keep their labels and sizes consistent, and place
+the gallery before the quickstart. Reuse the actual research assets.
+
+The archived scene previews and later route videos show different historical
+hardware revisions. Preserve the revision notes in the
+[research-example guide](RESEARCH_EXAMPLES.md) when changing the presentation.

@@ -1,24 +1,34 @@
+<div align="center">
+
 # PRM Kit
 
+**Multiobjective motion planning for robotics research.**
+
+Build environments · Compare Pareto paths · Share reproducible results
+
+[**Get started**](docs/GETTING_STARTED.md) · [Capabilities](docs/CAPABILITIES.md) · [Research examples](docs/RESEARCH_EXAMPLES.md) · [Download](https://github.com/CaptJack3/multiobjective-prm-kit/releases/latest) · [עברית](START_HERE_HE.md)
+
+</div>
+
+<!-- PROJECT_VIDEO_START -->
 
 https://github.com/user-attachments/assets/331acb83-4525-439c-970d-568803ff2548
 
+<!-- PROJECT_VIDEO_END -->
 
-**Build robot-planning experiments. Compare Pareto paths. Share reproducible results.**
+<p align="center"><em>Watch the project demo, then explore the environments below.</em></p>
+
+| Kitchen | Workbench | Shelves |
+| :---: | :---: | :---: |
+| [![Kitchen scene from multiple viewpoints](examples/research_showcase/scenes/kitchen/preview.jpg)](examples/research_showcase/scenes/kitchen/preview.jpg) | [![Workbench scene from multiple viewpoints](examples/research_showcase/scenes/office/preview.jpg)](examples/research_showcase/scenes/office/preview.jpg) | [![Shelf scene from multiple viewpoints](examples/research_showcase/scenes/shelves/preview.jpg)](examples/research_showcase/scenes/shelves/preview.jpg) |
+
+<p align="center"><strong>7 environments</strong> · <strong>21 saved routes</strong> · <strong>10 USD stages</strong></p>
 
 A portable Python toolkit for multiobjective probabilistic roadmaps, configurable
 wall environments, static Isaac/USD scenes, and saved trajectory analysis.
 Includes the UR5e, Robotiq 2F-85, D435 and PickNik assembly used in the project.
-
-[Start here](docs/GETTING_STARTED.md) · [What can I do?](docs/CAPABILITIES.md) ·
-[Research examples](docs/RESEARCH_EXAMPLES.md) · [עברית](START_HERE_HE.md)
-
-<!-- PROJECT_VIDEO_START
-Replace the preview below with a linked video thumbnail when the project video
-is ready. See docs/PRESENTATION.md. Keep the project video near the top.
-PROJECT_VIDEO_END -->
-[![Kitchen research example with the mounted UR5e](examples/research_showcase/scenes/kitchen/preference_routes/preview.jpg)](docs/RESEARCH_EXAMPLES.md)
-*Explore the kitchen, workbench, shelves and wall examples, with 21 saved route videos.*
+Explore the [scene collection and videos](docs/RESEARCH_EXAMPLES.md), or run your
+first experiment below.
 
 ## First successful run
 
@@ -60,10 +70,6 @@ Using a remote server or downloading a ZIP? The same guide explains both.
 [One-page Hebrew PDF](docs/PRMKIT_CAPABILITIES_HE.pdf)
 
 ## Research examples included
-
-| Kitchen | Workbench | Shelves |
-|---|---|---|
-| ![Kitchen](examples/research_showcase/scenes/kitchen/preview.jpg) | ![Workbench](examples/research_showcase/scenes/office/preview.jpg) | ![Shelves](examples/research_showcase/scenes/shelves/preview.jpg) |
 
 The collection includes **seven environments**, ten self-contained USD stages,
 21 saved preference routes with Isaac RTX videos, and a before/after smoothing
