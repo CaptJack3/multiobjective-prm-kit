@@ -1,5 +1,9 @@
 # PRM Kit
 
+
+https://github.com/user-attachments/assets/331acb83-4525-439c-970d-568803ff2548
+
+
 **Build robot-planning experiments. Compare Pareto paths. Share reproducible results.**
 
 A portable Python toolkit for multiobjective probabilistic roadmaps, configurable
