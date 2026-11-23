@@ -26,7 +26,7 @@ jobs:
     timeout-minutes: 20
     env:
       MPLBACKEND: Agg
-      MPLCONFIGDIR: ${{ runner.temp }}/prmkit-matplotlib
+      MPLCONFIGDIR: /tmp/prmkit-matplotlib
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
