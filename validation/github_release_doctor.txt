@@ -1,0 +1,42 @@
+{
+  "python": "3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:34:02) [GCC 14.3.0]",
+  "kit": "0.4.0",
+  "dependencies": {
+    "numpy": {
+      "version": "2.3.5",
+      "import_ok": true
+    },
+    "scipy": {
+      "version": "1.17.1",
+      "import_ok": true
+    },
+    "PyYAML": {
+      "version": "6.0.4",
+      "import_ok": true
+    },
+    "pin": {
+      "version": "3.9.0",
+      "import_ok": true
+    },
+    "coal": {
+      "version": "3.0.2",
+      "import_ok": true
+    },
+    "trimesh": {
+      "version": "4.12.2",
+      "import_ok": true
+    },
+    "rtree": {
+      "version": "1.4.1",
+      "import_ok": true
+    },
+    "numba": {
+      "version": "0.68.1",
+      "import_ok": true
+    },
+    "usd-core": {
+      "version": "26.11",
+      "import_ok": true
+    }
+  }
+}

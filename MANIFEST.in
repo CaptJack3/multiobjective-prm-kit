@@ -1,0 +1,12 @@
+include ARCHITECTURE.md VALIDATION.md START_HERE_HE.md PROVENANCE.json THIRD_PARTY_NOTICES.md requirements-tested.txt
+include run_experiment.py
+include CONTRIBUTING.md CHANGELOG.md .gitattributes
+graft .github
+graft docs
+graft examples
+graft scripts
+graft slurm
+graft validation
+graft tests
+graft src/prmkit/resources
+global-exclude __pycache__ *.pyc *.nbc *.nbi

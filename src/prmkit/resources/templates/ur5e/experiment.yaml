@@ -1,0 +1,63 @@
+schema_version: 1
+seed: 20260921
+robot: assets/ur5e/robot.yaml
+environment: assets/E4/scene.json
+query:
+  start:
+  - 0.3490658503988659
+  - -1.6580627893946132
+  - 2.0943951023931953
+  - -2.007128639793479
+  - -1.5707963267948966
+  - 0.0
+  goals:
+  - - -0.04786182266559802
+    - -1.3714064559664445
+    - 1.7755323790789799
+    - -1.5894737998266182
+    - -1.3306083390982595
+    - 0.3217523649289111
+prm:
+  n: 12
+  k: 4
+  query_k: 8
+  max_draws: 10000
+validation:
+  margin: 0.01
+  intervals: 4
+  max_depth: 18
+metrics:
+- name: ee_length
+  intervals: 4
+- name: clearance
+  threshold: 0.1
+  power: 2
+  scope: world
+  intervals: 4
+- name: visibility
+  intervals: 4
+camera:
+  frame: tool0
+  offset_m:
+  - 0.1
+  - 0
+  - 0.03
+  rotation:
+  - - 0.0
+    - 0.0
+    - 1.0
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  fov_deg:
+  - 90
+  - 90
+  rays: 64
+  target_object: goal
+search:
+  epsilon: 0.05
+  timeout_s: 300
+  max_labels: 500000

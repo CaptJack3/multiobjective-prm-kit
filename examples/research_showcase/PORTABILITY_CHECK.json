@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "scope": "Asset integrity, archived USD dependencies, numerical geometry reconstruction, portable commands and static HTML links; no new PRM, curve certification, GUI or RTX rendering.",
+  "source_manifest_hashes_verified": 126,
+  "archived_usd": [
+    {
+      "path": "scenes/E4/scene.usdc",
+      "prims": 97,
+      "external_dependencies": 0
+    },
+    {
+      "path": "scenes/E5/scene.usdc",
+      "prims": 97,
+      "external_dependencies": 0
+    },
+    {
+      "path": "scenes/E7/scene.usdc",
+      "prims": 97,
+      "external_dependencies": 0
+    },
+    {
+      "path": "scenes/kitchen/motion_scene.usdc",
+      "prims": 310,
+      "external_dependencies": 0
+    },
+    {
+      "path": "scenes/kitchen/scene.usdc",
+      "prims": 310,
+      "external_dependencies": 0
+    },
+    {
+      "path": "scenes/office/motion_scene.usdc",
+      "prims": 329,
+      "external_dependencies": 0
+    },
+    {
+      "path": "scenes/office/scene.usdc",
+      "prims": 329,
+      "external_dependencies": 0
+    },
+    {
+      "path": "scenes/shelves/motion_scene.usdc",
+      "prims": 267,
+      "external_dependencies": 0
+    },
+    {
+      "path": "scenes/shelves/scene.usdc",
+      "prims": 267,
+      "external_dependencies": 0
+    },
+    {
+      "path": "scenes/six_walls/scene.usdc",
+      "prims": 134,
+      "external_dependencies": 0
+    }
+  ],
+  "saved_routes_checked": 21,
+  "local_gallery_links_verified": 142,
+  "household_geometry_matches_original": {
+    "kitchen": {
+      "visual_objects": 166,
+      "collision_proxies": 23,
+      "targets": 3
+    },
+    "office": {
+      "visual_objects": 181,
+      "collision_proxies": 27,
+      "targets": 3
+    },
+    "shelves": {
+      "visual_objects": 112,
+      "collision_proxies": 34,
+      "targets": 3
+    }
+  },
+  "rebuilt_scenes_verified": [
+    "kitchen",
+    "office",
+    "shelves",
+    "E4",
+    "E5",
+    "E7",
+    "six_walls"
+  ],
+  "existing_output_protected": true,
+  "dependencies": {
+    "numpy": "2.3.5",
+    "usd-core": "26.11"
+  },
+  "limitations": [
+    "Live Isaac Sim/RTX and browser playback were not rerun in this session.",
+    "Copied historical videos and audits preserve source hashes; no new continuous collision audit is claimed.",
+    "Historical optimization, large PRM builds and archived video production are not packaged as one-command reproduction."
+  ],
+  "date": "2026-11-23",
+  "plot_and_preview_smoke_checks": {
+    "saved_route_plot": "PASS",
+    "prmkit_xy_preview": "PASS"
+  }
+}

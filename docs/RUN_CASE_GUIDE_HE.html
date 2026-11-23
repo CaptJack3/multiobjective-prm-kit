@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="מדריך מעשי ל־run_case ול־run_experiment.py: בחירת CASE, קירות, N/K, אפסילונים, שאילתות, הרצה ותוצאות.">
+<title>PRM Kit — ניסוי מקובץ אחד</title>
+<style>
+:root{--bg:#f4f6f5;--paper:#fff;--ink:#173b3b;--muted:#536b6b;--accent:#086b61;--soft:#e9f4ee;--line:#d8e4df;--gold:#fff4d9;--code:#122d32}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 Arial,sans-serif}header,main,footer{max-width:1100px;margin:auto;padding:28px 24px}header{padding-top:42px;padding-bottom:20px}.eyebrow{font:12px/1.5 Consolas,monospace;letter-spacing:1px;color:var(--accent);direction:ltr;text-align:right}h1{font-size:clamp(30px,5vw,48px);line-height:1.25;margin:12px 0}h2{font-size:24px;line-height:1.4;margin:0 0 14px}h3{font-size:18px;margin:18px 0 8px}p{margin:8px 0 14px}header p{max-width:790px;color:var(--muted);font-size:18px}a{color:var(--accent);text-underline-offset:4px}nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}nav a{background:var(--paper);border:1px solid var(--line);padding:6px 14px;border-radius:24px;text-decoration:none;font-size:14px}main{padding-top:8px}section{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px;margin:0 0 18px;scroll-margin-top:16px;min-width:0}.step{display:inline-grid;place-items:center;width:33px;height:33px;border-radius:10px;background:var(--soft);color:var(--accent);font-size:18px;margin-left:8px;vertical-align:middle}.muted,.small{color:var(--muted)}.small{font-size:14px}code{font:13px/1.6 Consolas,"Courier New",monospace;background:#eef3f1;padding:2px 5px;border-radius:4px;direction:ltr;unicode-bidi:isolate;overflow-wrap:anywhere}.path{direction:ltr;unicode-bidi:isolate;overflow-wrap:anywhere}.notice{background:var(--soft);border-right:3px solid var(--accent);padding:12px 16px;border-radius:7px;margin:14px 0}.notice.warn{background:var(--gold);border-color:#b78417}.codebox{position:relative;margin:12px 0;min-width:0}.codebox pre{background:var(--code);color:#e1f5ed;direction:ltr;text-align:left;unicode-bidi:plaintext;font:13px/1.85 Consolas,"Courier New",monospace;white-space:pre;overflow:auto;padding:48px 16px 18px;border-radius:10px;margin:0;max-height:490px}.copy{position:absolute;left:10px;top:9px;font-size:12px!important;padding:3px 10px!important;background:#20454b!important;color:white!important;border-color:#547c80!important}.codebox:focus-within pre{outline:2px solid #81b7a6}button,input,select{font:inherit}button{cursor:pointer;border:1px solid var(--line);border-radius:7px;background:#fff;color:var(--ink);padding:8px 13px}button:hover{border-color:var(--accent)}button[aria-pressed=true]{color:white;background:var(--accent);border-color:var(--accent)}button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #b99431;outline-offset:3px}.runtime{display:flex;gap:8px;flex-wrap:wrap}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:18px 0 8px}.flow div{border:1px solid var(--line);padding:12px;border-radius:10px;font-size:14px}.flow b{display:block;color:var(--accent)}.scenario-grid{display:grid;grid-template-columns:230px minmax(0,1fr);gap:24px;margin:18px 0}.scenario-nav{display:flex;flex-direction:column;gap:7px}.scenario-nav button{text-align:right;font-size:14px}.scenario-nav code{background:transparent;color:inherit;display:block}.badge{display:inline-block;background:var(--soft);color:var(--accent);font-size:13px;padding:3px 10px;border-radius:20px}.scenario-content h3{margin-top:0}.scenario-content{min-width:0}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:right;padding:10px 9px;vertical-align:top;border-bottom:1px solid var(--line)}th{color:var(--muted);background:#f5f8f6}td:first-child{min-width:125px}details{border-top:1px solid var(--line);padding:12px 0}details:last-child{padding-bottom:0}summary{cursor:pointer;font-weight:bold}details>p:first-of-type{margin-top:14px}.calc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0}.calc-grid label{font-size:13px;display:flex;flex-direction:column;gap:4px}.calc-grid input{width:100%;min-width:0;direction:ltr;border:1px solid #abc5bb;border-radius:6px;padding:6px 9px;color:var(--ink);background:#fff}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.stats div{border:1px solid var(--line);border-radius:10px;padding:12px;background:#f6faf7}.stats strong{display:block;direction:ltr;unicode-bidi:isolate;font-size:27px;color:var(--accent);overflow-wrap:anywhere}.stats span{font-size:13px}.error{color:#94391f;font-size:14px}.formula{direction:ltr;text-align:left;font:13px/1.8 Consolas,monospace;overflow-wrap:anywhere}ul,ol{padding-right:23px}li{margin:7px 0}.files{direction:ltr;text-align:left;white-space:pre;overflow:auto;background:#f1f6f3;border-radius:9px;padding:16px;font:13px/1.9 Consolas,monospace}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}[hidden]{display:none!important}footer{font-size:13px;color:var(--muted);padding-top:0}noscript{display:block;padding:14px;background:var(--gold)}
+@media(max-width:760px){header,main,footer{padding-left:16px;padding-right:16px}header{padding-top:24px}section{padding:20px 16px}.scenario-grid{grid-template-columns:1fr;gap:18px}.scenario-nav{display:grid;grid-template-columns:1fr 1fr}.scenario-nav button{padding:8px;font-size:13px}.scenario-nav code{font-size:11px}.flow{grid-template-columns:1fr 1fr}.calc-grid{grid-template-columns:1fr 1fr}.codebox pre{font-size:12px}.stats strong{font-size:23px}header p{font-size:16px}h2{font-size:21px}}
+@media(max-width:370px){.stats{grid-template-columns:1fr}.stats div{display:flex;justify-content:space-between;align-items:center}.stats strong{font-size:21px}.scenario-nav{grid-template-columns:1fr}nav a{font-size:12px;padding:5px 10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{body{background:white;font-size:12px}header,main,footer{max-width:none;padding:12px}section{border:0;padding:10px 0;break-inside:avoid}nav,.copy,.runtime,.scenario-nav,#calculator{display:none}.scenario-grid{display:block}.codebox pre{background:#f2f5f3;color:#000;white-space:pre-wrap;max-height:none;padding:12px}.flow{grid-template-columns:repeat(4,1fr)}h1{font-size:28px}h2{font-size:20px}}
+</style>
+</head>
+<body>
+<header>
+<div class="eyebrow">PRM KIT 0.4.0 · RUN_CASE · 23.11.2026</div>
+<h1>ניסוי שלם, מקובץ אחד.</h1>
+<p>פותחים את <code>run_experiment.py</code>, בוחרים תרחיש ומשנים את הפרמטרים. הפונקציה <code>run_case</code> מייצרת את הסביבות, מפעילה את התכנון ומרכזת את התוצאות.</p>
+<nav aria-label="שלבי המדריך"><a href="#start">1 · פותחים</a><a href="#choose">2 · מגדירים</a><a href="#run">3 · מריצים</a><a href="#results">4 · קוראים תוצאות</a><a href="#advanced">אפשרויות נוספות</a></nav>
+</header>
+<main>
+<noscript>ההוראות הבסיסיות זמינות גם כך. בחירת דוגמאות, כפתורי ההעתקה והמחשבון דורשים JavaScript בדפדפן.</noscript>
+<section id="start">
+<h2><span class="step">1</span> איזה קובץ פותחים?</h2>
+<p>בשרת שלכם, פתחו בעורך טקסט את הקובץ הזה:</p>
+<div class="codebox"><button class="copy" type="button" data-copy="main-path">העתקה</button><pre id="main-path" tabindex="0">run_experiment.py</pre></div>
+<p>בראש הקובץ עורכים רק את <code>CASE_ID</code> ואת בלוק <code>SETTINGS</code>. קוד ההרצה שמתחתיהם כבר קורא לפונקציה. <strong>מרחב חיפוש הקירות מוגדר בתוך SETTINGS</strong>, באמצעות מספר קירות, מיקומים, מידות וזוויות.</p>
+<div class="flow" aria-label="תהליך העבודה"><div><b>מגדירים</b>CASE והפרמטרים</div><div><b>בודקים</b>תצוגת תוכנית ההרצה</div><div><b>מריצים</b>התנגשויות, PRM ועלויות</div><div><b>משווים</b>דוח, מסלולים ומדדים</div></div>
+<div class="notice">לתרחישי הקירות אין צורך ב־Isaac Sim, ב־GPU או בעריכת YAML. קובץ ההרצה בוחר UR5e עם Robotiq 2F-85 פתוח ו־D435 על מתאם PickNik; מחשבים אורך TCP, קרבה למכשולים ונראות מצלמה. משימת ברירת המחדל קצרה לצורך בדיקה.</div>
+<details><summary>מחשב חדש? התקנה חד־פעמית</summary>
+<p>צריך את <strong>כל חבילת המשתמשים</strong>, ולא רק את קובץ Python. חלצו את ארכיון ההפצה, היכנסו לתיקייה המכילה את <code>pyproject.toml</code>, והריצו ב־Linux או WSL עם Python 3.10 ומעלה (נבדק ב־3.11):</p>
+<div class="codebox"><button class="copy" type="button" data-copy="install">העתקה</button><pre id="install" tabindex="0">python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install '.[robot]'</pre></div>
+<p class="small">בשרת הקיים אפשר להשתמש בסביבת Python המוכנה באמצעות הפקודות בשלב 3. קובץ ה־HTML הזה הוא מדריך בלבד: הוא עצמאי ואפשר לפתוח אותו גם ב־Windows; ההרצות מתבצעות בטרמינל.</p>
+</details>
+</section>
+
+<section id="choose">
+<h2><span class="step">2</span> בוחרים תרחיש ומעתיקים הגדרות</h2>
+<p>בחרו דוגמה. החליפו בקובץ את <strong>כל</strong> בלוק <code>CASE_ID + SETTINGS</code> בקטע המוצג, והשאירו את יתר הקובץ כפי שהוא. הנתיבים היחסיים בדוגמאות הם ביחס לתיקייה שבה נמצא <code>run_experiment.py</code>.</p>
+<div class="scenario-grid">
+<div class="scenario-nav" role="group" aria-label="דוגמאות לניסויים">
+<button type="button" data-case="quick" aria-pressed="true">ניסוי ראשון: שני קירות<code>wall_grid</code></button>
+<button type="button" data-case="one" aria-pressed="false">קיר אחד, כמה מידות<code>wall_grid</code></button>
+<button type="button" data-case="three" aria-pressed="false">שלושה קירות + N/K<code>wall_grid</code></button>
+<button type="button" data-case="random" aria-pressed="false">דגימה מטווחים רציפים<code>wall_random</code></button>
+<button type="button" data-case="custom" aria-pressed="false">הגדרה שונה לכל קיר<code>wall_grid + walls</code></button>
+<button type="button" data-case="fixed" aria-pressed="false">שני קירות קבועים<code>fixed_environment</code></button>
+<button type="button" data-case="dense" aria-pressed="false">ציפוף סביבה שנשמרה<code>fixed_environment</code></button>
+<button type="button" data-case="list" aria-pressed="false">השוואת סביבות מוכנות<code>environment_list</code></button>
+</div>
+<div class="scenario-content">
+<h3 id="case-title">התחלה קטנה: ארבע סביבות</h3>
+<p id="case-description">שני קירות, שני מיקומים לכל קיר. זהו מרחב החיפוש הקטן שמופיע בקובץ; מתאימה לווידוא שהכול עובד לפני הגדלת הניסוי.</p>
+<span class="badge" id="case-count">4 סביבות · 4 בניות PRM · 8 חיפושים</span>
+<div class="codebox"><button class="copy" type="button" data-copy="case-code">העתקת ההגדרות</button><pre id="case-code" tabindex="0">CASE_ID = "wall_grid"
+SETTINGS = dict(
+    profile="mounted_ur5e",
+    wall_count=2, grid_points=2,
+    offset_range=(-0.2, 0.2),
+    widths=[0.6], heights=[0.9], thicknesses=[0.08],
+    yaw_offsets=[0], max_environments=4,
+    n=[24], k=[6], epsilons=[0.0, 0.05],
+    num_queries=1, seed=7, query_k=12, workers=1,
+)</pre></div>
+<p id="case-note" class="small">שני האפסילונים משתמשים באותו גרף ובאותן עלויות עבור כל סביבה ושאילתה. N=24 הוא ניסוי בדיקה קטן.</p>
+<p>שם תיקיית התוצאות המומלץ לדוגמה: <code id="case-output">runs/first_wall_grid</code>. הפקודות בשלב 3 מתעדכנות לפי הבחירה.</p>
+</div>
+</div>
+<details><summary>מה כל פרמטר משנה?</summary>
+<div class="table-wrap"><table><thead><tr><th>פרמטר ב־SETTINGS</th><th>משמעות</th></tr></thead><tbody>
+<tr><td><code>wall_count</code></td><td>מספר הקירות בכל סביבה. כברירת מחדל הם מסודרים סביב בסיס הרובוט, על מעגל ברדיוס <code>radius=1.0</code> מטר.</td></tr>
+<tr><td><code>grid_points</code><br><code>offset_range</code></td><td>מספר ההזזות <strong>לכל קיר</strong> וטווח ההזזה במטרים, לאורך הכיוון המוגדר שלו. זה אינו גריד XYZ או מספר סביבות כולל. נקודה אחת בוחרת את אמצע הטווח.</td></tr>
+<tr><td><code>widths</code><br><code>heights</code><br><code>thicknesses</code></td><td>רשימות רוחב, גובה ועובי במטרים; כל קיר מקבל בחירה עצמאית. בצירי הקיר: רוחב ב־Y, עובי ב־X וגובה ב־Z. התחתית נשארת בגובה <code>base_z</code> (ברירת מחדל: 0).</td></tr>
+<tr><td><code>yaw_offsets</code></td><td>זוויות נוספות במעלות ביחס לכיוון ברירת המחדל של כל קיר. למשל <code>[-15, 0, 15]</code>.</td></tr>
+<tr><td><code>walls</code></td><td>רשימת הגדרות אישיות במקום <code>wall_count</code>: מיקום <code>center_xy</code>, כיוון הזזה <code>move_axis</code>, הזזות <code>offsets</code>, מידות וזוויות מוחלטות <code>yaw_degs</code>.</td></tr>
+<tr><td><code>max_environments</code></td><td>מגבלת סביבות. ב־Grid נלקח תחילת רצף הצירופים לפי סדר הפרמטרים; ב־Random זה מספר הדגימות. זו <strong>אינה</strong> מגבלת מספר חיפושי המסלול.</td></tr>
+<tr><td><code>n</code></td><td>מספר הדגימות החופשיות המבוקש לגרף, בנוסף למצבי ההתחלה והיעד. אפשר מספר יחיד או רשימה, למשל <code>[100, 1000]</code>.</td></tr>
+<tr><td><code>k</code> / <code>query_k</code></td><td><code>k</code> הוא מספר שכנים מוצעים לחיבור דגימות. <code>query_k</code> שולט בחיבור מצבי השאילתה. קשתות חייבות לעבור בדיקות התנגשות; זה אינו מספר שכנים מובטח.</td></tr>
+<tr><td><code>epsilons</code></td><td>רשימת אפסילונים. <code>0</code> לחיפוש Exact על הגרף שנבנה; ערך חיובי לחיפוש מקורב. אין הבטחת אופטימום במרחב הרציף.</td></tr>
+<tr><td><code>num_queries</code></td><td>מספר משימות תכנון עצמאיות. לכל משימה התחלה ויעד אחד או כמה יעדים חלופיים. אינו מספר מסלולי Pareto.</td></tr>
+<tr><td><code>seed</code> / <code>seeds</code></td><td><code>seed</code> קובע את יצירת הסביבות ובנק השאילתות, וגם את seed התכנון כברירת מחדל. <code>seeds=[7,8]</code> חוזר על התכנון באותן סביבות ומשימות עם seeds שונים.</td></tr>
+<tr><td><code>workers</code></td><td>מקביליות של עבודת הקשתות. הניסויים עצמם מופעלים בזה אחר זה. לבדיקה ראשונה השאירו 1.</td></tr>
+</tbody></table></div>
+</details>
+<details id="calculator"><summary>מחשבון: כמה הרצות יהיו? ✕</summary>
+<p class="small">מחשבון נפרד להמחשה של <code>wall_grid</code> עם אותן רשימות אפשרויות לכל הקירות. הוא לא עורך את הקובץ ולא משתנה עם בחירת הדוגמה. הזינו מספר <strong>ערכים שונים</strong> בכל רשימה; עבור טווח הזזה יחיד השתמשו במיקום אחד. לקירות עם הגדרות שונות השתמשו ב־<code>--plan</code>.</p>
+<div class="calc-grid">
+<label>מספר קירות<input id="calc-walls" type="number" min="0" max="100" step="1" value="2"></label>
+<label>מיקומים לכל קיר<input id="calc-positions" type="number" min="1" max="1000000" step="1" value="2"></label>
+<label>מספר רוחבים<input id="calc-widths" type="number" min="1" max="1000000" step="1" value="1"></label>
+<label>מספר גבהים<input id="calc-heights" type="number" min="1" max="1000000" step="1" value="1"></label>
+<label>מספר עוביים<input id="calc-thicknesses" type="number" min="1" max="1000000" step="1" value="1"></label>
+<label>מספר זוויות<input id="calc-yaws" type="number" min="1" max="1000000" step="1" value="1"></label>
+<label>מגבלת סביבות<input id="calc-budget" type="number" min="1" max="1000000" step="1" value="4"></label>
+<label>מספר שאילתות<input id="calc-queries" type="number" min="1" max="1000000" step="1" value="1"></label>
+<label>כמה ערכי N<input id="calc-n" type="number" min="1" max="1000000" step="1" value="1"></label>
+<label>כמה ערכי K<input id="calc-k" type="number" min="1" max="1000000" step="1" value="1"></label>
+<label>כמה אפסילונים<input id="calc-eps" type="number" min="1" max="1000000" step="1" value="2"></label>
+<label>כמה seeds לתכנון<input id="calc-seeds" type="number" min="1" max="1000000" step="1" value="1"></label>
+</div>
+<div id="calc-error" class="error" role="status"></div>
+<div id="calc-result" aria-live="polite"><p id="calc-total" class="small"></p><div class="stats"><div><strong id="count-env">4</strong><span>סביבות בתקציב</span></div><div><strong id="count-prm">4</strong><span>בניות PRM</span></div><div><strong id="count-search">8</strong><span>חיפושי מסלול</span></div></div></div>
+<p class="formula">environments = min(budget, (positions × widths × heights × thicknesses × yaws) ** walls)<br>PRMs = environments × queries × len(N) × len(K) × len(seeds)<br>searches = PRMs × len(epsilons)</p>
+<p class="small">כל ערך N משולב עם כל ערך K ועם כל אפסילון — לא מצמדים רשימות לפי מיקום. המספרים הם תוכנית ההרצה, ואינם מבטיחים שכל משימה תקפה או שתימצא לה דרך.</p>
+</details>
+</section>
+
+<section id="run">
+<h2><span class="step">3</span> שומרים, בודקים ומריצים</h2>
+<p>שמרו את הקובץ. הריצו את הפקודות הבאות בטרמינל — כולן מאותה תיקיית הפצה. בחרו את סביבת העבודה:</p>
+<div class="runtime" role="group" aria-label="סביבת הרצה"><button type="button" data-runtime="server" aria-pressed="true">שרת עם venv מותקן</button><button type="button" data-runtime="installed" aria-pressed="false">חבילה מותקנת במחשב אחר</button></div>
+<p id="runtime-note" class="small">יש להתאים את /path/to לנתיב תיקיית ההפצה שלכם. נדרשת התקנה חד־פעמית ב־.venv.</p>
+<div class="codebox"><button class="copy" type="button" data-copy="enter">העתקה</button><pre id="enter" tabindex="0">cd /path/to/multiobjective-prm-kit-0.4.0</pre></div>
+<h3>א. בודקים את היקף הניסוי</h3>
+<div class="codebox"><button class="copy" type="button" data-copy="plan-command">העתקה</button><pre id="plan-command" tabindex="0">.venv/bin/python run_experiment.py --plan --output runs/first_wall_grid</pre></div>
+<p class="small"><code>--plan</code> מציג מספר סביבות, שאילתות, בניות גרף וחיפושים; הוא לא בונה PRM ולא כותב תוצאות. זו בדיקת תוכנית, לא בדיקת התנגשות או הוכחת היתכנות.</p>
+<h3>ב. מפעילים את הניסוי</h3>
+<div class="codebox"><button class="copy" type="button" data-copy="run-command">העתקה</button><pre id="run-command" tabindex="0">.venv/bin/python run_experiment.py --output runs/first_wall_grid</pre></div>
+<p>המערכת מייצרת סביבות ובנק שאילתות, בונה PRM עם בדיקות התנגשות, מחשבת עלויות ומריצה חיפוש לכל אפסילון. בסוף מודפס הנתיב לדוח.</p>
+<details><summary>הריצה נקטעה? שיניתי הגדרות? איך ממשיכים?</summary>
+<p>להמשך עם <strong>אותם קלטים, קוד ותלויות</strong>, הוסיפו <code>--resume</code> לאותה פקודה:</p>
+<div class="codebox"><button class="copy" type="button" data-copy="resume-command">העתקה</button><pre id="resume-command" tabindex="0">.venv/bin/python run_experiment.py --output runs/first_wall_grid --resume</pre></div>
+<p>אם שיניתם הגדרות, בחרו תיקיית תוצאות חדשה, למשל <code>--output runs/revision_2</code>. גם להרצה חדשה של אותה דוגמה בחרו שם חדש. בלי <code>--output</code>, הקובץ משתמש ב־<code>runs/&lt;CASE_ID&gt;</code>.</p>
+</details>
+</section>
+
+<section id="results">
+<h2><span class="step">4</span> איפה התוצאות, ומה בודקים?</h2>
+<p>בדוגמה שנבחרה, פתחו בדפדפן את <code id="report-path">runs/first_wall_grid/report.html</code>. הדוח מאפשר לבחור קבוצת N/K/אפסילון/seed, לסנן לפי שאילתה וסטטוס, להשוות סביבות ולעבור לדוח של הרצה בודדת.</p>
+<pre class="files" tabindex="0">your_output_folder/
+  report.html                  # Study dashboard
+  results.csv                  # One row per planning run
+  study_summary.json           # Machine-readable summary
+  queries.json                 # Reusable query bank
+  environments/env_00000/scene.json
+  configs/run_0000000.yaml      # Generated automatically
+  runs/run_0000000/             # Individual run + paths</pre>
+<div class="notice">לציפוף: בחרו סביבה מהדוח, עברו לדוגמת ״ציפוף סביבה שנשמרה״ והעבירו גם את <code>scene.json</code> שלה וגם את <code>queries.json</code>. כך שומרים על אותה סביבה ואותן משימות ומשנים את N/K.</div>
+<details><summary>איך מפרשים הצלחה, כישלון ודירוג?</summary>
+<ul><li><code>complete</code>: החיפוש הסתיים עם תוצאות; <code>no_path_in_roadmap</code>: לא נמצאה דרך בגרף הנוכחי. זה אינו מוכיח שאין דרך בסביבה.</li>
+<li><code>invalid_query</code>: המשימה אינה תקפה בסביבה הזו. <code>partial</code> או <code>failed</code>: עיינו בפרטי ההרצה; התוצאה אינה שקולה להרצה שהסתיימה.</li>
+<li>הדירוג מופרד לכל צירוף N/K/אפסילון/seed. נכללות סביבות שכל שאילתותיהן הוערכו עד לסיום ולפחות אחת מהן נפתרה; קודם מועדף מספר משימות פתורות גדול יותר, ואז ציון ממוצע על המשימות שנפתרו.</li>
+<li>מספר מסלולי Pareto אינו מספר השאילתות ואינו מדד אוטומטי לגיוון גאומטרי. סיום הניסוי אינו אומר שנמצא מסלול לכל שאילתה.</li></ul>
+</details>
+<details><summary>התוצאות בשרת — איך מורידים ל־Windows?</summary>
+<p>הורידו את <strong>כל תיקיית התוצאות</strong> כדי שגם הקישורים לדוחות ולמסלולים יפעלו. התאימו DOMAIN, USER, HOST ואת /path/to לשרת שלכם. הריצו במחשב Windows שלכם:</p>
+<div class="codebox"><button class="copy" type="button" data-copy="download-command">העתקה</button><pre aria-label="יש להחליף DOMAIN, USER, HOST ונתיב תיקיית ההפצה" id="download-command" tabindex="0">scp -r "DOMAIN\USER@HOST:/path/to/multiobjective-prm-kit-0.4.0/runs/first_wall_grid" "C:\Users\Master\Downloads"</pre></div>
+<p class="small">אחר כך פתחו <code id="local-report">C:\Users\Master\Downloads\first_wall_grid\report.html</code>. אם בחרתם תיקיית פלט אחרת, התאימו את הנתיב. בניגוד לתוצאות, <strong>למדריך הזה מספיק להוריד את קובץ ה־HTML היחיד</strong>.</p>
+</details>
+</section>
+
+<section id="postprocessing"><h2>אחרי החיפוש: אימות ובחירת מסלולים</h2>
+<p>בקובץ ההרצה המקורי של גרסה 0.4 מוגדרים גם <code>verification</code> ו־<code>selection</code>. אם החלפתם את כל SETTINGS בדוגמה קצרה מהמדריך, הוסיפו את השורות הבאות בתוך המילון כדי להפעיל אותם:</p>
+<div class="codebox"><button class="copy" type="button" data-copy="post-settings">העתקה</button><pre id="post-settings">verification=dict(enabled=True, backend="coal_mesh", scope="all",
+                  min_clearance_m=0.005),
+selection=dict(only_verified=True, max_per_query=7),
+render=dict(enabled=False),</pre></div>
+<p>ייפתח מסלול חדש לקריאת התוצאות: <code>explorer/explore.html</code> בתוך תיקיית הפלט. בו רואים שלוש הקרנות Pareto מקושרות, מסננים לפי סטטוס אימות ובוחרים מסלולים להורדה כ־<code>selected_paths.json</code>. בדיקת Mesh מדוגמת נקראת <code>discrete_verified</code>; היא אינה הוכחת בטיחות רציפה.</p>
+<p>אפשר להפעיל מאוחר יותר <code>prmkit verify RUN</code>, <code>prmkit select RUN</code>, <code>prmkit export RUN --selection selected_paths.json</code> או <code>prmkit render RUN --selection selected_paths.json</code> בסביבה שבה החבילה מותקנת. הרינדור הוא סרטון Mesh ב־CPU; ל־Isaac אפשר לייצא USD. אין חיפוש מחדש בשלבים האלה.</p></section>
+<section id="advanced">
+<h2>כשרוצים לשלוט ביותר דברים</h2>
+<details><summary>קריאה ישירה לפונקציה run_case בקוד שלי</summary>
+<p>אפשר ליצור קובץ Python משלכם בתיקיית ההפצה. אין צורך ב־<code>run_experiment.py</code> אם קוראים ישירות לפונקציה:</p>
+<div class="codebox"><button class="copy" type="button" data-copy="direct-api">העתקה</button><pre id="direct-api" tabindex="0">from pathlib import Path
+from prmkit import run_case
+
+ROOT = Path(__file__).resolve().parent
+
+if __name__ == "__main__":
+    result = run_case(
+        "wall_grid", profile="mounted_ur5e",
+        wall_count=2, grid_points=2,
+        n=[24], k=[6], epsilons=[0, 0.05],
+        num_queries=1, max_environments=4,
+        input_dir=ROOT, output=ROOT / "runs/my_api_study",
+        dry_run=True,
+    )
+    print(result)</pre></div>
+<p>הריצו את הקובץ באותה סביבת Python. תחילה <code>dry_run=True</code> מחזיר את התוכנית; כדי לבצע, שנו ל־<code>False</code>. לאחר הרצה התוצאה מכילה בין השאר <code>result["report"]</code> ו־<code>result["complete"]</code>. שמרו את בלוק <code>__main__</code> גם אם בהמשך תגדילו את מספר ה־workers.</p>
+</details>
+<details><summary>התחלה ויעד משלי, או בנק שאילתות קבוע</summary>
+<p>ב־<code>SETTINGS</code>, הוסיפו <code>queries="runs/first_wall_grid/queries.json"</code> כדי לשחזר משימות מריצה קודמת. השמיטו את <code>num_queries</code> כדי להשתמש בכל הבנק; אם הוא מוגדר, הוא חייב להתאים למספר המשימות שבבנק.</p>
+<p>למשימה משלכם, <code>queries=[{"start": [...], "goal": [...]}]</code> מקבל <strong>וקטורי מפרקים מספריים</strong> בסדר ה־URDF: רדיאנים למפרקים סיבוביים, לא מיקום XYZ. החליפו את סימוני <code>...</code> בערכים שלכם. אפשר גם קובץ JSON או NPZ.</p>
+<p>ללא בנק מפורש, משימות התבנית משמשות ראשונות. אם מבקשים עוד שאילתות, מדגמים מצבי קצה ללא התנגשות בסביבה הראשונה, ושומרים את אותו בנק לכל ההשוואות. אין הבטחה למסלול בין המצבים; סביבה אחרת יכולה להפוך משימה לבלתי תקפה, והיא תסומן כך ולא תידגם מחדש.</p>
+</details>
+<details><summary>שינוי מטריקות ודירוג הסביבות</summary>
+<p>הוסיפו ל־<code>SETTINGS</code> את הפרמטרים הבאים. כאן שומרים את אורך מסלול הכלי, ומשנים את קנס הקרבה למכשולים:</p>
+<div class="codebox"><button class="copy" type="button" data-copy="metrics">העתקה</button><pre id="metrics" tabindex="0">metrics=[
+    "ee_length",
+    {"name": "risk", "kind": "clearance",
+     "threshold": 0.15, "power": 3, "scope": "world"},
+],
+rank_by="best.risk",
+rank_direction="min",</pre></div>
+<p><code>metrics</code> מגדיר עלויות למסלולים; <code>rank_by</code> בוחר את ציון ההשוואה בין הסביבות. <code>threshold</code> הוא סף קנס הקרבה במטרים, ולא סף איסור התנגשות. בטיחות מוגדרת בנפרד, למשל <code>validation={"margin": 0.01}</code>.</p>
+<p>מטריקות מובנות נוספות: <code>joint_length</code>; וכן <code>visibility</code>, שדורשת גם הגדרת מצלמה. לעלות חדשה לגמרי אפשר קובץ Python חיצוני — אין צורך לערוך את ליבת התכנון.</p>
+<details><summary>דוגמה מלאה למטריקה חדשה</summary>
+<p>צרו לצד <code>run_experiment.py</code> קובץ בשם <code>custom_metric.py</code>:</p>
+<div class="codebox"><button class="copy" type="button" data-copy="plugin-code">העתקה</button><pre id="plugin-code" tabindex="0">import numpy as np
+
+def elevation_exposure(samples, parameters):
+    floor = parameters.get("floor_m", 0.2)
+    penalty = np.maximum(0.0, samples.ee[:, 2] - floor)
+    return float(np.trapezoid(penalty, x=samples.t)
+                 * samples.joint_length)</pre></div>
+<p>וב־<code>SETTINGS</code> השתמשו למשל ב־:</p>
+<div class="codebox"><button class="copy" type="button" data-copy="plugin-settings">העתקה</button><pre id="plugin-settings" tabindex="0">metrics=[
+    "ee_length",
+    {"name": "elevation",
+     "plugin": "custom_metric.py:elevation_exposure",
+     "parameters": {"floor_m": 0.25}, "symmetric": True},
+],
+rank_by="best.elevation",</pre></div>
+<p class="small">הפונקציה מחזירה עלות קשת סופית ולא שלילית, שמצטברת לאורך המסלול ואינה תלויה בהיסטוריית החיפוש. כל מטריקות המסלול ממוזערות. הגדירו <code>symmetric=True</code> רק כשעלות הקשת זהה גם בכיוון ההפוך.</p>
+</details>
+</details>
+<details><summary>סביבה שיצרתי ב־Isaac Sim</summary>
+<p>תחילה מייבאים את קובץ ה־USD של הסביבה בעזרת היבואן. בדוגמה הפקודות מופעלות מתיקיית ההפצה לאחר התקנת החבילה בסביבה הפעילה:</p>
+<div class="codebox"><button class="copy" type="button" data-copy="isaac">העתקה</button><pre id="isaac" tabindex="0">python -m pip install '.[robot,usd]'
+prmkit import-usd my_scene.usd --output imported</pre></div>
+<p>אחר כך בוחרים <code>CASE_ID="fixed_environment"</code> וב־<code>SETTINGS</code> מגדירים <code>environment="imported/scene.json"</code>, N/K ואפסילונים. אל תגדירו יחד איתו <code>wall_count</code> או <code>walls</code>. השתמשו במשימות המתאימות לסביבה שלכם.</p>
+<p class="small">היבוא מיועד לגאומטריית התנגשות סטטית נתמכת; יש לשמור גם את קובצי הרשתות. אם הסצנה כוללת רובוט, יש להחריג אותו בייבוא; יש להתאים יחידות ומסגרת בסיס, ולהגדיר רובוט ומשימות במפורש. בזמן התכנון החישובים נעשים במנוע הגאומטרי של החבילה, ללא הרצת סימולציית Isaac.</p>
+</details>
+<details><summary>רובוט אחר או ניסוי קיים</summary>
+<p>אפשר להוסיף <code>base_experiment="my_project/experiment.yaml"</code> ולרשת הגדרת רובוט, מצלמה, משימות ומטריקות. ב־<code>fixed_environment</code>, אם לא מספקים סביבה או קירות חדשים, נשמרת סביבת הניסוי הבסיסי. N/K/אפסילונים נלקחים מארגומנטי <code>run_case</code>.</p>
+<p>אפשר גם להעביר <code>robot</code> כקובץ הגדרה או מילון, יחד עם שאילתות מתאימות. החלפת רובוט דורשת URDF וגאומטריית התנגשות, מסגרת כלי, גבולות ומשקלי מפרקים ומדיניות זוגות התנגשות. אין זיהוי אוטומטי של כל אלה מתוך סצנת Isaac.</p>
+<p class="small">המימוש המובנה תומך בבסיס קבוע ובמפרקים סיבוביים או קוויים חסומים, עם קואורדינטה אחת לכל מפרק. בסיס צף או מרחב מצבים אחר דורשים הרחבה בקוד.</p>
+</details>
+<details><summary>מה המערכת עושה כיום, ומה חשוב לדעת על ההיקף?</summary>
+<ul><li>ב־Grid נבדקים צירופים; ב־Random נדגמים ערכים מהטווחים או מהרשימות. זה אינו חיפוש אדפטיבי שלומד מהתוצאות, ואילוצי חפיפה בין קירות אינם מוסקים אוטומטית.</li>
+<li>שינוי אפסילון בלבד משתמש שוב בגרף ובעלויות מאומתים. שינוי N, K, שאילתה, seed או סביבה בונה גרף נוסף; ״ציפוף״ אינו הרחבה הדרגתית של הגרף הקודם.</li>
+<li><code>search={"timeout_s": 120}</code> מגביל כל חיפוש מסלול בנפרד, לא את בניית הגרף או את הניסוי כולו. אפסילון 0 וגרפים גדולים עשויים להיות יקרים.</li>
+<li>קובצי ההפצה מופרדים מקוד המחקר המקורי. ההגדרות וה־YAML שנוצרים אוטומטית נשמרים בתיקיית התוצאות לצורך שחזור.</li></ul>
+</details>
+</section>
+<div id="copy-status" class="sr-only" role="status" aria-live="polite"></div>
+</main>
+<footer>מדריך עצמאי לשימוש ב־PRM Kit 0.4.0 · אפשר להוריד רק את קובץ ה־HTML ולפתוח בדפדפן ללא אינטרנט. בחירת דוגמה משנה את הטקסט במדריך בלבד; שמירת ההגדרות והרצת הניסוי נעשות אצלכם.</footer>
+<script>
+"use strict";
+const EXAMPLES = {
+  quick: {
+    title: "התחלה קטנה: ארבע סביבות",
+    description: "שני קירות, שני מיקומים לכל קיר. זהו מרחב החיפוש הקטן שמופיע בקובץ; מתאימה לווידוא שהכול עובד לפני הגדלת הניסוי.",
+    count: "4 סביבות · 4 בניות PRM · 8 חיפושים",
+    note: "שני האפסילונים משתמשים באותו גרף ובאותן עלויות עבור כל סביבה ושאילתה. N=24 הוא ניסוי בדיקה קטן.",
+    output: "runs/first_wall_grid",
+    code: `CASE_ID = "wall_grid"
+SETTINGS = dict(
+    profile="mounted_ur5e",
+    wall_count=2, grid_points=2,
+    offset_range=(-0.2, 0.2),
+    widths=[0.6], heights=[0.9], thicknesses=[0.08],
+    yaw_offsets=[0], max_environments=4,
+    n=[24], k=[6], epsilons=[0.0, 0.05],
+    num_queries=1, seed=7, query_k=12, workers=1,
+)`
+  },
+  one: {
+    title: "קיר אחד: מיקום, רוחב וגובה",
+    description: "מגדירים שלושה מיקומים, שני רוחבים ושני גבהים. כל צירוף הוא סביבה נפרדת.",
+    count: "12 סביבות · 12 בניות PRM · 24 חיפושים",
+    note: "3 × 2 × 2 = 12 סביבות. כדי לשנות רק מידות בלי להזיז את הקיר, הגדירו offset_range=(0, 0).",
+    output: "runs/one_wall",
+    code: `CASE_ID = "wall_grid"
+SETTINGS = dict(
+    profile="mounted_ur5e",
+    wall_count=1, grid_points=3,
+    offset_range=(-0.2, 0.2),
+    widths=[0.4, 0.8], heights=[0.6, 0.9],
+    thicknesses=[0.08], max_environments=12,
+    n=[100], k=[8], epsilons=[0, 0.05],
+    num_queries=1, seed=7, query_k=12, workers=1,
+)`
+  },
+  three: {
+    title: "שלושה קירות והשוואת N/K",
+    description: "לכל קיר שלושה מיקומים, שני רוחבים ושני גבהים. מגבילים ל־20 סביבות ומשווים שתי צפיפויות, שני ערכי K ושלושה אפסילונים.",
+    count: "20 מתוך 1,728 סביבות · 160 בניות PRM · 480 חיפושים",
+    note: "הגריד המלא הוא (3 × 2 × 2)³ = 1,728. נלקחים 20 הצירופים הראשונים, לא מדגם מייצג. לשונות אקראית בתקציב קטן אפשר לבחור wall_random.",
+    output: "runs/three_walls",
+    code: `CASE_ID = "wall_grid"
+SETTINGS = dict(
+    profile="mounted_ur5e",
+    wall_count=3, grid_points=3,
+    offset_range=(-0.25, 0.25),
+    widths=[0.4, 0.8], heights=[0.6, 1.0],
+    thicknesses=[0.08], yaw_offsets=[0],
+    max_environments=20,
+    n=[100, 500], k=[8, 16],
+    epsilons=[0, 0.05, 0.1], num_queries=2,
+    seed=7, query_k=16, workers=1,
+)`
+  },
+  random: {
+    title: "שלושה קירות, מידות ומיקומים אקראיים",
+    description: "מייצרים 20 סביבות עם רוחב וגובה מטווחים רציפים. לכל קיר נבחר גם עובי וזווית מתוך רשימות.",
+    count: "20 סביבות מדוגמות · 40 בניות PRM · 80 חיפושים",
+    note: "הטווחים נדגמים באופן אחיד; רשימות הן בחירות בדידות. grid_points אינו מגביל את הדגימה האקראית. סביבות עשויות לחזור על עצמן.",
+    output: "runs/random_walls",
+    code: `CASE_ID = "wall_random"
+SETTINGS = dict(
+    profile="mounted_ur5e",
+    wall_count=3, offset_range=(-0.25, 0.25),
+    widths={"min": 0.3, "max": 0.9},
+    heights={"min": 0.5, "max": 1.2},
+    thicknesses=[0.06, 0.10], yaw_offsets=[-15, 0, 15],
+    max_environments=20,
+    n=[100], k=[8], epsilons=[0, 0.05],
+    num_queries=2, seed=42, query_k=12, workers=1,
+)`
+  },
+  custom: {
+    title: "שני קירות עם הגדרות שונות",
+    description: "מגדירים לכל קיר מרכז, כיוון הזזה, מידות וזוויות. מספקים walls במקום wall_count; שם הקיר מאפשר לזהות אותו בתוצרים.",
+    count: "48 סביבות · 48 בניות PRM · 96 חיפושים",
+    note: "לקיר east יש 24 צירופים ול־north שניים. move_axis נשאר קבוע גם כשהקיר מסתובב; yaw_degs הוא זווית מוחלטת במעלות, ומידות הן במטרים.",
+    output: "runs/custom_walls",
+    code: `CASE_ID = "wall_grid"
+SETTINGS = dict(
+    profile="mounted_ur5e",
+    walls=[
+        dict(name="east", center_xy=[1, 0], move_axis=[1, 0],
+             offsets=[-0.2, 0, 0.2], widths=[0.4, 0.8],
+             heights=[0.6, 0.9], thicknesses=[0.08],
+             yaw_degs=[0, 15]),
+        dict(name="north", center_xy=[0, 1], move_axis=[0, 1],
+             offsets=[-0.1, 0.1], widths=[0.5],
+             heights=[1.0], thicknesses=[0.08], yaw_degs=[90]),
+    ],
+    max_environments=48,
+    n=[100], k=[8], epsilons=[0, 0.05],
+    num_queries=1, seed=7, query_k=12, workers=1,
+)`
+  },
+  fixed: {
+    title: "סביבה קבועה חדשה, בלי קובץ סביבה",
+    description: "מייצרים פעם אחת שני קירות קבועים ומשווים N/K/אפסילונים באותה גאומטריה. אין כאן חיפוש מיקומים או מידות.",
+    count: "סביבה אחת · 4 בניות PRM · 8 חיפושים",
+    note: "לסביבה קבועה שנוצרת מקירות צריך ערך יחיד לכל שדה גאומטרי. בנק השאילתות נשאר זהה בין הגדרות התכנון.",
+    output: "runs/fixed_two_walls",
+    code: `CASE_ID = "fixed_environment"
+SETTINGS = dict(
+    profile="mounted_ur5e",
+    wall_count=2, widths=0.6, heights=0.9, thicknesses=0.08,
+    n=[100, 500], k=[8, 16], epsilons=[0, 0.05],
+    num_queries=1, seed=7, query_k=16, workers=1,
+)`
+  },
+  dense: {
+    title: "אותה סביבה ואותן משימות, עם גרפים צפופים יותר",
+    description: "קודם הריצו את דוגמת שני הקירות ושמרו את תוצאותיה ב־runs/first_wall_grid. כאן בוחרים את env_00000 ואת בנק השאילתות מאותה ריצה.",
+    count: "סביבה אחת · 4 בניות PRM · 8 חיפושים, אם בבנק שאילתה אחת",
+    note: "החליפו את שם התיקייה ואת מספר הסביבה לפי הבחירה שלכם. אל תוסיפו wall_count או walls לסביבה מיובאת. נבנים גרפים חדשים, בלי להרחיב את הגרף הישן.",
+    output: "runs/denser_env_0",
+    code: `CASE_ID = "fixed_environment"
+SETTINGS = dict(
+    profile="mounted_ur5e",
+    environment="runs/first_wall_grid/environments/env_00000/scene.json",
+    queries="runs/first_wall_grid/queries.json",
+    n=[1000, 5000], k=[16, 32], epsilons=[0, 0.05],
+    seed=7, query_k=32, workers=1,
+)`
+  },
+  list: {
+    title: "השוואת שתי סביבות שכבר הכנתם",
+    description: "הדוגמה משתמשת בשתי סביבות מתוצאת הניסוי הראשון. אפשר להחליף את הנתיבים בקובצי scene.json שלכם, כולל תוצרים של יבוא Isaac.",
+    count: "2 סביבות · 2 בניות PRM · 4 חיפושים, אם בבנק שאילתה אחת",
+    note: "נדרשת ריצה קודמת של הדוגמה הראשונה. משתמשים באותו בנק משימות בשתי הסביבות; קובצי רשתות שהסצנות מפנות אליהם צריכים להישאר זמינים.",
+    output: "runs/compare_saved_scenes",
+    code: `CASE_ID = "environment_list"
+SETTINGS = dict(
+    profile="mounted_ur5e",
+    environments=[
+        "runs/first_wall_grid/environments/env_00000/scene.json",
+        "runs/first_wall_grid/environments/env_00001/scene.json",
+    ],
+    queries="runs/first_wall_grid/queries.json",
+    max_environments=2,
+    n=[100], k=[8], epsilons=[0, 0.05],
+    seed=7, query_k=12, workers=1,
+)`
+  }
+};
+const SERVER_ROOT = "/path/to/multiobjective-prm-kit-0.4.0";
+const SERVER_PYTHON = ".venv/bin/python";
+let selectedCase = "quick", runtime = "server";
+const byId = id => document.getElementById(id);
+function updateCommands() {
+  const output = EXAMPLES[selectedCase].output;
+  const python = runtime === "server" ? SERVER_PYTHON : "python";
+  byId("enter").textContent = runtime === "server" ? "cd " + SERVER_ROOT : "source .venv/bin/activate";
+  byId("runtime-note").textContent = runtime === "server"
+    ? "יש להתאים את /path/to לנתיב תיקיית ההפצה שלכם. נדרשת התקנה חד־פעמית ב־.venv."
+    : "אחרי ההתקנה החד־פעמית: היכנסו לתיקיית ההפצה במחשב שלכם והפעילו את הסביבה. הפקודות הבאות מיועדות לטרמינל Linux/WSL.";
+  const command = python + " run_experiment.py --output " + output;
+  byId("plan-command").textContent = command + " --plan";
+  byId("run-command").textContent = command;
+  byId("resume-command").textContent = command + " --resume";
+  byId("report-path").textContent = output + "/report.html";
+  byId("download-command").textContent = 'scp -r "DOMAIN\\USER@HOST:' + SERVER_ROOT + '/' + output + '" "C:\\Users\\Master\\Downloads"';
+  byId("local-report").textContent = "C:\\Users\\Master\\Downloads\\" + output.split("/").pop() + "\\report.html";
+}
+function chooseCase(key) {
+  selectedCase = key;
+  const entry = EXAMPLES[key];
+  for (const field of ["title", "description", "count", "note", "output", "code"]) byId("case-" + field).textContent = entry[field];
+  document.querySelectorAll("[data-case]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.case === key)));
+  updateCommands();
+}
+document.querySelectorAll("[data-case]").forEach(button => button.addEventListener("click", () => chooseCase(button.dataset.case)));
+document.querySelectorAll("[data-runtime]").forEach(button => button.addEventListener("click", () => {
+  runtime = button.dataset.runtime;
+  document.querySelectorAll("[data-runtime]").forEach(item => item.setAttribute("aria-pressed", String(item.dataset.runtime === runtime)));
+  updateCommands();
+}));
+document.querySelectorAll("[data-copy]").forEach(button => button.addEventListener("click", async () => {
+  const content = byId(button.dataset.copy).textContent;
+  let copied = false;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    try { await navigator.clipboard.writeText(content); copied = true; } catch (_) { /* file:// fallback below */ }
+  }
+  if (!copied) {
+    const area = document.createElement("textarea");
+    area.value = content; area.dir = "ltr";
+    area.style.cssText = "position:fixed;left:0;top:0;width:1px;height:1px;opacity:0";
+    document.body.append(area); area.select();
+    try { copied = document.execCommand("copy"); } catch (_) { copied = false; }
+    area.remove(); button.focus();
+  }
+  if (!copied) {
+    const selection = window.getSelection(), range = document.createRange();
+    range.selectNodeContents(byId(button.dataset.copy)); selection.removeAllRanges(); selection.addRange(range);
+  }
+  const label = button.textContent;
+  button.textContent = copied ? "הועתק" : "סומן — Ctrl+C";
+  byId("copy-status").textContent = copied ? "הטקסט הועתק ללוח." : "ההעתקה האוטומטית אינה זמינה. הטקסט סומן; לחצו Ctrl+C או Command+C.";
+  setTimeout(() => { button.textContent = label; }, 2000);
+}));
+function calculate() {
+  const values = {};
+  let valid = true;
+  for (const input of document.querySelectorAll(".calc-grid input")) {
+    const number = input.valueAsNumber;
+    const ok = Number.isSafeInteger(number) && number >= Number(input.min) && number <= Number(input.max);
+    input.setAttribute("aria-invalid", String(!ok)); valid = valid && ok;
+    if (ok) values[input.id.slice(5)] = BigInt(number);
+  }
+  byId("calc-result").hidden = !valid;
+  byId("calc-error").textContent = valid ? "" : "הזינו מספרים שלמים בטווחי השדות: 0–100 קירות, ו־1–1,000,000 בכל שאר השדות.";
+  if (!valid) return;
+  const v = values;
+  const total = (v.positions * v.widths * v.heights * v.thicknesses * v.yaws) ** v.walls;
+  const count = total < v.budget ? total : v.budget;
+  const graphs = count * v.queries * v.n * v.k * v.seeds;
+  function display(number) {
+    const digits = number.toString();
+    return digits.length <= 18 ? number.toLocaleString("en-US") : digits.slice(0, 1) + "." + digits.slice(1, 4) + " × 10^" + (digits.length - 1);
+  }
+  byId("calc-total").textContent = "מספר הסביבות בגריד המלא: " + display(total) + (total > count ? " · התקציב לוקח רק את תחילת הגריד." : " · כל הגריד נכלל בתקציב.");
+  byId("count-env").textContent = display(count);
+  byId("count-prm").textContent = display(graphs);
+  byId("count-search").textContent = display(graphs * v.eps);
+}
+document.querySelectorAll(".calc-grid input").forEach(input => input.addEventListener("input", calculate));
+chooseCase("quick"); calculate();
+</script>
+</body>
+</html>

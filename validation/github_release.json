@@ -1,0 +1,274 @@
+{
+  "status": "PASS",
+  "date": "2026-11-23",
+  "python": "3.11.15",
+  "platform": "Linux x86_64",
+  "installation": "Fresh virtual environment, independent source copy, pip install -e .[robot,render,usd,fast,dev] plus quickjs 1.19.4",
+  "tests": {
+    "passed": 106,
+    "failed": 0,
+    "skipped": 0
+  },
+  "commands": [
+    {
+      "name": "pip_check",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.41
+    },
+    {
+      "name": "doctor",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/prmkit",
+        "doctor"
+      ],
+      "exit_code": 0,
+      "seconds": 0.92
+    },
+    {
+      "name": "pytest",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "seconds": 17.54
+    },
+    {
+      "name": "docs",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/python",
+        "scripts/check_docs.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06
+    },
+    {
+      "name": "point_init",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/prmkit",
+        "init",
+        "runs/point_demo",
+        "--template",
+        "demo"
+      ],
+      "exit_code": 0,
+      "seconds": 0.62
+    },
+    {
+      "name": "point_run",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/prmkit",
+        "run",
+        "runs/point_demo/experiment.yaml",
+        "--output",
+        "runs/point_demo/result"
+      ],
+      "exit_code": 0,
+      "seconds": 1.02
+    },
+    {
+      "name": "wall_dryrun",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/prmkit",
+        "run",
+        "examples/01_single_wall.yaml",
+        "--output",
+        "runs/first_wall",
+        "--dry-run"
+      ],
+      "exit_code": 0,
+      "seconds": 0.62
+    },
+    {
+      "name": "wall_run",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/prmkit",
+        "run",
+        "examples/01_single_wall.yaml",
+        "--output",
+        "runs/first_wall"
+      ],
+      "exit_code": 0,
+      "seconds": 7.68
+    },
+    {
+      "name": "case_plan",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/python",
+        "run_experiment.py",
+        "--plan"
+      ],
+      "exit_code": 0,
+      "seconds": 0.56
+    },
+    {
+      "name": "generate",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/prmkit",
+        "generate",
+        "examples/03_multi_wall_random.yaml",
+        "--output",
+        "runs/random_scenes"
+      ],
+      "exit_code": 0,
+      "seconds": 0.62
+    },
+    {
+      "name": "xy_grid",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/python",
+        "examples/generate_two_wall_xy_grid.py",
+        "examples/two_wall_xy_grid.yaml",
+        "--output",
+        "runs/two_wall_space",
+        "--no-plots"
+      ],
+      "exit_code": 0,
+      "seconds": 0.26
+    },
+    {
+      "name": "selection",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/prmkit",
+        "select",
+        "runs/first_wall",
+        "--max-per-query",
+        "1",
+        "--output",
+        "runs/first_wall_selection.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.62
+    },
+    {
+      "name": "export",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/prmkit",
+        "export",
+        "runs/first_wall",
+        "--selection",
+        "runs/first_wall_selection.json",
+        "--only-verified",
+        "--usd",
+        "--output",
+        "runs/first_wall_export"
+      ],
+      "exit_code": 0,
+      "seconds": 1.52
+    },
+    {
+      "name": "render",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/prmkit",
+        "render",
+        "runs/first_wall",
+        "--selection",
+        "runs/first_wall_selection.json",
+        "--only-verified",
+        "--frames",
+        "4",
+        "--fps",
+        "2",
+        "--output",
+        "runs/first_wall_video"
+      ],
+      "exit_code": 0,
+      "seconds": 3.97
+    },
+    {
+      "name": "usd_init",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/prmkit",
+        "init",
+        "runs/isaac_example",
+        "--template",
+        "isaac"
+      ],
+      "exit_code": 0,
+      "seconds": 0.61
+    },
+    {
+      "name": "usd_import",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/prmkit",
+        "import-usd",
+        "runs/isaac_example/scene.usda",
+        "--output",
+        "runs/isaac_example/imported"
+      ],
+      "exit_code": 0,
+      "seconds": 0.77
+    },
+    {
+      "name": "usd_run",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/prmkit",
+        "run",
+        "runs/isaac_example/experiment.yaml",
+        "--output",
+        "runs/isaac_example/result"
+      ],
+      "exit_code": 0,
+      "seconds": 1.67
+    },
+    {
+      "name": "research_assets",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/python",
+        "examples/research_showcase/verify_examples.py",
+        "--report",
+        "runs/research_check.json"
+      ],
+      "exit_code": 0,
+      "seconds": 3.57
+    },
+    {
+      "name": "research_plot",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/python",
+        "examples/research_showcase/plot_routes.py",
+        "--scene",
+        "kitchen",
+        "--output",
+        "runs/kitchen_routes.png"
+      ],
+      "exit_code": 0,
+      "seconds": 0.62
+    },
+    {
+      "name": "freeze",
+      "argv": [
+        "$CHECK_ROOT/venv/bin/python",
+        "-m",
+        "pip",
+        "freeze"
+      ],
+      "exit_code": 0,
+      "seconds": 0.31
+    }
+  ],
+  "results": {
+    "single_wall_complete": true,
+    "selected_verified_paths": 1,
+    "xy_environments": 1424,
+    "xy_prm_runs": 0,
+    "research_scenes_rebuilt": 7,
+    "research_usd_stages_without_external_assets": 10,
+    "research_saved_routes_checked": 21,
+    "mp4_decode": "PASS",
+    "wheel_build": "PASS"
+  },
+  "limitations": [
+    "No new live Isaac/RTX session or hardware execution.",
+    "GitHub-hosted CI is configured; its status must be checked in GitHub Actions.",
+    "Archived research audits retain their original scope and hardware."
+  ]
+}

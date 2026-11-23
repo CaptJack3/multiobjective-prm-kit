@@ -1,0 +1,247 @@
+{
+  "collision_policy": {
+    "authority": "Conservative convex envelopes enclosing planning AND video meshes; full attachment primitives; Pinocchio+Coal",
+    "continuous_edges": "pair-specific conservative joint-motion bounds and recursive bisection; unresolved intervals rejected",
+    "convex_robot_file": "FINAL_ARTIFACTS/collision_models/robot_convex_envelopes.npz",
+    "exclude_fixed_base_table_pair": true,
+    "numeric_guard_m": 2e-06,
+    "scope": "world and active self pairs, including all hardware against every robot link except its rigid parent wrist_3",
+    "strict_clearance_m": 0.01
+  },
+  "description": "Single thin vertical wall, grounded on the physical tabletop.",
+  "environment_id": "WY_L2_I3_J4_H070__mounted_clearance10mm_v1",
+  "grid_wall": {
+    "axis": 1,
+    "end_xy_m": [
+      0.6,
+      0.44999999999999996
+    ],
+    "height_m": 0.7,
+    "length_cells": 2,
+    "length_m": 0.3,
+    "start_xy_m": [
+      0.6,
+      0.14999999999999997
+    ],
+    "tabletop_z_m": 0.0,
+    "thickness_m": 0.02
+  },
+  "objectives": {
+    "joint_path_weights": [
+      1.0,
+      1.0,
+      0.85,
+      0.65,
+      0.45,
+      0.35
+    ],
+    "ordered": [
+      "tool0_world_length_m",
+      "assembly_world_safety_rad",
+      "mounted_wrist_visibility_loss_rad"
+    ],
+    "safety": {
+      "method": "convex_complete_assembly_world_clearance_quadratic",
+      "penalty_definition": "integral max(0,1-world_clearance/0.10)^2 ds; ds=||W dq||; complete assembly, including hardware, against world",
+      "safe_distance_m": 0.1
+    },
+    "visibility": {
+      "calibration_status": "Ideal simulated optical pose; dense selected-path convergence gate",
+      "camera_axes_in_tool0_columns": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "camera_offset_tool0_m": [
+        0.1,
+        0.0,
+        0.03
+      ],
+      "edge_cost_definition": "||W*(q1-q0)|| * trapezoid(1-V(q0+t*(q1-q0)), t=0..1)",
+      "horizontal_fov_deg": 90.0,
+      "integration_measure": "weighted_joint_arc_length",
+      "intervals_per_physical_edge": 32,
+      "joint_path_weights": [
+        1.0,
+        1.0,
+        0.85,
+        0.65,
+        0.45,
+        0.35
+      ],
+      "method": "Warp static-mesh ray casting",
+      "node_score_definition": "64 deterministic target-surface rays in 90x90 FOV, unobstructed by nominal robot meshes, complete mounted hardware envelope, and world",
+      "ray_count": 64,
+      "ray_engine_sha256": "65d713eb23bb26d89fdde367ea21f71910a430e3076a7745a18de27f2657baff",
+      "samples_per_physical_edge": 33,
+      "version": "mounted_assembly_visibility_32_intervals_v1",
+      "vertical_fov_deg": 90.0
+    },
+    "world_length_definition": "Tool0 polyline length at 17 uniform q-edge samples; dense selected-path convergence checked separately."
+  },
+  "objects": [
+    {
+      "category": "table",
+      "collider": true,
+      "color_rgb": [
+        0.63,
+        0.43,
+        0.22
+      ],
+      "dimensions_m": [
+        2.4,
+        2.4,
+        0.1
+      ],
+      "name": "table",
+      "position_m": [
+        0,
+        0,
+        -0.05
+      ]
+    },
+    {
+      "category": "target",
+      "collider": false,
+      "color_rgb": [
+        1,
+        0.45,
+        0
+      ],
+      "dimensions_m": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "name": "goal",
+      "position_m": [
+        0.65,
+        0,
+        0.3
+      ]
+    },
+    {
+      "category": "wall",
+      "collider": true,
+      "color_rgb": [
+        0.42,
+        0.47,
+        0.54
+      ],
+      "dimensions_m": [
+        0.02,
+        0.3,
+        0.7
+      ],
+      "name": "wall",
+      "position_m": [
+        0.6,
+        0.29999999999999993,
+        0.35
+      ]
+    }
+  ],
+  "rebuild": {
+    "alias": "E4",
+    "cable_route": "outward wrist-Z route; see assembly.json",
+    "camera_optical_pose": "unchanged",
+    "new_target_m": [
+      0.65,
+      0.0,
+      0.3
+    ],
+    "old_collision_certificates_reused": false,
+    "original_environment": "WY_L2_I3_J4_H070",
+    "original_target_m": [
+      0.65,
+      0.0,
+      0.3
+    ],
+    "reason_for_target_change": "unchanged"
+  },
+  "robot": {
+    "display_q_rad": [
+      0,
+      -1.5707963267948966,
+      0,
+      -1.5707963267948966,
+      -1.5707963267948966,
+      0
+    ],
+    "joint_lower_rad": [
+      -6.283185307179586,
+      -6.283185307179586,
+      -3.141592653589793,
+      -6.283185307179586,
+      -6.283185307179586,
+      -6.283185307179586
+    ],
+    "joint_names": [
+      "shoulder_pan_joint",
+      "shoulder_lift_joint",
+      "elbow_joint",
+      "wrist_1_joint",
+      "wrist_2_joint",
+      "wrist_3_joint"
+    ],
+    "joint_upper_rad": [
+      6.283185307179586,
+      6.283185307179586,
+      3.141592653589793,
+      6.283185307179586,
+      6.283185307179586,
+      6.283185307179586
+    ],
+    "model": "UR5e",
+    "self_collision_policy": "FINAL_ARTIFACTS/collision_models/self_pair_policy.json",
+    "urdf": "FINAL_ARTIFACTS/collision_models/ur5e_reference.urdf"
+  },
+  "sampling_envelope": {
+    "lower_rad": [
+      -6.283185307179586,
+      -6.283185307179586,
+      -6.283185307179586,
+      -6.283185307179586,
+      -6.283185307179586,
+      -6.283185307179586
+    ],
+    "rule": "Original Sobol box; reject outside URDF limits before any geometry evaluation",
+    "upper_rad": [
+      6.283185307179586,
+      6.283185307179586,
+      6.283185307179586,
+      6.283185307179586,
+      6.283185307179586,
+      6.283185307179586
+    ]
+  },
+  "schema": "moprm_environment_v1",
+  "source": {
+    "generator": "experiments/master_pareto/prepare.py",
+    "limit_authority": "URDF intersect legacy scene limits",
+    "recovered_cache": "results/master_pareto_20260907",
+    "seed": 20260907
+  },
+  "target": {
+    "object": "goal",
+    "orientation_constraint": "free",
+    "position_tolerance_m": 0.001,
+    "tcp_target_m": [
+      0.65,
+      0.0,
+      0.3
+    ]
+  }
+}

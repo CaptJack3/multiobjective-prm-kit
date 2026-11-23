@@ -1,0 +1,40 @@
+schema_version: 2
+experiment:
+  name: 04_import_isaac_scene
+  seed: 7
+robot:
+  preset: mounted_ur5e
+scene:
+  source: isaac_export
+  file: ../imported/scene.json
+queries:
+  mode: fixed
+  count: 1
+roadmap:
+  n_vertices: 24
+  k_neighbors: 6
+  query_k: 12
+  workers: 1
+search:
+  epsilons:
+  - 0.05
+  timeout_seconds: 120
+constraints:
+  min_clearance_m: 0.005
+  clearance_mode: enforce_during_search
+verification:
+  enabled: true
+  backend: coal_mesh
+  scope: all
+  min_clearance_m: 0.005
+  interpolation:
+    method: dense
+    max_joint_step_deg: 0.5
+selection:
+  mode: representative
+  only_verified: true
+  max_per_query: 7
+render:
+  enabled: false
+output:
+  directory: ../runs/04_import_isaac_scene

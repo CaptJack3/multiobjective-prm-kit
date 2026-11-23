@@ -1,0 +1,134 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>PRM Kit — research examples</title>
+<style>body{font:16px/1.55 system-ui,sans-serif;margin:0;background:#f3f5f7;color:#223246}main{max-width:1280px;margin:auto;padding:30px}h1,h2,h3{line-height:1.2}a{color:#16639c}header,section{background:white;padding:24px;margin-bottom:24px;border-radius:12px;border:1px solid #dbe2e9}nav{display:flex;flex-wrap:wrap;gap:16px}img,video{max-width:100%;height:auto;border-radius:6px}.scene{display:grid;grid-template-columns:1fr 1fr;gap:24px}.routes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.routes p{font-size:14px}.note{padding:12px;background:#eff5fa}code,pre{background:#f0f3f6;padding:8px;white-space:pre-wrap;overflow-wrap:anywhere}@media(max-width:800px){.routes,.scene{grid-template-columns:1fr}main{padding:12px}}</style>
+<main><header><p>RESEARCH EXAMPLES · PORTABLE LAB HANDOFF</p><h1>Scenes, saved paths and comparisons</h1>
+<p dir="rtl" lang="he">מטבח, עמדת עבודה ומדפים — לצד E4/E5/E7 ושישה קירות. קובצי סביבה, קוד יצירה, מסלולים שמורים וסרטונים מהעבודה הקודמת.</p>
+<p>Seven editable environments · 21 saved preference videos · one before/after smoothing example.</p>
+<p><a href="README.md">Instructions and commands</a> · <a href="metrics.csv">All route costs (CSV)</a> · <a href="../../docs/PRMKIT_CAPABILITIES_HE.pdf">Core toolkit: one-page Hebrew PDF</a></p>
+<p class="note">No installation is needed to view this gallery. Keep its folder together. The USD scenes use the original hardware; the later preference videos use the updated assembly. These are historical kinematic demonstrations, with each experiment's scope stated below.</p>
+<nav><a href="#kitchen">Kitchen / cluttered preparation station</a><a href="#office">Office / workbench</a><a href="#shelves">Multilevel shelves</a><a href="#E4">E4 wall environment</a><a href="#E5">E5 wall environment</a><a href="#E7">E7 wall environment</a><a href="#six_walls">Six-wall environment</a><a href="#smoothing">Smoothing</a></nav></header><section id="kitchen"><h2>Kitchen / cluttered preparation station</h2>
+          <div class="scene"><a href="scenes/kitchen/preview.jpg"><img loading="lazy" src="scenes/kitchen/preview.jpg" alt="Original scene preview: kitchen"></a>
+          <div><p><a href="scenes/kitchen/scene.usdc">Open original USD in Isaac Sim</a> · <a href="scenes/kitchen/motion_scene.usdc">Animated USD (original rig)</a></p>
+          <p><a href="scenes/kitchen/scene_spec.json">Editable geometry JSON</a> · <a href="scenes/kitchen/scene.json">Planning geometry</a></p>
+          <p>Original scene: 2026-11-11, UR5e with earlier camera/bracket, bare tool flange.</p>
+          <p>The three videos below: 21 November 2026, updated gripper + PickNik + D435 assembly.</p>
+          <p>Three objective extrema among collision-certified C2 curves from a 500K lazy PRM; not a complete Pareto frontier</p>
+          <p><a href="scenes/kitchen/preference_routes/manifest.json">Recorded results</a> · <a href="scenes/kitchen/preference_routes/query.json">Start / goal</a> · <a href="scenes/kitchen/preference_routes/dense_audit.json">Archived audit</a></p></div></div>
+          <div class="routes"><article><h3>Shorter path</h3>
+              <video controls preload="none" poster="scenes/kitchen/preference_routes/preview.jpg" src="scenes/kitchen/preference_routes/route_01.mp4"></video>
+              <p>Length: 0.329 m · Exposure: 0.253 · Visibility loss: 0.315</p>
+              <a href="scenes/kitchen/preference_routes/route_01.npz">Route data (NPZ)</a></article><article><h3>Less obstacle exposure</h3>
+              <video controls preload="none" poster="scenes/kitchen/preference_routes/preview.jpg" src="scenes/kitchen/preference_routes/route_02.mp4"></video>
+              <p>Length: 0.421 m · Exposure: 0.017 · Visibility loss: 0.217</p>
+              <a href="scenes/kitchen/preference_routes/route_02.npz">Route data (NPZ)</a></article><article><h3>Better wrist visibility</h3>
+              <video controls preload="none" poster="scenes/kitchen/preference_routes/preview.jpg" src="scenes/kitchen/preference_routes/route_03.mp4"></video>
+              <p>Length: 0.351 m · Exposure: 0.054 · Visibility loss: 0.127</p>
+              <a href="scenes/kitchen/preference_routes/route_03.npz">Route data (NPZ)</a></article></div></section><section id="office"><h2>Office / workbench</h2>
+          <div class="scene"><a href="scenes/office/preview.jpg"><img loading="lazy" src="scenes/office/preview.jpg" alt="Original scene preview: office"></a>
+          <div><p><a href="scenes/office/scene.usdc">Open original USD in Isaac Sim</a> · <a href="scenes/office/motion_scene.usdc">Animated USD (original rig)</a></p>
+          <p><a href="scenes/office/scene_spec.json">Editable geometry JSON</a> · <a href="scenes/office/scene.json">Planning geometry</a></p>
+          <p>Original scene: 2026-11-11, UR5e with earlier camera/bracket, bare tool flange.</p>
+          <p>The three videos below: 21 November 2026, updated gripper + PickNik + D435 assembly.</p>
+          <p>Three objective extrema among collision-certified C2 curves from a 500K lazy PRM; not a complete Pareto frontier</p>
+          <p><a href="scenes/office/preference_routes/manifest.json">Recorded results</a> · <a href="scenes/office/preference_routes/query.json">Start / goal</a> · <a href="scenes/office/preference_routes/dense_audit.json">Archived audit</a></p></div></div>
+          <div class="routes"><article><h3>Shorter path</h3>
+              <video controls preload="none" poster="scenes/office/preference_routes/preview.jpg" src="scenes/office/preference_routes/route_01.mp4"></video>
+              <p>Length: 0.277 m · Exposure: 0.012 · Visibility loss: 0.135</p>
+              <a href="scenes/office/preference_routes/route_01.npz">Route data (NPZ)</a></article><article><h3>Less obstacle exposure</h3>
+              <video controls preload="none" poster="scenes/office/preference_routes/preview.jpg" src="scenes/office/preference_routes/route_02.mp4"></video>
+              <p>Length: 0.304 m · Exposure: 0.009 · Visibility loss: 0.114</p>
+              <a href="scenes/office/preference_routes/route_02.npz">Route data (NPZ)</a></article><article><h3>Better wrist visibility</h3>
+              <video controls preload="none" poster="scenes/office/preference_routes/preview.jpg" src="scenes/office/preference_routes/route_03.mp4"></video>
+              <p>Length: 0.282 m · Exposure: 0.011 · Visibility loss: 0.091</p>
+              <a href="scenes/office/preference_routes/route_03.npz">Route data (NPZ)</a></article></div></section><section id="shelves"><h2>Multilevel shelves</h2>
+          <div class="scene"><a href="scenes/shelves/preview.jpg"><img loading="lazy" src="scenes/shelves/preview.jpg" alt="Original scene preview: shelves"></a>
+          <div><p><a href="scenes/shelves/scene.usdc">Open original USD in Isaac Sim</a> · <a href="scenes/shelves/motion_scene.usdc">Animated USD (original rig)</a></p>
+          <p><a href="scenes/shelves/scene_spec.json">Editable geometry JSON</a> · <a href="scenes/shelves/scene.json">Planning geometry</a></p>
+          <p>Original scene: 2026-11-11, UR5e with earlier camera/bracket, bare tool flange.</p>
+          <p>The three videos below: 21 November 2026, updated gripper + PickNik + D435 assembly.</p>
+          <p>Three objective extrema among collision-certified C2 curves from a 500K lazy PRM; not a complete Pareto frontier</p>
+          <p><a href="scenes/shelves/preference_routes/manifest.json">Recorded results</a> · <a href="scenes/shelves/preference_routes/query.json">Start / goal</a> · <a href="scenes/shelves/preference_routes/dense_audit.json">Archived audit</a></p></div></div>
+          <div class="routes"><article><h3>Shorter path</h3>
+              <video controls preload="none" poster="scenes/shelves/preference_routes/preview.jpg" src="scenes/shelves/preference_routes/route_01.mp4"></video>
+              <p>Length: 0.307 m · Exposure: 0.118 · Visibility loss: 0.248</p>
+              <a href="scenes/shelves/preference_routes/route_01.npz">Route data (NPZ)</a></article><article><h3>Less obstacle exposure</h3>
+              <video controls preload="none" poster="scenes/shelves/preference_routes/preview.jpg" src="scenes/shelves/preference_routes/route_02.mp4"></video>
+              <p>Length: 0.341 m · Exposure: 0.020 · Visibility loss: 0.415</p>
+              <a href="scenes/shelves/preference_routes/route_02.npz">Route data (NPZ)</a></article><article><h3>Better wrist visibility</h3>
+              <video controls preload="none" poster="scenes/shelves/preference_routes/preview.jpg" src="scenes/shelves/preference_routes/route_03.mp4"></video>
+              <p>Length: 0.343 m · Exposure: 0.026 · Visibility loss: 0.224</p>
+              <a href="scenes/shelves/preference_routes/route_03.npz">Route data (NPZ)</a></article></div></section><section id="E4"><h2>E4 wall environment</h2>
+          <div class="scene"><a href="scenes/E4/preview.jpg"><img loading="lazy" src="scenes/E4/preview.jpg" alt="Original scene preview: E4"></a>
+          <div><p><a href="scenes/E4/scene.usdc">Open original USD in Isaac Sim</a></p>
+          <p><a href="scenes/E4/scene.json">Editable geometry JSON</a> · <a href="scenes/E4/scene.json">Planning geometry</a></p>
+          <p>Original scene: 2026-09-22, UR5e with earlier camera/bracket, bare tool flange.</p>
+          <p>The three videos below: 21 November 2026, updated gripper + PickNik + D435 assembly.</p>
+          <p>Objective extremes among certified C2 cubic curves obtained by old-path reuse and lazy corridor repair; not an exact Pareto frontier</p>
+          <p><a href="scenes/E4/preference_routes/manifest.json">Recorded results</a> · <a href="scenes/E4/preference_routes/query.json">Start / goal</a> · <a href="scenes/E4/preference_routes/dense_audit.json">Archived audit</a></p></div></div>
+          <div class="routes"><article><h3>Shorter path</h3>
+              <video controls preload="none" poster="scenes/E4/preference_routes/preview.jpg" src="scenes/E4/preference_routes/route_01.mp4"></video>
+              <p>Length: 0.519 m · Exposure: 0.462 · Visibility loss: 0.693</p>
+              <a href="scenes/E4/preference_routes/route_01.npz">Route data (NPZ)</a></article><article><h3>Less obstacle exposure</h3>
+              <video controls preload="none" poster="scenes/E4/preference_routes/preview.jpg" src="scenes/E4/preference_routes/route_02.mp4"></video>
+              <p>Length: 0.973 m · Exposure: 0.020 · Visibility loss: 1.867</p>
+              <a href="scenes/E4/preference_routes/route_02.npz">Route data (NPZ)</a></article><article><h3>Better wrist visibility</h3>
+              <video controls preload="none" poster="scenes/E4/preference_routes/preview.jpg" src="scenes/E4/preference_routes/route_03.mp4"></video>
+              <p>Length: 0.839 m · Exposure: 0.070 · Visibility loss: 0.288</p>
+              <a href="scenes/E4/preference_routes/route_03.npz">Route data (NPZ)</a></article></div></section><section id="E5"><h2>E5 wall environment</h2>
+          <div class="scene"><a href="scenes/E5/preview.jpg"><img loading="lazy" src="scenes/E5/preview.jpg" alt="Original scene preview: E5"></a>
+          <div><p><a href="scenes/E5/scene.usdc">Open original USD in Isaac Sim</a></p>
+          <p><a href="scenes/E5/scene.json">Editable geometry JSON</a> · <a href="scenes/E5/scene.json">Planning geometry</a></p>
+          <p>Original scene: 2026-09-22, UR5e with earlier camera/bracket, bare tool flange.</p>
+          <p>The three videos below: 21 November 2026, updated gripper + PickNik + D435 assembly.</p>
+          <p>Objective extremes among certified C2 cubic curves obtained by old-path reuse and lazy corridor repair; not an exact Pareto frontier</p>
+          <p><a href="scenes/E5/preference_routes/manifest.json">Recorded results</a> · <a href="scenes/E5/preference_routes/query.json">Start / goal</a> · <a href="scenes/E5/preference_routes/dense_audit.json">Archived audit</a></p></div></div>
+          <div class="routes"><article><h3>Shorter path</h3>
+              <video controls preload="none" poster="scenes/E5/preference_routes/preview.jpg" src="scenes/E5/preference_routes/route_01.mp4"></video>
+              <p>Length: 0.545 m · Exposure: 0.560 · Visibility loss: 1.067</p>
+              <a href="scenes/E5/preference_routes/route_01.npz">Route data (NPZ)</a></article><article><h3>Less obstacle exposure</h3>
+              <video controls preload="none" poster="scenes/E5/preference_routes/preview.jpg" src="scenes/E5/preference_routes/route_02.mp4"></video>
+              <p>Length: 1.275 m · Exposure: 0.037 · Visibility loss: 2.409</p>
+              <a href="scenes/E5/preference_routes/route_02.npz">Route data (NPZ)</a></article><article><h3>Better wrist visibility</h3>
+              <video controls preload="none" poster="scenes/E5/preference_routes/preview.jpg" src="scenes/E5/preference_routes/route_03.mp4"></video>
+              <p>Length: 0.633 m · Exposure: 0.593 · Visibility loss: 0.717</p>
+              <a href="scenes/E5/preference_routes/route_03.npz">Route data (NPZ)</a></article></div></section><section id="E7"><h2>E7 wall environment</h2>
+          <div class="scene"><a href="scenes/E7/preview.jpg"><img loading="lazy" src="scenes/E7/preview.jpg" alt="Original scene preview: E7"></a>
+          <div><p><a href="scenes/E7/scene.usdc">Open original USD in Isaac Sim</a></p>
+          <p><a href="scenes/E7/scene.json">Editable geometry JSON</a> · <a href="scenes/E7/scene.json">Planning geometry</a></p>
+          <p>Original scene: 2026-09-22, UR5e with earlier camera/bracket, bare tool flange.</p>
+          <p>The three videos below: 21 November 2026, updated gripper + PickNik + D435 assembly.</p>
+          <p>Objective extremes among certified C2 cubic curves obtained by old-path reuse and lazy corridor repair; not an exact Pareto frontier</p>
+          <p><a href="scenes/E7/preference_routes/manifest.json">Recorded results</a> · <a href="scenes/E7/preference_routes/query.json">Start / goal</a> · <a href="scenes/E7/preference_routes/dense_audit.json">Archived audit</a></p></div></div>
+          <div class="routes"><article><h3>Shorter path</h3>
+              <video controls preload="none" poster="scenes/E7/preference_routes/preview.jpg" src="scenes/E7/preference_routes/route_01.mp4"></video>
+              <p>Length: 0.766 m · Exposure: 2.090 · Visibility loss: 3.139</p>
+              <a href="scenes/E7/preference_routes/route_01.npz">Route data (NPZ)</a></article><article><h3>Less obstacle exposure</h3>
+              <video controls preload="none" poster="scenes/E7/preference_routes/preview.jpg" src="scenes/E7/preference_routes/route_02.mp4"></video>
+              <p>Length: 1.954 m · Exposure: 0.142 · Visibility loss: 3.835</p>
+              <a href="scenes/E7/preference_routes/route_02.npz">Route data (NPZ)</a></article><article><h3>Better wrist visibility</h3>
+              <video controls preload="none" poster="scenes/E7/preference_routes/preview.jpg" src="scenes/E7/preference_routes/route_03.mp4"></video>
+              <p>Length: 1.624 m · Exposure: 0.877 · Visibility loss: 2.293</p>
+              <a href="scenes/E7/preference_routes/route_03.npz">Route data (NPZ)</a></article></div></section><section id="six_walls"><h2>Six-wall environment</h2>
+          <div class="scene"><a href="scenes/six_walls/preview.jpg"><img loading="lazy" src="scenes/six_walls/preview.jpg" alt="Original scene preview: six_walls"></a>
+          <div><p><a href="scenes/six_walls/scene.usdc">Open original USD in Isaac Sim</a></p>
+          <p><a href="scenes/six_walls/scene.json">Editable geometry JSON</a> · <a href="scenes/six_walls/scene.json">Planning geometry</a></p>
+          <p>Original scene: 2026-11-11, UR5e with earlier camera/bracket, bare tool flange.</p>
+          <p>The three videos below: 21 November 2026, updated gripper + PickNik + D435 assembly.</p>
+          <p>Objective extremes among certified C2 cubic curves obtained by old-path reuse and lazy corridor repair; not an exact Pareto frontier</p>
+          <p><a href="scenes/six_walls/preference_routes/manifest.json">Recorded results</a> · <a href="scenes/six_walls/preference_routes/query.json">Start / goal</a> · <a href="scenes/six_walls/preference_routes/dense_audit.json">Archived audit</a></p></div></div>
+          <div class="routes"><article><h3>Shorter path</h3>
+              <video controls preload="none" poster="scenes/six_walls/preference_routes/preview.jpg" src="scenes/six_walls/preference_routes/route_01.mp4"></video>
+              <p>Length: 0.405 m · Exposure: 0.162 · Visibility loss: 0.328</p>
+              <a href="scenes/six_walls/preference_routes/route_01.npz">Route data (NPZ)</a></article><article><h3>Less obstacle exposure</h3>
+              <video controls preload="none" poster="scenes/six_walls/preference_routes/preview.jpg" src="scenes/six_walls/preference_routes/route_02.mp4"></video>
+              <p>Length: 0.533 m · Exposure: 0.017 · Visibility loss: 0.826</p>
+              <a href="scenes/six_walls/preference_routes/route_02.npz">Route data (NPZ)</a></article><article><h3>Better wrist visibility</h3>
+              <video controls preload="none" poster="scenes/six_walls/preference_routes/preview.jpg" src="scenes/six_walls/preference_routes/route_03.mp4"></video>
+              <p>Length: 0.445 m · Exposure: 0.339 · Visibility loss: 0.231</p>
+              <a href="scenes/six_walls/preference_routes/route_03.npz">Route data (NPZ)</a></article></div></section>
+<section id="smoothing"><h2>Before and after smoothing — E4 shortest path</h2>
+<p>18 October 2026 · earlier hardware. A selected saved graph path and its smoothed alternative, with fixed endpoints. Presentation timing is not execution speed.</p>
+<video controls preload="none" poster="smoothing/E4_shortest/SNAPSHOTS.jpg" src="smoothing/E4_shortest/BEFORE_AFTER.mp4"></video>
+<div class="scene"><img loading="lazy" src="smoothing/E4_shortest/EE_BEFORE_AFTER.png" alt="Before and after TCP paths"><img loading="lazy" src="smoothing/E4_shortest/SAFETY_VISIBILITY.png" alt="Archived clearance and visibility comparison"></div>
+<p><a href="smoothing/E4_shortest/data/original_replay.npz">Original replay</a> · <a href="smoothing/E4_shortest/data/smoothed_replay.npz">Smoothed replay</a> · <a href="smoothing/E4_shortest/selection.json">Selection metadata</a></p></section>
+<footer>Source hashes: <a href="SOURCE_MANIFEST.json">manifest</a> · Delivery checks: <a href="PORTABILITY_CHECK.json">portability report</a></footer></main></html>

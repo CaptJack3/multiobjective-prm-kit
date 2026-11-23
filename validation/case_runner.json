@@ -1,0 +1,256 @@
+{
+  "date": "2026-11-22",
+  "version": "0.3.0",
+  "unit_tests": {
+    "passed": 93,
+    "skipped": 0,
+    "environment": "Fresh venv /tmp/prmkit-case-release; installed wheel, pytest pythonpath override disabled source imports",
+    "pip_check": "No broken requirements found"
+  },
+  "native": {
+    "root": "/tmp/prmkit-case-native-_m6u_to1",
+    "runtime": {
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "pinocchio": "4.1.0",
+      "coal": "3.0.4"
+    },
+    "cases": {
+      "wall_grid": {
+        "plan": {
+          "case_id": "wall_grid",
+          "environments": 2,
+          "finite_environment_count": 64,
+          "grid_exhausted": false,
+          "num_queries": 2,
+          "n": [
+            8,
+            12
+          ],
+          "k": [
+            3,
+            4
+          ],
+          "epsilons": [
+            0.0,
+            0.05
+          ],
+          "seeds": [
+            19
+          ],
+          "query_k": 12,
+          "metrics": [
+            "ee_length",
+            "clearance"
+          ],
+          "roadmaps": 16,
+          "runs": 32,
+          "query_source": "template goals, then seeded random free endpoints in first environment",
+          "rank_by": "best.ee_length",
+          "rank_direction": "min"
+        },
+        "statuses": {
+          "complete": 24,
+          "no_path_in_roadmap": 8
+        },
+        "validated_paths": 2,
+        "reused_graphs": 16
+      },
+      "random": {
+        "plan": {
+          "case_id": "wall_random",
+          "environments": 3,
+          "finite_environment_count": null,
+          "grid_exhausted": false,
+          "num_queries": 2,
+          "n": [
+            8
+          ],
+          "k": [
+            3
+          ],
+          "epsilons": [
+            0.0,
+            0.1
+          ],
+          "seeds": [
+            7
+          ],
+          "query_k": 12,
+          "metrics": [
+            "ee_length",
+            "clearance"
+          ],
+          "roadmaps": 6,
+          "runs": 12,
+          "query_source": "supplied",
+          "rank_by": "best.ee_length",
+          "rank_direction": "min"
+        },
+        "statuses": {
+          "complete": 12
+        },
+        "validated_paths": 2,
+        "reused_graphs": 6
+      },
+      "dense": {
+        "plan": {
+          "case_id": "fixed_environment",
+          "environments": 1,
+          "finite_environment_count": 1,
+          "grid_exhausted": true,
+          "num_queries": 2,
+          "n": [
+            16,
+            24
+          ],
+          "k": [
+            4,
+            6
+          ],
+          "epsilons": [
+            0.0,
+            0.05
+          ],
+          "seeds": [
+            7
+          ],
+          "query_k": 12,
+          "metrics": [
+            "ee_length",
+            "clearance"
+          ],
+          "roadmaps": 8,
+          "runs": 16,
+          "query_source": "supplied",
+          "rank_by": "best.ee_length",
+          "rank_direction": "min"
+        },
+        "statuses": {
+          "complete": 16
+        },
+        "validated_paths": 2,
+        "reused_graphs": 8
+      },
+      "provided": {
+        "plan": {
+          "case_id": "environment_list",
+          "environments": 2,
+          "finite_environment_count": 2,
+          "grid_exhausted": true,
+          "num_queries": 2,
+          "n": [
+            8
+          ],
+          "k": [
+            3
+          ],
+          "epsilons": [
+            0.05
+          ],
+          "seeds": [
+            7
+          ],
+          "query_k": 12,
+          "metrics": [
+            "ee_length",
+            "clearance"
+          ],
+          "roadmaps": 4,
+          "runs": 4,
+          "query_source": "supplied",
+          "rank_by": "best.ee_length",
+          "rank_direction": "min"
+        },
+        "statuses": {
+          "complete": 4
+        },
+        "validated_paths": 2,
+        "reused_graphs": 0
+      },
+      "inherit": {
+        "plan": {
+          "case_id": "fixed_environment",
+          "environments": 1,
+          "finite_environment_count": 1,
+          "grid_exhausted": true,
+          "num_queries": 1,
+          "n": [
+            16
+          ],
+          "k": [
+            4
+          ],
+          "epsilons": [
+            0.0,
+            0.05
+          ],
+          "seeds": [
+            7
+          ],
+          "query_k": 12,
+          "metrics": [
+            "ee_length",
+            "risk"
+          ],
+          "roadmaps": 1,
+          "runs": 2,
+          "query_source": "template goals, then seeded random free endpoints in first environment",
+          "rank_by": "best.risk",
+          "rank_direction": "min"
+        },
+        "statuses": {
+          "complete": 2
+        },
+        "validated_paths": 2,
+        "reused_graphs": 1
+      }
+    }
+  },
+  "browser": {
+    "browser": "Chromium headless 1255",
+    "group_filters": 8,
+    "query_filter": true,
+    "status_filter": true,
+    "relative_links_exist": true,
+    "individual_report_loaded": true,
+    "widths_without_page_overflow": [
+      1280,
+      390,
+      320
+    ],
+    "javascript_errors": [],
+    "external_requests": []
+  },
+  "research_diff_sha256": "f435f49057e8e52328645ed9fb6d2dfabfc37d16229bad9f118fe18a5c62f6e5",
+  "clean_install": {
+    "python": "3.11.15",
+    "module_path": "/tmp/prmkit-case-release/lib/python3.11/site-packages/prmkit",
+    "pinocchio": "3.9.0",
+    "coal": "3.0.2",
+    "numpy": "2.3.5",
+    "scipy": "1.17.1",
+    "single_script_outside_repository": true,
+    "default_runs": 8,
+    "default_paths": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "other_robot": {
+      "complete": true,
+      "runs": 2,
+      "dimension": 2,
+      "paths": [
+        1,
+        1
+      ]
+    },
+    "source_wheel_installed_python_files_match": 21
+  }
+}

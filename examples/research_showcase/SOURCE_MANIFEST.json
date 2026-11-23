@@ -1,0 +1,884 @@
+[
+  {
+    "source": "results/extension_showcase_20261111/dense/kitchen/scene.usdc",
+    "destination": "scenes/kitchen/scene.usdc",
+    "source_sha256": "7af8826827db6c5896589749a50b2632acedda715cfdd6b2a60b9d8bf95876d8",
+    "sha256": "7af8826827db6c5896589749a50b2632acedda715cfdd6b2a60b9d8bf95876d8",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/extension_showcase_20261111/dense/kitchen/motion_scene.usdc",
+    "destination": "scenes/kitchen/motion_scene.usdc",
+    "source_sha256": "d5a440a99496f529bddf0c85257269815d32752467182b541c47cf79c0e60990",
+    "sha256": "d5a440a99496f529bddf0c85257269815d32752467182b541c47cf79c0e60990",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/extension_showcase_20261111/dense/kitchen/scene_spec.json",
+    "destination": "scenes/kitchen/scene_spec.json",
+    "source_sha256": "4371f0b458bc99ca0d2296339b34a01bc4c65aa87eda4d9dee307202b32b4995",
+    "sha256": "4371f0b458bc99ca0d2296339b34a01bc4c65aa87eda4d9dee307202b32b4995",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/extension_showcase_20261111/dense/kitchen/contact_sheet.jpg",
+    "destination": "scenes/kitchen/preview.jpg",
+    "source_sha256": "3e7197ddc7cf51f57cdd4a043fbc279d5f722f66529badac81c0722e5aa3879c",
+    "sha256": "3e7197ddc7cf51f57cdd4a043fbc279d5f722f66529badac81c0722e5aa3879c",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/extension_showcase_20261111/dense/kitchen/usd_validation.json",
+    "destination": "scenes/kitchen/archived_usd_validation.json",
+    "source_sha256": "f1e71d4eda63f9aceecc667ccc7c640471fca028d4bffe8350916089408360b8",
+    "sha256": "f1e71d4eda63f9aceecc667ccc7c640471fca028d4bffe8350916089408360b8",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/extension_showcase_20261111/dense/kitchen/motion_validation.json",
+    "destination": "scenes/kitchen/archived_motion_validation.json",
+    "source_sha256": "b9c1ce7dc7249dbf025ac30ed42b0bc2de20e8cbf2518f9ff7e1e28e9d3c3603",
+    "sha256": "b9c1ce7dc7249dbf025ac30ed42b0bc2de20e8cbf2518f9ff7e1e28e9d3c3603",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/kitchen/environment.json",
+    "destination": "scenes/kitchen/scene.json",
+    "source_sha256": "ca6235b7839d04bf2fe3a6eea2d4ccffec284c94a5862cba1bf2f3ed67517c1f",
+    "sha256": "1fe44cdc4f863da2ce3326b14be23e148dd8153e03145ae9c8ada7aaf0eee681",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/kitchen/query.json",
+    "destination": "scenes/kitchen/preference_routes/query.json",
+    "source_sha256": "bd71014651b9598d9acc104a7cfb730492f9fe88bf6ff7491eee2ac20969e117",
+    "sha256": "4efd9fde82a1e52ab1d067dd0b28971fe7d522ff4f50514e12a59a561ecc4e57",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/kitchen/camera_calibration.json",
+    "destination": "scenes/kitchen/preference_routes/camera_calibration.json",
+    "source_sha256": "0330174d3028bb6d35d2cc2fa3d68f8bdbc6e21de690c31cf05695df7ccda0de",
+    "sha256": "0330174d3028bb6d35d2cc2fa3d68f8bdbc6e21de690c31cf05695df7ccda0de",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/kitchen/dense_audit.json",
+    "destination": "scenes/kitchen/preference_routes/dense_audit.json",
+    "source_sha256": "6d06789f52e33aa766a0f059766467a95abc0a92d266e6142191dbac9484469c",
+    "sha256": "6d06789f52e33aa766a0f059766467a95abc0a92d266e6142191dbac9484469c",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/kitchen/manifest.json",
+    "destination": "scenes/kitchen/preference_routes/manifest.json",
+    "source_sha256": "b600154a0dc2e2653135b456f7ebc07387f6436364107c8f4cc906a16fa6abe7",
+    "sha256": "b600154a0dc2e2653135b456f7ebc07387f6436364107c8f4cc906a16fa6abe7",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/kitchen/start_preview.jpg",
+    "destination": "scenes/kitchen/preference_routes/preview.jpg",
+    "source_sha256": "0184084db11548b4fd958c6b4032250ef0bee153c6474c93de527e55c9a42be3",
+    "sha256": "0184084db11548b4fd958c6b4032250ef0bee153c6474c93de527e55c9a42be3",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/kitchen/route_01.npz",
+    "destination": "scenes/kitchen/preference_routes/route_01.npz",
+    "source_sha256": "0b7c442c86093c1e6f4019868c69d953d78d10a53aba9bec134a9ddfac4ff905",
+    "sha256": "0b7c442c86093c1e6f4019868c69d953d78d10a53aba9bec134a9ddfac4ff905",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/kitchen/route_01.mp4",
+    "destination": "scenes/kitchen/preference_routes/route_01.mp4",
+    "source_sha256": "1643a6efd2df68099b7290e12c4206112cddeeacecfd7ebaba238aa919b76547",
+    "sha256": "1643a6efd2df68099b7290e12c4206112cddeeacecfd7ebaba238aa919b76547",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/kitchen/route_02.npz",
+    "destination": "scenes/kitchen/preference_routes/route_02.npz",
+    "source_sha256": "1008374caad3fbdfa517e79f81486500240a52c7db42e3ca188c11bdafa2d8d7",
+    "sha256": "1008374caad3fbdfa517e79f81486500240a52c7db42e3ca188c11bdafa2d8d7",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/kitchen/route_02.mp4",
+    "destination": "scenes/kitchen/preference_routes/route_02.mp4",
+    "source_sha256": "20b059a7f54cfd490315722190ef57c02f5fb12b6acccab4088273fb87141b29",
+    "sha256": "20b059a7f54cfd490315722190ef57c02f5fb12b6acccab4088273fb87141b29",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/kitchen/route_03.npz",
+    "destination": "scenes/kitchen/preference_routes/route_03.npz",
+    "source_sha256": "15e7eb46a71793083fccaa6b0cfacea1c808dbaa3ff06aab7b220ac2b9e8281c",
+    "sha256": "15e7eb46a71793083fccaa6b0cfacea1c808dbaa3ff06aab7b220ac2b9e8281c",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/kitchen/route_03.mp4",
+    "destination": "scenes/kitchen/preference_routes/route_03.mp4",
+    "source_sha256": "8ccf02bc43a601c1a88ad6291a9e98a51217b12de57e773db8c93aaa749ce46c",
+    "sha256": "8ccf02bc43a601c1a88ad6291a9e98a51217b12de57e773db8c93aaa749ce46c",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/extension_showcase_20261111/dense/office/scene.usdc",
+    "destination": "scenes/office/scene.usdc",
+    "source_sha256": "aa6c79219e4daede937a840d67aea9a3c598238c909f0175c315c43de00abf00",
+    "sha256": "aa6c79219e4daede937a840d67aea9a3c598238c909f0175c315c43de00abf00",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/extension_showcase_20261111/dense/office/motion_scene.usdc",
+    "destination": "scenes/office/motion_scene.usdc",
+    "source_sha256": "ead49956ccd2a156d9b5620953cae3ffc7e7a2847aaa5f5843ac906baa94a383",
+    "sha256": "ead49956ccd2a156d9b5620953cae3ffc7e7a2847aaa5f5843ac906baa94a383",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/extension_showcase_20261111/dense/office/scene_spec.json",
+    "destination": "scenes/office/scene_spec.json",
+    "source_sha256": "fe6c8a33419bf30b4746d75616a3cc3dd4c40c074d808d5fbead7526c0da9a15",
+    "sha256": "fe6c8a33419bf30b4746d75616a3cc3dd4c40c074d808d5fbead7526c0da9a15",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/extension_showcase_20261111/dense/office/contact_sheet.jpg",
+    "destination": "scenes/office/preview.jpg",
+    "source_sha256": "09e1a431828d8a6363b37660b3f967ae009020d993ad4475831a04e8a23efc76",
+    "sha256": "09e1a431828d8a6363b37660b3f967ae009020d993ad4475831a04e8a23efc76",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/extension_showcase_20261111/dense/office/usd_validation.json",
+    "destination": "scenes/office/archived_usd_validation.json",
+    "source_sha256": "5a76707d808fc09dfbd76d524023b30793f15166bbc6ce9c27daa685856aa1a1",
+    "sha256": "5a76707d808fc09dfbd76d524023b30793f15166bbc6ce9c27daa685856aa1a1",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/extension_showcase_20261111/dense/office/motion_validation.json",
+    "destination": "scenes/office/archived_motion_validation.json",
+    "source_sha256": "fae26bf85fbb1074937ef0ab56ff0d0587294004e122a08fce90a604f6c47870",
+    "sha256": "fae26bf85fbb1074937ef0ab56ff0d0587294004e122a08fce90a604f6c47870",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/office/environment.json",
+    "destination": "scenes/office/scene.json",
+    "source_sha256": "f097369ad6ca5bf49032c81f0f4632b77a1a6bd7254e32244b8dc726cef77708",
+    "sha256": "a8233304f4ea5f2fb20c9019be5dc1e215858ecb1a659e5513b7a51cece9e08b",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/office/query.json",
+    "destination": "scenes/office/preference_routes/query.json",
+    "source_sha256": "b81d728731db2f746d8a282a3beb964c42b42a4b959dba72fc47cad412855689",
+    "sha256": "66ad81fd059f139e9896e3286a0c89a250d4681d830971ea7f2b8f799856fcd4",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/office/camera_calibration.json",
+    "destination": "scenes/office/preference_routes/camera_calibration.json",
+    "source_sha256": "0330174d3028bb6d35d2cc2fa3d68f8bdbc6e21de690c31cf05695df7ccda0de",
+    "sha256": "0330174d3028bb6d35d2cc2fa3d68f8bdbc6e21de690c31cf05695df7ccda0de",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/office/dense_audit.json",
+    "destination": "scenes/office/preference_routes/dense_audit.json",
+    "source_sha256": "c4de6ad3404bf8b0a4d3025c72e572352c02e25dc66aabe8db4d3a464b12ba96",
+    "sha256": "c4de6ad3404bf8b0a4d3025c72e572352c02e25dc66aabe8db4d3a464b12ba96",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/office/manifest.json",
+    "destination": "scenes/office/preference_routes/manifest.json",
+    "source_sha256": "0c491ee0347787b5930e2891733b0b0bf40cb03e4321eb0867fba638a8312e7d",
+    "sha256": "0c491ee0347787b5930e2891733b0b0bf40cb03e4321eb0867fba638a8312e7d",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/office/start_preview.jpg",
+    "destination": "scenes/office/preference_routes/preview.jpg",
+    "source_sha256": "177209e80f946e16e7fe1fe58d0252fcc9f5d5243538676f6de41107b0992433",
+    "sha256": "177209e80f946e16e7fe1fe58d0252fcc9f5d5243538676f6de41107b0992433",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/office/route_01.npz",
+    "destination": "scenes/office/preference_routes/route_01.npz",
+    "source_sha256": "1e93e404247fe55ecd5493fdeef8e8bb451c3fd3430a946d939f06f47f0d2c6f",
+    "sha256": "1e93e404247fe55ecd5493fdeef8e8bb451c3fd3430a946d939f06f47f0d2c6f",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/office/route_01.mp4",
+    "destination": "scenes/office/preference_routes/route_01.mp4",
+    "source_sha256": "9d0cdf56bb739c4d3ffc16aff1cfc40ea6dbbcdc898499cc5553f4e12d768076",
+    "sha256": "9d0cdf56bb739c4d3ffc16aff1cfc40ea6dbbcdc898499cc5553f4e12d768076",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/office/route_02.npz",
+    "destination": "scenes/office/preference_routes/route_02.npz",
+    "source_sha256": "aa9f4dd4b5997be72d0dc0cd3b271f763b62b3ded1bdde4b87ea6c87904cd747",
+    "sha256": "aa9f4dd4b5997be72d0dc0cd3b271f763b62b3ded1bdde4b87ea6c87904cd747",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/office/route_02.mp4",
+    "destination": "scenes/office/preference_routes/route_02.mp4",
+    "source_sha256": "07dd70cd345e3498b4c74c965095d360986c1722bfc2e29e4fb44c303ddd7dc0",
+    "sha256": "07dd70cd345e3498b4c74c965095d360986c1722bfc2e29e4fb44c303ddd7dc0",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/office/route_03.npz",
+    "destination": "scenes/office/preference_routes/route_03.npz",
+    "source_sha256": "cf938417b2a05c2840e4543286e0d7b1a8b1fcc9bf081caea98724a20a9a2df9",
+    "sha256": "cf938417b2a05c2840e4543286e0d7b1a8b1fcc9bf081caea98724a20a9a2df9",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/office/route_03.mp4",
+    "destination": "scenes/office/preference_routes/route_03.mp4",
+    "source_sha256": "46e303cd7994d59ca9f97c032a990106270444fc1bb3664017da1abbe0a34acd",
+    "sha256": "46e303cd7994d59ca9f97c032a990106270444fc1bb3664017da1abbe0a34acd",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/extension_showcase_20261111/dense/shelves/scene.usdc",
+    "destination": "scenes/shelves/scene.usdc",
+    "source_sha256": "9e17d91dfa4359d0279026892290fd69e535c2a97555bc4bbbe8dc95cec20290",
+    "sha256": "9e17d91dfa4359d0279026892290fd69e535c2a97555bc4bbbe8dc95cec20290",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/extension_showcase_20261111/dense/shelves/motion_scene.usdc",
+    "destination": "scenes/shelves/motion_scene.usdc",
+    "source_sha256": "4b811b522fe64a703ca39a27195dc535f0f1158fa6c7f7b3eadcda7526729fc3",
+    "sha256": "4b811b522fe64a703ca39a27195dc535f0f1158fa6c7f7b3eadcda7526729fc3",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/extension_showcase_20261111/dense/shelves/scene_spec.json",
+    "destination": "scenes/shelves/scene_spec.json",
+    "source_sha256": "5109cbc773fef8ddc8baf6ca26ca2b2f4916ee72a5356a55904d7321c283f5a5",
+    "sha256": "5109cbc773fef8ddc8baf6ca26ca2b2f4916ee72a5356a55904d7321c283f5a5",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/extension_showcase_20261111/dense/shelves/contact_sheet.jpg",
+    "destination": "scenes/shelves/preview.jpg",
+    "source_sha256": "23e380edcf79fd9b70cb61ded07ea680ed87497f5fac2c0b8a09a0315a6ab2f8",
+    "sha256": "23e380edcf79fd9b70cb61ded07ea680ed87497f5fac2c0b8a09a0315a6ab2f8",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/extension_showcase_20261111/dense/shelves/usd_validation.json",
+    "destination": "scenes/shelves/archived_usd_validation.json",
+    "source_sha256": "baa84627e6eb996fe0b766eb560f3198a14db578ceedd3f6eb52cf8c78eb6c01",
+    "sha256": "baa84627e6eb996fe0b766eb560f3198a14db578ceedd3f6eb52cf8c78eb6c01",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/extension_showcase_20261111/dense/shelves/motion_validation.json",
+    "destination": "scenes/shelves/archived_motion_validation.json",
+    "source_sha256": "338e76ace67903ff015f05a7a5eecef5db2825d53abcc85275baf5abdfc3fef3",
+    "sha256": "338e76ace67903ff015f05a7a5eecef5db2825d53abcc85275baf5abdfc3fef3",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/shelves/environment.json",
+    "destination": "scenes/shelves/scene.json",
+    "source_sha256": "4de46bf8d3f199acad0f4a60172930a796e1bfddc69caadf5ad172040e04c934",
+    "sha256": "9065ec457932f669b3475935d1292cac4897677a71fc8f690e0c3b85c7c0193c",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/shelves/query.json",
+    "destination": "scenes/shelves/preference_routes/query.json",
+    "source_sha256": "275173f50693a5c084d0858d2fcc0bb9935bf79ff136fafd6665f92dc2fed0e0",
+    "sha256": "3d886e9acf05e9f604092d3bb1866dce666ed2a27e8bc648c4662b22973738aa",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/shelves/camera_calibration.json",
+    "destination": "scenes/shelves/preference_routes/camera_calibration.json",
+    "source_sha256": "0330174d3028bb6d35d2cc2fa3d68f8bdbc6e21de690c31cf05695df7ccda0de",
+    "sha256": "0330174d3028bb6d35d2cc2fa3d68f8bdbc6e21de690c31cf05695df7ccda0de",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/shelves/dense_audit.json",
+    "destination": "scenes/shelves/preference_routes/dense_audit.json",
+    "source_sha256": "f572759688ce35f9649bf79a9810a88d990c74a2ec5e6299f1dda319401b61de",
+    "sha256": "f572759688ce35f9649bf79a9810a88d990c74a2ec5e6299f1dda319401b61de",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/shelves/manifest.json",
+    "destination": "scenes/shelves/preference_routes/manifest.json",
+    "source_sha256": "27e40ba7cec7899edaadf44324493d9cd0cf13c7876d32b9dd9ea85d425ad485",
+    "sha256": "27e40ba7cec7899edaadf44324493d9cd0cf13c7876d32b9dd9ea85d425ad485",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/shelves/start_preview.jpg",
+    "destination": "scenes/shelves/preference_routes/preview.jpg",
+    "source_sha256": "8b17bf91876ad7c2a4a6f247307ea7dd41596414efd9b6646a04dd239b703689",
+    "sha256": "8b17bf91876ad7c2a4a6f247307ea7dd41596414efd9b6646a04dd239b703689",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/shelves/route_01.npz",
+    "destination": "scenes/shelves/preference_routes/route_01.npz",
+    "source_sha256": "b505fbc2930e59a80c58005a9963adc47e06df9be8d7206f9df86d1f6a3b98cf",
+    "sha256": "b505fbc2930e59a80c58005a9963adc47e06df9be8d7206f9df86d1f6a3b98cf",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/shelves/route_01.mp4",
+    "destination": "scenes/shelves/preference_routes/route_01.mp4",
+    "source_sha256": "7fc037e63adbd45d7e32812fecddbe3536a16135d92abeefe0a1bdc89442cdae",
+    "sha256": "7fc037e63adbd45d7e32812fecddbe3536a16135d92abeefe0a1bdc89442cdae",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/shelves/route_02.npz",
+    "destination": "scenes/shelves/preference_routes/route_02.npz",
+    "source_sha256": "d19412ab896dd2f881f06cb3aeea962fe07a73253fd81cbd2d26e6abe7214737",
+    "sha256": "d19412ab896dd2f881f06cb3aeea962fe07a73253fd81cbd2d26e6abe7214737",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/shelves/route_02.mp4",
+    "destination": "scenes/shelves/preference_routes/route_02.mp4",
+    "source_sha256": "2485cbd482e43ba73560e5dd5e9f88a104544285a14e58596ff577caf86f012d",
+    "sha256": "2485cbd482e43ba73560e5dd5e9f88a104544285a14e58596ff577caf86f012d",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/shelves/route_03.npz",
+    "destination": "scenes/shelves/preference_routes/route_03.npz",
+    "source_sha256": "e584137f4bebef3ac92505fbf6f4ee80ef6ed4933aea07213694cae5acca4b6b",
+    "sha256": "e584137f4bebef3ac92505fbf6f4ee80ef6ed4933aea07213694cae5acca4b6b",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/household_prm_500k_20261121/shelves/route_03.mp4",
+    "destination": "scenes/shelves/preference_routes/route_03.mp4",
+    "source_sha256": "10d2934c68eafaf261b1af0c3617bb570a510549f5f9f2386db065303e67527d",
+    "sha256": "10d2934c68eafaf261b1af0c3617bb570a510549f5f9f2386db065303e67527d",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/clearance_rebuild_3env_20260921/video_production/E4/scene.usdc",
+    "destination": "scenes/E4/scene.usdc",
+    "source_sha256": "5d6774fd0488a34ef310377e59d66fb978a80e54db9dbbe54303c854e294bce8",
+    "sha256": "5d6774fd0488a34ef310377e59d66fb978a80e54db9dbbe54303c854e294bce8",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "DELIVERABLES/E4/E4_1_shortest_snapshots.jpg",
+    "destination": "scenes/E4/preview.jpg",
+    "source_sha256": "1daa7b6a70897527bc06efebe8d00a340ebb36083c7a3e6f629a3c4c694c94be",
+    "sha256": "1daa7b6a70897527bc06efebe8d00a340ebb36083c7a3e6f629a3c4c694c94be",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E4/environment.json",
+    "destination": "scenes/E4/scene.json",
+    "source_sha256": "d9157bdf38cb5188fdda1d321b54abdb34703b30c1561b4bfabd61ec0b9e4d16",
+    "sha256": "ba39cd828f0db15857495fb4455701825e6426f6c109614557b49bba2000e4b8",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E4/query.json",
+    "destination": "scenes/E4/preference_routes/query.json",
+    "source_sha256": "105ea3f2ca283bf41df2bb63708f79bef98097b1403f06b7a87a26a4b04b01d7",
+    "sha256": "9dccc72aa6c3b0ab55b623bbf87a95f6b9b05738dd9855cf81991c899b163e7d",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E4/camera_calibration.json",
+    "destination": "scenes/E4/preference_routes/camera_calibration.json",
+    "source_sha256": "0330174d3028bb6d35d2cc2fa3d68f8bdbc6e21de690c31cf05695df7ccda0de",
+    "sha256": "0330174d3028bb6d35d2cc2fa3d68f8bdbc6e21de690c31cf05695df7ccda0de",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E4/dense_audit.json",
+    "destination": "scenes/E4/preference_routes/dense_audit.json",
+    "source_sha256": "bdd7d2d1dbc2d3d77815d9933a5ed7359025f1cade40ef06f8807ebaf88b0e5a",
+    "sha256": "bdd7d2d1dbc2d3d77815d9933a5ed7359025f1cade40ef06f8807ebaf88b0e5a",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E4/manifest.json",
+    "destination": "scenes/E4/preference_routes/manifest.json",
+    "source_sha256": "3b462aa506c7c79ac1682084b1cf3782352c56f3595941e0cc57fa7e2e526656",
+    "sha256": "3b462aa506c7c79ac1682084b1cf3782352c56f3595941e0cc57fa7e2e526656",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E4/start_preview.jpg",
+    "destination": "scenes/E4/preference_routes/preview.jpg",
+    "source_sha256": "930eb179e88ec41251b31f96c3f158b896fcec15b4a63df8062fed434e5bedab",
+    "sha256": "930eb179e88ec41251b31f96c3f158b896fcec15b4a63df8062fed434e5bedab",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E4/route_01.npz",
+    "destination": "scenes/E4/preference_routes/route_01.npz",
+    "source_sha256": "40a3e37ecdf0dd4ee76304535e2b9297da1574fcf971651daba3db1f7f432143",
+    "sha256": "40a3e37ecdf0dd4ee76304535e2b9297da1574fcf971651daba3db1f7f432143",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E4/route_01.mp4",
+    "destination": "scenes/E4/preference_routes/route_01.mp4",
+    "source_sha256": "b3b5620f40bf3a5cd29c811d8be474a2a85ffc293ca97ea12fbbe2d2939e0c68",
+    "sha256": "b3b5620f40bf3a5cd29c811d8be474a2a85ffc293ca97ea12fbbe2d2939e0c68",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E4/route_02.npz",
+    "destination": "scenes/E4/preference_routes/route_02.npz",
+    "source_sha256": "575a828c16e2689eaa9e02d1785c8e4adcef9d8e58805b41e38f0de525e5d3d3",
+    "sha256": "575a828c16e2689eaa9e02d1785c8e4adcef9d8e58805b41e38f0de525e5d3d3",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E4/route_02.mp4",
+    "destination": "scenes/E4/preference_routes/route_02.mp4",
+    "source_sha256": "c928864e142e039d7d00dd76f7d5f54374fbc30e6202b18446b065de146e8df9",
+    "sha256": "c928864e142e039d7d00dd76f7d5f54374fbc30e6202b18446b065de146e8df9",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E4/route_03.npz",
+    "destination": "scenes/E4/preference_routes/route_03.npz",
+    "source_sha256": "9c7b27ddc6fdca0dfe68ee10644ce06ecbbceb57a57011f3d6817d3bf2bcdd16",
+    "sha256": "9c7b27ddc6fdca0dfe68ee10644ce06ecbbceb57a57011f3d6817d3bf2bcdd16",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E4/route_03.mp4",
+    "destination": "scenes/E4/preference_routes/route_03.mp4",
+    "source_sha256": "fa95876cd2292ccdd8102dfc7ead8f6c829df336c0514cb77b9cc367f82b0b19",
+    "sha256": "fa95876cd2292ccdd8102dfc7ead8f6c829df336c0514cb77b9cc367f82b0b19",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/clearance_rebuild_3env_20260921/video_production/E5/scene.usdc",
+    "destination": "scenes/E5/scene.usdc",
+    "source_sha256": "a22c1169a6d9ffcb83638cec29ed5b8c30e2763465dd3bcd95e35b2ecc79b777",
+    "sha256": "a22c1169a6d9ffcb83638cec29ed5b8c30e2763465dd3bcd95e35b2ecc79b777",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "DELIVERABLES/E5/E5_1_shortest_snapshots.jpg",
+    "destination": "scenes/E5/preview.jpg",
+    "source_sha256": "01b7bb6b7d7347ab0429e1b8c423c9b211b60130b4dfb5c2319268eaa6edc2c8",
+    "sha256": "01b7bb6b7d7347ab0429e1b8c423c9b211b60130b4dfb5c2319268eaa6edc2c8",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E5/environment.json",
+    "destination": "scenes/E5/scene.json",
+    "source_sha256": "8ff3edfcc6bf53003fa747662effae85556931af85992316c0feaf3cf27f47ec",
+    "sha256": "ab6f76854b9d6a77ff74b0515e56c69759ed1793e9815b1132fc7f86a5a17ae8",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E5/query.json",
+    "destination": "scenes/E5/preference_routes/query.json",
+    "source_sha256": "544e648fb7410d6fe889865d3c5d197914f27f6c93736e7d1a05cc395d2dc41e",
+    "sha256": "2a2ab47a969669e54aff25263fbd7faee6f18bd9ad310e3056506b2c93381fd3",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E5/camera_calibration.json",
+    "destination": "scenes/E5/preference_routes/camera_calibration.json",
+    "source_sha256": "0330174d3028bb6d35d2cc2fa3d68f8bdbc6e21de690c31cf05695df7ccda0de",
+    "sha256": "0330174d3028bb6d35d2cc2fa3d68f8bdbc6e21de690c31cf05695df7ccda0de",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E5/dense_audit.json",
+    "destination": "scenes/E5/preference_routes/dense_audit.json",
+    "source_sha256": "d11f61ca5699a7833149a8371f2693c8fb28e5ea1181af116909df6d4fdcca6e",
+    "sha256": "d11f61ca5699a7833149a8371f2693c8fb28e5ea1181af116909df6d4fdcca6e",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E5/manifest.json",
+    "destination": "scenes/E5/preference_routes/manifest.json",
+    "source_sha256": "489d29165c5c22d367853f7bc91a757b813532d7cf561254f406251fda7cc322",
+    "sha256": "489d29165c5c22d367853f7bc91a757b813532d7cf561254f406251fda7cc322",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E5/start_preview.jpg",
+    "destination": "scenes/E5/preference_routes/preview.jpg",
+    "source_sha256": "6cc1806fc803087ad8677bd5a8f1da331a87ff6e6b0b66711c6022843bf3ad21",
+    "sha256": "6cc1806fc803087ad8677bd5a8f1da331a87ff6e6b0b66711c6022843bf3ad21",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E5/route_01.npz",
+    "destination": "scenes/E5/preference_routes/route_01.npz",
+    "source_sha256": "209e0f65f1b042c548ee947e8c0282c6806c441055fdc51af7a3e2eec661cc5e",
+    "sha256": "209e0f65f1b042c548ee947e8c0282c6806c441055fdc51af7a3e2eec661cc5e",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E5/route_01.mp4",
+    "destination": "scenes/E5/preference_routes/route_01.mp4",
+    "source_sha256": "7b35d8765124e114804f46ca2b89b7ec5a32091aafb263302cf5e2ad1ccf884a",
+    "sha256": "7b35d8765124e114804f46ca2b89b7ec5a32091aafb263302cf5e2ad1ccf884a",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E5/route_02.npz",
+    "destination": "scenes/E5/preference_routes/route_02.npz",
+    "source_sha256": "d6d2416c0b9ccfc7c2b43583db69aaab93302ce54fb0944d9f69e621297e09f5",
+    "sha256": "d6d2416c0b9ccfc7c2b43583db69aaab93302ce54fb0944d9f69e621297e09f5",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E5/route_02.mp4",
+    "destination": "scenes/E5/preference_routes/route_02.mp4",
+    "source_sha256": "d1be779f5feea6b96cb6035946f1be70d28fe9c6e14a286e0901c3b5cfced16e",
+    "sha256": "d1be779f5feea6b96cb6035946f1be70d28fe9c6e14a286e0901c3b5cfced16e",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E5/route_03.npz",
+    "destination": "scenes/E5/preference_routes/route_03.npz",
+    "source_sha256": "d879519eb7f2c41fcd6f95374cc1d9e67a069aaf7a3bf26618aaa4a9826d5d8b",
+    "sha256": "d879519eb7f2c41fcd6f95374cc1d9e67a069aaf7a3bf26618aaa4a9826d5d8b",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E5/route_03.mp4",
+    "destination": "scenes/E5/preference_routes/route_03.mp4",
+    "source_sha256": "2b4e73019ac369d0da0155cc3842fed26b070059d45d0ad9bd6b2bd18e7031bc",
+    "sha256": "2b4e73019ac369d0da0155cc3842fed26b070059d45d0ad9bd6b2bd18e7031bc",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/clearance_rebuild_3env_20260921/video_production/E7/scene.usdc",
+    "destination": "scenes/E7/scene.usdc",
+    "source_sha256": "912d9ec56c846ca964591499aa81cf468ac36554a6f83965fc172de060dcf5a0",
+    "sha256": "912d9ec56c846ca964591499aa81cf468ac36554a6f83965fc172de060dcf5a0",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "DELIVERABLES/E7/E7_1_shortest_snapshots.jpg",
+    "destination": "scenes/E7/preview.jpg",
+    "source_sha256": "2170f08892ff93aa6d05a1784dddf08aa559cc4a0c9af3589b8c8c03864074bf",
+    "sha256": "2170f08892ff93aa6d05a1784dddf08aa559cc4a0c9af3589b8c8c03864074bf",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E7/environment.json",
+    "destination": "scenes/E7/scene.json",
+    "source_sha256": "d071494a3a6beadd93632e2ee07afb3cb878a845801159d675efdf398a418da9",
+    "sha256": "5b0cffa481e19d700a2a3593624af844604cc05bcebbba43056d0d8642d40816",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E7/query.json",
+    "destination": "scenes/E7/preference_routes/query.json",
+    "source_sha256": "056938e67af2cdd3e9c58a632fef291e6f35cf496b6ac4bb8c1ba24f89efb2f1",
+    "sha256": "1f26519b6e74e04cf64d23a73203a64b5d8720c49f391edc7c5792b6a7aa46d5",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E7/camera_calibration.json",
+    "destination": "scenes/E7/preference_routes/camera_calibration.json",
+    "source_sha256": "0330174d3028bb6d35d2cc2fa3d68f8bdbc6e21de690c31cf05695df7ccda0de",
+    "sha256": "0330174d3028bb6d35d2cc2fa3d68f8bdbc6e21de690c31cf05695df7ccda0de",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E7/dense_audit.json",
+    "destination": "scenes/E7/preference_routes/dense_audit.json",
+    "source_sha256": "9ceed30d7c9651c39867d0b16b63567920d3c8d99cd638d7ab4b2ab5e887660a",
+    "sha256": "9ceed30d7c9651c39867d0b16b63567920d3c8d99cd638d7ab4b2ab5e887660a",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E7/manifest.json",
+    "destination": "scenes/E7/preference_routes/manifest.json",
+    "source_sha256": "70bf30e14a7ce716068b3a294bfa9889c9e6bc52997c2520f8bcafe745c59d5f",
+    "sha256": "70bf30e14a7ce716068b3a294bfa9889c9e6bc52997c2520f8bcafe745c59d5f",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E7/start_preview.jpg",
+    "destination": "scenes/E7/preference_routes/preview.jpg",
+    "source_sha256": "1639762663969448e0e435b3f4cac3286fea05b64b3e40534bdb515aa4aa7fff",
+    "sha256": "1639762663969448e0e435b3f4cac3286fea05b64b3e40534bdb515aa4aa7fff",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E7/route_01.npz",
+    "destination": "scenes/E7/preference_routes/route_01.npz",
+    "source_sha256": "827a9683dde3933b2dd3af7ccd30f66f561224e4ddb5af15c499886c96f9090c",
+    "sha256": "827a9683dde3933b2dd3af7ccd30f66f561224e4ddb5af15c499886c96f9090c",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E7/route_01.mp4",
+    "destination": "scenes/E7/preference_routes/route_01.mp4",
+    "source_sha256": "33c5032f89a99ef2720969a761f006b3c11b679630145461404c48e4ba706d9d",
+    "sha256": "33c5032f89a99ef2720969a761f006b3c11b679630145461404c48e4ba706d9d",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E7/route_02.npz",
+    "destination": "scenes/E7/preference_routes/route_02.npz",
+    "source_sha256": "da976060b0a0dd8303c1f56cf525f05a0777c7b0d18f9ed7b839d254cd6d1e02",
+    "sha256": "da976060b0a0dd8303c1f56cf525f05a0777c7b0d18f9ed7b839d254cd6d1e02",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E7/route_02.mp4",
+    "destination": "scenes/E7/preference_routes/route_02.mp4",
+    "source_sha256": "788dddaf077deb218b73152a8f8e5a1000eefeb4224ad0a2bbd49f77ecfed0f5",
+    "sha256": "788dddaf077deb218b73152a8f8e5a1000eefeb4224ad0a2bbd49f77ecfed0f5",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E7/route_03.npz",
+    "destination": "scenes/E7/preference_routes/route_03.npz",
+    "source_sha256": "b8b51965be4cdafd708eb82dd657eed224936c1d6c58f86cc78af3ee1280237a",
+    "sha256": "b8b51965be4cdafd708eb82dd657eed224936c1d6c58f86cc78af3ee1280237a",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/E7/route_03.mp4",
+    "destination": "scenes/E7/preference_routes/route_03.mp4",
+    "source_sha256": "3a09104aa649c3bf24f459f0a5c3655cc960191c8440edfdbd62b1cdd2d9e049",
+    "sha256": "3a09104aa649c3bf24f459f0a5c3655cc960191c8440edfdbd62b1cdd2d9e049",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/extension_showcase_20261111/multiwall/six_walls/scene.usdc",
+    "destination": "scenes/six_walls/scene.usdc",
+    "source_sha256": "16b86f6be2c9054d204021764b3ec38e2aa0280ca862093efe61e1836b1bcab1",
+    "sha256": "16b86f6be2c9054d204021764b3ec38e2aa0280ca862093efe61e1836b1bcab1",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/extension_showcase_20261111/multiwall/six_walls/preview.jpg",
+    "destination": "scenes/six_walls/preview.jpg",
+    "source_sha256": "acf998805d7d6644a3bc811bdb79d3493f932cbb2c639ca2636d315be3c45af0",
+    "sha256": "acf998805d7d6644a3bc811bdb79d3493f932cbb2c639ca2636d315be3c45af0",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/six_walls/environment.json",
+    "destination": "scenes/six_walls/scene.json",
+    "source_sha256": "6cbe2dd7264901010a2c3bc5fb2d4ef70fbb9d6e113abba20da2e5ff784d1af2",
+    "sha256": "c38e9df66ca2334a43ab4bb82558ea6462bd15a39af304115ff0fe02dc00e25c",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/six_walls/query.json",
+    "destination": "scenes/six_walls/preference_routes/query.json",
+    "source_sha256": "0e4992f43dc11c2c2138256ca7fb668746d972e79316b495c595f6df861bd8b8",
+    "sha256": "adb745ab115e4468bb15ced34111a7635dd3f20432eefddb89af4b8d03d0e62c",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/six_walls/camera_calibration.json",
+    "destination": "scenes/six_walls/preference_routes/camera_calibration.json",
+    "source_sha256": "0330174d3028bb6d35d2cc2fa3d68f8bdbc6e21de690c31cf05695df7ccda0de",
+    "sha256": "0330174d3028bb6d35d2cc2fa3d68f8bdbc6e21de690c31cf05695df7ccda0de",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/six_walls/dense_audit.json",
+    "destination": "scenes/six_walls/preference_routes/dense_audit.json",
+    "source_sha256": "8ea41a5ae42371f4342fd1079e943a2ac881697eb67ec96ca0640d99209754f4",
+    "sha256": "8ea41a5ae42371f4342fd1079e943a2ac881697eb67ec96ca0640d99209754f4",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/six_walls/manifest.json",
+    "destination": "scenes/six_walls/preference_routes/manifest.json",
+    "source_sha256": "89e3eb050c1cb840f3c6f1ae8df512566e95175285683ff76853117825c9d554",
+    "sha256": "89e3eb050c1cb840f3c6f1ae8df512566e95175285683ff76853117825c9d554",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/six_walls/start_preview.jpg",
+    "destination": "scenes/six_walls/preference_routes/preview.jpg",
+    "source_sha256": "fbf11a8ad4a58134bf979172068026a1274d20f188da7ca6eee8de94a66d4af8",
+    "sha256": "fbf11a8ad4a58134bf979172068026a1274d20f188da7ca6eee8de94a66d4af8",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/six_walls/route_01.npz",
+    "destination": "scenes/six_walls/preference_routes/route_01.npz",
+    "source_sha256": "32d74000b2940bdd0ff4ac0d2ee21015fe171ea258983c0ce1663f7a5cf2d11f",
+    "sha256": "32d74000b2940bdd0ff4ac0d2ee21015fe171ea258983c0ce1663f7a5cf2d11f",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/six_walls/route_01.mp4",
+    "destination": "scenes/six_walls/preference_routes/route_01.mp4",
+    "source_sha256": "03dceb17e6639eec9164721e77c90be0585d61fbb0085e6df786305552ff496a",
+    "sha256": "03dceb17e6639eec9164721e77c90be0585d61fbb0085e6df786305552ff496a",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/six_walls/route_02.npz",
+    "destination": "scenes/six_walls/preference_routes/route_02.npz",
+    "source_sha256": "d28c4315f3eb226fe61bcab357003b956c83e6437823af3af99d75bd04f6bea0",
+    "sha256": "d28c4315f3eb226fe61bcab357003b956c83e6437823af3af99d75bd04f6bea0",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/six_walls/route_02.mp4",
+    "destination": "scenes/six_walls/preference_routes/route_02.mp4",
+    "source_sha256": "e9827518b298204a3cc700c2521da56cdc1d2157037ca60c7340f05486ee2824",
+    "sha256": "e9827518b298204a3cc700c2521da56cdc1d2157037ca60c7340f05486ee2824",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/six_walls/route_03.npz",
+    "destination": "scenes/six_walls/preference_routes/route_03.npz",
+    "source_sha256": "f748dce728301401d532b12ca95c8e90ba9108f334bd1d083323fd3639e5d138",
+    "sha256": "f748dce728301401d532b12ca95c8e90ba9108f334bd1d083323fd3639e5d138",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "results/ur5e_all_walls_smooth_20261121/six_walls/route_03.mp4",
+    "destination": "scenes/six_walls/preference_routes/route_03.mp4",
+    "source_sha256": "1656d6fe50c192794da80702f5b1b4d9a51c5be7eb479cc139ca5589b984f21b",
+    "sha256": "1656d6fe50c192794da80702f5b1b4d9a51c5be7eb479cc139ca5589b984f21b",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "DOWNLOADS/UR5E_SMOOTHING_DELIVERABLES_20261018/E4/E4_1/BEFORE_AFTER.mp4",
+    "destination": "smoothing/E4_shortest/BEFORE_AFTER.mp4",
+    "source_sha256": "b4a2597ccc0deb81fb30efda41c21b4df1ae337a1db73600f3f499864c780165",
+    "sha256": "b4a2597ccc0deb81fb30efda41c21b4df1ae337a1db73600f3f499864c780165",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "DOWNLOADS/UR5E_SMOOTHING_DELIVERABLES_20261018/E4/E4_1/EE_BEFORE_AFTER.png",
+    "destination": "smoothing/E4_shortest/EE_BEFORE_AFTER.png",
+    "source_sha256": "6cc2fe822650ecbd0b8a51dae469c2da7a2d5ca1d99412adec06a2d4d6cff4b8",
+    "sha256": "6cc2fe822650ecbd0b8a51dae469c2da7a2d5ca1d99412adec06a2d4d6cff4b8",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "DOWNLOADS/UR5E_SMOOTHING_DELIVERABLES_20261018/E4/E4_1/SAFETY_VISIBILITY.png",
+    "destination": "smoothing/E4_shortest/SAFETY_VISIBILITY.png",
+    "source_sha256": "90f74741660d953ecf69bfa89fc93d3ce37e3e181e5a3b71d73c6fb867b85834",
+    "sha256": "90f74741660d953ecf69bfa89fc93d3ce37e3e181e5a3b71d73c6fb867b85834",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "DOWNLOADS/UR5E_SMOOTHING_DELIVERABLES_20261018/E4/E4_1/SNAPSHOTS.jpg",
+    "destination": "smoothing/E4_shortest/SNAPSHOTS.jpg",
+    "source_sha256": "664ffcee5e66c1ee4e09ca1cabf78c450b8065408c87b25dfd4c10ccd6f8c618",
+    "sha256": "664ffcee5e66c1ee4e09ca1cabf78c450b8065408c87b25dfd4c10ccd6f8c618",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "DOWNLOADS/UR5E_SMOOTHING_DELIVERABLES_20261018/E4/E4_1/selection.json",
+    "destination": "smoothing/E4_shortest/selection.json",
+    "source_sha256": "932e266e078f1540db10a8214e4b41f2387502293027ed4c8e5909a82be52fe3",
+    "sha256": "932e266e078f1540db10a8214e4b41f2387502293027ed4c8e5909a82be52fe3",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "DOWNLOADS/UR5E_SMOOTHING_DELIVERABLES_20261018/E4/E4_1/data/original_replay.npz",
+    "destination": "smoothing/E4_shortest/data/original_replay.npz",
+    "source_sha256": "3c7d9ff645815a7c6d0a35ddf7a289bd915763759c093d28ef7835a456b689a0",
+    "sha256": "3c7d9ff645815a7c6d0a35ddf7a289bd915763759c093d28ef7835a456b689a0",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "DOWNLOADS/UR5E_SMOOTHING_DELIVERABLES_20261018/E4/E4_1/data/smoothed_replay.npz",
+    "destination": "smoothing/E4_shortest/data/smoothed_replay.npz",
+    "source_sha256": "89cf78e2f176891f746e6462a544e7bef6c51bd8f2d80b2f1e480010dae28b28",
+    "sha256": "89cf78e2f176891f746e6462a544e7bef6c51bd8f2d80b2f1e480010dae28b28",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "DOWNLOADS/UR5E_SMOOTHING_DELIVERABLES_20261018/E4/E4_1/data/E4_1_0000.npz",
+    "destination": "smoothing/E4_shortest/data/E4_1_0000.npz",
+    "source_sha256": "f2cfd0a77febb998973394d26ce9dff4c1a89ec00afb5439bf23327685103b8b",
+    "sha256": "f2cfd0a77febb998973394d26ce9dff4c1a89ec00afb5439bf23327685103b8b",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "DOWNLOADS/UR5E_SMOOTHING_DELIVERABLES_20261018/E4/E4_1/data/E4_1_0020.npz",
+    "destination": "smoothing/E4_shortest/data/E4_1_0020.npz",
+    "source_sha256": "f3960844b0285a5abae57cc82108790c51020e13b91c55e6b7f3ffe820c96c35",
+    "sha256": "f3960844b0285a5abae57cc82108790c51020e13b91c55e6b7f3ffe820c96c35",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "DOWNLOADS/UR5E_SMOOTHING_DELIVERABLES_20261018/E4/E4_1/data/E4_1_0000_audit.json",
+    "destination": "smoothing/E4_shortest/data/E4_1_0000_audit.json",
+    "source_sha256": "d8ce0898cd972f216bf4064f0809091ebf4f92ae541f3cf673a590d4b3a95667",
+    "sha256": "d8ce0898cd972f216bf4064f0809091ebf4f92ae541f3cf673a590d4b3a95667",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "DOWNLOADS/UR5E_SMOOTHING_DELIVERABLES_20261018/E4/E4_1/data/E4_1_0020_audit.json",
+    "destination": "smoothing/E4_shortest/data/E4_1_0020_audit.json",
+    "source_sha256": "8c8b432ac5ee9fca1bdc946a54e56315b21c70f2a7d86435bc1792f04a95b2fc",
+    "sha256": "8c8b432ac5ee9fca1bdc946a54e56315b21c70f2a7d86435bc1792f04a95b2fc",
+    "transformation": "JSON projection / archival paths made non-absolute"
+  },
+  {
+    "source": "DOWNLOADS/UR5E_PARETO_SMOOTHING_20261018/README.txt",
+    "destination": "smoothing/HISTORICAL_STUDY.txt",
+    "source_sha256": "99b1609e696d815985e391dc9e5f39d3ee770c9a4615d7a35e96133b82372c8c",
+    "sha256": "99b1609e696d815985e391dc9e5f39d3ee770c9a4615d7a35e96133b82372c8c",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "user_distribution/src/prmkit/resources/assets/ur5e/UR_DESCRIPTION_LICENSE.txt",
+    "destination": "licenses/UR_DESCRIPTION_LICENSE.txt",
+    "source_sha256": "bfb6287ea2fb65367f877c57e05d49a65166dc10285ac53096ddc2fb6752bae1",
+    "sha256": "bfb6287ea2fb65367f877c57e05d49a65166dc10285ac53096ddc2fb6752bae1",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "user_distribution/src/prmkit/resources/assets/ur5e/CUROBO_ASSET_LICENSE.txt",
+    "destination": "licenses/CUROBO_ASSET_LICENSE.txt",
+    "source_sha256": "1875daf7da4ff7554e49558b734a42af5d7077703f8bf6ec0239765b9225e4c1",
+    "sha256": "1875daf7da4ff7554e49558b734a42af5d7077703f8bf6ec0239765b9225e4c1",
+    "transformation": "byte-for-byte copy"
+  },
+  {
+    "source": "experiments/demo_extensions/dense/build_specs.py",
+    "destination": "generate_household_specs.py",
+    "source_sha256": "6aa2bfdb123912f97bafbce8ce4b97f30bcfa7195891d9be137de9c2c37bb340",
+    "sha256": "5927c5cccfe8edd3d1bc90dfd597f6fd07044d19964949bd7bc49c870b9fe97f",
+    "transformation": "Portable CLI output and geometry-only scene JSON; all geometry authoring unchanged"
+  },
+  {
+    "source": "experiments/demo_extensions/dense/render_scenes.py",
+    "destination": "build_scenes.py",
+    "source_sha256": "3e6ba89209542c487d1b60c2d20ddea80f22e0b33f991bbed5b4f1df1a55d570",
+    "sha256": "b091b049edcd707232e07c0756d0f66469e091482285a4532f194cda717aef1c",
+    "transformation": "USD shape authoring adapted into a standalone portable builder; embedded archived robot/cameras/lights retained"
+  }
+]

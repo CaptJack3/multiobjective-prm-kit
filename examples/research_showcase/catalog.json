@@ -1,0 +1,128 @@
+[
+  {
+    "id": "kitchen",
+    "title": "Kitchen / cluttered preparation station",
+    "static_scene": "scenes/kitchen/scene.usdc",
+    "preview": "scenes/kitchen/preview.jpg",
+    "motion_scene": "scenes/kitchen/motion_scene.usdc",
+    "geometry_spec": "scenes/kitchen/scene_spec.json",
+    "static_rig": "Archived UR5e with camera/bracket; no Robotiq gripper",
+    "static_date": "2026-11-11",
+    "routes_directory": "scenes/kitchen/preference_routes",
+    "routes_rig": "2026-11-21 UR5e + fixed-open Robotiq 2F-85 + PickNik + D435",
+    "routes_scope": "Three objective extrema among collision-certified C2 curves from a 500K lazy PRM; not a complete Pareto frontier",
+    "robot_base_world_m": [
+      0,
+      -0.08,
+      0.86
+    ]
+  },
+  {
+    "id": "office",
+    "title": "Office / workbench",
+    "static_scene": "scenes/office/scene.usdc",
+    "preview": "scenes/office/preview.jpg",
+    "motion_scene": "scenes/office/motion_scene.usdc",
+    "geometry_spec": "scenes/office/scene_spec.json",
+    "static_rig": "Archived UR5e with camera/bracket; no Robotiq gripper",
+    "static_date": "2026-11-11",
+    "routes_directory": "scenes/office/preference_routes",
+    "routes_rig": "2026-11-21 UR5e + fixed-open Robotiq 2F-85 + PickNik + D435",
+    "routes_scope": "Three objective extrema among collision-certified C2 curves from a 500K lazy PRM; not a complete Pareto frontier",
+    "robot_base_world_m": [
+      0,
+      -0.08,
+      0.86
+    ]
+  },
+  {
+    "id": "shelves",
+    "title": "Multilevel shelves",
+    "static_scene": "scenes/shelves/scene.usdc",
+    "preview": "scenes/shelves/preview.jpg",
+    "motion_scene": "scenes/shelves/motion_scene.usdc",
+    "geometry_spec": "scenes/shelves/scene_spec.json",
+    "static_rig": "Archived UR5e with camera/bracket; no Robotiq gripper",
+    "static_date": "2026-11-11",
+    "routes_directory": "scenes/shelves/preference_routes",
+    "routes_rig": "2026-11-21 UR5e + fixed-open Robotiq 2F-85 + PickNik + D435",
+    "routes_scope": "Three objective extrema among collision-certified C2 curves from a 500K lazy PRM; not a complete Pareto frontier",
+    "robot_base_world_m": [
+      0,
+      -0.08,
+      0.86
+    ]
+  },
+  {
+    "id": "E4",
+    "title": "E4 wall environment",
+    "static_scene": "scenes/E4/scene.usdc",
+    "preview": "scenes/E4/preview.jpg",
+    "motion_scene": null,
+    "geometry_spec": "scenes/E4/scene.json",
+    "static_rig": "Archived UR5e with camera/bracket; no Robotiq gripper",
+    "static_date": "2026-09-22",
+    "routes_directory": "scenes/E4/preference_routes",
+    "routes_rig": "2026-11-21 UR5e + fixed-open Robotiq 2F-85 + PickNik + D435",
+    "routes_scope": "Objective extremes among certified C2 cubic curves obtained by old-path reuse and lazy corridor repair; not an exact Pareto frontier",
+    "robot_base_world_m": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "E5",
+    "title": "E5 wall environment",
+    "static_scene": "scenes/E5/scene.usdc",
+    "preview": "scenes/E5/preview.jpg",
+    "motion_scene": null,
+    "geometry_spec": "scenes/E5/scene.json",
+    "static_rig": "Archived UR5e with camera/bracket; no Robotiq gripper",
+    "static_date": "2026-09-22",
+    "routes_directory": "scenes/E5/preference_routes",
+    "routes_rig": "2026-11-21 UR5e + fixed-open Robotiq 2F-85 + PickNik + D435",
+    "routes_scope": "Objective extremes among certified C2 cubic curves obtained by old-path reuse and lazy corridor repair; not an exact Pareto frontier",
+    "robot_base_world_m": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "E7",
+    "title": "E7 wall environment",
+    "static_scene": "scenes/E7/scene.usdc",
+    "preview": "scenes/E7/preview.jpg",
+    "motion_scene": null,
+    "geometry_spec": "scenes/E7/scene.json",
+    "static_rig": "Archived UR5e with camera/bracket; no Robotiq gripper",
+    "static_date": "2026-09-22",
+    "routes_directory": "scenes/E7/preference_routes",
+    "routes_rig": "2026-11-21 UR5e + fixed-open Robotiq 2F-85 + PickNik + D435",
+    "routes_scope": "Objective extremes among certified C2 cubic curves obtained by old-path reuse and lazy corridor repair; not an exact Pareto frontier",
+    "robot_base_world_m": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "six_walls",
+    "title": "Six-wall environment",
+    "static_scene": "scenes/six_walls/scene.usdc",
+    "preview": "scenes/six_walls/preview.jpg",
+    "motion_scene": null,
+    "geometry_spec": "scenes/six_walls/scene.json",
+    "static_rig": "Archived UR5e with camera/bracket; no Robotiq gripper",
+    "static_date": "2026-11-11",
+    "routes_directory": "scenes/six_walls/preference_routes",
+    "routes_rig": "2026-11-21 UR5e + fixed-open Robotiq 2F-85 + PickNik + D435",
+    "routes_scope": "Objective extremes among certified C2 cubic curves obtained by old-path reuse and lazy corridor repair; not an exact Pareto frontier",
+    "robot_base_world_m": [
+      0,
+      0,
+      0
+    ]
+  }
+]

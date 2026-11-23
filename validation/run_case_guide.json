@@ -1,0 +1,66 @@
+{
+  "examples": {
+    "quick": [
+      4,
+      4,
+      4,
+      8
+    ],
+    "one": [
+      12,
+      12,
+      12,
+      24
+    ],
+    "three": [
+      1728,
+      20,
+      160,
+      480
+    ],
+    "random": [
+      null,
+      20,
+      40,
+      80
+    ],
+    "custom": [
+      48,
+      48,
+      48,
+      96
+    ],
+    "fixed": [
+      1,
+      1,
+      4,
+      8
+    ],
+    "dense": [
+      1,
+      1,
+      4,
+      8
+    ],
+    "list": [
+      2,
+      2,
+      2,
+      4
+    ]
+  },
+  "responsive_widths": [
+    1280,
+    390,
+    320
+  ],
+  "calculator": true,
+  "copy_and_fallback": true,
+  "javascript_errors": [],
+  "external_requests": [],
+  "html_bytes": 47116,
+  "date": "2026-11-23",
+  "guide": "docs/RUN_CASE_GUIDE_HE.html",
+  "examples_validation": "run_case dry_run=True; saved-scene examples use temporary fixtures, without running new planning experiments",
+  "browser": "Chromium headless 1255"
+}

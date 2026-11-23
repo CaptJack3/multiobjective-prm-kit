@@ -1,0 +1,42 @@
+schema_version: 1
+seed: 7
+robot:
+  backend: urdf
+  urdf: assets/two_link/robot.urdf
+  tool_frame: tool
+  weights:
+  - 1
+  - 0.7
+  ignore_self_pairs:
+  - - arm1
+    - arm2
+environment:
+  environment_id: two_link_table
+  objects:
+  - name: table
+    position_m:
+    - 0
+    - 0
+    - -0.05
+    dimensions_m:
+    - 2
+    - 2
+    - 0.1
+query:
+  start:
+  - 0.2
+  - 0.4
+  goals:
+  - - 1.4
+    - -0.8
+prm:
+  n: 64
+  k: 8
+  query_k: 12
+metrics:
+- name: ee_length
+- name: joint_length
+- name: clearance
+  threshold: 0.2
+search:
+  epsilon: 0.05

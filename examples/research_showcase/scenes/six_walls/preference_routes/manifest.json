@@ -1,0 +1,431 @@
+{
+  "case": "six_walls",
+  "selected": [
+    {
+      "id": "route_01",
+      "method": "bspline",
+      "parameter": null,
+      "path_source": "locally_refined_C2_curve",
+      "segments": 1,
+      "costs": [
+        0.40481518503611236,
+        0.1622039653182052,
+        0.32751676132713065
+      ],
+      "continuous_clearance_lower_bound_m": 0.005165948304665,
+      "sampled_min_all_pairs_m": 0.016136916976304042,
+      "sampled_min_world_m": 0.03578584250175773,
+      "mean_visibility_joint_arc": 0.7987789524724185,
+      "weighted_joint_arc": 1.6276466371254608,
+      "candidate_id": "refine_025",
+      "label": "Shortest smooth route",
+      "frames": 193,
+      "duration_s": 8.0,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.3818474874744311,
+      "max_joint_acceleration_rad_s2": 0.2257307271804727,
+      "min_interior_speed_fraction": 0.12728475060212632,
+      "actual_curve_evaluation": true,
+      "lazy_path_imported_vertices_before_shortcuts": 0,
+      "lazy_path_sources_before_shortcuts": [],
+      "smoothing_seed_old_waypoints": 0,
+      "smoothing_seed_old_sources": []
+    },
+    {
+      "id": "route_02",
+      "method": "bspline",
+      "parameter": null,
+      "path_source": "locally_refined_C2_curve",
+      "segments": 1,
+      "costs": [
+        0.5333097282534132,
+        0.017464910444582274,
+        0.8263568000822464
+      ],
+      "continuous_clearance_lower_bound_m": 0.00515839932982509,
+      "sampled_min_all_pairs_m": 0.016079165005217107,
+      "sampled_min_world_m": 0.03578584250175773,
+      "mean_visibility_joint_arc": 0.5659794874444719,
+      "weighted_joint_arc": 1.9039579378786229,
+      "candidate_id": "refine_007",
+      "label": "Safer smooth route",
+      "frames": 193,
+      "duration_s": 8.0,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.5369100511568377,
+      "max_joint_acceleration_rad_s2": 0.521496652158504,
+      "min_interior_speed_fraction": 0.127288437366604,
+      "actual_curve_evaluation": true,
+      "lazy_path_imported_vertices_before_shortcuts": 0,
+      "lazy_path_sources_before_shortcuts": [],
+      "smoothing_seed_old_waypoints": 0,
+      "smoothing_seed_old_sources": []
+    },
+    {
+      "id": "route_03",
+      "method": "bspline",
+      "parameter": null,
+      "path_source": "locally_refined_C2_curve",
+      "segments": 1,
+      "costs": [
+        0.44527185317347373,
+        0.3390345159167333,
+        0.23075945574144502
+      ],
+      "continuous_clearance_lower_bound_m": 0.005028464657268493,
+      "sampled_min_all_pairs_m": 0.015952791767039905,
+      "sampled_min_world_m": 0.03258882915637394,
+      "mean_visibility_joint_arc": 0.8630072648530608,
+      "weighted_joint_arc": 1.6844649133688079,
+      "candidate_id": "refine_028",
+      "label": "More visible smooth route",
+      "frames": 193,
+      "duration_s": 8.0,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.40260289813420513,
+      "max_joint_acceleration_rad_s2": 0.3088853648876011,
+      "min_interior_speed_fraction": 0.12728465995779262,
+      "actual_curve_evaluation": true,
+      "lazy_path_imported_vertices_before_shortcuts": 0,
+      "lazy_path_sources_before_shortcuts": [],
+      "smoothing_seed_old_waypoints": 0,
+      "smoothing_seed_old_sources": []
+    }
+  ],
+  "candidates": 51,
+  "eligible_c2_candidates": 37,
+  "candidate_length_cap_m": 1.214445555108337,
+  "front": [
+    {
+      "costs": [
+        0.4408249504831863,
+        0.10175092842140057,
+        0.6135485643250498
+      ]
+    },
+    {
+      "costs": [
+        0.4571320843111032,
+        0.07794998806211814,
+        0.6469820689058896
+      ]
+    },
+    {
+      "costs": [
+        0.4571321995953498,
+        0.07795169142623448,
+        0.6470250693895992
+      ]
+    },
+    {
+      "costs": [
+        0.438238807090728,
+        0.05471363130967962,
+        1.3911944345347202
+      ]
+    },
+    {
+      "costs": [
+        0.4939092976381869,
+        0.06673714104673281,
+        0.6820374665663165
+      ]
+    },
+    {
+      "costs": [
+        0.43612008872743413,
+        0.23545034225822808,
+        0.3356577541052861
+      ]
+    },
+    {
+      "costs": [
+        0.45713158383475416,
+        0.07794632578961035,
+        0.6465523849679239
+      ]
+    },
+    {
+      "costs": [
+        0.4481496236922997,
+        0.08672734510124232,
+        0.6326824425035699
+      ]
+    },
+    {
+      "costs": [
+        0.4340110908587026,
+        0.24806536854218433,
+        0.34180933021230875
+      ]
+    },
+    {
+      "costs": [
+        0.45128476018393243,
+        0.025000347760219553,
+        0.7264314356960893
+      ]
+    },
+    {
+      "costs": [
+        0.46208968321368094,
+        0.022758772781674274,
+        0.7174204717179731
+      ]
+    },
+    {
+      "costs": [
+        0.4317313780793483,
+        0.2863792477525633,
+        0.32208557674572447
+      ]
+    },
+    {
+      "costs": [
+        0.4283527472233516,
+        0.2657260861102313,
+        0.3411681903483959
+      ]
+    },
+    {
+      "costs": [
+        0.42179490220746996,
+        0.2289578473272963,
+        0.35247823913367854
+      ]
+    },
+    {
+      "costs": [
+        0.43330528133891244,
+        0.37333550790111447,
+        0.3102706651243773
+      ]
+    },
+    {
+      "costs": [
+        0.5333097282534132,
+        0.017464910444582274,
+        0.8263568000822464
+      ]
+    },
+    {
+      "costs": [
+        0.4171962838086134,
+        0.2048928088400722,
+        0.33028063692713494
+      ]
+    },
+    {
+      "costs": [
+        0.41408202327014243,
+        0.3467663952126745,
+        0.31198016354055197
+      ]
+    },
+    {
+      "costs": [
+        0.4122591503983781,
+        0.3457042574571238,
+        0.29099708237059685
+      ]
+    },
+    {
+      "costs": [
+        0.4140949013022202,
+        0.43190545547855363,
+        0.281072672003737
+      ]
+    },
+    {
+      "costs": [
+        0.4111699186412998,
+        0.3514652968757984,
+        0.2913804254748414
+      ]
+    },
+    {
+      "costs": [
+        0.422562287349412,
+        0.4251139089962914,
+        0.2460069422143884
+      ]
+    },
+    {
+      "costs": [
+        0.40622114571166307,
+        0.34139150868029605,
+        0.2688413289010091
+      ]
+    },
+    {
+      "costs": [
+        0.42094796401182233,
+        0.364854131433042,
+        0.24433570277834663
+      ]
+    },
+    {
+      "costs": [
+        0.4059975406716644,
+        0.4210369241545865,
+        0.27259325985685084
+      ]
+    },
+    {
+      "costs": [
+        0.4273766007130553,
+        0.35375055554635837,
+        0.24307107613612486
+      ]
+    },
+    {
+      "costs": [
+        0.4244944264785835,
+        0.2779816731522038,
+        0.23984539066370553
+      ]
+    },
+    {
+      "costs": [
+        0.42794456215144705,
+        0.30370772187537903,
+        0.2380283128520391
+      ]
+    },
+    {
+      "costs": [
+        0.40581940510157344,
+        0.2375772895391085,
+        0.28028121706181
+      ]
+    },
+    {
+      "costs": [
+        0.4057346587437254,
+        0.23474763842203067,
+        0.2824363847397373
+      ]
+    },
+    {
+      "costs": [
+        0.4308513800588411,
+        0.29700341744745207,
+        0.23726118346180552
+      ]
+    },
+    {
+      "costs": [
+        0.40528257285345554,
+        0.25162144363202626,
+        0.30277048903577575
+      ]
+    },
+    {
+      "costs": [
+        0.4050288108851101,
+        0.16412490708972158,
+        0.30864465565523663
+      ]
+    },
+    {
+      "costs": [
+        0.40481518503611236,
+        0.1622039653182052,
+        0.32751676132713065
+      ]
+    },
+    {
+      "costs": [
+        0.4318996058438428,
+        0.3244066649449324,
+        0.23293298254772468
+      ]
+    },
+    {
+      "costs": [
+        0.44013403525449524,
+        0.3151387672675572,
+        0.23222481565539205
+      ]
+    },
+    {
+      "costs": [
+        0.44527185317347373,
+        0.3390345159167333,
+        0.23075945574144502
+      ]
+    }
+  ],
+  "complete_front_size": null,
+  "scope": "Objective extremes among certified C2 cubic curves obtained by old-path reuse and lazy corridor repair; not an exact Pareto frontier",
+  "wall_count": 6,
+  "old_stopping_routes": [
+    {
+      "id": "route_01",
+      "label": "Shortest TCP path",
+      "front_index": 0,
+      "costs": [
+        0.4532734681312568,
+        0.07805806264801107,
+        0.6268617099907197
+      ],
+      "search_costs": [
+        0.4532734681312568,
+        0.07805806264801107,
+        0.6263710531891382
+      ],
+      "continuous_clearance_lower_bound_m": 0.005975662622095132,
+      "frames": 168,
+      "end_visibility": 0.828125
+    },
+    {
+      "id": "route_02",
+      "label": "Lower obstacle exposure",
+      "front_index": 4,
+      "costs": [
+        0.893484812924593,
+        0.05579065794971264,
+        1.2705383664406518
+      ],
+      "search_costs": [
+        0.893484812924593,
+        0.05579065794971264,
+        1.2727184243261602
+      ],
+      "continuous_clearance_lower_bound_m": 0.005244230657572572,
+      "frames": 360,
+      "end_visibility": 0.828125
+    },
+    {
+      "id": "route_03",
+      "label": "Better wrist visibility",
+      "front_index": 20,
+      "costs": [
+        1.8888651455314365,
+        0.06823478940534619,
+        0.3998211477241991
+      ],
+      "search_costs": [
+        1.8888651455314365,
+        0.06823478940534619,
+        0.4047587444036903
+      ],
+      "continuous_clearance_lower_bound_m": 0.005684622546111184,
+      "frames": 564,
+      "end_visibility": 0.828125
+    }
+  ],
+  "timing_policy": "Common duration within scene; shared start and fixed pregrasp; no waypoint stops.",
+  "refinement": {
+    "iterations": 1200,
+    "accepted": 29,
+    "seconds": 64.5851626158692,
+    "initial_extreme_costs": [
+      0.4360252691089004,
+      0.054870173200358995,
+      0.3362001477313177
+    ],
+    "max_individual_duration_s": 30,
+    "source": "Bounded stochastic local C2 curve search plus revalidated cross-scene shape proposals; same start/goal, no new full roadmap"
+  }
+}

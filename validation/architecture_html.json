@@ -1,0 +1,13 @@
+{
+  "html": "docs/ARCHITECTURE_HE.html",
+  "local_links_valid": 13,
+  "capability_rows": 16,
+  "filter_modes_tested": [
+    "all",
+    "yes",
+    "conditional",
+    "no"
+  ],
+  "copy_handler_tested": true,
+  "method": "HTMLParser + QuickJS DOM stub; not a browser rendering test"
+}

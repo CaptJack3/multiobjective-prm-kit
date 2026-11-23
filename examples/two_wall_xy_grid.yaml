@@ -1,0 +1,14 @@
+# Geometry only. Coordinates, widths and heights are in metres.
+# Each wall starts at a grid point and ends at another grid point.
+# Increase these lists to enlarge the space; inspect --plan before generation.
+grid:
+  x_m: [0.20, 0.40, 0.60, 0.80]
+  y_m: [-0.30, -0.10, 0.10, 0.30]
+widths_m: [0.20, 0.60]
+heights_m: [0.25, 0.90]
+thickness_m: 0.04
+orientations: [X, Y]
+base_z_m: 0.0
+# Reject intersection or touching between the two solid wall boxes.
+# No robot, table, target or path feasibility checks are performed.
+exclude_wall_overlap: true

@@ -1,0 +1,49 @@
+{
+  "case": "E4_1",
+  "environment": "E4",
+  "eta": 0.0,
+  "original_id": "E4_1_0000",
+  "chosen_id": "E4_1_0020",
+  "changed": true,
+  "method": "shortcut_plus_cubic",
+  "parameter": 0.1,
+  "parent": "partial_5",
+  "original_cost": [
+    0.40984047074733343,
+    0.28255534244763175,
+    1.0842974432794277
+  ],
+  "new_cost": [
+    0.4081260540793853,
+    0.2494393386365779,
+    0.7079738372024726
+  ],
+  "cost_change_pct": [
+    -0.41831317068856677,
+    -11.720183212317604,
+    -34.70667651292939
+  ],
+  "original_roughness_256": 34.10865251813426,
+  "new_roughness_256": 3.5145121637356618,
+  "roughness_reduction_pct": 89.69612721620376,
+  "roughness_512_reduction_pct": 91.6415442103019,
+  "original_world_mm": 20.26356146577525,
+  "new_world_mm": 19.356945156972174,
+  "original_minimum_mm": 15.95506809125039,
+  "new_minimum_mm": 15.957089260432523,
+  "certified_minimum_mm": 13.424459556863583,
+  "numerical_cost_error": [
+    5.828226706805495e-09,
+    5.357609585143752e-08,
+    2.4613279904495133e-05
+  ],
+  "original_numerical_cost_error": [
+    1.1541249567148526e-08,
+    3.50330472423388e-07,
+    3.595717903170925e-05
+  ],
+  "safe_representative_world_floor_applied": false,
+  "role": "Shortest / minimum O1",
+  "source_path": "apex_000001",
+  "epsilon": "0.05"
+}

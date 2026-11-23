@@ -1,0 +1,17 @@
+schema_version: 1
+experiment: experiment.yaml
+method: random
+seed: 42
+max_evaluations: 12
+parameters:
+  environment.objects.0.position_m.0: {min: 0.7, max: 1.1}
+  environment.objects.0.dimensions_m.1: {min: 0.4, max: 0.8}
+  environment.objects.1.position_m.1: {min: 0.7, max: 1.1}
+  environment.objects.1.dimensions_m.0: {min: 0.4, max: 0.8}
+  environment.objects.2.position_m.1: {min: -1.1, max: -0.7}
+  environment.objects.2.dimensions_m.0: {min: 0.4, max: 0.8}
+constraints:
+  - {field: environment.objects.0.dimensions_m.1, op: le, value: 0.75}
+rank:
+  by: best.ee_length
+  direction: min

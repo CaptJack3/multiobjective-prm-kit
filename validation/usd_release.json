@@ -1,0 +1,146 @@
+{
+  "version": "0.2.0",
+  "installed_module": "/tmp/prmkit-clean/lib/python3.10/site-packages/prmkit/__init__.py",
+  "workspace": "/tmp/prmkit-usd-release-gwhgp796",
+  "commands": [
+    {
+      "args": [
+        "init",
+        "/tmp/prmkit-usd-release-gwhgp796/author_project",
+        "--template",
+        "isaac"
+      ],
+      "returncode": 0
+    },
+    {
+      "args": [
+        "import-usd",
+        "/tmp/prmkit-usd-release-gwhgp796/author_project/scene.usda",
+        "--output",
+        "/tmp/prmkit-usd-release-gwhgp796/author_project/imported"
+      ],
+      "returncode": 0
+    },
+    {
+      "args": [
+        "check",
+        "/tmp/prmkit-usd-release-gwhgp796/researcher_project/experiment.yaml"
+      ],
+      "returncode": 0
+    },
+    {
+      "args": [
+        "run",
+        "/tmp/prmkit-usd-release-gwhgp796/researcher_project/experiment.yaml",
+        "--output",
+        "/tmp/prmkit-usd-release-gwhgp796/researcher_project/run",
+        "--quiet"
+      ],
+      "returncode": 0
+    },
+    {
+      "args": [
+        "validate-path",
+        "/tmp/prmkit-usd-release-gwhgp796/researcher_project/experiment.yaml",
+        "/tmp/prmkit-usd-release-gwhgp796/researcher_project/run/paths.npz"
+      ],
+      "returncode": 0
+    },
+    {
+      "args": [
+        "inspect",
+        "/tmp/prmkit-usd-release-gwhgp796/researcher_project/run"
+      ],
+      "returncode": 0
+    },
+    {
+      "args": [
+        "export-usd",
+        "/tmp/prmkit-usd-release-gwhgp796/researcher_project/experiment.yaml",
+        "/tmp/prmkit-usd-release-gwhgp796/researcher_project/run/paths.npz",
+        "--output",
+        "/tmp/prmkit-usd-release-gwhgp796/researcher_project/replay.usda"
+      ],
+      "returncode": 0
+    }
+  ],
+  "imported_objects": 3,
+  "relocated_before_planning": true,
+  "source_usd_removed_from_original_path": true,
+  "no_repository_input_dependencies": true,
+  "check": {
+    "status": "ready",
+    "dimension": 6,
+    "joint_names": [
+      "shoulder_pan_joint",
+      "shoulder_lift_joint",
+      "elbow_joint",
+      "wrist_1_joint",
+      "wrist_2_joint",
+      "wrist_3_joint"
+    ],
+    "query": {
+      "supplied_goals": 1,
+      "accepted_goals": 1
+    },
+    "metrics": [
+      "ee_length",
+      "clearance"
+    ],
+    "collision_pairs": 36,
+    "continuous_bound": true
+  },
+  "summary": {
+    "schema_version": 1,
+    "complete": true,
+    "termination": "complete",
+    "status": "complete",
+    "fingerprint": "9248b6009174d6f8e4f804058d9b8f629cb69abf2a53d4b54895fd8b940abf6c",
+    "n": 24,
+    "k": 6,
+    "vertices": 26,
+    "directed_edges": 94,
+    "paths": 1,
+    "metrics": [
+      "ee_length",
+      "clearance"
+    ],
+    "costs": [
+      [
+        0.213401114260497,
+        0.16032810226148878
+      ]
+    ],
+    "metric_units": [
+      "m",
+      "weighted_joint_units"
+    ],
+    "epsilon": 0.05,
+    "algorithm": "A*pex",
+    "engine": "python",
+    "continuous_clearance": true,
+    "hard_margin": 0.01,
+    "elapsed_s": 1.525733945891261,
+    "python": "3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]",
+    "platform": "Linux-5.15.0-185-generic-x86_64-with-glibc2.35"
+  },
+  "validation": {
+    "valid": true,
+    "costs": [
+      0.213401114260497,
+      0.16032810226148875
+    ],
+    "certified_lower_bound": 0.010276640468888935,
+    "waypoints": 2,
+    "scope": "geometry_and_costs_only; endpoints are not checked against the experiment query"
+  },
+  "usd_replay": {
+    "output": "/tmp/prmkit-usd-release-gwhgp796/researcher_project/replay.usda",
+    "frames": 10,
+    "fps": 24,
+    "scope": "kinematic_mesh_replay",
+    "camera": null,
+    "note": "Open the USDA in Isaac Sim and play the timeline; no controller dynamics or physical timing."
+  },
+  "dependency_check": "No broken requirements found."
+}

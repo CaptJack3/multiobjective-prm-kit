@@ -1,0 +1,34 @@
+# Run import-usd first. Change query.start/goals for your task (URDF joint order).
+# The example uses a bare UR5e; add mounted hardware explicitly when needed.
+schema_version: 1
+seed: 7
+robot:
+  backend: urdf
+  urdf: assets/ur5e/ur5e_reference.urdf
+  convex_file: assets/ur5e/robot_convex_envelopes.npz
+  pair_policy: assets/ur5e/self_pair_policy.json
+  tool_frame: tool0
+  weights: [1, 1, 0.85, 0.65, 0.45, 0.35]
+environment: imported/scene.json
+query:
+  start: [0.3490658503988659, -1.6580627893946132, 2.0943951023931953, -2.007128639793479, -1.5707963267948966, 0.0]
+  goals:
+    - [-0.04786182266559802, -1.3714064559664445, 1.7755323790789799, -1.5894737998266182, -1.3306083390982595, 0.3217523649289111]
+prm:
+  n: 24
+  k: 6
+  query_k: 12
+validation:
+  margin: 0.01
+  intervals: 8
+metrics:
+  - name: ee_length
+  - name: clearance
+    threshold: 0.1
+    power: 2
+    scope: world
+# Visibility is optional: add camera settings and a visibility metric explicitly.
+# camera.target is a point in the imported environment's planning frame (metres).
+search:
+  epsilon: 0.05
+  timeout_s: 120

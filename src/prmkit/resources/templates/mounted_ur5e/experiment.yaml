@@ -1,0 +1,74 @@
+schema_version: 1
+seed: 7
+robot: assets/mounted_ur5e/robot.yaml
+environment:
+  objects: []
+query:
+  start:
+  - 0.3490658503988659
+  - -1.6580627893946132
+  - 2.0943951023931953
+  - -2.007128639793479
+  - -1.5707963267948966
+  - 0.0
+  goals:
+  - - -0.04786182266559802
+    - -1.3714064559664445
+    - 1.7755323790789799
+    - -1.5894737998266182
+    - -1.3306083390982595
+    - 0.3217523649289111
+prm:
+  n: 24
+  k: 6
+  query_k: 12
+validation:
+  margin: 0.005
+  intervals: 8
+metrics:
+- name: ee_length
+  unit: m
+- name: clearance
+  threshold: 0.1
+  power: 2
+  scope: world
+  unit: weighted_joint_rad
+- name: visibility
+  unit: weighted_joint_rad
+search:
+  epsilon: 0.05
+  timeout_s: 120
+camera:
+  frame: wrist_3_link
+  offset_m:
+  - -0.0325
+  - -0.07832352198146629
+  - 0.028948537881749364
+  rotation:
+  - - 1.0
+    - 5.5511151231257815e-17
+    - -2.7755575615628914e-16
+  - - -3.230116990157105e-17
+    - 0.9945218953682733
+    - 0.1045284632676533
+  - - 2.763393725775994e-16
+    - -0.1045284632676533
+    - 0.9945218953682733
+  fov_deg:
+  - 69.4
+  - 42.56117708362836
+  rays: 64
+  target:
+  - 0.65
+  - 0
+  - 0.3
+  target_dimensions_m:
+  - 0.04
+  - 0.04
+  - 0.04
+  resolution_wh:
+  - 640
+  - 360
+  clipping_range_m:
+  - 0.005
+  - 5.0

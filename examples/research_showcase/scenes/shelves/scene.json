@@ -1,0 +1,571 @@
+{
+  "environment_id": "shelves",
+  "description": "Multilevel workcell / shelves and occlusion",
+  "objects": [
+    {
+      "name": "floor",
+      "position_m": [
+        0,
+        0.08,
+        -0.905
+      ],
+      "dimensions_m": [
+        5,
+        5,
+        0.08
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "back_wall_and_tiles",
+      "position_m": [
+        0.35,
+        1.008,
+        0.39
+      ],
+      "dimensions_m": [
+        3,
+        0.11,
+        2.5
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "worktop",
+      "position_m": [
+        0.33,
+        0.08,
+        -0.04500000000000004
+      ],
+      "dimensions_m": [
+        1.52,
+        1.2,
+        0.07
+      ],
+      "category": "table",
+      "collider": true
+    },
+    {
+      "name": "table_leg0",
+      "position_m": [
+        -0.31,
+        -0.39999999999999997,
+        -0.47
+      ],
+      "dimensions_m": [
+        0.045,
+        0.045,
+        0.78
+      ],
+      "category": "table",
+      "collider": true
+    },
+    {
+      "name": "table_leg1",
+      "position_m": [
+        -0.31,
+        0.5599999999999999,
+        -0.47
+      ],
+      "dimensions_m": [
+        0.045,
+        0.045,
+        0.78
+      ],
+      "category": "table",
+      "collider": true
+    },
+    {
+      "name": "table_leg2",
+      "position_m": [
+        0.97,
+        -0.39999999999999997,
+        -0.47
+      ],
+      "dimensions_m": [
+        0.045,
+        0.045,
+        0.78
+      ],
+      "category": "table",
+      "collider": true
+    },
+    {
+      "name": "table_leg3",
+      "position_m": [
+        0.97,
+        0.5599999999999999,
+        -0.47
+      ],
+      "dimensions_m": [
+        0.045,
+        0.045,
+        0.78
+      ],
+      "category": "table",
+      "collider": true
+    },
+    {
+      "name": "lower_crossbar",
+      "position_m": [
+        0.33,
+        0.5599999999999999,
+        -0.6799999999999999
+      ],
+      "dimensions_m": [
+        1.3,
+        0.035,
+        0.05
+      ],
+      "category": "table",
+      "collider": true
+    },
+    {
+      "name": "rear_shelf_support",
+      "position_m": [
+        0.63,
+        0.7,
+        -0.04500000000000004
+      ],
+      "dimensions_m": [
+        0.81,
+        0.12,
+        0.07
+      ],
+      "category": "table",
+      "collider": true
+    },
+    {
+      "name": "upright0_0",
+      "position_m": [
+        0.28,
+        0.37,
+        0.39
+      ],
+      "dimensions_m": [
+        0.035,
+        0.035,
+        0.8
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "upright0_1",
+      "position_m": [
+        0.28,
+        0.7,
+        0.39
+      ],
+      "dimensions_m": [
+        0.035,
+        0.035,
+        0.8
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "upright1_0",
+      "position_m": [
+        0.98,
+        0.37,
+        0.39
+      ],
+      "dimensions_m": [
+        0.035,
+        0.035,
+        0.8
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "upright1_1",
+      "position_m": [
+        0.98,
+        0.7,
+        0.39
+      ],
+      "dimensions_m": [
+        0.035,
+        0.035,
+        0.8
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "shelf0",
+      "position_m": [
+        0.63,
+        0.535,
+        0.010000000000000009
+      ],
+      "dimensions_m": [
+        0.76,
+        0.39,
+        0.025
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "shelf1",
+      "position_m": [
+        0.63,
+        0.535,
+        0.2899999999999999
+      ],
+      "dimensions_m": [
+        0.76,
+        0.39,
+        0.025
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "shelf2",
+      "position_m": [
+        0.63,
+        0.535,
+        0.59
+      ],
+      "dimensions_m": [
+        0.76,
+        0.39,
+        0.025
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "back_panel",
+      "position_m": [
+        0.63,
+        0.72,
+        0.29999999999999993
+      ],
+      "dimensions_m": [
+        0.76,
+        0.018,
+        0.62
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "bin0",
+      "position_m": [
+        0.38,
+        0.57,
+        0.11499999999999999
+      ],
+      "dimensions_m": [
+        0.16,
+        0.22,
+        0.18
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "bin1",
+      "position_m": [
+        0.83,
+        0.59,
+        0.125
+      ],
+      "dimensions_m": [
+        0.16,
+        0.22,
+        0.2
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "bin2",
+      "position_m": [
+        0.4,
+        0.59,
+        0.40500000000000014
+      ],
+      "dimensions_m": [
+        0.16,
+        0.22,
+        0.2
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "bin3",
+      "position_m": [
+        0.86,
+        0.58,
+        0.39
+      ],
+      "dimensions_m": [
+        0.16,
+        0.22,
+        0.17
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "jar0",
+      "position_m": [
+        0.4,
+        0.5599999999999999,
+        0.6698000000000001
+      ],
+      "dimensions_m": [
+        0.07904,
+        0.07904,
+        0.1296
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "jar1",
+      "position_m": [
+        0.53,
+        0.5599999999999999,
+        0.6698000000000001
+      ],
+      "dimensions_m": [
+        0.07904,
+        0.07904,
+        0.1296
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "jar2",
+      "position_m": [
+        0.66,
+        0.5599999999999999,
+        0.6698000000000001
+      ],
+      "dimensions_m": [
+        0.07904,
+        0.07904,
+        0.1296
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "manual",
+      "position_m": [
+        0.78,
+        -0.25,
+        0.012499999999999956
+      ],
+      "dimensions_m": [
+        0.226,
+        0.182,
+        0.041
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "plant",
+      "position_m": [
+        1.01,
+        0.03,
+        0.14
+      ],
+      "dimensions_m": [
+        0.18,
+        0.18,
+        0.3
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "workcup",
+      "position_m": [
+        0.178,
+        0.46,
+        0.03300000000000003
+      ],
+      "dimensions_m": [
+        0.12,
+        0.08,
+        0.086
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "toolcase",
+      "position_m": [
+        0.58,
+        -0.3,
+        0.040000000000000036
+      ],
+      "dimensions_m": [
+        0.22,
+        0.16,
+        0.1
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "shelf_divider",
+      "position_m": [
+        0.6,
+        0.57,
+        0.44000000000000006
+      ],
+      "dimensions_m": [
+        0.022,
+        0.28,
+        0.28
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "front_storage_stack",
+      "position_m": [
+        0.8,
+        -0.039999999999999994,
+        0.138
+      ],
+      "dimensions_m": [
+        0.2,
+        0.17,
+        0.296
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "workcell_canister0",
+      "position_m": [
+        -0.23,
+        0.42000000000000004,
+        0.10340000000000005
+      ],
+      "dimensions_m": [
+        0.08320000000000001,
+        0.08320000000000001,
+        0.2268
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "workcell_canister1",
+      "position_m": [
+        -0.11000000000000001,
+        0.42000000000000004,
+        0.13039999999999996
+      ],
+      "dimensions_m": [
+        0.08320000000000001,
+        0.08320000000000001,
+        0.28080000000000005
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "workcell_canister2",
+      "position_m": [
+        0.009999999999999981,
+        0.42000000000000004,
+        0.10340000000000005
+      ],
+      "dimensions_m": [
+        0.08320000000000001,
+        0.08320000000000001,
+        0.2268
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "front_organizer",
+      "position_m": [
+        0.23,
+        -0.29,
+        0.07999999999999996
+      ],
+      "dimensions_m": [
+        0.21,
+        0.16,
+        0.18
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "Target_A",
+      "category": "target",
+      "collider": false,
+      "position_m": [
+        0.55,
+        0.36000000000000004,
+        0.049000000000000044
+      ],
+      "dimensions_m": [
+        0.035,
+        0.035,
+        0.035
+      ]
+    },
+    {
+      "name": "Target_B",
+      "category": "target",
+      "collider": false,
+      "position_m": [
+        0.65,
+        0.37,
+        0.32999999999999996
+      ],
+      "dimensions_m": [
+        0.035,
+        0.035,
+        0.035
+      ]
+    },
+    {
+      "name": "Target_C",
+      "category": "target",
+      "collider": false,
+      "position_m": [
+        0.42,
+        0.0,
+        0.013000000000000012
+      ],
+      "dimensions_m": [
+        0.035,
+        0.035,
+        0.035
+      ]
+    }
+  ],
+  "target": {
+    "object": "Target_B",
+    "orientation_constraint": "Fixed shared new-gripper pregrasp orientation",
+    "position_tolerance_m": 0.001,
+    "tcp_target_m": [
+      0.65,
+      0.33619053906074403,
+      0.402504622962932
+    ]
+  }
+}

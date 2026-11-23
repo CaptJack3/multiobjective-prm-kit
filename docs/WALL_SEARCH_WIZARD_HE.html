@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>חיפוש במרחב הקירות — מדריך מעשי</title>
+<style>
+:root{--bg:#f4f5f2;--paper:#fff;--ink:#172f36;--muted:#52656b;--line:#d5dfde;--accent:#006a65;--soft:#e5f3ee;--warn:#8a4a09;--code:#172e36;--red:#a12828}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}header,main,footer{max-width:1140px;margin:auto;padding:24px}header{padding-top:36px;padding-bottom:16px}.eyebrow{color:var(--accent);font-size:14px;font-weight:700;letter-spacing:.03em}h1{font-size:clamp(27px,4vw,42px);line-height:1.25;margin:8px 0 14px}h2{font-size:26px;margin:0 0 12px;line-height:1.35}h3{font-size:19px;margin:16px 0 8px}p{margin:10px 0}a{color:var(--accent)}code,pre,.ltr{direction:ltr;unicode-bidi:isolate}code{display:inline-block;font:14px/1.65 ui-monospace,Consolas,monospace;overflow-wrap:anywhere}pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;text-align:left;font:14px/1.65 ui-monospace,Consolas,monospace}.muted{color:var(--muted)}.small{font-size:14px}.lead{max-width:780px}.filemap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:22px}.filemap button{display:grid;text-align:right;gap:4px;padding:14px;border-radius:10px;background:var(--paper)}.filemap code{font-weight:700}.filemap .space{border:2px solid var(--accent);background:var(--soft)}.filemap span{font-size:14px;color:var(--muted)}button,input,select,textarea{font:inherit}button{border:1px solid var(--line);border-radius:7px;background:var(--paper);color:var(--ink);padding:9px 14px;cursor:pointer}button:hover{border-color:var(--accent)}button:disabled{opacity:.45;cursor:default}button.primary{background:var(--accent);color:white;border-color:var(--accent)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #d09624;outline-offset:3px}nav{display:flex;gap:7px;flex-wrap:wrap;margin:0 0 18px}nav button{font-size:14px;padding:8px 12px}nav button[aria-current=step]{background:var(--ink);color:white;border-color:var(--ink)}.panel{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:28px;min-width:0}.panel[hidden]{display:none}.step-title{color:var(--accent);font-size:14px;font-weight:700}.destination{background:var(--soft);padding:12px 16px;border-radius:8px;margin:14px 0}.codebox{position:relative;background:var(--code);color:#eff8f5;border-radius:9px;padding:16px;margin:12px 0}.codebox .actions{display:flex;justify-content:flex-start;gap:8px;margin-bottom:10px}.codebox button{font-size:13px;padding:4px 11px;background:#29454d;color:#fff;border-color:#527079}.codebox .filename{margin-inline-end:auto;color:#b2ded2;font-size:13px}.notice{border-inline-start:3px solid var(--accent);background:var(--soft);padding:10px 14px;margin:14px 0}.warning{border-color:#c88330;background:#fff4e5;color:#68410f}.error{border:1px solid var(--red);padding:12px;color:var(--red);background:#fff1f1;border-radius:8px;margin-bottom:16px}.error[hidden]{display:none}.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;align-items:end}.fields.wide{grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}label{display:grid;gap:4px;font-size:14px}input,select,textarea{width:100%;min-width:0;padding:8px 9px;border:1px solid #acbdbd;border-radius:6px;background:#fff;color:var(--ink);font-size:16px}input[type=number],input[data-values],textarea{direction:ltr;text-align:left}input[type=range]{padding:4px 0}input[type=file]{max-width:100%}fieldset{border:1px solid var(--line);border-radius:9px;padding:14px;margin:16px 0;min-width:0}legend{padding:0 8px;font-size:15px;font-weight:700}.twocol{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;align-items:start}.twocol>*{min-width:0}.preview{background:#fafcfb;border:1px solid var(--line);border-radius:10px;padding:12px}svg{display:block;width:100%;height:auto;max-height:360px}.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.actions{display:flex;gap:10px;flex-wrap:wrap}.steps-list{padding-inline-start:24px}.steps-list li{margin-bottom:14px}details{border-top:1px solid var(--line);padding:12px 0;margin-top:12px}summary{cursor:pointer;font-weight:600;overflow-wrap:anywhere}details p{font-size:15px}.axis-row{border-bottom:1px solid var(--line);padding:14px 0}.axis-row:first-child{padding-top:0}.axis-row .fields{grid-template-columns:1fr 1.25fr 1.75fr auto}.axis-row .field-path{font-size:12px;margin-top:5px;display:block}.count{font-size:22px;color:var(--accent);font-weight:700}.bottom-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:18px}.bottom-nav span{font-size:14px;color:var(--muted)}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:9px 6px;border-bottom:1px solid var(--line);text-align:right;overflow-wrap:anywhere}th{color:var(--muted);font-weight:600}.pipeline{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:14px 0;font-size:14px}.pipeline span{background:var(--soft);padding:6px 10px;border-radius:5px}.nojs{background:#fff4e5;padding:16px}footer{font-size:14px;color:var(--muted);padding-top:0}.link-button{background:transparent;border:0;padding:0;text-decoration:underline;color:var(--accent)}.checklist{padding-inline-start:24px}.checklist li{margin:8px 0}[hidden]{display:none!important}
+@media(max-width:800px){.twocol{grid-template-columns:1fr}.axis-row .fields{grid-template-columns:1fr 1fr}.filemap{grid-template-columns:1fr}.filemap button{grid-template-columns:1fr 1.6fr;align-items:center}.panel{padding:20px}header,main,footer{padding-inline:16px}}
+@media(max-width:400px){.axis-row .fields,.fields.wide{grid-template-columns:1fr}.panel{padding:16px}.filemap button{grid-template-columns:1fr}.bottom-nav span{display:none}}
+@media print{nav,.bottom-nav,button,.filemap,footer{display:none!important}.panel{border:0;padding:0}body{background:white}.codebox{background:#eee;color:#111}.panel[hidden]{display:none}details{display:block}}
+</style>
+</head>
+<body>
+<header>
+<div class="eyebrow">PRM KIT · מדריך מעשי ללא Isaac</div>
+<h1>בונים חיפוש במרחב הקירות</h1>
+<p class="lead">משנים קירות וטווחים, מקבלים קובצי הגדרות מוכנים, ומריצים חיפוש מקצה לקצה. בכל שלב מופיע בדיוק איזה קובץ ליצור ואיפה לשמור אותו.</p>
+<div class="filemap" aria-label="שלושת הקבצים ואחריותם">
+<button data-goto="1"><code>walls.json</code><span>אילו קירות קיימים ומה הגאומטריה שלהם</span></button>
+<button data-goto="2"><code>experiment.yaml</code><span>הרובוט, המשימה, PRM והעלויות</span></button>
+<button data-goto="3" class="space"><code>space.yaml</code><span><strong>זה הקובץ שמגדיר את מרחב החיפוש</strong></span></button>
+</div>
+</header>
+<main>
+<noscript><p class="nojs">כדי להשתמש במדריך וביצירת הקבצים יש לפתוח אותו בדפדפן עם JavaScript פעיל.</p></noscript>
+<nav aria-label="שלבי העבודה">
+<button data-goto="0" aria-current="step">1 · תיקיית עבודה</button>
+<button data-goto="1">2 · קירות</button>
+<button data-goto="2">3 · ניסוי</button>
+<button data-goto="3">4 · מרחב חיפוש</button>
+<button data-goto="4">5 · הרצה</button>
+<button data-goto="5">6 · תוצאות</button>
+</nav>
+<div id="errors" class="error" role="alert" hidden></div>
+<section class="panel" id="step-0" aria-labelledby="title-0">
+<div class="step-title">שלב 1 מתוך 6</div><h2 id="title-0">יוצרים תיקיית עבודה חדשה</h2>
+<p>הדוגמה משתמשת ברובוט <b>UR5e ללא אביזרים</b>, עם משימת התחלה–יעד מוכנה. הקירות נוצרים מקופסאות JSON; אין צורך בסביבה מוכנה, ב־Isaac, ב־USD או ב־GPU.</p>
+<div class="notice"><b>איפה עובדים?</b> המדריך נפתח בכל דפדפן, גם ב־Windows. את פקודות התכנון מריצים בטרמינל Linux — למשל בשרת המחקר או ב־WSL — שבו מותקנת חבילת PRM Kit. המדריך מכין קבצים; החישובים עצמם רצים בטרמינל.</div>
+<details><summary>התקנה ראשונה — אם prmkit עדיין אינו מותקן</summary>
+<p>צריך את תיקיית <code>user_distribution</code> המלאה, הכוללת <code>pyproject.toml</code> ו־<code>src/</code>. פתחו בה טרמינל, עם Python 3.10 ומעלה, והריצו:</p>
+<div class="codebox"><div class="actions"><button data-copy="install">העתקה</button></div><pre id="install">python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install '.[robot]'</pre></div>
+<p>התקנת תלויות דורשת גישה לאינטרנט. בחלון טרמינל חדש יש להפעיל שוב את אותה סביבה. אם החבילה כבר מותקנת, הפעילו את סביבת Python שבה הותקנה.</p>
+</details>
+<p><b>מתוך תיקיית ההפצה, בסביבת Python הפעילה</b>, הריצו:</p>
+<div class="codebox"><div class="actions"><button data-copy="init">העתקה</button></div><pre id="init">prmkit init wall_study --template ur5e
+cd wall_study</pre></div>
+<p>נוצרת תיקיית <code>wall_study</code> עם נכסי הרובוט. בשלבים הבאים נחליף את קובץ הניסוי של התבנית וניצור שני קבצים נוספים. <b>מכאן כל פקודות התכנון רצות מתוך <code>wall_study</code>.</b></p>
+<div class="codebox"><pre>wall_study/
+├── assets/             ← נוצר באמצעות init; משאירים בתיקייה
+├── walls.json          ← ניצור בשלב 2
+├── experiment.yaml     ← נחליף בתוכן משלב 3
+└── space.yaml          ← ניצור בשלב 4: הגדרת החיפוש</pre></div>
+<p class="small muted">אם <code>wall_study</code> כבר קיימת, השתמשו בתיקייה חדשה או המשיכו בפרויקט שכבר הכנתם. <code>init</code> דורש יעד ריק. נכסי E4 שהועתקו עם התבנית אינם הסביבה של המדריך; הניסוי שנייצר מפנה ל־<code>walls.json</code>.</p>
+</section>
+<section class="panel" id="step-1" aria-labelledby="title-1" hidden>
+<div class="step-title">שלב 2 מתוך 6</div><h2 id="title-1">מגדירים אילו קירות קיימים</h2>
+<div class="destination">צרו קובץ: <code>wall_study/walls.json</code> — זהו תיאור של <b>סביבה אחת בסיסית</b>.</div>
+<p>אפשר להתחיל בלי לשנות דבר. לכל קיר מגדירים מרכז ומידות במטרים, ביחס לבסיס הרובוט. הדוגמה כוללת קירות זקופים ללא סיבוב; אין רצפה או מכשולים נוספים.</p>
+<div class="twocol"><div>
+<label>מספר קירות במחולל הזה (1–6)<select id="wall-count"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option></select></label>
+<div id="walls-editor"></div>
+</div><div>
+<div class="preview"><h3>מבט מלמעלה · XY</h3><svg id="base-view" viewBox="0 0 420 360" role="img" aria-label="הקירות במבט מלמעלה ומיקום בסיס הרובוט"></svg><p class="small muted">הנקודה היא בסיס הרובוט. זהו ציור של הקירות בלבד; בדיקות התנגשות עם הרובוט נעשות בהרצה.</p></div>
+<details><summary>איך מרכז ומידות הופכים לקיר?</summary><p><code>position_m: [x, y, z]</code> הוא מרכז הקופסה; <code>dimensions_m: [dx, dy, dz]</code> הן מידותיה המלאות. בקיר A: עובי X=0.08, רוחב Y=0.6, גובה Z=0.9. מרכז Z=0.45 מעמיד את תחתיתו בגובה 0.</p><p>הספירה ב־<code>objects</code> מתחילה מ־0: קיר A הוא 0, קיר B הוא 1 וכן הלאה. הוספת פרמטר לחיפוש אינה מוסיפה קיר — את הקיר עצמו מוסיפים כאן.</p></details>
+</div></div>
+<details><summary>הצגת התוכן המלא והורדת walls.json</summary><div class="codebox"><div class="actions"><span class="filename">walls.json</span><button data-copy="walls-code" data-generated>העתקה</button><button data-download="walls.json" data-generated>הורדת הקובץ</button></div><pre id="walls-code"></pre></div></details>
+<p class="small">שמרו את הקובץ בתיקיית העבודה, לא בתיקיית <code>assets</code>. אם יוצרים בעורך טקסט, השתמשו ב־UTF-8 ושימו לב שלא נוספת סיומת <code>.txt</code>.</p>
+</section>
+<section class="panel" id="step-2" aria-labelledby="title-2" hidden>
+<div class="step-title">שלב 3 מתוך 6</div><h2 id="title-2">מגדירים מה מריצים בכל סביבה</h2>
+<div class="destination">פתחו: <code>wall_study/experiment.yaml</code> — והחליפו את תוכן התבנית בתוכן המלא שלמטה.</div>
+<p>זהו הניסוי הקבוע: אותו רובוט, אותה משימה ואותן הגדרות בכל הסביבות. השורה <code>environment: walls.json</code> מחברת אותו לקירות מהשלב הקודם.</p>
+<div class="fields">
+<label>N · דגימות PRM<input id="n" data-exp="n" type="number" min="0" step="1" value="24"></label>
+<label>K · שכנים מוצעים<input id="k" data-exp="k" type="number" min="1" step="1" value="6"></label>
+<label>query_k · חיבור התחלה/יעד<input id="query-k" data-exp="queryK" type="number" min="1" step="1" value="12"></label>
+<label>אפסילון · חיפוש מסלולים<input id="epsilon" data-exp="epsilon" type="number" min="0" step="0.01" value="0.05"></label>
+</div>
+<p class="small muted">אלה ערכי התחלה קטנים לבדיקת התהליך. <code>epsilon: 0</code> מבקש חיפוש Exact על הגרף שנבנה. מספר הדגימות אינו מבטיח שיימצא מסלול.</p>
+<details><summary>משימה, עלויות ודיוק — אפשר לערוך כאן</summary>
+<p>התחלה ויעד הם <b>6 זוויות מפרקים ברדיאנים</b>, בסדר ה־URDF, ולא XYZ של הכלי. <code>prmkit check experiment.yaml</code> מציג את סדר המפרקים. שמרו את המשימה המוכנה להרצה הראשונה.</p>
+<label>query.start<input id="start" data-query="start" class="ltr" aria-label="זוויות מפרקים בהתחלה"></label>
+<label>query.goals[0]<input id="goal" data-query="goal" class="ltr" aria-label="זוויות מפרקים ביעד"></label>
+<div class="fields wide" style="margin-top:12px">
+<label>מטריקות למסלולים<select id="metrics"><option value="both">אורך הכלי + עלות קרבה למכשולים</option><option value="length">אורך הכלי בלבד</option></select></label>
+<label>margin · מרווח התנגשות קשיח [m]<input data-exp="margin" type="number" min="0" step="0.001" value="0.01"></label>
+<label>threshold · תחילת קנס קרבה [m]<input data-exp="threshold" type="number" min="0.001" step="0.01" value="0.1"></label>
+<label>power · חזקה בקנס הקרבה<input data-exp="power" type="number" min="0.01" step="0.1" value="2"></label>
+<label>seed · דגימת PRM<input data-exp="seed" type="number" min="0" step="1" value="7"></label>
+<label>timeout_s · חיפוש מסלולים בכל מועמד<input data-exp="timeout" type="number" min="1" step="1" value="120"></label>
+</div>
+<p>עלות <code>clearance</code> היא קנס מצטבר על קרבה; ערך קטן עדיף. היא נפרדת ממרווח ההתנגשות הקשיח. המדריך אינו מוסיף מצלמה או מדד נראות. אפשר להוסיף מטריקות אחרות בקובץ הניסוי, בהתאם לממשק החבילה.</p>
+</details>
+<details><summary>הצגת התוכן המלא והורדת experiment.yaml</summary><div class="codebox"><div class="actions"><span class="filename">experiment.yaml</span><button data-copy="experiment-code" data-generated>העתקה</button><button data-download="experiment.yaml" data-generated>הורדת הקובץ</button></div><pre id="experiment-code"></pre></div></details>
+<p class="small">החלפת התוכן מיועדת לפרויקט החדש מהשלב הראשון. אם זה ניסוי שכבר התאמתם, שמרו את הגדרותיו לפני ההחלפה. הרובוט כאן נטען ישירות מנכסי UR5e, ללא החומרה הנלווית של תבנית המחקר.</p>
+</section>
+<section class="panel" id="step-3" aria-labelledby="title-3" hidden>
+<div class="step-title">שלב 4 מתוך 6</div><h2 id="title-3">מגדירים את מרחב החיפוש</h2>
+<div class="destination">צרו קובץ: <code>wall_study/space.yaml</code> — <b>כאן מחליטים אילו שדות משתנים, בין אילו ערכים ואיך מדרגים.</b></div>
+<p>כל שורה היא משתנה אחד. לדוגמה: 3 מיקומים לקיר A × שלושה לקיר B × שלושה לקיר C = <b>27 סביבות מועמדות</b>. בכל מועמד מורכבת סביבה אחרת ומורץ הניסוי המלא.</p>
+<div class="fields wide">
+<label>שיטת החיפוש<select id="method"><option value="grid">Grid · צירופים מרשימות ערכים</option><option value="random">Random · דגימה אחידה מטווחים</option></select></label>
+<label>max_evaluations · תקציב מועמדים<input id="budget" type="number" min="1" max="1000000" step="1" value="27"></label>
+<label>seed · דגימת סביבות (Random בלבד)<input id="space-seed" type="number" min="0" step="1" value="42"></label>
+</div>
+<h3>מה משתנה בין הסביבות?</h3><div id="axes-editor"></div>
+<div class="actions"><button id="add-axis">+ הוספת משתנה לחיפוש</button><button id="match-budget">תקציב לכל הצירופים</button></div>
+<div id="space-count" class="notice" aria-live="polite"></div>
+<div class="fields wide">
+<label>קריטריון דירוג הסביבות<select id="rank"><option value="best.ee_length">best.ee_length · אורך המסלול הקצר ביותר שהוחזר</option><option value="best.clearance">best.clearance · עלות הקרבה הקטנה ביותר שהוחזרה</option><option value="path_count">path_count · מספר המסלולים שהוחזרו</option></select></label>
+<label>כיוון הדירוג<select id="direction"><option value="min">min · הערך הקטן קודם</option><option value="max">max · הערך הגדול קודם</option></select></label>
+</div>
+<p class="small">מטריקות המסלול מוגדרות ב־<code>experiment.yaml</code>; <code>rank</code> כאן בוחר איך להשוות סביבות לפי המסלולים שהוחזרו. רק מועמדים שהושלמו עם מסלולים נכנסים לדירוג. מספר מסלולים תלוי גם ב־N/K ובאפסילון.</p>
+<div class="twocol"><div>
+<div class="codebox"><div class="actions"><span class="filename">space.yaml</span><button data-copy="space-code" data-generated>העתקה</button><button data-download="space.yaml" data-generated>הורדת הקובץ</button></div><pre id="space-code"></pre></div>
+</div><div class="preview">
+<h3 id="preview-title">תצוגה של מועמד מה־Grid</h3>
+<svg id="candidate-view" viewBox="0 0 420 360" role="img" aria-label="תצוגת קירות במרחב החיפוש"></svg>
+<label id="preview-control">מועמד מתוך התקציב<input id="preview-index" type="range" min="0" max="26" value="0" step="1"></label>
+<div id="preview-caption" class="small" aria-live="polite"></div>
+<p class="small muted">הציור אינו מריץ PRM או בדיקות התנגשות. שינוי גובה אינו נראה במבט מלמעלה.</p>
+</div></div>
+<details><summary>איך קוראים שדה כמו environment.objects.0.position_m.0?</summary>
+<p><code>environment</code> = הסביבה שנטענה; <code>objects.0</code> = קיר A; <code>position_m.0</code> = מרכז X. הסיומות 1 ו־2 מציינות Y ו־Z. <code>dimensions_m</code> משנה את המידות. הוספת קיר נעשית בקובץ הקירות; כאן רק משנים שדות של עצם קיים.</p>
+<p>למשל, כדי לשנות גם את רוחב Y של קיר A, הוסיפו משתנה עם קיר A, מידת Y וערכים <code>0.4, 0.8</code>. יחד עם שלושת משתני המיקום המקוריים מתקבלים <b>54 צירופים</b>. כפתור ״תקציב לכל הצירופים״ יעדכן את התקציב.</p>
+</details>
+<details><summary>גובה, אילוצים ושילובים גדולים</summary>
+<p>שינוי מידה מתבצע סביב מרכז הקיר. אם משנים גובה בלבד, תחתית הקיר משתנה. כדי לשמור תחתית Z=0, אפשר לערוך ידנית את <code>space.yaml</code> ולחפש על <code>environment.objects.0</code> עם רשימת הגדרות קיר מלאות, הכוללות גובה ומרכז מתואמים.</p>
+<p>אפשר להוסיף ידנית <code>constraints</code> להשוואות בין שדות וערכים, למשל סינון רוחב גדול מדי. אין בדיקת חפיפה אוטומטית בין קירות. אילוץ שמסנן מועמד עדיין צורך מקום בתקציב.</p>
+<p>Grid בתקציב קטן סורק רק את תחילת הצירופים, לפי סדר המשתנים והערכים; הוא אינו דוגם אותם. Random דוגם מתוך הטווחים ואינו אופטימיזציה אדפטיבית. תקרת המחולל כאן היא מיליון מועמדים, כדי למנוע יצירת תקציב עצום בטעות; זו אינה מגבלת PRM Kit.</p>
+</details>
+</section>
+<section class="panel" id="step-4" aria-labelledby="title-4" hidden>
+<div class="step-title">שלב 5 מתוך 6</div><h2 id="title-4">שומרים ומריצים E2E</h2>
+<ol class="steps-list">
+<li><b>שמרו את שלושת הקבצים באותה תיקייה.</b> אפשר להוריד אותם יחד ולחלץ ישירות לתיקיית <code>wall_study</code> שנוצרה בשלב הראשון. יש לשמור את תיקיית <code>assets</code> ולבחור בהחלפת <code>experiment.yaml</code> של התבנית החדשה.
+<p><button class="primary" id="download-bundle" data-generated>הורדת שלושת קובצי ההגדרות ב־ZIP</button></p>
+<p class="small">ה־ZIP כולל הגדרות בלבד; הוא משתמש בחבילה ובנכסי הרובוט שכבר הכנתם באמצעות <code>init</code>. אם הדפדפן ב־Windows וההרצה בשרת, העבירו את הקבצים גם לשרת — הורדה למחשב שלכם אינה מעדכנת אותו.</p>
+<details><summary>העברת ה־ZIP מהמחשב שלי לשרת המחקר</summary><p>החליפו DOMAIN, USER, HOST ואת /path/to בפרטי השרת שלכם. בטרמינל של Windows, לאחר ההורדה (הנתיב מניח שיצרתם את הפרויקט במיקום שבשלב 1):</p><div class="codebox"><div class="actions"><button data-copy="upload">העתקה</button></div><pre id="upload">scp "C:\Users\Master\Downloads\wall_search_configs.zip" "DOMAIN\USER@HOST:/path/to/multiobjective-prm-kit-0.4.0/wall_study/"</pre></div><p>ואז בטרמינל השרת, מתוך <code>wall_study</code>, חלצו את ההגדרות; הפקודה מחליפה קבצי הגדרות באותם שמות:</p><div class="codebox"><div class="actions"><button data-copy="unzip">העתקה</button></div><pre id="unzip">python -m zipfile -e wall_search_configs.zip .</pre></div></details>
+</li>
+<li><b>בדקו את הניסוי הבסיסי.</b> מתוך <code>wall_study</code>, באותה סביבת Python:
+<div class="codebox"><div class="actions"><button data-copy="check-command">העתקה</button></div><pre id="check-command">prmkit check experiment.yaml</pre></div>
+<p class="small"><code>check</code> טוען את הרובוט והסביבה ובודק את ההתחלה והיעד הבסיסיים. הוא אינו בונה PRM ואינו בודק מראש את כל הסביבות בחיפוש.</p></li>
+<li><b>הריצו את החיפוש.</b> בחרו שם חדש לתיקיית התוצאות, ואז העתיקו את הפקודה:
+<label>שם ריצה (אותיות לטיניות, ספרות, קו תחתון או מקף)<input id="run-name" class="ltr" value="search_001" pattern="[A-Za-z0-9_-]+" maxlength="64"></label>
+<div class="codebox"><div class="actions"><button data-copy="run-command" data-generated>העתקה</button></div><pre id="run-command"></pre></div>
+<div class="pipeline" aria-label="מה מתבצע לכל מועמד"><span>שינוי הקירות</span>←<span>דגימת PRM</span>←<span>בדיקות התנגשות</span>←<span>עלויות קשתות</span>←<span>חיפוש מסלולים</span>←<span>דירוג הסביבה</span></div>
+<p>אין צורך להריץ <code>prmkit run</code> בנפרד לכל סביבה: <code>sweep</code> מפעיל את התהליך עבור המועמדים. הקבצים המקוריים נשארים בסיס; כל ניסוי נכתב כעותק בתיקיית התוצאות.</p>
+</li></ol>
+<details><summary>הריצה נקטעה / שיניתי הגדרות / לא נמצא מסלול</summary>
+<p>לאחר הפסקה, בלי לשנות אף קובץ קלט, ממשיכים באמצעות:</p><div class="codebox"><div class="actions"><button data-copy="resume-command" data-generated>העתקה</button></div><pre id="resume-command"></pre></div>
+<p>לאחר שינוי קירות, טווחים, N/K, אפסילון או מטריקות — בחרו <b>שם ריצה חדש</b>. כפתור הורדה אינו מעדכן קבצים שכבר שמרתם: הורידו וחלצו שוב את ההגדרות העדכניות.</p>
+<p><code>invalid_query</code>: ההתחלה או היעד אינם תקפים במועמד הזה. <code>no_path_in_roadmap</code>: לא נמצא מסלול בגרף שנבנה; זו אינה הוכחה שאין מסלול במרחב הרציף. אפשר להגדיל N/K או לשנות את המשימה. <code>failed</code> או חיפוש חלקי דורשים קריאת השגיאה/סטטוס לפני פירוש הדירוג.</p>
+</details>
+</section>
+<section class="panel" id="step-5" aria-labelledby="title-5" hidden>
+<div class="step-title">שלב 6 מתוך 6</div><h2 id="title-5">קוראים את תוצאות החיפוש</h2>
+<div class="destination">פתחו תחילה: <code id="summary-path"></code> — סיכום כל הסביבות והדירוג ביניהן.</div>
+<ol class="steps-list">
+<li>בדקו <code>complete</code>, את הסטטוס בכל שורה ב־<code>rows</code> ואת מספר המועמדים ב־<code>evaluated</code>. ב־Grid, <code>grid_exhausted</code> אומר אם כל הצירופים נסרקו.</li>
+<li>ב־<code>ranking</code>, המזהה הראשון הוא הסביבה המובילה <b>לפי קריטריון הדירוג ובין המועמדים הזכאים לדירוג</b>. זו אינה הבטחת אופטימום במרחב רציף. אם הרשימה ריקה, אין מועמד שהושלם עם מסלול.</li>
+<li>למועמד שבחרתם, פתחו <code>candidate_XXXXX.yaml</code> כדי לראות את הסביבה והניסוי בפועל, ואת <code>candidate_XXXXX/report.html</code> כדי לראות מסלולים ועלויות. אין צורך ב־Isaac לצפייה בדוח.</li>
+</ol>
+<details open><summary>אפשר לטעון לכאן את הסיכום ולקבל את הנתיבים המדויקים</summary>
+<p class="small">בחרו את <code>space_summary.json</code> שנוצר אצלכם. הקריאה מקומית בדפדפן, ואין העלאה לשרת. אם ההרצה בשרת, הורידו קודם את הקובץ למחשב שבו פתחתם מדריך זה.</p>
+<label>קובץ סיכום אמיתי של הריצה<input id="summary-file" type="file" accept=".json,application/json"></label>
+<p id="result-status" aria-live="polite">טרם נטענו תוצאות. לא מוצגות כאן תוצאות מדומות.</p>
+<div id="loaded-results" hidden>
+<label>מועמד מדורג לצפייה<select id="result-candidate"></select></label>
+<div id="candidate-detail"></div>
+<div class="codebox"><div class="actions"><button data-copy="result-commands">העתקה</button></div><pre id="result-commands"></pre></div>
+<p>בדפדפן פתחו את קובץ הדוח הבא:</p><code id="report-path"></code>
+<p class="small">פקודת <code>validate-path</code> בודקת מחדש גאומטריה ועלויות של מסלול 0. היא משתמשת בקובץ הניסוי של המועמד שנבחר, ולא בקירות הבסיסיים. בדוח ניתן לבחור גם מסלולים אחרים.</p>
+</div></details>
+<details><summary>אילו קבצים נוספים נשמרים?</summary><table><thead><tr><th>קובץ</th><th>מה יש בו</th></tr></thead><tbody><tr><td><code>space_progress.json</code></td><td>התקדמות החיפוש במהלך הריצה</td></tr><tr><td><code>candidate_XXXXX.yaml</code></td><td>ההגדרות המלאות של הסביבה המועמדת</td></tr><tr><td><code>candidate_XXXXX/summary.json</code></td><td>סטטוס, מספר מסלולים ועלויות</td></tr><tr><td><code>candidate_XXXXX/front.csv</code></td><td>עלויות המסלולים בטבלה</td></tr><tr><td><code>candidate_XXXXX/paths.npz</code></td><td>מסלולי המפרקים</td></tr><tr><td><code>candidate_XXXXX/report.html</code></td><td>דוח אינטראקטיבי של המועמד</td></tr></tbody></table><p>מועמד שסונן או שהמשימה בו אינה תקפה עשוי להופיע בסיכום ללא דוח או קובצי מסלולים. כדי להציג דוח ב־Windows אפשר להוריד את <code>report.html</code> היחיד של המועמד; כדי להמשיך חישובים יש לשמור גם את שאר תוצרי הריצה ונכסי הקלט.</p></details>
+<div class="notice">לחיפוש נוסף: משנים קירות בשלב 2, הגדרות ניסוי בשלב 3 או טווחי חיפוש בשלב 4; מורידים שוב את הקבצים ושומרים אותם, ואז מריצים לתיקיית תוצאות חדשה.</div>
+</section>
+<div class="bottom-nav"><button id="prev">השלב הקודם</button><span id="step-status" aria-live="polite">שלב 1 מתוך 6</span><button class="primary" id="next">הבא: מגדירים קירות</button></div>
+</main>
+<footer>קובץ מדריך עצמאי, פועל גם ללא אינטרנט. הבחירות נשמרות בזיכרון הכרטיסייה בלבד — הורידו את ההגדרות לפני סגירתה. נבנה עבור PRM Kit 0.2.0; שינויים ידניים בקבצים אינם מיובאים חזרה למחולל.</footer>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const clone=value=>JSON.parse(JSON.stringify(value));
+const letters='ABCDEF';
+const fields=[['position_m.0','מרכז X'],['position_m.1','מרכז Y'],['position_m.2','מרכז Z'],['dimensions_m.0','מידת X'],['dimensions_m.1','מידת Y'],['dimensions_m.2','גובה Z']];
+const defaults=[
+ {name:'Wall_A',shape:'box',position_m:[1,0,0.45],dimensions_m:[0.08,0.6,0.9],collider:true},
+ {name:'Wall_B',shape:'box',position_m:[0,1,0.45],dimensions_m:[0.6,0.08,0.9],collider:true},
+ {name:'Wall_C',shape:'box',position_m:[0,-1,0.45],dimensions_m:[0.6,0.08,0.9],collider:true},
+ {name:'Wall_D',shape:'box',position_m:[-1,0,0.45],dimensions_m:[0.08,0.6,0.9],collider:true},
+ {name:'Wall_E',shape:'box',position_m:[1,1,0.45],dimensions_m:[0.08,0.6,0.9],collider:true},
+ {name:'Wall_F',shape:'box',position_m:[-1,-1,0.45],dimensions_m:[0.6,0.08,0.9],collider:true}
+];
+const state={step:0,walls:clone(defaults.slice(0,3)),axes:[
+ {wall:0,field:'position_m.0',values:'0.7, 0.9, 1.1',min:0.7,max:1.1},
+ {wall:1,field:'position_m.1',values:'0.7, 0.9, 1.1',min:0.7,max:1.1},
+ {wall:2,field:'position_m.1',values:'-1.1, -0.9, -0.7',min:-1.1,max:-0.7}
+],method:'grid',budget:27,spaceSeed:42,rank:'best.ee_length',direction:'min',runName:'search_001',preview:0,
+ exp:{n:24,k:6,queryK:12,epsilon:0.05,margin:0.01,threshold:0.1,power:2,seed:7,timeout:120,metrics:'both',
+ start:'0.3490658503988659, -1.6580627893946132, 2.0943951023931953, -2.007128639793479, -1.5707963267948966, 0',
+ goal:'-0.04786182266559802, -1.3714064559664445, 1.7755323790789799, -1.5894737998266182, -1.3306083390982595, 0.3217523649289111'}};
+let generated={},validationErrors=[],loadedSummary=null;
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function numericList(text){const bits=String(text).split(',');if(!bits.length||bits.some(x=>!x.trim()))throw Error('רשימת ערכים ריקה או פסיק ללא מספר');const a=bits.map(x=>Number(x.trim()));if(a.some(x=>!Number.isFinite(x)))throw Error('יש להזין מספרים סופיים, מופרדים בפסיקים');return a;}
+function axisPath(a){return `environment.objects.${a.wall}.${a.field}`;}
+function gridTotal(s=state){return s.axes.reduce((n,a)=>n*numericList(a.values).length,1);}
+function validate(s=state){
+ const errors=[];const finite=(v,name,min,integer=false,strict=false)=>{if(!Number.isFinite(v)||(strict?v<=min:v<min)||(integer&&!Number.isSafeInteger(v)))errors.push(name+' — ערך מספרי '+(integer?'שלם ':'')+'תקין נדרש');};
+ s.walls.forEach((w,i)=>{w.position_m.forEach(v=>{if(!Number.isFinite(v))errors.push('קיר '+letters[i]+': מיקום לא תקין');});w.dimensions_m.forEach(v=>finite(v,'קיר '+letters[i]+': מידה',0,false,true));});
+ const used=new Set();if(!s.axes.length)errors.push('הוסיפו לפחות משתנה אחד לחיפוש בשלב 4');
+ s.axes.forEach((a,i)=>{const name='משתנה '+(i+1);const path=axisPath(a);if(used.has(path))errors.push(name+': אותו שדה מופיע פעמיים');used.add(path);if(!s.walls[a.wall])errors.push(name+': הקיר אינו קיים');
+  try{if(s.method==='grid'){const vals=numericList(a.values);if(a.field.startsWith('dimensions')&&vals.some(v=>v<=0))errors.push(name+': מידות חייבות להיות חיוביות');}else{if(!Number.isFinite(a.min)||!Number.isFinite(a.max)||a.min>a.max)errors.push(name+': נדרש טווח סופי עם min ≤ max');if(a.field.startsWith('dimensions')&&a.min<=0)errors.push(name+': מידות חייבות להיות חיוביות');}}catch(e){errors.push(name+': '+e.message);}
+ });
+ finite(s.budget,'תקציב החיפוש',1,true);if(s.budget>1000000)errors.push('תקרת התקציב במחולל היא 1,000,000');finite(s.spaceSeed,'seed של הסביבות',0,true);
+ if(s.method==='grid'){try{if(!Number.isSafeInteger(gridTotal(s)))errors.push('מספר הצירופים גדול מדי למחולל; הקטינו משתנים/ערכים או עברו ל־Random');}catch(e){/* Reported per axis above. */}}
+ const e=s.exp;[['n',0],['k',1],['queryK',1],['seed',0]].forEach(([k,min])=>finite(e[k],k,min,true));finite(e.epsilon,'אפסילון',0);finite(e.margin,'margin',0);finite(e.timeout,'timeout',0,false,true);
+ if(e.metrics==='both'){finite(e.threshold,'threshold',0,false,true);finite(e.power,'power',0,false,true);}
+ for(const key of ['start','goal']){try{if(numericList(e[key]).length!==6)errors.push(key+': נדרשות 6 זוויות מפרקים');}catch(err){errors.push(key+': '+err.message);}}
+ if(s.rank==='best.clearance'&&e.metrics!=='both')errors.push('דירוג clearance דורש להפעיל את מטריקת clearance בשלב 3');
+ if(!/^[A-Za-z0-9_-]{1,64}$/.test(s.runName))errors.push('שם הריצה: 1–64 אותיות לטיניות, ספרות, קו תחתון או מקף בלבד');
+ return [...new Set(errors)];
+}
+function yaml(value,level=0){
+ const pad='  '.repeat(level);let lines=[];
+ for(const [key,v] of Object.entries(value)){
+  if(Array.isArray(v)&&v.some(x=>x&&typeof x==='object'&&!Array.isArray(x))){lines.push(pad+key+':');for(const item of v){const inner=yaml(item,level+2).split('\n');lines.push(pad+'  - '+inner[0].trimStart(),...inner.slice(1));}}
+  else if(v&&typeof v==='object'&&!Array.isArray(v)){lines.push(pad+key+':',yaml(v,level+1));}
+  else lines.push(pad+key+': '+JSON.stringify(v));
+ }return lines.join('\n');
+}
+function configs(s=state){
+ const errors=validate(s);if(errors.length)throw Error(errors.join('\n'));
+ const e=s.exp;const experiment={schema_version:1,seed:e.seed,robot:{backend:'urdf',urdf:'assets/ur5e/ur5e_reference.urdf',convex_file:'assets/ur5e/robot_convex_envelopes.npz',pair_policy:'assets/ur5e/self_pair_policy.json',tool_frame:'tool0',weights:[1,1,0.85,0.65,0.45,0.35]},environment:'walls.json',query:{start:numericList(e.start),goals:[numericList(e.goal)]},prm:{n:e.n,k:e.k,query_k:e.queryK},validation:{margin:e.margin,intervals:8},metrics:[{name:'ee_length'}],search:{epsilon:e.epsilon,timeout_s:e.timeout}};
+ if(e.metrics==='both')experiment.metrics.push({name:'clearance',threshold:e.threshold,power:e.power,scope:'world'});
+ const space={schema_version:1,experiment:'experiment.yaml',method:s.method,max_evaluations:s.budget};
+ if(s.method==='random')space.seed=s.spaceSeed;
+ space.parameters={};s.axes.forEach(a=>{space.parameters[axisPath(a)]=s.method==='grid'?{values:numericList(a.values)}:{min:a.min,max:a.max};});space.rank={by:s.rank,direction:s.direction};
+ return {'walls.json':JSON.stringify({environment_id:'wall_search_tutorial',objects:s.walls},null,2)+'\n','experiment.yaml':yaml(experiment)+'\n','space.yaml':yaml(space)+'\n'};
+}
+function candidateAt(s,index){const walls=clone(s.walls);for(let i=s.axes.length-1;i>=0;i--){const a=s.axes[i],v=numericList(a.values);const [key,dim]=a.field.split('.');walls[a.wall][key][Number(dim)]=v[index%v.length];index=Math.floor(index/v.length);}return walls;}
+function renderWalls(){
+ $('walls-editor').innerHTML=state.walls.map((w,i)=>'<fieldset><legend>קיר '+letters[i]+' · objects.'+i+'</legend><div class="fields">'+['position_m','dimensions_m'].map(key=>w[key].map((v,j)=>'<label>'+ (key==='position_m'?'מרכז ':'מידת ')+'XYZ'[j]+' [m]<input type="number" step="0.01" '+(key==='dimensions_m'?'min="0.001" ':'')+'data-wall="'+i+'" data-key="'+key+'" data-dim="'+j+'" value="'+v+'"></label>').join('')).join('')+'</div></fieldset>').join('');
+}
+function renderAxes(){
+ $('axes-editor').innerHTML=state.axes.map((a,i)=>'<div class="axis-row"><div class="fields"><label>קיר<select data-axis="'+i+'" data-key="wall">'+state.walls.map((w,j)=>'<option value="'+j+'" '+(a.wall===j?'selected':'')+'>קיר '+letters[j]+' · '+j+'</option>').join('')+'</select></label><label>השדה שמשתנה<select data-axis="'+i+'" data-key="field">'+fields.map(([k,t])=>'<option value="'+k+'" '+(a.field===k?'selected':'')+'>'+t+' [m]</option>').join('')+'</select></label>'+ (state.method==='grid'?'<label>ערכים, מופרדים בפסיקים<input data-values data-axis="'+i+'" data-key="values" value="'+esc(a.values)+'"></label>':'<div class="fields"><label>min [m]<input type="number" step="0.01" data-axis="'+i+'" data-key="min" value="'+a.min+'"></label><label>max [m]<input type="number" step="0.01" data-axis="'+i+'" data-key="max" value="'+a.max+'"></label></div>')+'<button data-remove="'+i+'" aria-label="הסרת משתנה '+(i+1)+'">הסרה</button></div><code class="field-path" id="axis-path-'+i+'">'+axisPath(a)+'</code></div>').join('');
+ $('match-budget').hidden=state.method!=='grid';$('space-seed').disabled=state.method==='grid';
+}
+function draw(id,walls,reference=walls){
+ const svg=$(id);let extent=1.4;for(const w of [...walls,...reference])extent=Math.max(extent,Math.abs(w.position_m[0])+w.dimensions_m[0]/2+0.2,Math.abs(w.position_m[1])+w.dimensions_m[1]/2+0.2);
+ const scale=136/extent,ox=210,oy=174;let markup='<title>קירות במבט מלמעלה, במטרים</title>';
+ for(let i=-2;i<=2;i++){const v=i*extent/2,x=ox+v*scale,y=oy-v*scale;markup+='<line x1="'+x+'" y1="30" x2="'+x+'" y2="310" stroke="#dfe8e5"/><line x1="66" y1="'+y+'" x2="354" y2="'+y+'" stroke="#dfe8e5"/>';
+ markup+='<text x="'+x+'" y="332" text-anchor="middle" direction="ltr" font-size="12" fill="#52656b">'+Number(v.toFixed(2))+'</text><text x="50" y="'+(y+4)+'" text-anchor="middle" direction="ltr" font-size="12" fill="#52656b">'+Number(v.toFixed(2))+'</text>';}
+ markup+='<line x1="66" y1="174" x2="363" y2="174" stroke="#8ca8a5"/><line x1="210" y1="310" x2="210" y2="22" stroke="#8ca8a5"/>';
+ walls.forEach((w,i)=>{const [x,y]=w.position_m,[dx,dy]=w.dimensions_m;const left=ox+(x-dx/2)*scale,top=oy-(y+dy/2)*scale;markup+='<rect x="'+left+'" y="'+top+'" width="'+dx*scale+'" height="'+dy*scale+'" fill="#007b73" fill-opacity=".7"><title>'+letters[i]+': center '+w.position_m.join(', ')+'; size '+w.dimensions_m.join(', ')+'</title></rect><text x="'+(ox+x*scale)+'" y="'+(top-7)+'" text-anchor="middle" font-size="15" font-weight="600" fill="#172f36">'+letters[i]+'</text>';});
+ markup+='<circle cx="210" cy="174" r="5" fill="#ce8b31"/><text x="224" y="195" text-anchor="middle" font-size="12" fill="#172f36">בסיס</text><text x="379" y="179" font-size="13" fill="#172f36">X [m]</text><text x="213" y="17" font-size="13" fill="#172f36">Y [m]</text>';svg.innerHTML=markup;
+}
+function preview(){
+ if(validationErrors.length)return;
+ if(state.method==='grid'){
+  const count=Math.min(gridTotal(),state.budget);state.preview=Math.min(state.preview,count-1);$('preview-index').max=count-1;$('preview-index').value=state.preview;$('preview-control').hidden=false;
+  $('preview-title').textContent='תצוגה של מועמד מה־Grid';const walls=candidateAt(state,state.preview);draw('candidate-view',walls,state.walls);
+  const detail=state.axes.map(a=>{const [key,d]=a.field.split('.');return letters[a.wall]+' '+fields.find(f=>f[0]===a.field)[1]+'='+walls[a.wall][key][Number(d)];}).join(' · ');
+  $('preview-caption').textContent='candidate_'+String(state.preview).padStart(5,'0')+' · '+detail;
+ }else{$('preview-control').hidden=true;$('preview-title').textContent='סביבת הבסיס · Random';draw('candidate-view',state.walls);$('preview-caption').textContent='הדגימות האקראיות ייווצרו ב־Python בהרצה לפי הטווחים וה־seed. כאן מוצגים קירות הבסיס בלבד.';}
+}
+function refresh(){
+ validationErrors=validate();$('errors').hidden=!validationErrors.length;$('errors').textContent=validationErrors.join(' · ');
+ document.querySelectorAll('[data-generated]').forEach(b=>b.disabled=!!validationErrors.length);
+ if(validationErrors.length){generated={};for(const id of ['walls-code','experiment-code','space-code','run-command','resume-command'])$(id).textContent='יש לתקן את הערכים המסומנים למעלה לפני יצירת הקבצים והפקודות.';$('space-count').textContent='תקנו את ההגדרות כדי לחשב את מספר המועמדים.';return;}
+ generated=configs();$('walls-code').textContent=generated['walls.json'];$('experiment-code').textContent=generated['experiment.yaml'];$('space-code').textContent=generated['space.yaml'];
+ if(state.method==='grid'){const total=gridTotal(),planned=Math.min(total,state.budget);$('space-count').textContent=state.axes.map(a=>numericList(a.values).length).join(' × ')+' = '+total.toLocaleString('en-US')+' צירופים. ייבדקו '+planned.toLocaleString('en-US')+' מועמדים.'+(planned<total?' התקציב מכסה רק את תחילת ה־Grid.':' התקציב מכסה את כל ה־Grid.');}
+ else $('space-count').textContent='יידגמו '+state.budget+' מועמדים מטווחי '+state.axes.length+' המשתנים. זו דגימה אקראית עם seed='+state.spaceSeed+'.';
+ const cmd='prmkit sweep space.yaml --output runs/'+state.runName;$('run-command').textContent=cmd;$('resume-command').textContent=cmd+' --resume';$('summary-path').textContent='wall_study/runs/'+state.runName+'/space_summary.json';
+ draw('base-view',state.walls);preview();renderResultCandidate();
+}
+function go(step,moveToStart=false){state.step=Math.max(0,Math.min(5,step));document.querySelectorAll('.panel').forEach((el,i)=>el.hidden=i!==state.step);document.querySelectorAll('nav [data-goto]').forEach(b=>{if(Number(b.dataset.goto)===state.step)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});$('prev').disabled=state.step===0;$('next').hidden=state.step===5;$('step-status').textContent='שלב '+(state.step+1)+' מתוך 6';$('next').textContent=['הבא: מגדירים קירות','הבא: מגדירים ניסוי','הבא: מגדירים מרחב חיפוש','הבא: שומרים ומריצים','הבא: קוראים תוצאות',''][state.step];if(moveToStart){const title=$('title-'+state.step);title.tabIndex=-1;title.focus({preventScroll:true});document.querySelector('nav').scrollIntoView({block:'start'});}}
+function download(name,data,type='text/plain;charset=utf-8'){const url=URL.createObjectURL(new Blob([data],{type}));const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);}
+async function copy(id,button){const el=$(id);try{await navigator.clipboard.writeText(el.textContent);button.textContent='הועתק';}catch(e){const range=document.createRange();range.selectNodeContents(el);const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);button.textContent='סומן — Ctrl+C';}setTimeout(()=>button.textContent='העתקה',2500);}
+function zipFiles(files){
+ const enc=new TextEncoder(),parts=[],central=[];let offset=0;
+ function crc32(bytes){let crc=-1;for(const b of bytes){crc^=b;for(let k=0;k<8;k++)crc=(crc>>>1)^((crc&1)?0xedb88320:0);}return(crc^-1)>>>0;}
+ function header(size){const bytes=new Uint8Array(size),view=new DataView(bytes.buffer);return{bytes,u16:(o,v)=>view.setUint16(o,v,true),u32:(o,v)=>view.setUint32(o,v,true)};}
+ for(const [name,text]of Object.entries(files)){const n=enc.encode(name),data=enc.encode(text),crc=crc32(data);const local=header(30);local.u32(0,0x04034b50);local.u16(4,20);local.u16(6,0x0800);local.u16(12,33);local.u32(14,crc);local.u32(18,data.length);local.u32(22,data.length);local.u16(26,n.length);parts.push(local.bytes,n,data);
+  const c=header(46);c.u32(0,0x02014b50);c.u16(4,20);c.u16(6,20);c.u16(8,0x0800);c.u16(14,33);c.u32(16,crc);c.u32(20,data.length);c.u32(24,data.length);c.u16(28,n.length);c.u32(42,offset);central.push(c.bytes,n);offset+=30+n.length+data.length;
+ }const length=central.reduce((n,p)=>n+p.length,0),end=header(22);end.u32(0,0x06054b50);end.u16(8,Object.keys(files).length);end.u16(10,Object.keys(files).length);end.u32(12,length);end.u32(16,offset);parts.push(...central,end.bytes);const out=new Uint8Array(parts.reduce((n,p)=>n+p.length,0));let pos=0;for(const p of parts){out.set(p,pos);pos+=p.length;}return out;
+}
+function setSummary(data){
+ if(!data||typeof data.complete!=='boolean'||!Number.isSafeInteger(data.evaluated)||data.evaluated<0||!Array.isArray(data.rows)||!Array.isArray(data.ranking)||data.rows.length!==data.evaluated)throw Error('נדרש קובץ space_summary.json של prmkit sweep');
+ const ids=new Set();for(const row of data.rows){if(!row||!/^candidate_\d{5,}$/.test(row.id)||ids.has(row.id)||typeof row.status!=='string')throw Error('רשימת המועמדים אינה תקינה');ids.add(row.id);}
+ const rankingSet=new Set();for(const id of data.ranking){const row=data.rows.find(r=>r.id===id);if(rankingSet.has(id)||!row||row.complete!==true||!Number.isInteger(row.paths)||row.paths<1||typeof row.score!=='number'||!Number.isFinite(row.score))throw Error('דירוג המועמדים אינו תקין');rankingSet.add(id);}
+ loadedSummary=data;const statuses={};data.rows.forEach(r=>statuses[r.status]=(statuses[r.status]||0)+1);
+ $('result-status').textContent=(data.complete?'החיפוש הושלם':'החיפוש לא הושלם')+' · נבדקו '+data.evaluated+' · מדורגים '+data.ranking.length+' · '+Object.entries(statuses).map(([s,n])=>s+': '+n).join(', ')+(data.grid_exhausted===false?' · אין כיסוי מלא של Grid (או שמדובר ב־Random).':'');
+ $('result-candidate').innerHTML=data.ranking.map((id,i)=>'<option value="'+esc(id)+'">'+(i+1)+'. '+esc(id)+'</option>').join('');$('loaded-results').hidden=!data.ranking.length;
+ if(!data.ranking.length)$('result-status').textContent+=' · אין מועמד שהושלם עם מסלול לצפייה.';renderResultCandidate();
+}
+function renderResultCandidate(){if(!loadedSummary||!loadedSummary.ranking.length)return;const id=$('result-candidate').value;if(!loadedSummary.ranking.includes(id))return;const row=loadedSummary.rows.find(r=>r.id===id);const prefix='runs/'+state.runName;const safeName=/^[A-Za-z0-9_-]{1,64}$/.test(state.runName);$('candidate-detail').textContent='ציון: '+row.score+' · מסלולים: '+row.paths+' · סטטוס: '+row.status+' · הנתיבים מניחים שם ריצה '+state.runName+' כפי שמוגדר בשלב 5.';$('result-commands').textContent=safeName?'prmkit inspect '+prefix+'/'+id+'\nprmkit validate-path '+prefix+'/'+id+'.yaml '+prefix+'/'+id+'/paths.npz --index 0':'יש לתקן את שם הריצה בשלב 5.';$('report-path').textContent=safeName?'wall_study/'+prefix+'/'+id+'/report.html':'';}
+document.addEventListener('click',event=>{const b=event.target.closest('button');if(!b)return;
+ if(b.dataset.goto!==undefined){go(Number(b.dataset.goto),true);return;}if(b.dataset.copy){copy(b.dataset.copy,b);return;}
+ if(b.dataset.download){if(!validationErrors.length)download(b.dataset.download,generated[b.dataset.download]);return;}
+ if(b.dataset.remove!==undefined){state.axes.splice(Number(b.dataset.remove),1);renderAxes();refresh();return;}
+});
+$('prev').addEventListener('click',()=>go(state.step-1,true));$('next').addEventListener('click',()=>go(state.step+1,true));
+$('wall-count').addEventListener('change',event=>{const n=Number(event.target.value);const old=state.walls.length;state.walls=state.walls.slice(0,n);for(let i=old;i<n;i++){state.walls.push(clone(defaults[i]));const field=i===0||i===3||i===4?'position_m.0':'position_m.1';const d=Number(field.split('.')[1]),v=state.walls[i].position_m[d];state.axes.push({wall:i,field,values:[v-0.2,v,v+0.2].map(x=>Number(x.toFixed(3))).join(', '),min:v-0.2,max:v+0.2});}state.axes=state.axes.filter(a=>a.wall<n);renderWalls();renderAxes();refresh();});
+document.addEventListener('input',event=>{const t=event.target;if(t.dataset.wall!==undefined){state.walls[Number(t.dataset.wall)][t.dataset.key][Number(t.dataset.dim)]=t.value===''?NaN:Number(t.value);refresh();}
+ else if(t.dataset.exp){state.exp[t.dataset.exp]=t.value===''?NaN:Number(t.value);refresh();}
+ else if(t.dataset.query){state.exp[t.dataset.query]=t.value;refresh();}
+ else if(t.dataset.axis!==undefined){const a=state.axes[Number(t.dataset.axis)],key=t.dataset.key;a[key]=['wall','min','max'].includes(key)?(t.value===''?NaN:Number(t.value)):t.value;$('axis-path-'+t.dataset.axis).textContent=axisPath(a);refresh();}
+});
+for(const [id,key]of [['budget','budget'],['space-seed','spaceSeed'],['run-name','runName']])$(id).addEventListener('input',e=>{state[key]=key==='runName'?e.target.value:(e.target.value===''?NaN:Number(e.target.value));refresh();});
+$('method').addEventListener('change',event=>{state.method=event.target.value;state.preview=0;renderAxes();refresh();});
+$('metrics').addEventListener('change',event=>{state.exp.metrics=event.target.value;$('rank').querySelector('[value="best.clearance"]').disabled=state.exp.metrics!=='both';if(state.exp.metrics!=='both'&&state.rank==='best.clearance'){state.rank='best.ee_length';$('rank').value=state.rank;}refresh();});
+$('rank').addEventListener('change',event=>{state.rank=event.target.value;state.direction=state.rank==='path_count'?'max':'min';$('direction').value=state.direction;refresh();});$('direction').addEventListener('change',event=>{state.direction=event.target.value;refresh();});
+$('match-budget').addEventListener('click',()=>{try{const total=gridTotal();state.budget=Math.min(1000000,total);$('budget').value=state.budget;refresh();}catch(e){refresh();}});
+$('add-axis').addEventListener('click',()=>{for(let w=0;w<state.walls.length;w++){for(const [field]of fields){if(state.axes.some(a=>a.wall===w&&a.field===field))continue;const [key,d]=field.split('.'),value=state.walls[w][key][Number(d)];state.axes.push({wall:w,field,values:String(value),min:value,max:value});renderAxes();refresh();return;}}});
+$('preview-index').addEventListener('input',event=>{state.preview=Number(event.target.value);preview();});
+$('download-bundle').addEventListener('click',()=>{if(!validationErrors.length)download('wall_search_configs.zip',zipFiles(generated),'application/zip');});
+$('summary-file').addEventListener('change',async event=>{const file=event.target.files[0];if(!file)return;try{if(file.size>20000000)throw Error('קובץ הסיכום גדול מ־20 MB; פתחו אותו בעורך טקסט');setSummary(JSON.parse(await file.text()));}catch(e){loadedSummary=null;$('loaded-results').hidden=true;$('result-status').textContent='לא ניתן לטעון את הסיכום: '+e.message;}});
+$('result-candidate').addEventListener('change',renderResultCandidate);
+$('start').value=state.exp.start;$('goal').value=state.exp.goal;renderWalls();renderAxes();refresh();go(0);
+// Public helpers allow validation against the Python pipeline without duplicating the generator.
+window.WallGuide={state,configs,validate,gridTotal,candidateAt,zipFiles,setSummary,go,refresh};
+</script>
+</body>
+</html>

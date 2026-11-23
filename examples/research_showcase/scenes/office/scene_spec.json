@@ -1,0 +1,3760 @@
+{
+  "name": "office",
+  "title": "Office / dense desktop workspace",
+  "units": "meters",
+  "robot_base_world_m": [
+    0,
+    -0.08,
+    0.86
+  ],
+  "materials": {
+    "ivory": [
+      [
+        0.76,
+        0.75,
+        0.68
+      ],
+      0.06,
+      0.42
+    ],
+    "white": [
+      [
+        0.88,
+        0.9,
+        0.87
+      ],
+      0,
+      0.32
+    ],
+    "wood": [
+      [
+        0.28,
+        0.13,
+        0.055
+      ],
+      0,
+      0.48
+    ],
+    "oak": [
+      [
+        0.55,
+        0.34,
+        0.15
+      ],
+      0,
+      0.55
+    ],
+    "teal": [
+      [
+        0.045,
+        0.25,
+        0.23
+      ],
+      0.15,
+      0.4
+    ],
+    "navy": [
+      [
+        0.035,
+        0.085,
+        0.14
+      ],
+      0.05,
+      0.4
+    ],
+    "black": [
+      [
+        0.018,
+        0.025,
+        0.03
+      ],
+      0.08,
+      0.38
+    ],
+    "metal": [
+      [
+        0.47,
+        0.5,
+        0.53
+      ],
+      0.82,
+      0.23
+    ],
+    "glass": [
+      [
+        0.1,
+        0.23,
+        0.24
+      ],
+      0.35,
+      0.12
+    ],
+    "terracotta": [
+      [
+        0.52,
+        0.19,
+        0.095
+      ],
+      0,
+      0.6
+    ],
+    "green": [
+      [
+        0.075,
+        0.24,
+        0.065
+      ],
+      0,
+      0.6
+    ],
+    "leaf": [
+      [
+        0.17,
+        0.36,
+        0.09
+      ],
+      0,
+      0.55
+    ],
+    "yellow": [
+      [
+        0.88,
+        0.59,
+        0.035
+      ],
+      0,
+      0.36
+    ],
+    "red": [
+      [
+        0.8,
+        0.075,
+        0.055
+      ],
+      0,
+      0.32
+    ],
+    "blue": [
+      [
+        0.04,
+        0.38,
+        0.85
+      ],
+      0.05,
+      0.32
+    ],
+    "purple": [
+      [
+        0.48,
+        0.12,
+        0.7
+      ],
+      0,
+      0.32
+    ],
+    "paper": [
+      [
+        0.85,
+        0.82,
+        0.7
+      ],
+      0,
+      0.75
+    ],
+    "screen": [
+      [
+        0.035,
+        0.14,
+        0.19
+      ],
+      0.15,
+      0.2
+    ],
+    "floor": [
+      [
+        0.35,
+        0.37,
+        0.36
+      ],
+      0,
+      0.7
+    ],
+    "grout": [
+      [
+        0.16,
+        0.18,
+        0.18
+      ],
+      0,
+      0.8
+    ]
+  },
+  "geometry": [
+    {
+      "name": "floor",
+      "shape": "box",
+      "position_m": [
+        0,
+        0,
+        -0.045
+      ],
+      "size": [
+        5,
+        5,
+        0.08
+      ],
+      "material": "floor"
+    },
+    {
+      "name": "floor_line_x-5",
+      "shape": "box",
+      "position_m": [
+        -2.0,
+        0,
+        -0.003
+      ],
+      "size": [
+        0.003,
+        4,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_y-5",
+      "shape": "box",
+      "position_m": [
+        0,
+        -2.0,
+        -0.003
+      ],
+      "size": [
+        4,
+        0.003,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_x-4",
+      "shape": "box",
+      "position_m": [
+        -1.6,
+        0,
+        -0.003
+      ],
+      "size": [
+        0.003,
+        4,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_y-4",
+      "shape": "box",
+      "position_m": [
+        0,
+        -1.6,
+        -0.003
+      ],
+      "size": [
+        4,
+        0.003,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_x-3",
+      "shape": "box",
+      "position_m": [
+        -1.2000000000000002,
+        0,
+        -0.003
+      ],
+      "size": [
+        0.003,
+        4,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_y-3",
+      "shape": "box",
+      "position_m": [
+        0,
+        -1.2000000000000002,
+        -0.003
+      ],
+      "size": [
+        4,
+        0.003,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_x-2",
+      "shape": "box",
+      "position_m": [
+        -0.8,
+        0,
+        -0.003
+      ],
+      "size": [
+        0.003,
+        4,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_y-2",
+      "shape": "box",
+      "position_m": [
+        0,
+        -0.8,
+        -0.003
+      ],
+      "size": [
+        4,
+        0.003,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_x-1",
+      "shape": "box",
+      "position_m": [
+        -0.4,
+        0,
+        -0.003
+      ],
+      "size": [
+        0.003,
+        4,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_y-1",
+      "shape": "box",
+      "position_m": [
+        0,
+        -0.4,
+        -0.003
+      ],
+      "size": [
+        4,
+        0.003,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_x0",
+      "shape": "box",
+      "position_m": [
+        0.0,
+        0,
+        -0.003
+      ],
+      "size": [
+        0.003,
+        4,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_y0",
+      "shape": "box",
+      "position_m": [
+        0,
+        0.0,
+        -0.003
+      ],
+      "size": [
+        4,
+        0.003,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_x1",
+      "shape": "box",
+      "position_m": [
+        0.4,
+        0,
+        -0.003
+      ],
+      "size": [
+        0.003,
+        4,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_y1",
+      "shape": "box",
+      "position_m": [
+        0,
+        0.4,
+        -0.003
+      ],
+      "size": [
+        4,
+        0.003,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_x2",
+      "shape": "box",
+      "position_m": [
+        0.8,
+        0,
+        -0.003
+      ],
+      "size": [
+        0.003,
+        4,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_y2",
+      "shape": "box",
+      "position_m": [
+        0,
+        0.8,
+        -0.003
+      ],
+      "size": [
+        4,
+        0.003,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_x3",
+      "shape": "box",
+      "position_m": [
+        1.2000000000000002,
+        0,
+        -0.003
+      ],
+      "size": [
+        0.003,
+        4,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_y3",
+      "shape": "box",
+      "position_m": [
+        0,
+        1.2000000000000002,
+        -0.003
+      ],
+      "size": [
+        4,
+        0.003,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_x4",
+      "shape": "box",
+      "position_m": [
+        1.6,
+        0,
+        -0.003
+      ],
+      "size": [
+        0.003,
+        4,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_y4",
+      "shape": "box",
+      "position_m": [
+        0,
+        1.6,
+        -0.003
+      ],
+      "size": [
+        4,
+        0.003,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_x5",
+      "shape": "box",
+      "position_m": [
+        2.0,
+        0,
+        -0.003
+      ],
+      "size": [
+        0.003,
+        4,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "floor_line_y5",
+      "shape": "box",
+      "position_m": [
+        0,
+        2.0,
+        -0.003
+      ],
+      "size": [
+        4,
+        0.003,
+        0.001
+      ],
+      "material": "grout"
+    },
+    {
+      "name": "back_wall",
+      "shape": "box",
+      "position_m": [
+        0.35,
+        0.94,
+        1.25
+      ],
+      "size": [
+        3.0,
+        0.08,
+        2.5
+      ],
+      "material": "ivory"
+    },
+    {
+      "name": "wall_baseboard",
+      "shape": "box",
+      "position_m": [
+        0.35,
+        0.887,
+        0.08
+      ],
+      "size": [
+        3,
+        0.025,
+        0.15
+      ],
+      "material": "white"
+    },
+    {
+      "name": "worktop",
+      "shape": "box",
+      "position_m": [
+        0.33,
+        0,
+        0.815
+      ],
+      "size": [
+        1.52,
+        1.2,
+        0.07
+      ],
+      "material": "oak"
+    },
+    {
+      "name": "robot_mount",
+      "shape": "cylinder",
+      "position_m": [
+        0,
+        -0.08,
+        0.855
+      ],
+      "size": [
+        0.09,
+        0.01
+      ],
+      "material": "metal"
+    },
+    {
+      "name": "bolt_-0.06_-0.14",
+      "shape": "cylinder",
+      "position_m": [
+        -0.06,
+        -0.14,
+        0.864
+      ],
+      "size": [
+        0.005,
+        0.008
+      ],
+      "material": "black"
+    },
+    {
+      "name": "bolt_-0.06_-0.02",
+      "shape": "cylinder",
+      "position_m": [
+        -0.06,
+        -0.02,
+        0.864
+      ],
+      "size": [
+        0.005,
+        0.008
+      ],
+      "material": "black"
+    },
+    {
+      "name": "bolt_0.06_-0.14",
+      "shape": "cylinder",
+      "position_m": [
+        0.06,
+        -0.14,
+        0.864
+      ],
+      "size": [
+        0.005,
+        0.008
+      ],
+      "material": "black"
+    },
+    {
+      "name": "bolt_0.06_-0.02",
+      "shape": "cylinder",
+      "position_m": [
+        0.06,
+        -0.02,
+        0.864
+      ],
+      "size": [
+        0.005,
+        0.008
+      ],
+      "material": "black"
+    },
+    {
+      "name": "table_leg0",
+      "shape": "box",
+      "position_m": [
+        -0.31,
+        -0.48,
+        0.39
+      ],
+      "size": [
+        0.045,
+        0.045,
+        0.78
+      ],
+      "material": "navy"
+    },
+    {
+      "name": "table_leg1",
+      "shape": "box",
+      "position_m": [
+        -0.31,
+        0.48,
+        0.39
+      ],
+      "size": [
+        0.045,
+        0.045,
+        0.78
+      ],
+      "material": "navy"
+    },
+    {
+      "name": "table_leg2",
+      "shape": "box",
+      "position_m": [
+        0.97,
+        -0.48,
+        0.39
+      ],
+      "size": [
+        0.045,
+        0.045,
+        0.78
+      ],
+      "material": "navy"
+    },
+    {
+      "name": "table_leg3",
+      "shape": "box",
+      "position_m": [
+        0.97,
+        0.48,
+        0.39
+      ],
+      "size": [
+        0.045,
+        0.045,
+        0.78
+      ],
+      "material": "navy"
+    },
+    {
+      "name": "lower_crossbar",
+      "shape": "box",
+      "position_m": [
+        0.33,
+        0.48,
+        0.18
+      ],
+      "size": [
+        1.3,
+        0.035,
+        0.05
+      ],
+      "material": "navy"
+    },
+    {
+      "name": "monitor_stand",
+      "shape": "box",
+      "position_m": [
+        0.62,
+        0.36,
+        0.861
+      ],
+      "size": [
+        0.25,
+        0.16,
+        0.022
+      ],
+      "material": "black"
+    },
+    {
+      "name": "monitor_neck",
+      "shape": "box",
+      "position_m": [
+        0.62,
+        0.41,
+        1.01
+      ],
+      "size": [
+        0.045,
+        0.045,
+        0.29
+      ],
+      "material": "metal"
+    },
+    {
+      "name": "monitor_case",
+      "shape": "box",
+      "position_m": [
+        0.62,
+        0.42,
+        1.23
+      ],
+      "size": [
+        0.52,
+        0.045,
+        0.34
+      ],
+      "material": "black"
+    },
+    {
+      "name": "monitor_screen",
+      "shape": "box",
+      "position_m": [
+        0.62,
+        0.393,
+        1.23
+      ],
+      "size": [
+        0.485,
+        0.004,
+        0.303
+      ],
+      "material": "screen"
+    },
+    {
+      "name": "screen_line0",
+      "shape": "box",
+      "position_m": [
+        0.5,
+        0.389,
+        1.31
+      ],
+      "size": [
+        0.19,
+        0.001,
+        0.006
+      ],
+      "material": "teal"
+    },
+    {
+      "name": "screen_line1",
+      "shape": "box",
+      "position_m": [
+        0.513,
+        0.389,
+        1.2770000000000001
+      ],
+      "size": [
+        0.203,
+        0.001,
+        0.006
+      ],
+      "material": "teal"
+    },
+    {
+      "name": "screen_line2",
+      "shape": "box",
+      "position_m": [
+        0.526,
+        0.389,
+        1.244
+      ],
+      "size": [
+        0.216,
+        0.001,
+        0.006
+      ],
+      "material": "teal"
+    },
+    {
+      "name": "screen_line3",
+      "shape": "box",
+      "position_m": [
+        0.539,
+        0.389,
+        1.211
+      ],
+      "size": [
+        0.19,
+        0.001,
+        0.006
+      ],
+      "material": "teal"
+    },
+    {
+      "name": "screen_line4",
+      "shape": "box",
+      "position_m": [
+        0.552,
+        0.389,
+        1.178
+      ],
+      "size": [
+        0.203,
+        0.001,
+        0.006
+      ],
+      "material": "teal"
+    },
+    {
+      "name": "screen_line5",
+      "shape": "box",
+      "position_m": [
+        0.565,
+        0.389,
+        1.145
+      ],
+      "size": [
+        0.216,
+        0.001,
+        0.006
+      ],
+      "material": "teal"
+    },
+    {
+      "name": "keyboard",
+      "shape": "box",
+      "position_m": [
+        0.67,
+        0.1,
+        0.865
+      ],
+      "size": [
+        0.35,
+        0.14,
+        0.025
+      ],
+      "material": "navy"
+    },
+    {
+      "name": "key_0_0",
+      "shape": "box",
+      "position_m": [
+        0.515,
+        0.047,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "white"
+    },
+    {
+      "name": "key_0_1",
+      "shape": "box",
+      "position_m": [
+        0.542,
+        0.047,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "white"
+    },
+    {
+      "name": "key_0_2",
+      "shape": "box",
+      "position_m": [
+        0.5690000000000001,
+        0.047,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "white"
+    },
+    {
+      "name": "key_0_3",
+      "shape": "box",
+      "position_m": [
+        0.596,
+        0.047,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "white"
+    },
+    {
+      "name": "key_0_4",
+      "shape": "box",
+      "position_m": [
+        0.623,
+        0.047,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "white"
+    },
+    {
+      "name": "key_0_5",
+      "shape": "box",
+      "position_m": [
+        0.65,
+        0.047,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "white"
+    },
+    {
+      "name": "key_0_6",
+      "shape": "box",
+      "position_m": [
+        0.677,
+        0.047,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "white"
+    },
+    {
+      "name": "key_0_7",
+      "shape": "box",
+      "position_m": [
+        0.704,
+        0.047,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "white"
+    },
+    {
+      "name": "key_0_8",
+      "shape": "box",
+      "position_m": [
+        0.731,
+        0.047,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "white"
+    },
+    {
+      "name": "key_0_9",
+      "shape": "box",
+      "position_m": [
+        0.758,
+        0.047,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "white"
+    },
+    {
+      "name": "key_0_10",
+      "shape": "box",
+      "position_m": [
+        0.785,
+        0.047,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "white"
+    },
+    {
+      "name": "key_0_11",
+      "shape": "box",
+      "position_m": [
+        0.812,
+        0.047,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "white"
+    },
+    {
+      "name": "key_1_0",
+      "shape": "box",
+      "position_m": [
+        0.515,
+        0.077,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_1_1",
+      "shape": "box",
+      "position_m": [
+        0.542,
+        0.077,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_1_2",
+      "shape": "box",
+      "position_m": [
+        0.5690000000000001,
+        0.077,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_1_3",
+      "shape": "box",
+      "position_m": [
+        0.596,
+        0.077,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_1_4",
+      "shape": "box",
+      "position_m": [
+        0.623,
+        0.077,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_1_5",
+      "shape": "box",
+      "position_m": [
+        0.65,
+        0.077,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_1_6",
+      "shape": "box",
+      "position_m": [
+        0.677,
+        0.077,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_1_7",
+      "shape": "box",
+      "position_m": [
+        0.704,
+        0.077,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_1_8",
+      "shape": "box",
+      "position_m": [
+        0.731,
+        0.077,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_1_9",
+      "shape": "box",
+      "position_m": [
+        0.758,
+        0.077,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_1_10",
+      "shape": "box",
+      "position_m": [
+        0.785,
+        0.077,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_1_11",
+      "shape": "box",
+      "position_m": [
+        0.812,
+        0.077,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_2_0",
+      "shape": "box",
+      "position_m": [
+        0.515,
+        0.107,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_2_1",
+      "shape": "box",
+      "position_m": [
+        0.542,
+        0.107,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_2_2",
+      "shape": "box",
+      "position_m": [
+        0.5690000000000001,
+        0.107,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_2_3",
+      "shape": "box",
+      "position_m": [
+        0.596,
+        0.107,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_2_4",
+      "shape": "box",
+      "position_m": [
+        0.623,
+        0.107,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_2_5",
+      "shape": "box",
+      "position_m": [
+        0.65,
+        0.107,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_2_6",
+      "shape": "box",
+      "position_m": [
+        0.677,
+        0.107,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_2_7",
+      "shape": "box",
+      "position_m": [
+        0.704,
+        0.107,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_2_8",
+      "shape": "box",
+      "position_m": [
+        0.731,
+        0.107,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_2_9",
+      "shape": "box",
+      "position_m": [
+        0.758,
+        0.107,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_2_10",
+      "shape": "box",
+      "position_m": [
+        0.785,
+        0.107,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_2_11",
+      "shape": "box",
+      "position_m": [
+        0.812,
+        0.107,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_3_0",
+      "shape": "box",
+      "position_m": [
+        0.515,
+        0.137,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_3_1",
+      "shape": "box",
+      "position_m": [
+        0.542,
+        0.137,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_3_2",
+      "shape": "box",
+      "position_m": [
+        0.5690000000000001,
+        0.137,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_3_3",
+      "shape": "box",
+      "position_m": [
+        0.596,
+        0.137,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_3_4",
+      "shape": "box",
+      "position_m": [
+        0.623,
+        0.137,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_3_5",
+      "shape": "box",
+      "position_m": [
+        0.65,
+        0.137,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_3_6",
+      "shape": "box",
+      "position_m": [
+        0.677,
+        0.137,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_3_7",
+      "shape": "box",
+      "position_m": [
+        0.704,
+        0.137,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_3_8",
+      "shape": "box",
+      "position_m": [
+        0.731,
+        0.137,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_3_9",
+      "shape": "box",
+      "position_m": [
+        0.758,
+        0.137,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_3_10",
+      "shape": "box",
+      "position_m": [
+        0.785,
+        0.137,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "key_3_11",
+      "shape": "box",
+      "position_m": [
+        0.812,
+        0.137,
+        0.881
+      ],
+      "size": [
+        0.022,
+        0.023,
+        0.009
+      ],
+      "material": "black"
+    },
+    {
+      "name": "mouse",
+      "shape": "sphere",
+      "position_m": [
+        0.93,
+        0.07,
+        0.871
+      ],
+      "size": [
+        0.035,
+        0.055,
+        0.018
+      ],
+      "material": "black"
+    },
+    {
+      "name": "book0_pages",
+      "shape": "box",
+      "position_m": [
+        0.23,
+        0.35,
+        0.868
+      ],
+      "size": [
+        0.17279999999999998,
+        0.2112,
+        0.02028
+      ],
+      "material": "paper"
+    },
+    {
+      "name": "book0_top",
+      "shape": "box",
+      "position_m": [
+        0.23,
+        0.35,
+        0.881
+      ],
+      "size": [
+        0.18,
+        0.22,
+        0.003
+      ],
+      "material": "navy"
+    },
+    {
+      "name": "book0_bottom",
+      "shape": "box",
+      "position_m": [
+        0.23,
+        0.35,
+        0.855
+      ],
+      "size": [
+        0.18,
+        0.22,
+        0.003
+      ],
+      "material": "navy"
+    },
+    {
+      "name": "book0_spine",
+      "shape": "box",
+      "position_m": [
+        0.14,
+        0.35,
+        0.868
+      ],
+      "size": [
+        0.004,
+        0.22,
+        0.026
+      ],
+      "material": "navy"
+    },
+    {
+      "name": "book1_pages",
+      "shape": "box",
+      "position_m": [
+        0.23,
+        0.35,
+        0.896
+      ],
+      "size": [
+        0.17279999999999998,
+        0.2112,
+        0.02028
+      ],
+      "material": "paper"
+    },
+    {
+      "name": "book1_top",
+      "shape": "box",
+      "position_m": [
+        0.23,
+        0.35,
+        0.909
+      ],
+      "size": [
+        0.18,
+        0.22,
+        0.003
+      ],
+      "material": "terracotta"
+    },
+    {
+      "name": "book1_bottom",
+      "shape": "box",
+      "position_m": [
+        0.23,
+        0.35,
+        0.883
+      ],
+      "size": [
+        0.18,
+        0.22,
+        0.003
+      ],
+      "material": "terracotta"
+    },
+    {
+      "name": "book1_spine",
+      "shape": "box",
+      "position_m": [
+        0.14,
+        0.35,
+        0.896
+      ],
+      "size": [
+        0.004,
+        0.22,
+        0.026
+      ],
+      "material": "terracotta"
+    },
+    {
+      "name": "book2_pages",
+      "shape": "box",
+      "position_m": [
+        0.23,
+        0.35,
+        0.924
+      ],
+      "size": [
+        0.17279999999999998,
+        0.2112,
+        0.02028
+      ],
+      "material": "paper"
+    },
+    {
+      "name": "book2_top",
+      "shape": "box",
+      "position_m": [
+        0.23,
+        0.35,
+        0.937
+      ],
+      "size": [
+        0.18,
+        0.22,
+        0.003
+      ],
+      "material": "teal"
+    },
+    {
+      "name": "book2_bottom",
+      "shape": "box",
+      "position_m": [
+        0.23,
+        0.35,
+        0.911
+      ],
+      "size": [
+        0.18,
+        0.22,
+        0.003
+      ],
+      "material": "teal"
+    },
+    {
+      "name": "book2_spine",
+      "shape": "box",
+      "position_m": [
+        0.14,
+        0.35,
+        0.924
+      ],
+      "size": [
+        0.004,
+        0.22,
+        0.026
+      ],
+      "material": "teal"
+    },
+    {
+      "name": "book3_pages",
+      "shape": "box",
+      "position_m": [
+        0.23,
+        0.35,
+        0.952
+      ],
+      "size": [
+        0.17279999999999998,
+        0.2112,
+        0.02028
+      ],
+      "material": "paper"
+    },
+    {
+      "name": "book3_top",
+      "shape": "box",
+      "position_m": [
+        0.23,
+        0.35,
+        0.965
+      ],
+      "size": [
+        0.18,
+        0.22,
+        0.003
+      ],
+      "material": "paper"
+    },
+    {
+      "name": "book3_bottom",
+      "shape": "box",
+      "position_m": [
+        0.23,
+        0.35,
+        0.939
+      ],
+      "size": [
+        0.18,
+        0.22,
+        0.003
+      ],
+      "material": "paper"
+    },
+    {
+      "name": "book3_spine",
+      "shape": "box",
+      "position_m": [
+        0.14,
+        0.35,
+        0.952
+      ],
+      "size": [
+        0.004,
+        0.22,
+        0.026
+      ],
+      "material": "paper"
+    },
+    {
+      "name": "mug",
+      "shape": "lathe",
+      "position_m": [
+        0.84,
+        -0.23,
+        0.85
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "material": "yellow",
+      "profile": [
+        [
+          0,
+          0
+        ],
+        [
+          0.034,
+          0
+        ],
+        [
+          0.039,
+          0.079
+        ],
+        [
+          0.034,
+          0.083
+        ],
+        [
+          0.029,
+          0.077
+        ],
+        [
+          0.025,
+          0.008
+        ],
+        [
+          0,
+          0.008
+        ]
+      ]
+    },
+    {
+      "name": "mug_handle",
+      "shape": "tube",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.006
+      ],
+      "material": "yellow",
+      "points": [
+        [
+          0.883,
+          -0.23,
+          0.863
+        ],
+        [
+          0.8870672960910461,
+          -0.23,
+          0.8633693497821459
+        ],
+        [
+          0.8910344418537487,
+          -0.23,
+          0.8644683045111454
+        ],
+        [
+          0.8948037529932282,
+          -0.23,
+          0.866269804274349
+        ],
+        [
+          0.8982824165596043,
+          -0.23,
+          0.8687294901687516
+        ],
+        [
+          0.9013847763108502,
+          -0.23,
+          0.8717867965644036
+        ],
+        [
+          0.9040344418537486,
+          -0.23,
+          0.8753664424312259
+        ],
+        [
+          0.9061661696288976,
+          -0.23,
+          0.8793802850078136
+        ],
+        [
+          0.907727469423674,
+          -0.23,
+          0.8837294901687516
+        ],
+        [
+          0.9086798968554736,
+          -0.23,
+          0.8883069660487931
+        ],
+        [
+          0.909,
+          -0.23,
+          0.893
+        ],
+        [
+          0.9086798968554736,
+          -0.23,
+          0.8976930339512069
+        ],
+        [
+          0.907727469423674,
+          -0.23,
+          0.9022705098312485
+        ],
+        [
+          0.9061661696288976,
+          -0.23,
+          0.9066197149921864
+        ],
+        [
+          0.9040344418537486,
+          -0.23,
+          0.9106335575687742
+        ],
+        [
+          0.9013847763108502,
+          -0.23,
+          0.9142132034355964
+        ],
+        [
+          0.8982824165596043,
+          -0.23,
+          0.9172705098312485
+        ],
+        [
+          0.8948037529932282,
+          -0.23,
+          0.9197301957256511
+        ],
+        [
+          0.8910344418537487,
+          -0.23,
+          0.9215316954888546
+        ],
+        [
+          0.8870672960910461,
+          -0.23,
+          0.9226306502178542
+        ],
+        [
+          0.883,
+          -0.23,
+          0.923
+        ],
+        [
+          0.8789327039089541,
+          -0.23,
+          0.9226306502178542
+        ],
+        [
+          0.8749655581462514,
+          -0.23,
+          0.9215316954888546
+        ],
+        [
+          0.8711962470067718,
+          -0.23,
+          0.9197301957256511
+        ],
+        [
+          0.8677175834403957,
+          -0.23,
+          0.9172705098312485
+        ],
+        [
+          0.8646152236891498,
+          -0.23,
+          0.9142132034355964
+        ],
+        [
+          0.8619655581462514,
+          -0.23,
+          0.9106335575687742
+        ],
+        [
+          0.8598338303711024,
+          -0.23,
+          0.9066197149921864
+        ],
+        [
+          0.858272530576326,
+          -0.23,
+          0.9022705098312485
+        ],
+        [
+          0.8573201031445264,
+          -0.23,
+          0.8976930339512069
+        ],
+        [
+          0.857,
+          -0.23,
+          0.893
+        ],
+        [
+          0.8573201031445264,
+          -0.23,
+          0.8883069660487931
+        ],
+        [
+          0.858272530576326,
+          -0.23,
+          0.8837294901687516
+        ],
+        [
+          0.8598338303711024,
+          -0.23,
+          0.8793802850078136
+        ],
+        [
+          0.8619655581462514,
+          -0.23,
+          0.8753664424312259
+        ],
+        [
+          0.8646152236891498,
+          -0.23,
+          0.8717867965644036
+        ],
+        [
+          0.8677175834403957,
+          -0.23,
+          0.8687294901687516
+        ],
+        [
+          0.8711962470067718,
+          -0.23,
+          0.866269804274349
+        ],
+        [
+          0.8749655581462513,
+          -0.23,
+          0.8644683045111454
+        ],
+        [
+          0.878932703908954,
+          -0.23,
+          0.8633693497821459
+        ],
+        [
+          0.883,
+          -0.23,
+          0.863
+        ]
+      ]
+    },
+    {
+      "name": "plant",
+      "shape": "lathe",
+      "position_m": [
+        0.96,
+        0.47,
+        0.85
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "material": "terracotta",
+      "profile": [
+        [
+          0,
+          0
+        ],
+        [
+          0.042,
+          0
+        ],
+        [
+          0.056,
+          0.095
+        ],
+        [
+          0.054,
+          0.1
+        ],
+        [
+          0,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "plant_soil",
+      "shape": "cylinder",
+      "position_m": [
+        0.96,
+        0.47,
+        0.95
+      ],
+      "size": [
+        0.048,
+        0.003
+      ],
+      "material": "wood"
+    },
+    {
+      "name": "plant_stem0",
+      "shape": "tube",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.002
+      ],
+      "material": "green",
+      "points": [
+        [
+          0.96,
+          0.47,
+          0.95
+        ],
+        [
+          0.995,
+          0.47,
+          1.05
+        ]
+      ]
+    },
+    {
+      "name": "plant_leaf0",
+      "shape": "sphere",
+      "position_m": [
+        0.995,
+        0.47,
+        1.04
+      ],
+      "size": [
+        0.025,
+        0.016,
+        0.055
+      ],
+      "material": "green"
+    },
+    {
+      "name": "plant_stem1",
+      "shape": "tube",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.002
+      ],
+      "material": "green",
+      "points": [
+        [
+          0.96,
+          0.47,
+          0.95
+        ],
+        [
+          0.9216906700436248,
+          0.505162412293436,
+          1.065
+        ]
+      ]
+    },
+    {
+      "name": "plant_leaf1",
+      "shape": "sphere",
+      "position_m": [
+        0.9216906700436248,
+        0.505162412293436,
+        1.055
+      ],
+      "size": [
+        0.025,
+        0.016,
+        0.055
+      ],
+      "material": "leaf"
+    },
+    {
+      "name": "plant_stem2",
+      "shape": "tube",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.002
+      ],
+      "material": "green",
+      "points": [
+        [
+          0.96,
+          0.47,
+          0.95
+        ],
+        [
+          0.9629927268193229,
+          0.43512818349748744,
+          1.08
+        ]
+      ]
+    },
+    {
+      "name": "plant_leaf2",
+      "shape": "sphere",
+      "position_m": [
+        0.9629927268193229,
+        0.43512818349748744,
+        1.07
+      ],
+      "size": [
+        0.025,
+        0.016,
+        0.055
+      ],
+      "material": "green"
+    },
+    {
+      "name": "plant_stem3",
+      "shape": "tube",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.002
+      ],
+      "material": "green",
+      "points": [
+        [
+          0.96,
+          0.47,
+          0.95
+        ],
+        [
+          0.9917579380026187,
+          0.5111756405393022,
+          1.05
+        ]
+      ]
+    },
+    {
+      "name": "plant_leaf3",
+      "shape": "sphere",
+      "position_m": [
+        0.9917579380026187,
+        0.5111756405393022,
+        1.04
+      ],
+      "size": [
+        0.025,
+        0.016,
+        0.055
+      ],
+      "material": "leaf"
+    },
+    {
+      "name": "plant_stem4",
+      "shape": "tube",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.002
+      ],
+      "material": "green",
+      "points": [
+        [
+          0.96,
+          0.47,
+          0.95
+        ],
+        [
+          0.9255117950751482,
+          0.464036467400824,
+          1.065
+        ]
+      ]
+    },
+    {
+      "name": "plant_leaf4",
+      "shape": "sphere",
+      "position_m": [
+        0.9255117950751482,
+        0.464036467400824,
+        1.055
+      ],
+      "size": [
+        0.025,
+        0.016,
+        0.055
+      ],
+      "material": "green"
+    },
+    {
+      "name": "plant_stem5",
+      "shape": "tube",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.002
+      ],
+      "material": "green",
+      "points": [
+        [
+          0.96,
+          0.47,
+          0.95
+        ],
+        [
+          1.0037403489727657,
+          0.441879155920551,
+          1.08
+        ]
+      ]
+    },
+    {
+      "name": "plant_leaf5",
+      "shape": "sphere",
+      "position_m": [
+        1.0037403489727657,
+        0.441879155920551,
+        1.07
+      ],
+      "size": [
+        0.025,
+        0.016,
+        0.055
+      ],
+      "material": "leaf"
+    },
+    {
+      "name": "plant_stem6",
+      "shape": "tube",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.002
+      ],
+      "material": "green",
+      "points": [
+        [
+          0.96,
+          0.47,
+          0.95
+        ],
+        [
+          0.9511093431333106,
+          0.5038519751340862,
+          1.05
+        ]
+      ]
+    },
+    {
+      "name": "plant_leaf6",
+      "shape": "sphere",
+      "position_m": [
+        0.9511093431333106,
+        0.5038519751340862,
+        1.04
+      ],
+      "size": [
+        0.025,
+        0.016,
+        0.055
+      ],
+      "material": "green"
+    },
+    {
+      "name": "plant_stem7",
+      "shape": "tube",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.002
+      ],
+      "material": "green",
+      "points": [
+        [
+          0.96,
+          0.47,
+          0.95
+        ],
+        [
+          0.9357222285949437,
+          0.4240153306459225,
+          1.065
+        ]
+      ]
+    },
+    {
+      "name": "plant_leaf7",
+      "shape": "sphere",
+      "position_m": [
+        0.9357222285949437,
+        0.4240153306459225,
+        1.055
+      ],
+      "size": [
+        0.025,
+        0.016,
+        0.055
+      ],
+      "material": "leaf"
+    },
+    {
+      "name": "plant_stem8",
+      "shape": "tube",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.002
+      ],
+      "material": "green",
+      "points": [
+        [
+          0.96,
+          0.47,
+          0.95
+        ],
+        [
+          0.992967787367918,
+          0.4817526591060808,
+          1.08
+        ]
+      ]
+    },
+    {
+      "name": "plant_leaf8",
+      "shape": "sphere",
+      "position_m": [
+        0.992967787367918,
+        0.4817526591060808,
+        1.07
+      ],
+      "size": [
+        0.025,
+        0.016,
+        0.055
+      ],
+      "material": "green"
+    },
+    {
+      "name": "pen_pot",
+      "shape": "cylinder",
+      "position_m": [
+        0.42,
+        0.43,
+        0.9
+      ],
+      "size": [
+        0.035,
+        0.1
+      ],
+      "material": "metal"
+    },
+    {
+      "name": "pen0",
+      "shape": "cylinder",
+      "position_m": [
+        0.4,
+        0.415,
+        0.985
+      ],
+      "size": [
+        0.003,
+        0.13
+      ],
+      "material": "blue"
+    },
+    {
+      "name": "pen1",
+      "shape": "cylinder",
+      "position_m": [
+        0.41500000000000004,
+        0.415,
+        0.985
+      ],
+      "size": [
+        0.003,
+        0.13
+      ],
+      "material": "red"
+    },
+    {
+      "name": "pen2",
+      "shape": "cylinder",
+      "position_m": [
+        0.43000000000000005,
+        0.415,
+        0.985
+      ],
+      "size": [
+        0.003,
+        0.13
+      ],
+      "material": "black"
+    },
+    {
+      "name": "pen3",
+      "shape": "cylinder",
+      "position_m": [
+        0.4,
+        0.43,
+        0.985
+      ],
+      "size": [
+        0.003,
+        0.13
+      ],
+      "material": "blue"
+    },
+    {
+      "name": "pen4",
+      "shape": "cylinder",
+      "position_m": [
+        0.41500000000000004,
+        0.43,
+        0.985
+      ],
+      "size": [
+        0.003,
+        0.13
+      ],
+      "material": "red"
+    },
+    {
+      "name": "pen5",
+      "shape": "cylinder",
+      "position_m": [
+        0.43000000000000005,
+        0.43,
+        0.985
+      ],
+      "size": [
+        0.003,
+        0.13
+      ],
+      "material": "black"
+    },
+    {
+      "name": "pen6",
+      "shape": "cylinder",
+      "position_m": [
+        0.4,
+        0.44499999999999995,
+        0.985
+      ],
+      "size": [
+        0.003,
+        0.13
+      ],
+      "material": "blue"
+    },
+    {
+      "name": "notebook_pages",
+      "shape": "box",
+      "position_m": [
+        0.28,
+        -0.4,
+        0.864
+      ],
+      "size": [
+        0.2112,
+        0.1536,
+        0.014039999999999999
+      ],
+      "material": "paper"
+    },
+    {
+      "name": "notebook_top",
+      "shape": "box",
+      "position_m": [
+        0.28,
+        -0.4,
+        0.873
+      ],
+      "size": [
+        0.22,
+        0.16,
+        0.003
+      ],
+      "material": "terracotta"
+    },
+    {
+      "name": "notebook_bottom",
+      "shape": "box",
+      "position_m": [
+        0.28,
+        -0.4,
+        0.855
+      ],
+      "size": [
+        0.22,
+        0.16,
+        0.003
+      ],
+      "material": "terracotta"
+    },
+    {
+      "name": "notebook_spine",
+      "shape": "box",
+      "position_m": [
+        0.17000000000000004,
+        -0.4,
+        0.864
+      ],
+      "size": [
+        0.004,
+        0.16,
+        0.018
+      ],
+      "material": "terracotta"
+    },
+    {
+      "name": "papertray",
+      "shape": "box",
+      "position_m": [
+        0.92,
+        -0.42,
+        0.89
+      ],
+      "size": [
+        0.22,
+        0.18,
+        0.08
+      ],
+      "material": "teal"
+    },
+    {
+      "name": "papers",
+      "shape": "box",
+      "position_m": [
+        0.92,
+        -0.42,
+        0.935
+      ],
+      "size": [
+        0.205,
+        0.16,
+        0.014
+      ],
+      "material": "paper"
+    },
+    {
+      "name": "desk_lamp_base",
+      "shape": "box",
+      "position_m": [
+        -0.19,
+        0.35,
+        0.86
+      ],
+      "size": [
+        0.14,
+        0.14,
+        0.02
+      ],
+      "material": "black"
+    },
+    {
+      "name": "lamp_stem",
+      "shape": "tube",
+      "position_m": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        0.012
+      ],
+      "material": "metal",
+      "points": [
+        [
+          -0.19,
+          0.35,
+          0.87
+        ],
+        [
+          -0.19,
+          0.35,
+          1.28
+        ],
+        [
+          -0.03,
+          0.35,
+          1.36
+        ]
+      ]
+    },
+    {
+      "name": "lamp_shade",
+      "shape": "lathe",
+      "position_m": [
+        -0.03,
+        0.35,
+        1.31
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "material": "ivory",
+      "profile": [
+        [
+          0.07,
+          0
+        ],
+        [
+          0.07,
+          0.01
+        ],
+        [
+          0.035,
+          0.09
+        ],
+        [
+          0,
+          0.09
+        ]
+      ]
+    },
+    {
+      "name": "document_rack_base",
+      "shape": "box",
+      "position_m": [
+        0.62,
+        -0.4,
+        0.862
+      ],
+      "size": [
+        0.24,
+        0.2,
+        0.024
+      ],
+      "material": "navy"
+    },
+    {
+      "name": "folder0",
+      "shape": "box",
+      "position_m": [
+        0.53,
+        -0.4,
+        0.977
+      ],
+      "size": [
+        0.025,
+        0.17,
+        0.2
+      ],
+      "material": "teal"
+    },
+    {
+      "name": "folder_spine_label0",
+      "shape": "box",
+      "position_m": [
+        0.53,
+        -0.487,
+        0.95
+      ],
+      "size": [
+        0.018,
+        0.003,
+        0.06
+      ],
+      "material": "paper"
+    },
+    {
+      "name": "folder1",
+      "shape": "box",
+      "position_m": [
+        0.5750000000000001,
+        -0.4,
+        0.9995
+      ],
+      "size": [
+        0.025,
+        0.17,
+        0.245
+      ],
+      "material": "terracotta"
+    },
+    {
+      "name": "folder_spine_label1",
+      "shape": "box",
+      "position_m": [
+        0.5750000000000001,
+        -0.487,
+        0.95
+      ],
+      "size": [
+        0.018,
+        0.003,
+        0.06
+      ],
+      "material": "paper"
+    },
+    {
+      "name": "folder2",
+      "shape": "box",
+      "position_m": [
+        0.62,
+        -0.4,
+        0.977
+      ],
+      "size": [
+        0.025,
+        0.17,
+        0.2
+      ],
+      "material": "navy"
+    },
+    {
+      "name": "folder_spine_label2",
+      "shape": "box",
+      "position_m": [
+        0.62,
+        -0.487,
+        0.95
+      ],
+      "size": [
+        0.018,
+        0.003,
+        0.06
+      ],
+      "material": "paper"
+    },
+    {
+      "name": "folder3",
+      "shape": "box",
+      "position_m": [
+        0.665,
+        -0.4,
+        0.9995
+      ],
+      "size": [
+        0.025,
+        0.17,
+        0.245
+      ],
+      "material": "ivory"
+    },
+    {
+      "name": "folder_spine_label3",
+      "shape": "box",
+      "position_m": [
+        0.665,
+        -0.487,
+        0.95
+      ],
+      "size": [
+        0.018,
+        0.003,
+        0.06
+      ],
+      "material": "paper"
+    },
+    {
+      "name": "folder4",
+      "shape": "box",
+      "position_m": [
+        0.71,
+        -0.4,
+        0.977
+      ],
+      "size": [
+        0.025,
+        0.17,
+        0.2
+      ],
+      "material": "teal"
+    },
+    {
+      "name": "folder_spine_label4",
+      "shape": "box",
+      "position_m": [
+        0.71,
+        -0.487,
+        0.95
+      ],
+      "size": [
+        0.018,
+        0.003,
+        0.06
+      ],
+      "material": "paper"
+    },
+    {
+      "name": "speaker0",
+      "shape": "box",
+      "position_m": [
+        0.36,
+        0.27,
+        0.955
+      ],
+      "size": [
+        0.075,
+        0.09,
+        0.21
+      ],
+      "material": "black"
+    },
+    {
+      "name": "speaker_cone0_0",
+      "shape": "cylinder",
+      "position_m": [
+        0.36,
+        0.22300000000000003,
+        0.91
+      ],
+      "size": [
+        0.024,
+        0.004
+      ],
+      "material": "metal",
+      "axis": "Y"
+    },
+    {
+      "name": "speaker_cone0_1",
+      "shape": "cylinder",
+      "position_m": [
+        0.36,
+        0.22300000000000003,
+        0.99
+      ],
+      "size": [
+        0.024,
+        0.004
+      ],
+      "material": "metal",
+      "axis": "Y"
+    },
+    {
+      "name": "speaker1",
+      "shape": "box",
+      "position_m": [
+        0.98,
+        0.19,
+        0.955
+      ],
+      "size": [
+        0.075,
+        0.09,
+        0.21
+      ],
+      "material": "black"
+    },
+    {
+      "name": "speaker_cone1_0",
+      "shape": "cylinder",
+      "position_m": [
+        0.98,
+        0.14300000000000002,
+        0.91
+      ],
+      "size": [
+        0.024,
+        0.004
+      ],
+      "material": "metal",
+      "axis": "Y"
+    },
+    {
+      "name": "speaker_cone1_1",
+      "shape": "cylinder",
+      "position_m": [
+        0.98,
+        0.14300000000000002,
+        0.99
+      ],
+      "size": [
+        0.024,
+        0.004
+      ],
+      "material": "metal",
+      "axis": "Y"
+    },
+    {
+      "name": "laptop_bottom",
+      "shape": "box",
+      "position_m": [
+        -0.2,
+        -0.36,
+        0.86
+      ],
+      "size": [
+        0.28,
+        0.22,
+        0.02
+      ],
+      "material": "metal"
+    },
+    {
+      "name": "laptop_lid",
+      "shape": "box",
+      "position_m": [
+        -0.2,
+        -0.36,
+        0.875
+      ],
+      "size": [
+        0.28,
+        0.22,
+        0.01
+      ],
+      "material": "navy"
+    },
+    {
+      "name": "water_bottle",
+      "shape": "lathe",
+      "position_m": [
+        0.05,
+        0.47,
+        0.85
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "material": "teal",
+      "profile": [
+        [
+          0,
+          0
+        ],
+        [
+          0.035,
+          0
+        ],
+        [
+          0.035,
+          0.18200000000000002
+        ],
+        [
+          0.015750000000000004,
+          0.22120000000000004
+        ],
+        [
+          0.015750000000000004,
+          0.266
+        ],
+        [
+          0.0175,
+          0.26880000000000004
+        ],
+        [
+          0.0175,
+          0.28
+        ],
+        [
+          0,
+          0.28
+        ]
+      ]
+    },
+    {
+      "name": "water_bottle_label",
+      "shape": "cylinder",
+      "position_m": [
+        0.05,
+        0.47,
+        0.9676
+      ],
+      "size": [
+        0.035525,
+        0.06440000000000001
+      ],
+      "material": "paper"
+    },
+    {
+      "name": "water_bottle_cap",
+      "shape": "cylinder",
+      "position_m": [
+        0.05,
+        0.47,
+        1.1328
+      ],
+      "size": [
+        0.0182,
+        0.019600000000000003
+      ],
+      "material": "metal"
+    },
+    {
+      "name": "desktop_frame",
+      "shape": "box",
+      "position_m": [
+        0.26,
+        -0.18,
+        1.0
+      ],
+      "size": [
+        0.14,
+        0.022,
+        0.3
+      ],
+      "material": "wood"
+    },
+    {
+      "name": "frame_paper",
+      "shape": "box",
+      "position_m": [
+        0.26,
+        -0.193,
+        1.0
+      ],
+      "size": [
+        0.12,
+        0.002,
+        0.27
+      ],
+      "material": "paper"
+    },
+    {
+      "name": "Target_A",
+      "shape": "box",
+      "position_m": [
+        0.48,
+        -0.11,
+        0.873
+      ],
+      "size": [
+        0.035,
+        0.035,
+        0.035
+      ],
+      "material": "blue"
+    },
+    {
+      "name": "Target_A_pad",
+      "shape": "cylinder",
+      "position_m": [
+        0.48,
+        -0.11,
+        0.853
+      ],
+      "size": [
+        0.029,
+        0.005
+      ],
+      "material": "black"
+    },
+    {
+      "name": "Target_B",
+      "shape": "box",
+      "position_m": [
+        0.37,
+        0.15,
+        0.873
+      ],
+      "size": [
+        0.035,
+        0.035,
+        0.035
+      ],
+      "material": "yellow"
+    },
+    {
+      "name": "Target_B_pad",
+      "shape": "cylinder",
+      "position_m": [
+        0.37,
+        0.15,
+        0.853
+      ],
+      "size": [
+        0.029,
+        0.005
+      ],
+      "material": "black"
+    },
+    {
+      "name": "Target_C",
+      "shape": "box",
+      "position_m": [
+        0.7,
+        -0.12,
+        0.873
+      ],
+      "size": [
+        0.035,
+        0.035,
+        0.035
+      ],
+      "material": "purple"
+    },
+    {
+      "name": "Target_C_pad",
+      "shape": "cylinder",
+      "position_m": [
+        0.7,
+        -0.12,
+        0.853
+      ],
+      "size": [
+        0.029,
+        0.005
+      ],
+      "material": "black"
+    }
+  ],
+  "colliders": [
+    {
+      "name": "floor",
+      "position_m": [
+        0,
+        0,
+        -0.045
+      ],
+      "dimensions_m": [
+        5,
+        5,
+        0.08
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "back_wall_and_tiles",
+      "position_m": [
+        0.35,
+        0.928,
+        1.25
+      ],
+      "dimensions_m": [
+        3,
+        0.11,
+        2.5
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "worktop",
+      "position_m": [
+        0.33,
+        0,
+        0.815
+      ],
+      "dimensions_m": [
+        1.52,
+        1.2,
+        0.07
+      ],
+      "category": "table",
+      "collider": true
+    },
+    {
+      "name": "table_leg0",
+      "position_m": [
+        -0.31,
+        -0.48,
+        0.39
+      ],
+      "dimensions_m": [
+        0.045,
+        0.045,
+        0.78
+      ],
+      "category": "table",
+      "collider": true
+    },
+    {
+      "name": "table_leg1",
+      "position_m": [
+        -0.31,
+        0.48,
+        0.39
+      ],
+      "dimensions_m": [
+        0.045,
+        0.045,
+        0.78
+      ],
+      "category": "table",
+      "collider": true
+    },
+    {
+      "name": "table_leg2",
+      "position_m": [
+        0.97,
+        -0.48,
+        0.39
+      ],
+      "dimensions_m": [
+        0.045,
+        0.045,
+        0.78
+      ],
+      "category": "table",
+      "collider": true
+    },
+    {
+      "name": "table_leg3",
+      "position_m": [
+        0.97,
+        0.48,
+        0.39
+      ],
+      "dimensions_m": [
+        0.045,
+        0.045,
+        0.78
+      ],
+      "category": "table",
+      "collider": true
+    },
+    {
+      "name": "lower_crossbar",
+      "position_m": [
+        0.33,
+        0.48,
+        0.18
+      ],
+      "dimensions_m": [
+        1.3,
+        0.035,
+        0.05
+      ],
+      "category": "table",
+      "collider": true
+    },
+    {
+      "name": "monitor",
+      "position_m": [
+        0.62,
+        0.37,
+        1.125
+      ],
+      "dimensions_m": [
+        0.53,
+        0.19,
+        0.55
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "keyboard",
+      "position_m": [
+        0.67,
+        0.1,
+        0.868
+      ],
+      "dimensions_m": [
+        0.35,
+        0.14,
+        0.036
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "mouse",
+      "position_m": [
+        0.93,
+        0.07,
+        0.872
+      ],
+      "dimensions_m": [
+        0.07,
+        0.11,
+        0.042
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "book0",
+      "position_m": [
+        0.23,
+        0.35,
+        0.868
+      ],
+      "dimensions_m": [
+        0.186,
+        0.222,
+        0.032
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "book1",
+      "position_m": [
+        0.23,
+        0.35,
+        0.896
+      ],
+      "dimensions_m": [
+        0.186,
+        0.222,
+        0.032
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "book2",
+      "position_m": [
+        0.23,
+        0.35,
+        0.924
+      ],
+      "dimensions_m": [
+        0.186,
+        0.222,
+        0.032
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "book3",
+      "position_m": [
+        0.23,
+        0.35,
+        0.952
+      ],
+      "dimensions_m": [
+        0.186,
+        0.222,
+        0.032
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "mug",
+      "position_m": [
+        0.858,
+        -0.23,
+        0.893
+      ],
+      "dimensions_m": [
+        0.12,
+        0.08,
+        0.086
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "plant",
+      "position_m": [
+        0.96,
+        0.47,
+        1.0
+      ],
+      "dimensions_m": [
+        0.18,
+        0.18,
+        0.3
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "pen_pot",
+      "position_m": [
+        0.42,
+        0.43,
+        0.94
+      ],
+      "dimensions_m": [
+        0.09,
+        0.09,
+        0.18
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "notebook",
+      "position_m": [
+        0.28,
+        -0.4,
+        0.864
+      ],
+      "dimensions_m": [
+        0.226,
+        0.162,
+        0.024
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "papertray",
+      "position_m": [
+        0.92,
+        -0.42,
+        0.895
+      ],
+      "dimensions_m": [
+        0.23,
+        0.19,
+        0.1
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "lamp_complete",
+      "position_m": [
+        -0.105,
+        0.35,
+        1.125
+      ],
+      "dimensions_m": [
+        0.31,
+        0.15,
+        0.55
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "document_rack",
+      "position_m": [
+        0.62,
+        -0.4,
+        0.998
+      ],
+      "dimensions_m": [
+        0.25,
+        0.21,
+        0.296
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "speaker0",
+      "position_m": [
+        0.36,
+        0.27,
+        0.955
+      ],
+      "dimensions_m": [
+        0.08,
+        0.1,
+        0.21
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "speaker1",
+      "position_m": [
+        0.98,
+        0.19,
+        0.955
+      ],
+      "dimensions_m": [
+        0.08,
+        0.1,
+        0.21
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "closed_laptop",
+      "position_m": [
+        -0.2,
+        -0.36,
+        0.865
+      ],
+      "dimensions_m": [
+        0.29,
+        0.23,
+        0.035
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "water_bottle",
+      "position_m": [
+        0.05,
+        0.47,
+        1.0012
+      ],
+      "dimensions_m": [
+        0.0728,
+        0.0728,
+        0.30240000000000006
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "desktop_frame",
+      "position_m": [
+        0.26,
+        -0.18,
+        1.0
+      ],
+      "dimensions_m": [
+        0.15,
+        0.03,
+        0.3
+      ],
+      "category": "obstacle",
+      "collider": true
+    }
+  ],
+  "targets": [
+    {
+      "name": "Target_A",
+      "marker_world_m": [
+        0.48,
+        -0.11,
+        0.873
+      ],
+      "tcp_world_m": [
+        0.48,
+        -0.11,
+        0.953
+      ],
+      "color": "blue",
+      "collider": false
+    },
+    {
+      "name": "Target_B",
+      "marker_world_m": [
+        0.37,
+        0.15,
+        0.873
+      ],
+      "tcp_world_m": [
+        0.37,
+        0.15,
+        0.953
+      ],
+      "color": "yellow",
+      "collider": false
+    },
+    {
+      "name": "Target_C",
+      "marker_world_m": [
+        0.7,
+        -0.12,
+        0.873
+      ],
+      "tcp_world_m": [
+        0.7,
+        -0.12,
+        0.953
+      ],
+      "color": "purple",
+      "collider": false
+    }
+  ],
+  "motion_semantics": "Kinematic reach demonstration; no grasp or dynamic control.",
+  "provenance": "Original procedural household scene; native UR5e visual CAD reused locally."
+}

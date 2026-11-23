@@ -1,0 +1,76 @@
+{
+  "environment_id": "WY_L1_I2_J3_H070__mounted_clearance10mm_v1",
+  "description": "Single thin vertical wall, grounded on the physical tabletop.",
+  "objects": [
+    {
+      "category": "table",
+      "collider": true,
+      "color_rgb": [
+        0.63,
+        0.43,
+        0.22
+      ],
+      "dimensions_m": [
+        2.4,
+        2.4,
+        0.1
+      ],
+      "name": "table",
+      "position_m": [
+        0,
+        0,
+        -0.05
+      ]
+    },
+    {
+      "category": "target",
+      "collider": false,
+      "color_rgb": [
+        1,
+        0.45,
+        0
+      ],
+      "dimensions_m": [
+        0.05,
+        0.05,
+        0.05
+      ],
+      "name": "goal",
+      "position_m": [
+        0.65,
+        0,
+        0.3
+      ]
+    },
+    {
+      "category": "wall",
+      "collider": true,
+      "color_rgb": [
+        0.42,
+        0.47,
+        0.54
+      ],
+      "dimensions_m": [
+        0.02,
+        0.15,
+        0.7
+      ],
+      "name": "wall",
+      "position_m": [
+        0.44999999999999996,
+        0.07499999999999994,
+        0.35
+      ]
+    }
+  ],
+  "target": {
+    "object": "goal",
+    "orientation_constraint": "free",
+    "position_tolerance_m": 0.001,
+    "tcp_target_m": [
+      0.65,
+      0.0,
+      0.3
+    ]
+  }
+}

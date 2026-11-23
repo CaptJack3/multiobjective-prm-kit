@@ -1,0 +1,54 @@
+{
+  "accept": true,
+  "actual_cubic_curve_certified": true,
+  "margin_m": 0.005,
+  "shared_start_and_goal": true,
+  "shared_duration": true,
+  "routes": [
+    {
+      "route": "route_01",
+      "frames": 274,
+      "continuous_curve_bound_m": 0.005000007624439255,
+      "dense_min_all_pairs_m": 0.005122641440950684,
+      "endpoint_error_m": 9.898776933596634e-14,
+      "shared_duration_s": 11.375,
+      "c2_join_derivatives_verified": true,
+      "no_internal_dwell": true,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.2759575161971952,
+      "max_joint_acceleration_rad_s2": 0.23906200874234507,
+      "min_interior_speed_fraction": 0.12712343552628336,
+      "actual_curve_evaluation": true
+    },
+    {
+      "route": "route_02",
+      "frames": 274,
+      "continuous_curve_bound_m": 0.005149554431674414,
+      "dense_min_all_pairs_m": 0.01581246084786468,
+      "endpoint_error_m": 9.90032202770907e-14,
+      "shared_duration_s": 11.375,
+      "c2_join_derivatives_verified": true,
+      "no_internal_dwell": true,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.44813972836635624,
+      "max_joint_acceleration_rad_s2": 1.195740899913221,
+      "min_interior_speed_fraction": 0.1271329074135657,
+      "actual_curve_evaluation": true
+    },
+    {
+      "route": "route_03",
+      "frames": 274,
+      "continuous_curve_bound_m": 0.005028466604946965,
+      "dense_min_all_pairs_m": 0.006666527318822328,
+      "endpoint_error_m": 9.897241717093825e-14,
+      "shared_duration_s": 11.375,
+      "c2_join_derivatives_verified": true,
+      "no_internal_dwell": true,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.2013684449298875,
+      "max_joint_acceleration_rad_s2": 0.21949545603179094,
+      "min_interior_speed_fraction": 0.12712704974336142,
+      "actual_curve_evaluation": true
+    }
+  ]
+}

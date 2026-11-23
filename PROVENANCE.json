@@ -1,0 +1,142 @@
+[
+  {
+    "source": "FINAL_ARTIFACTS/collision_models/robot_convex_envelopes.npz",
+    "destination": "src/prmkit/resources/assets/ur5e/robot_convex_envelopes.npz",
+    "sha256": "52f01c7e0359811b91ebec8bbca1763e77553256fe1de48230b14a1eb53a58c5"
+  },
+  {
+    "source": "FINAL_ARTIFACTS/collision_models/ur5e_reference.urdf",
+    "destination": "src/prmkit/resources/assets/ur5e/ur5e_reference.urdf",
+    "sha256": "c3ece471b1c70032e549409bddf2ab2b4d71e2c71d62135a1f20f03e27d428f1"
+  },
+  {
+    "source": "FINAL_ARTIFACTS/collision_models/self_pair_policy.json",
+    "destination": "src/prmkit/resources/assets/ur5e/self_pair_policy.json",
+    "sha256": "e3045af187ab213731d1f2f24c3ca6b537b595195e4fb9aad86588c071b5ed84",
+    "source_sha256": "6ce956cec3162086b1bfc258e0417bceda8a66dfd1fdde44454a2b5c4f554783",
+    "transformation": "Historical provenance paths made repository-relative; geometry and numerical data unchanged."
+  },
+  {
+    "source": "FINAL_ARTIFACTS/collision_models/UR_DESCRIPTION_LICENSE.txt",
+    "destination": "src/prmkit/resources/assets/ur5e/UR_DESCRIPTION_LICENSE.txt",
+    "sha256": "bfb6287ea2fb65367f877c57e05d49a65166dc10285ac53096ddc2fb6752bae1"
+  },
+  {
+    "source": "FINAL_ARTIFACTS/collision_models/CUROBO_ASSET_LICENSE.txt",
+    "destination": "src/prmkit/resources/assets/ur5e/CUROBO_ASSET_LICENSE.txt",
+    "sha256": "1875daf7da4ff7554e49558b734a42af5d7077703f8bf6ec0239765b9225e4c1"
+  },
+  {
+    "source": "FINAL_ARTIFACTS/collision_models/meshes/base.stl",
+    "destination": "src/prmkit/resources/assets/ur5e/meshes/base.stl",
+    "sha256": "9a145e0d46f2130afdf2a2e8825a00a929870c4c3d6d8e4d1adc5f04db3aac1b"
+  },
+  {
+    "source": "FINAL_ARTIFACTS/collision_models/meshes/forearm.stl",
+    "destination": "src/prmkit/resources/assets/ur5e/meshes/forearm.stl",
+    "sha256": "2e7423cab807c34160ec4f770daee5e747d70e777eb01b7beeace2b8c5751816"
+  },
+  {
+    "source": "FINAL_ARTIFACTS/collision_models/meshes/shoulder.stl",
+    "destination": "src/prmkit/resources/assets/ur5e/meshes/shoulder.stl",
+    "sha256": "ceb92532177daa77682f5fbd628e01c2137d168f949a7a706ce1dabe9f002387"
+  },
+  {
+    "source": "FINAL_ARTIFACTS/collision_models/meshes/upperarm.stl",
+    "destination": "src/prmkit/resources/assets/ur5e/meshes/upperarm.stl",
+    "sha256": "ee893044caf00075cb55b4cf666d1f1311c7979786212a501009f33bee945209"
+  },
+  {
+    "source": "FINAL_ARTIFACTS/collision_models/meshes/wrist1.stl",
+    "destination": "src/prmkit/resources/assets/ur5e/meshes/wrist1.stl",
+    "sha256": "f8c9f9337b6fd98c75f052e96de10e14a107ddb6874ba6b904e546f8a4e4f43a"
+  },
+  {
+    "source": "FINAL_ARTIFACTS/collision_models/meshes/wrist2.stl",
+    "destination": "src/prmkit/resources/assets/ur5e/meshes/wrist2.stl",
+    "sha256": "2964a63f60ce3e3cf3ad55bcf190d7876d50e373cb64b70a57cea5885eaf3c86"
+  },
+  {
+    "source": "FINAL_ARTIFACTS/collision_models/meshes/wrist3.stl",
+    "destination": "src/prmkit/resources/assets/ur5e/meshes/wrist3.stl",
+    "sha256": "83b3666b4ae2badd54af0d2c25a921682ecbc29e849eec646c3ed55fb74c78a3"
+  },
+  {
+    "source": "FINAL_ARTIFACTS/environments/E4/environment.json",
+    "destination": "src/prmkit/resources/assets/E4/environment.json",
+    "sha256": "74b3d70c6cc3aff2b7b78080d5378150a2678202276fb48df45e74e772e338df",
+    "source_sha256": "aaa44ca390ecf876b6f2cd5e47e9a5a84c40e8fe6b89f384e1e0206fedf6467e",
+    "transformation": "Historical provenance paths made repository-relative; geometry and numerical data unchanged."
+  },
+  {
+    "source": "FINAL_ARTIFACTS/environments/E4/queries.npz",
+    "destination": "src/prmkit/resources/assets/E4/queries.npz",
+    "sha256": "5bf2abc2fafab61c3b2fbf4537eceecf920d06e8ff7a5124b66903e595fb1512"
+  },
+  {
+    "source": "FINAL_ARTIFACTS/environments/E5/environment.json",
+    "destination": "src/prmkit/resources/assets/E5/environment.json",
+    "sha256": "fceca617b7a790a40ba8b149119e2d5e3b00964654c0593aefa94ab3c12b0162",
+    "source_sha256": "82e97e6868c07e2aa22760b81aa83b31eff6afe42ca1ca8e14ae94fe9b5d89f7",
+    "transformation": "Historical provenance paths made repository-relative; geometry and numerical data unchanged."
+  },
+  {
+    "source": "FINAL_ARTIFACTS/environments/E5/queries.npz",
+    "destination": "src/prmkit/resources/assets/E5/queries.npz",
+    "sha256": "f9a2e8c673b6feabc825f2ccefe92ce4554e2719839729aa8a486bb676537fee"
+  },
+  {
+    "source": "FINAL_ARTIFACTS/environments/E7/environment.json",
+    "destination": "src/prmkit/resources/assets/E7/environment.json",
+    "sha256": "5beb92c5651491667f399b3db3355757ebfb266d8c622ebc54e74c2452f26b85",
+    "source_sha256": "296aa5badf360a0634214c3c5a86c4eefce86f972433878c5b16d71f31f9fced",
+    "transformation": "Historical provenance paths made repository-relative; geometry and numerical data unchanged."
+  },
+  {
+    "source": "FINAL_ARTIFACTS/environments/E7/queries.npz",
+    "destination": "src/prmkit/resources/assets/E7/queries.npz",
+    "sha256": "cd566cc8df9c3cf60858993d7fe07a3b69d8ca95f2fa2fe5e15c38a1a6b3fd7b"
+  },
+  {
+    "source": "experiments/apex_correctness/fixtures/terminal_obligation.json",
+    "destination": "tests/fixtures/terminal_obligation.json",
+    "sha256": "4f463b89aef2e24b5b69ceb6a76bf3f1364c4a662352e34941b5edeb8fa8305f"
+  },
+  {
+    "source": "experiments/apex_correctness/fixtures/real_ancestry_reopening.json",
+    "destination": "tests/fixtures/real_ancestry_reopening.json",
+    "sha256": "f949514bab4c464896fa557b8ac8a71b00de5ec5c5da9f6290c55bc415b503d6",
+    "source_sha256": "4067ca27a2be40d4fb45eb7efbc27bfbaa5f9dc70fc721da79bb4eec5d08dd48",
+    "transformation": "Historical provenance paths made repository-relative; geometry and numerical data unchanged."
+  },
+  {
+    "source": "experiments/master_pareto/apex_kernel.py",
+    "destination": "src/prmkit/_research_kernel.py",
+    "sha256": "3192ed9e078a4ae9d53ef37f362be9ae4734b11386c9e15c99c1c7d245c0d5aa"
+  },
+  {
+    "source": "FINAL_ARTIFACTS/environments/E4/selected/01_shortest/trajectory.npz",
+    "destination": "src/prmkit/resources/assets/E4/reference_path.npz",
+    "sha256": "861d5eedb43dbbbc0e0205e5070f46c1d44a458f996d8a7e703a03953f73a409"
+  },
+  {
+    "source": "FINAL_ARTIFACTS/environments/E5/selected/01_shortest/trajectory.npz",
+    "destination": "src/prmkit/resources/assets/E5/reference_path.npz",
+    "sha256": "e31d88eb4ffa908d60b7b22d269d2b9d6dc4e6ea902528c857a4a510ce00c7bd"
+  },
+  {
+    "source": "FINAL_ARTIFACTS/environments/E7/selected/01_shortest/trajectory.npz",
+    "destination": "src/prmkit/resources/assets/E7/reference_path.npz",
+    "sha256": "e8cdef490b73c6fdecedb2e54c5d21d13a3c8f2c5b019e20abb85d1b787002ba"
+  },
+  {
+    "source": "experiments/clearance_rebuild/assembly.py",
+    "destination": "tests/reference/assembly.py",
+    "sha256": "8d0b09dfb4d3cf7538ca5306e5bbb4a316c0bdf1891309ceeee488ddc1dc375e"
+  },
+  {
+    "source": "results/ur5e_realsense_picknik_20261121/standard/assembly_meshes.npz",
+    "destination": "src/prmkit/resources/assets/mounted_ur5e/assembly_meshes.npz",
+    "sha256": "b79225bd537c1ad60552d5214fa41af0f4c3d08a74bbb44e9f0d36cb5e0f5ace"
+  }
+]

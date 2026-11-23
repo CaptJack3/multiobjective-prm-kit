@@ -1,0 +1,385 @@
+{
+  "variant": "standard",
+  "tcp": [
+    0.0,
+    0.0,
+    0.1659000001
+  ],
+  "camera": {
+    "parent_prim_path": "/World/Robot/wrist_3_link",
+    "translation_m": [
+      -0.0325,
+      -0.07832352198146629,
+      0.028948537881749364
+    ],
+    "rotation_rpy_deg": [
+      -5.999999999999991,
+      -1.2722218725854067e-14,
+      -1.987846675914698e-15
+    ],
+    "resolution_wh": [
+      640,
+      360
+    ],
+    "horizontal_fov_deg": 69.4,
+    "clipping_range_m": [
+      0.005,
+      5.0
+    ],
+    "description": "Official D435 mesh and nominal RGB optical frame on PickNik 6-degree UR adapter; ideal pinhole RGB, not physical stereo/noise simulation",
+    "gripper": "Robotiq 2F-85 fixed open, actual CAD coupling",
+    "tcp_offset_tool0_m": [
+      0.0,
+      0.0,
+      0.1659000001
+    ]
+  },
+  "T_flange_mount": [
+    [
+      -5.551115123125783e-17,
+      -1.0,
+      -5.551115123125783e-17,
+      0.0
+    ],
+    [
+      0.10452846326765353,
+      5.551115123125783e-17,
+      -0.9945218953682733,
+      -0.067
+    ],
+    [
+      0.9945218953682733,
+      -5.551115123125783e-17,
+      0.10452846326765353,
+      0.0171
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "T_flange_mesh": [
+    [
+      -1.0,
+      -5.5511151231257815e-17,
+      1.6653345369377348e-16,
+      0.0
+    ],
+    [
+      7.87211325609446e-17,
+      -0.9945218953682733,
+      0.1045284632676533,
+      -0.07787404958941538
+    ],
+    [
+      1.6531707011508374e-16,
+      0.1045284632676533,
+      0.9945218953682733,
+      0.03322498203183294
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "T_flange_rgb_optical": [
+    [
+      1.0,
+      5.5511151231257815e-17,
+      -2.7755575615628914e-16,
+      -0.0325
+    ],
+    [
+      -3.230116990157105e-17,
+      0.9945218953682733,
+      0.1045284632676533,
+      -0.07832352198146629
+    ],
+    [
+      2.763393725775994e-16,
+      -0.1045284632676533,
+      0.9945218953682733,
+      0.028948537881749364
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "source_hashes": {
+    "realsense_LICENSE": {
+      "sha256": "7092398b52290edddcb41c6e2297f4c6343eb315ea6c83edfdbeea2a73adfbdb",
+      "bytes": 10758
+    },
+    "d435.urdf.xacro": {
+      "sha256": "ae3f57e8d38b3a6d5cc9de059e4afe545e4b895717d638b75d2ad0642cfb7f1b",
+      "bytes": 7527
+    },
+    "picknik_ur.xacro": {
+      "sha256": "2210173de8b7f486b470eabf6ccb705eacc3c5e91dc6a7fe73bdb515f48bd7d5",
+      "bytes": 38941
+    },
+    "verified_assets.json": {
+      "sha256": "6f2316122fefb2d56c5a1d933626a9d0ebd934a6020699bd69f04c81ef326105",
+      "bytes": 1060
+    },
+    "camera_mount.urdf.xacro": {
+      "sha256": "f32d105ce551c7af833f7cca319e5e891ac3599ab5fe888cb36fb36f58c677c9",
+      "bytes": 2152
+    },
+    "mount_collision.stl": {
+      "sha256": "9569607b57ac42b9df0f1859cfce821418265141a5cb1266bed3a356a2f5a05e",
+      "bytes": 9384
+    },
+    "camera_mount.dae": {
+      "sha256": "4b7716daa331a01aa34a06d6d858d8508c635208fe05afce4a9e9a77192cc1b9",
+      "bytes": 66447
+    },
+    "d435.dae": {
+      "sha256": "42f3b66f47a1f8f425a2e4dc07c1d9c283183167d8441f520a15623d98f9bf78",
+      "bytes": 15782439
+    },
+    "picknik_LICENSE": {
+      "sha256": "526c155ca101866dbe0c7cab352f240c7407dd42a8d2dfca591ebb7653c9a987",
+      "bytes": 1511
+    }
+  },
+  "source_urls": [
+    {
+      "file": "d435.dae",
+      "bytes": 15782439,
+      "geometry_count": 18,
+      "materials": 1,
+      "unit": [
+        {
+          "meter": "1",
+          "name": "Meters"
+        }
+      ],
+      "url": "https://raw.githubusercontent.com/realsenseai/realsense-ros/ros2-master/realsense2_description/meshes/d435.dae"
+    },
+    {
+      "file": "camera_mount.dae",
+      "bytes": 66447,
+      "geometry_count": 1,
+      "materials": 2,
+      "unit": [
+        {
+          "name": "meter",
+          "meter": "1"
+        }
+      ],
+      "url": "https://raw.githubusercontent.com/PickNikRobotics/picknik_accessories/fcdb1ff8b729c93dbd5f15a09c33098b32caeac5/descriptions/brackets/ur_realsense_camera_adapter/picknik_ur5_realsense_camera_adapter_rev2.dae"
+    },
+    {
+      "file": "camera_mount.urdf.xacro",
+      "bytes": 2152,
+      "geometry_count": 0,
+      "materials": 0,
+      "unit": [],
+      "url": "https://raw.githubusercontent.com/PickNikRobotics/picknik_accessories/fcdb1ff8b729c93dbd5f15a09c33098b32caeac5/descriptions/brackets/ur_realsense_camera_adapter/picknik_ur_camera_adapter.urdf.xacro"
+    }
+  ],
+  "scope": "Ready-made CAD, nominal sensor transforms, authored material finishes; no cables; fixed-open pregrasp",
+  "gripper_axis_alignment": "Robosuite -Y left knuckle maps to PickNik +X left knuckle by Rz(+90deg); actual Robosuite coupling thickness 13.9mm retained, rather than the 11mm adapter of the full PickNik robot example.",
+  "source_artifact": "results/ur5e_realsense_picknik_20261121/standard/assembly_meshes.npz",
+  "source_sha256": "b79225bd537c1ad60552d5214fa41af0f4c3d08a74bbb44e9f0d36cb5e0f5ace",
+  "visual_parts": 34,
+  "collision_parts": 14,
+  "geometry_keys": [
+    {
+      "name": "hand_visual",
+      "parent": "wrist_3_link",
+      "shape": "mesh",
+      "mesh": "assembly_meshes.npz",
+      "mesh_key": "c00",
+      "convex": true,
+      "visual_mesh_keys": [
+        "p00"
+      ],
+      "role": "gripper"
+    },
+    {
+      "name": "left_outer_knuckle_visual",
+      "parent": "wrist_3_link",
+      "shape": "mesh",
+      "mesh": "assembly_meshes.npz",
+      "mesh_key": "c01",
+      "convex": true,
+      "visual_mesh_keys": [
+        "p01"
+      ],
+      "role": "gripper"
+    },
+    {
+      "name": "left_outer_finger_visual",
+      "parent": "wrist_3_link",
+      "shape": "mesh",
+      "mesh": "assembly_meshes.npz",
+      "mesh_key": "c02",
+      "convex": true,
+      "visual_mesh_keys": [
+        "p02"
+      ],
+      "role": "gripper"
+    },
+    {
+      "name": "left_inner_finger_visual",
+      "parent": "wrist_3_link",
+      "shape": "mesh",
+      "mesh": "assembly_meshes.npz",
+      "mesh_key": "c03",
+      "convex": true,
+      "visual_mesh_keys": [
+        "p03"
+      ],
+      "role": "gripper"
+    },
+    {
+      "name": "left_fingertip_visual",
+      "parent": "wrist_3_link",
+      "shape": "mesh",
+      "mesh": "assembly_meshes.npz",
+      "mesh_key": "c04",
+      "convex": true,
+      "visual_mesh_keys": [
+        "p04"
+      ],
+      "role": "gripper"
+    },
+    {
+      "name": "left_inner_knuckle_visual",
+      "parent": "wrist_3_link",
+      "shape": "mesh",
+      "mesh": "assembly_meshes.npz",
+      "mesh_key": "c05",
+      "convex": true,
+      "visual_mesh_keys": [
+        "p05"
+      ],
+      "role": "gripper"
+    },
+    {
+      "name": "right_outer_knuckle_visual",
+      "parent": "wrist_3_link",
+      "shape": "mesh",
+      "mesh": "assembly_meshes.npz",
+      "mesh_key": "c06",
+      "convex": true,
+      "visual_mesh_keys": [
+        "p06"
+      ],
+      "role": "gripper"
+    },
+    {
+      "name": "right_outer_finger_visual",
+      "parent": "wrist_3_link",
+      "shape": "mesh",
+      "mesh": "assembly_meshes.npz",
+      "mesh_key": "c07",
+      "convex": true,
+      "visual_mesh_keys": [
+        "p07"
+      ],
+      "role": "gripper"
+    },
+    {
+      "name": "right_inner_finger_visual",
+      "parent": "wrist_3_link",
+      "shape": "mesh",
+      "mesh": "assembly_meshes.npz",
+      "mesh_key": "c08",
+      "convex": true,
+      "visual_mesh_keys": [
+        "p08"
+      ],
+      "role": "gripper"
+    },
+    {
+      "name": "right_fingertip_visual",
+      "parent": "wrist_3_link",
+      "shape": "mesh",
+      "mesh": "assembly_meshes.npz",
+      "mesh_key": "c09",
+      "convex": true,
+      "visual_mesh_keys": [
+        "p09"
+      ],
+      "role": "gripper"
+    },
+    {
+      "name": "right_inner_knuckle_visual",
+      "parent": "wrist_3_link",
+      "shape": "mesh",
+      "mesh": "assembly_meshes.npz",
+      "mesh_key": "c10",
+      "convex": true,
+      "visual_mesh_keys": [
+        "p10"
+      ],
+      "role": "gripper"
+    },
+    {
+      "name": "robotiq_coupling",
+      "parent": "wrist_3_link",
+      "shape": "mesh",
+      "mesh": "assembly_meshes.npz",
+      "mesh_key": "c11",
+      "convex": true,
+      "visual_mesh_keys": [
+        "p11"
+      ],
+      "role": "mount"
+    },
+    {
+      "name": "picknik_mount_envelope",
+      "parent": "wrist_3_link",
+      "shape": "mesh",
+      "mesh": "assembly_meshes.npz",
+      "mesh_key": "c12",
+      "convex": true,
+      "visual_mesh_keys": [
+        "p12",
+        "p13"
+      ],
+      "role": "mount"
+    },
+    {
+      "name": "d435_camera_envelope",
+      "parent": "wrist_3_link",
+      "shape": "mesh",
+      "mesh": "assembly_meshes.npz",
+      "mesh_key": "c13",
+      "convex": true,
+      "visual_mesh_keys": [
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24",
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32",
+        "p33"
+      ],
+      "role": "camera"
+    }
+  ]
+}

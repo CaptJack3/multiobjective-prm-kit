@@ -1,0 +1,40 @@
+schema_version: 1
+seed: 7
+robot:
+  backend: point
+  lower:
+  - 0
+  - 0
+  upper:
+  - 1
+  - 1
+  radius: 0.015
+  weights:
+  - 1
+  - 1
+environment: environment.json
+query:
+  start:
+  - 0.1
+  - 0.5
+  goals:
+  - - 0.9
+    - 0.5
+prm:
+  n: 160
+  k: 12
+  query_k: 24
+validation:
+  margin: 0.015
+  intervals: 8
+metrics:
+- name: length
+  kind: ee_length
+- name: risk
+  kind: clearance
+  threshold: 0.18
+  power: 2
+search:
+  epsilon: 0.1
+  timeout_s: 60
+  max_labels: 100000

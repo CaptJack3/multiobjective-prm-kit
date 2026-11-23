@@ -1,0 +1,180 @@
+{
+  "source_urdf": "configs/curobo/ur5e.urdf",
+  "source_urdf_sha256": "b2d7cd4f4b84573bdd7c15ec102e2238ccc3a77f8230d266faa0d399bee1957d",
+  "collision_links_ordered": [
+    "base_link_inertia",
+    "shoulder_link",
+    "upper_arm_link",
+    "forearm_link",
+    "wrist_1_link",
+    "wrist_2_link",
+    "wrist_3_link"
+  ],
+  "collision_link_count": 7,
+  "ignored_adjacent_pairs": [
+    [
+      "base_link_inertia",
+      "shoulder_link"
+    ],
+    [
+      "forearm_link",
+      "upper_arm_link"
+    ],
+    [
+      "forearm_link",
+      "wrist_1_link"
+    ],
+    [
+      "shoulder_link",
+      "upper_arm_link"
+    ],
+    [
+      "wrist_1_link",
+      "wrist_2_link"
+    ],
+    [
+      "wrist_2_link",
+      "wrist_3_link"
+    ]
+  ],
+  "active_pairs": [
+    [
+      "base_link_inertia",
+      "upper_arm_link"
+    ],
+    [
+      "base_link_inertia",
+      "forearm_link"
+    ],
+    [
+      "base_link_inertia",
+      "wrist_1_link"
+    ],
+    [
+      "base_link_inertia",
+      "wrist_2_link"
+    ],
+    [
+      "base_link_inertia",
+      "wrist_3_link"
+    ],
+    [
+      "shoulder_link",
+      "forearm_link"
+    ],
+    [
+      "shoulder_link",
+      "wrist_1_link"
+    ],
+    [
+      "shoulder_link",
+      "wrist_2_link"
+    ],
+    [
+      "shoulder_link",
+      "wrist_3_link"
+    ],
+    [
+      "upper_arm_link",
+      "wrist_1_link"
+    ],
+    [
+      "upper_arm_link",
+      "wrist_2_link"
+    ],
+    [
+      "upper_arm_link",
+      "wrist_3_link"
+    ],
+    [
+      "forearm_link",
+      "wrist_2_link"
+    ],
+    [
+      "forearm_link",
+      "wrist_3_link"
+    ],
+    [
+      "wrist_1_link",
+      "wrist_3_link"
+    ]
+  ],
+  "ignored_adjacent_pair_count": 6,
+  "active_pair_count": 15,
+  "assertion": "15 = C(7,2) - 6",
+  "curobo_ignore_pairs_among_collision_links": [
+    [
+      "forearm_link",
+      "upper_arm_link"
+    ],
+    [
+      "forearm_link",
+      "wrist_1_link"
+    ],
+    [
+      "forearm_link",
+      "wrist_2_link"
+    ],
+    [
+      "forearm_link",
+      "wrist_3_link"
+    ],
+    [
+      "shoulder_link",
+      "upper_arm_link"
+    ],
+    [
+      "wrist_1_link",
+      "wrist_2_link"
+    ],
+    [
+      "wrist_1_link",
+      "wrist_3_link"
+    ],
+    [
+      "wrist_2_link",
+      "wrist_3_link"
+    ]
+  ],
+  "curobo_differences": [
+    {
+      "pair": [
+        "forearm_link",
+        "wrist_2_link"
+      ],
+      "difference": "ignored_by_curobo_but_active_by_urdf_rule"
+    },
+    {
+      "pair": [
+        "forearm_link",
+        "wrist_3_link"
+      ],
+      "difference": "ignored_by_curobo_but_active_by_urdf_rule"
+    },
+    {
+      "pair": [
+        "wrist_1_link",
+        "wrist_3_link"
+      ],
+      "difference": "ignored_by_curobo_but_active_by_urdf_rule"
+    },
+    {
+      "pair": [
+        "base_link_inertia",
+        "shoulder_link"
+      ],
+      "difference": "ignored_by_urdf_rule_but_not_curobo"
+    }
+  ],
+  "srdf_disable_collisions": {
+    "present": false,
+    "search_scope": "repository",
+    "note": "no SRDF file or disable_collisions entry found"
+  },
+  "isaac_usd_filtering": {
+    "status": "inspected",
+    "filtered_pair_relationship_count": 0,
+    "relationships": [],
+    "note": "No USD filtered-pair relationships were found; direct scene queries were filtered explicitly to the 15 URDF-active pairs."
+  }
+}

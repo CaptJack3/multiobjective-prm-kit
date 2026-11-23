@@ -1,0 +1,13 @@
+schema_version: 1
+experiment: experiment.yaml
+method: grid
+max_evaluations: 3
+parameters:
+  environment.objects.0:
+    values:
+      - {name: Wall_A, shape: box, position_m: [1.0, 0.0, 0.3], dimensions_m: [0.04, 0.4, 0.6], collider: true}
+      - {name: Wall_A, shape: box, position_m: [1.0, 0.0, 0.45], dimensions_m: [0.08, 0.6, 0.9], collider: true}
+      - {name: Wall_A, shape: box, position_m: [1.0, 0.0, 0.6], dimensions_m: [0.12, 0.8, 1.2], collider: true}
+rank:
+  by: best.ee_length
+  direction: min

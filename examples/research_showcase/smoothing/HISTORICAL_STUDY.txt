@@ -1,0 +1,56 @@
+E4/E5/E7 PATH SMOOTHING — 18 October 2026
+
+18 original movie paths; 1,213 certified new candidate curves.
+All 18 have a smoother alternative with NO increase in any of the three costs.
+Median joint-path roughness reduction: 90.0% (fixed 256-sample metric).
+Median changes: length -17.5%, safety cost -14.7%, visibility cost -21.8%.
+Independent continuous clearance lower bound: at least 10.0018 mm.
+
+Methods: full and partial joint shortcuts; quadratic corner blends; cubic B-splines;
+natural cubic interpolation with/without waypoint regularization; combinations.
+Original start and final joint configurations are fixed for every candidate.
+
+Each eta budget is measured against its own ORIGINAL parent, separately for O1/O2/O3.
+Candidates outside the budget are still retained if nondominated in the augmented pool.
+The three SAFE replacements also preserve sampled minimum world clearance within 0.1 mm.
+
+Sources and established deliverables are immutable. All analysis is in a new folder.
+Recomputed costs use the same definitions, mounted-camera model and 100 mm safety threshold.
+Numerical integration was refined; the raw saved PRM vectors are also retained separately.
+
+Scope: kinematic geometric smoothing, not robot execution or jerk-limited time parameterization.
+Roughness is NOT physical jerk. Candidate-front membership is relative to the available pool,
+not a proof of continuous-space Pareto optimality or a new A*pex epsilon guarantee.
+
+Augmented fronts:
+{"environment": "E4", "original_front_paths": 53, "original_nondominated_after_reintegration": 53, "valid_generated_candidates": 350, "unique_generated_candidates": 350, "new_nondominated": 33, "new_nondominated_both_resolutions": 33, "original_surviving": 23, "augmented_set_size": 56, "all_source_paths_preserved": true}
+{"environment": "E5", "original_front_paths": 202, "original_nondominated_after_reintegration": 199, "valid_generated_candidates": 388, "unique_generated_candidates": 384, "new_nondominated": 47, "new_nondominated_both_resolutions": 47, "original_surviving": 110, "augmented_set_size": 157, "all_source_paths_preserved": true}
+{"environment": "E7", "original_front_paths": 660, "original_nondominated_after_reintegration": 653, "valid_generated_candidates": 475, "unique_generated_candidates": 475, "new_nondominated": 69, "new_nondominated_both_resolutions": 69, "original_surviving": 303, "augmented_set_size": 372, "all_source_paths_preserved": true}
+
+Reproduction (repository root; existing environments):
+For each E4/E5/E7: self_collision_gt/bin/python experiments/pareto_smoothing_20261018/study.py --environment E4 --gpu 0
+Then refine.py and audit.py with the same arguments; run refine.py again with --final for final full-pool cost convergence. Run resolve_close_fronts.py for the four E4 near-tie curves. Finally sky-pareto/.venv/bin/python experiments/pareto_smoothing_20261018/report.py.
+
+Metrics and numerical scope:
+O1 is EE arc length in metres. O2 integrates max(0,1-world_clearance/0.1)^2 over weighted joint arc. O3 integrates visibility loss over the same arc using the existing 64-ray mounted-camera model.
+Raw costs are re-evaluated too; differences from stored PRM quadrature are numerical integration differences, not objective-definition changes.
+Geometric roughness: equal UNWEIGHTED joint-arc resampling at N=256; RMS norm of second finite differences divided by (1/(N-1))^2. The 512-sample result is also reported. This is resolution-dependent geometric roughness, not physical acceleration or jerk.
+Corners in joint space are measured in degrees of direction change between consecutive displacement vectors on the same 512-sample grid; these are not joint-angle magnitudes.
+Cost convergence guard for selected paths: C_new+estimated_error <= (1+eta)*(C_original-estimated_error), with 1e-10 roundoff slack. Estimated error is the absolute difference from nested half-resolution quadrature, not a rigorous integral enclosure.
+All candidate curves: continuous Bezier convex-hull clearance checks. Final selections: a separate Bezier-to-chord displacement bound with Python edge_reference at inflated margin, plus refined on-curve cost evaluation.
+SAFE representatives also retain sampled world minimum within 0.1mm. Other representatives retain the hard >10mm constraint but can trade bottleneck clearance against integrated costs.
+The current collision pair exclusions and conservative robot/camera assembly remain the existing model. No physical execution occurred.
+New nondominated counts are candidate-pool results, not proven global Pareto solutions. Both-resolution membership is provided to expose numerical sensitivity. Count does not equal number of motion families.
+A smaller augmented set can mean improved objective coverage: new candidate curves dominate old points. No original files are removed.
+Smoothing also reduces pairwise geometric separation. Consult diversity_before_after.csv; preserving objective budgets does not guarantee preserving motion families.
+New curves can improve all objectives of a graph path because they leave the finite roadmap edge set. This does not contradict graph-optimality.
+Cubic B-splines/natural cubic paths are C2 in their spline parameter; quadratic local corner blends are C1 geometrically; plain shortcuts remain piecewise linear.
+No Ruckig/TOPPRA, hardware timing, actuator feasibility or expensive nonlinear trajectory optimizer was run.
+
+All 1063 protected input files retain their original SHA-256.
+Saved curve representation: NPZ bezier[segment, 4 control points, 6 joints], cubic Bernstein parameter t in [0,1] per segment. Do not execute the control points as waypoints. Segment parameter durations are not execution timestamps.
+Default visual comparison uses eta=0. Tables include eta=0, 0.01, 0.05 and every tested candidate. Original and new paths remain separate.
+
+Literature: OMPL PathSimplifier https://ompl.kavrakilab.org/classompl_1_1geometric_1_1PathSimplifier.html
+CHOMP https://publications.ri.cmu.edu/chomp-covariant-hamiltonian-optimization-for-motion-planning
+MoveIt timing https://moveit.picknik.ai/main/doc/examples/time_parameterization/time_parameterization_tutorial.html

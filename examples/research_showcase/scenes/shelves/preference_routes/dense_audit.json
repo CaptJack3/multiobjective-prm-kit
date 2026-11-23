@@ -1,0 +1,49 @@
+{
+  "accept": true,
+  "actual_cubic_curve_certified": true,
+  "world_margin_m": 0.015,
+  "internal_margin_m": 0.005,
+  "shared_start_and_goal": true,
+  "shared_duration": true,
+  "routes": [
+    {
+      "route": "route_01",
+      "continuous_world_bound_m": 0.016041436490465254,
+      "continuous_all_pairs_bound_m": 0.007773614365783273,
+      "sampled_world_clearance_m": 0.03240668750584067,
+      "frames": 238,
+      "endpoint_error_m": 1.4875849264967998e-14,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.13030834198204352,
+      "max_joint_acceleration_rad_s2": 0.057900582711957575,
+      "min_interior_speed_fraction": 0.12291584766102792,
+      "actual_curve_evaluation": true
+    },
+    {
+      "route": "route_02",
+      "continuous_world_bound_m": 0.022405335030054225,
+      "continuous_all_pairs_bound_m": 0.005261882597874971,
+      "sampled_world_clearance_m": 0.032406687505840664,
+      "frames": 238,
+      "endpoint_error_m": 1.4689072980195238e-14,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.14890736443544772,
+      "max_joint_acceleration_rad_s2": 0.15021137137796617,
+      "min_interior_speed_fraction": 0.12291520871491668,
+      "actual_curve_evaluation": true
+    },
+    {
+      "route": "route_03",
+      "continuous_world_bound_m": 0.022749781126284074,
+      "continuous_all_pairs_bound_m": 0.005236363244072579,
+      "sampled_world_clearance_m": 0.0324066875058407,
+      "frames": 238,
+      "endpoint_error_m": 1.4875849264967998e-14,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.1728393627776935,
+      "max_joint_acceleration_rad_s2": 1.1954325806716242,
+      "min_interior_speed_fraction": 0.12291519751023415,
+      "actual_curve_evaluation": true
+    }
+  ]
+}

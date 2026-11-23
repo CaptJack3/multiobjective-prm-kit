@@ -1,0 +1,406 @@
+{
+  "environment_id": "kitchen",
+  "description": "Kitchen / cluttered preparation station",
+  "objects": [
+    {
+      "name": "floor",
+      "position_m": [
+        0,
+        0.08,
+        -0.905
+      ],
+      "dimensions_m": [
+        5,
+        5,
+        0.08
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "back_wall_and_tiles",
+      "position_m": [
+        0.35,
+        1.008,
+        0.39
+      ],
+      "dimensions_m": [
+        3,
+        0.11,
+        2.5
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "worktop",
+      "position_m": [
+        0.33,
+        0.08,
+        -0.04500000000000004
+      ],
+      "dimensions_m": [
+        1.52,
+        1.2,
+        0.07
+      ],
+      "category": "table",
+      "collider": true
+    },
+    {
+      "name": "cabinet_and_handles",
+      "position_m": [
+        0.33,
+        0.08,
+        -0.45999999999999996
+      ],
+      "dimensions_m": [
+        1.52,
+        1.22,
+        0.8
+      ],
+      "category": "table",
+      "collider": true
+    },
+    {
+      "name": "cutting_board",
+      "position_m": [
+        0.55,
+        -0.15999999999999998,
+        0.0
+      ],
+      "dimensions_m": [
+        0.32,
+        0.23,
+        0.02
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "knife",
+      "position_m": [
+        0.66,
+        -0.21999999999999997,
+        0.02300000000000002
+      ],
+      "dimensions_m": [
+        0.27,
+        0.03,
+        0.02
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "bottle0",
+      "position_m": [
+        0.82,
+        0.4,
+        0.125
+      ],
+      "dimensions_m": [
+        0.06448,
+        0.06448,
+        0.27
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "bottle1",
+      "position_m": [
+        0.94,
+        0.33,
+        0.09799999999999998
+      ],
+      "dimensions_m": [
+        0.06448,
+        0.06448,
+        0.21600000000000003
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "bottle2",
+      "position_m": [
+        0.78,
+        0.5499999999999999,
+        0.08720000000000006
+      ],
+      "dimensions_m": [
+        0.06448,
+        0.06448,
+        0.19440000000000002
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "bottle3",
+      "position_m": [
+        0.95,
+        0.54,
+        0.13580000000000003
+      ],
+      "dimensions_m": [
+        0.06448,
+        0.06448,
+        0.2916
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "bowl_and_fruit",
+      "position_m": [
+        0.71,
+        0.13,
+        0.04200000000000004
+      ],
+      "dimensions_m": [
+        0.21,
+        0.21,
+        0.104
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "coffee",
+      "position_m": [
+        0.258,
+        0.41000000000000003,
+        0.03300000000000003
+      ],
+      "dimensions_m": [
+        0.12,
+        0.08,
+        0.086
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "tea",
+      "position_m": [
+        0.458,
+        0.51,
+        0.03300000000000003
+      ],
+      "dimensions_m": [
+        0.12,
+        0.08,
+        0.086
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "herb",
+      "position_m": [
+        0.0,
+        0.53,
+        0.14
+      ],
+      "dimensions_m": [
+        0.18,
+        0.18,
+        0.3
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "plate_stack",
+      "position_m": [
+        0.92,
+        -0.15000000000000002,
+        0.016000000000000014
+      ],
+      "dimensions_m": [
+        0.18,
+        0.18,
+        0.05
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "dish_rack",
+      "position_m": [
+        0.52,
+        0.3,
+        0.08499999999999996
+      ],
+      "dimensions_m": [
+        0.16,
+        0.15,
+        0.19
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "utensil_crock_and_tools",
+      "position_m": [
+        0.25,
+        -0.25,
+        0.2025
+      ],
+      "dimensions_m": [
+        0.12,
+        0.13,
+        0.425
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "kettle",
+      "position_m": [
+        0.27,
+        0.2,
+        0.10499999999999998
+      ],
+      "dimensions_m": [
+        0.22,
+        0.2,
+        0.23
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "coffee_grinder",
+      "position_m": [
+        0.65,
+        -0.35,
+        0.136
+      ],
+      "dimensions_m": [
+        0.14,
+        0.15,
+        0.292
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "olive_oil",
+      "position_m": [
+        -0.23,
+        0.36000000000000004,
+        0.14659999999999995
+      ],
+      "dimensions_m": [
+        0.08112,
+        0.08112,
+        0.3132
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "storage_jar",
+      "position_m": [
+        -0.23,
+        -0.26999999999999996,
+        0.08199999999999996
+      ],
+      "dimensions_m": [
+        0.12,
+        0.12,
+        0.184
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "rear_target_jar",
+      "position_m": [
+        0.58,
+        0.45,
+        0.06000000000000005
+      ],
+      "dimensions_m": [
+        0.086,
+        0.086,
+        0.14
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "front_target_jar",
+      "position_m": [
+        0.65,
+        -0.020000000000000004,
+        0.08399999999999996
+      ],
+      "dimensions_m": [
+        0.078,
+        0.078,
+        0.148
+      ],
+      "category": "obstacle",
+      "collider": true
+    },
+    {
+      "name": "Target_A",
+      "category": "target",
+      "collider": false,
+      "position_m": [
+        0.47,
+        0.0,
+        0.027000000000000024
+      ],
+      "dimensions_m": [
+        0.035,
+        0.035,
+        0.035
+      ]
+    },
+    {
+      "name": "Target_B",
+      "category": "target",
+      "collider": false,
+      "position_m": [
+        0.58,
+        0.45,
+        0.1529999999999999
+      ],
+      "dimensions_m": [
+        0.035,
+        0.035,
+        0.035
+      ]
+    },
+    {
+      "name": "Target_C",
+      "category": "target",
+      "collider": false,
+      "position_m": [
+        0.65,
+        -0.020000000000000004,
+        0.18000000000000005
+      ],
+      "dimensions_m": [
+        0.035,
+        0.035,
+        0.035
+      ]
+    }
+  ],
+  "target": {
+    "object": "Target_B",
+    "orientation_constraint": "Fixed shared new-gripper pregrasp orientation",
+    "position_tolerance_m": 0.001,
+    "tcp_target_m": [
+      0.58,
+      0.45,
+      0.23299999999999998
+    ]
+  }
+}

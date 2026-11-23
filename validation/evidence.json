@@ -1,0 +1,659 @@
+{
+  "core_run": {
+    "schema_version": 1,
+    "complete": true,
+    "termination": "complete",
+    "status": "complete",
+    "fingerprint": "3526046b703213d3f50cc84a521a6c1c62fa342bd8a84df7c5ab822a50a3986f",
+    "n": 160,
+    "k": 12,
+    "vertices": 162,
+    "directed_edges": 2250,
+    "paths": 7,
+    "metrics": [
+      "length",
+      "risk"
+    ],
+    "costs": [
+      [
+        1.1375169010012316,
+        0.09615828184025597
+      ],
+      [
+        1.1545749863178085,
+        0.07233464055726394
+      ],
+      [
+        1.1648206233063076,
+        0.06447007799272397
+      ],
+      [
+        1.2028471608547668,
+        0.044818998164249474
+      ],
+      [
+        1.2425421270371315,
+        0.040503481320339756
+      ],
+      [
+        1.303191281232781,
+        0.01229639458578513
+      ],
+      [
+        1.3729065748858456,
+        0.0
+      ]
+    ],
+    "metric_units": [
+      "m",
+      "weighted_joint_units"
+    ],
+    "epsilon": 0.1,
+    "algorithm": "A*pex",
+    "engine": "python",
+    "continuous_clearance": true,
+    "hard_margin": 0.015,
+    "elapsed_s": 0.6780835166573524,
+    "python": "3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]",
+    "platform": "Linux-5.15.0-185-generic-x86_64-with-glibc2.35"
+  },
+  "core_sweep": {
+    "complete": true,
+    "evaluated": 6,
+    "finite_grid_size": 6,
+    "grid_exhausted": true,
+    "ranking": [
+      "candidate_00003",
+      "candidate_00002",
+      "candidate_00005",
+      "candidate_00001",
+      "candidate_00000",
+      "candidate_00004"
+    ],
+    "rows": [
+      {
+        "id": "candidate_00000",
+        "parameters": {
+          "environment.objects.0.position_m.1": 0.35,
+          "environment.objects.0.dimensions_m.1": 0.3
+        },
+        "score": 5.0,
+        "status": "complete",
+        "complete": true,
+        "paths": 5,
+        "metrics": [
+          "length",
+          "risk"
+        ],
+        "costs": [
+          [
+            0.8727042269048212,
+            0.038203434816855786
+          ],
+          [
+            0.8968563687209632,
+            0.024669200474315797
+          ],
+          [
+            0.9127467800446406,
+            0.01593236539144768
+          ],
+          [
+            0.9960665291562409,
+            0.00012745005789835905
+          ],
+          [
+            1.033385050837475,
+            0.0
+          ]
+        ]
+      },
+      {
+        "id": "candidate_00001",
+        "parameters": {
+          "environment.objects.0.position_m.1": 0.35,
+          "environment.objects.0.dimensions_m.1": 0.5
+        },
+        "score": 9.0,
+        "status": "complete",
+        "complete": true,
+        "paths": 9,
+        "metrics": [
+          "length",
+          "risk"
+        ],
+        "costs": [
+          [
+            0.9459896767091721,
+            0.13307932378167914
+          ],
+          [
+            0.9631490226960603,
+            0.1185235731285997
+          ],
+          [
+            0.9792274861761302,
+            0.07697130688328886
+          ],
+          [
+            1.0249653752227643,
+            0.047084656445994445
+          ],
+          [
+            1.0518042547051145,
+            0.03488560519343407
+          ],
+          [
+            1.0587052256541043,
+            0.029731649326161912
+          ],
+          [
+            1.091876883115504,
+            0.009212478415225916
+          ],
+          [
+            1.107197529679204,
+            0.008467210877246433
+          ],
+          [
+            1.12885277762186,
+            0.0
+          ]
+        ]
+      },
+      {
+        "id": "candidate_00002",
+        "parameters": {
+          "environment.objects.0.position_m.1": 0.5,
+          "environment.objects.0.dimensions_m.1": 0.3
+        },
+        "score": 13.0,
+        "status": "complete",
+        "complete": true,
+        "paths": 13,
+        "metrics": [
+          "length",
+          "risk"
+        ],
+        "costs": [
+          [
+            1.048932174571867,
+            0.10548175640286969
+          ],
+          [
+            1.0731672712702383,
+            0.08560526764764612
+          ],
+          [
+            1.0804329785068711,
+            0.07157450517758696
+          ],
+          [
+            1.0937898274250537,
+            0.06069813228045437
+          ],
+          [
+            1.1137340519888452,
+            0.05474027901698193
+          ],
+          [
+            1.121454974331595,
+            0.010508888163916116
+          ],
+          [
+            1.131215309688641,
+            0.009547413407962894
+          ],
+          [
+            1.157600890483752,
+            0.0014238873453659773
+          ],
+          [
+            1.2186618614216014,
+            0.0008149416258778689
+          ],
+          [
+            1.2361032211481957,
+            0.0004971467378655762
+          ],
+          [
+            1.2679854744927945,
+            0.0003117431300600997
+          ],
+          [
+            1.2789567040303504,
+            2.5265334337053095e-05
+          ],
+          [
+            1.361798872875705,
+            0.0
+          ]
+        ]
+      },
+      {
+        "id": "candidate_00003",
+        "parameters": {
+          "environment.objects.0.position_m.1": 0.5,
+          "environment.objects.0.dimensions_m.1": 0.5
+        },
+        "score": 14.0,
+        "status": "complete",
+        "complete": true,
+        "paths": 14,
+        "metrics": [
+          "length",
+          "risk"
+        ],
+        "costs": [
+          [
+            1.1939668143273257,
+            0.09716035362169485
+          ],
+          [
+            1.2437246311211239,
+            0.0906016727077804
+          ],
+          [
+            1.2519222811600839,
+            0.0818662015786609
+          ],
+          [
+            1.2580511007782236,
+            0.06647257690642688
+          ],
+          [
+            1.27035758698542,
+            0.04382807383593312
+          ],
+          [
+            1.2818754921305453,
+            0.03832250640232682
+          ],
+          [
+            1.3030142550749446,
+            0.03193464761940547
+          ],
+          [
+            1.3050801040694417,
+            0.028309049208894592
+          ],
+          [
+            1.3118440547416037,
+            0.027169485237820073
+          ],
+          [
+            1.3645344288120356,
+            0.024117542826785587
+          ],
+          [
+            1.3786153071750393,
+            0.0008058930563277867
+          ],
+          [
+            1.3899805480045886,
+            0.0006936856976116313
+          ],
+          [
+            1.4192473596212518,
+            5.198680349838578e-05
+          ],
+          [
+            1.4220861252496604,
+            0.0
+          ]
+        ]
+      },
+      {
+        "id": "candidate_00004",
+        "parameters": {
+          "environment.objects.0.position_m.1": 0.65,
+          "environment.objects.0.dimensions_m.1": 0.3
+        },
+        "score": 4.0,
+        "status": "complete",
+        "complete": true,
+        "paths": 4,
+        "metrics": [
+          "length",
+          "risk"
+        ],
+        "costs": [
+          [
+            0.8891227213418158,
+            0.05937834028925387
+          ],
+          [
+            0.8962399647183918,
+            0.00997232346058448
+          ],
+          [
+            0.9485002558011124,
+            0.0047453555620549535
+          ],
+          [
+            1.0214740411847192,
+            0.0
+          ]
+        ]
+      },
+      {
+        "id": "candidate_00005",
+        "parameters": {
+          "environment.objects.0.position_m.1": 0.65,
+          "environment.objects.0.dimensions_m.1": 0.5
+        },
+        "score": 13.0,
+        "status": "complete",
+        "complete": true,
+        "paths": 13,
+        "metrics": [
+          "length",
+          "risk"
+        ],
+        "costs": [
+          [
+            0.9665197614592764,
+            0.07502992511063292
+          ],
+          [
+            0.987058037284406,
+            0.07108596215178589
+          ],
+          [
+            1.0139283453921282,
+            0.06064513495653068
+          ],
+          [
+            1.0214740411847192,
+            0.04655349216948663
+          ],
+          [
+            1.0506715354331262,
+            0.03753608002618399
+          ],
+          [
+            1.0601337311565888,
+            0.028854022500525236
+          ],
+          [
+            1.0613648098918325,
+            0.02394367085771153
+          ],
+          [
+            1.081903085716962,
+            0.019999707898864516
+          ],
+          [
+            1.105806104328833,
+            0.015889002833657274
+          ],
+          [
+            1.1183365861050634,
+            0.011551908372076728
+          ],
+          [
+            1.1239313287687729,
+            0.009151514182398629
+          ],
+          [
+            1.1317208142203001,
+            0.004396858964302453
+          ],
+          [
+            1.1373751569897192,
+            0.0
+          ]
+        ]
+      }
+    ],
+    "ranking_scope": "completed feasible candidates; path_count depends on epsilon and roadmap settings"
+  },
+  "ur5e_run": {
+    "schema_version": 1,
+    "complete": true,
+    "termination": "complete",
+    "status": "complete",
+    "fingerprint": "d58c43134784459db9b3d557e51e277f595940f15bea2f11b2103b8903aa42ff",
+    "n": 12,
+    "k": 4,
+    "vertices": 14,
+    "directed_edges": 26,
+    "paths": 1,
+    "metrics": [
+      "ee_length",
+      "clearance",
+      "visibility"
+    ],
+    "costs": [
+      [
+        0.21329452176704158,
+        0.10579664742746502,
+        0.5260535292332016
+      ]
+    ],
+    "metric_units": [
+      "m",
+      "weighted_joint_units",
+      "weighted_joint_units"
+    ],
+    "epsilon": 0.05,
+    "algorithm": "A*pex",
+    "engine": "research",
+    "continuous_clearance": true,
+    "hard_margin": 0.01,
+    "elapsed_s": 6.971460765227675,
+    "python": "3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]",
+    "platform": "Linux-5.15.0-185-generic-x86_64-with-glibc2.35"
+  },
+  "ur5e_validation": {
+    "valid": true,
+    "costs": [
+      0.21329452176704158,
+      0.10579664742746502,
+      0.5260535292332016
+    ],
+    "certified_lower_bound": 0.010338403419002148,
+    "waypoints": 2,
+    "scope": "geometry_and_costs_only; endpoints are not checked against the experiment query"
+  },
+  "usd_export": {
+    "output": "ur5e/replay.usda",
+    "frames": 10,
+    "fps": 24,
+    "scope": "kinematic_mesh_replay",
+    "camera": "/World/WristCamera",
+    "note": "Open the USDA in Isaac Sim and play the timeline; no controller dynamics or physical timing."
+  },
+  "two_link_run": {
+    "schema_version": 1,
+    "complete": true,
+    "termination": "complete",
+    "status": "complete",
+    "fingerprint": "5d61683cb03334ab2091f6c9da6af308d9d7f28dc85679cf9e3b28a59ca69db9",
+    "n": 64,
+    "k": 8,
+    "vertices": 66,
+    "directed_edges": 622,
+    "paths": 1,
+    "metrics": [
+      "ee_length",
+      "joint_length",
+      "clearance"
+    ],
+    "costs": [
+      [
+        0.4178344748285835,
+        1.4661590395999153,
+        0.17960448236125273
+      ]
+    ],
+    "metric_units": [
+      "m",
+      "weighted_joint_units",
+      "weighted_joint_units"
+    ],
+    "epsilon": 0.05,
+    "algorithm": "A*pex",
+    "engine": "research",
+    "continuous_clearance": true,
+    "hard_margin": 0.01,
+    "elapsed_s": 1.0273038763552904,
+    "python": "3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]",
+    "platform": "Linux-5.15.0-185-generic-x86_64-with-glibc2.35"
+  },
+  "exact_run": {
+    "schema_version": 1,
+    "complete": true,
+    "termination": "complete",
+    "status": "complete",
+    "fingerprint": "dff0079a0a6bfae11b3765f1116b9b41761468129162003c1e816567905f3c47",
+    "n": 40,
+    "k": 6,
+    "vertices": 42,
+    "directed_edges": 338,
+    "paths": 12,
+    "metrics": [
+      "length",
+      "risk"
+    ],
+    "costs": [
+      [
+        1.221822071329339,
+        0.08811367593329437
+      ],
+      [
+        1.2390969123733708,
+        0.07905614325797003
+      ],
+      [
+        1.239411615202316,
+        0.07827040450604203
+      ],
+      [
+        1.2395278724265126,
+        0.07703524657083918
+      ],
+      [
+        1.2552936559533905,
+        0.028230773570928777
+      ],
+      [
+        1.267034998979151,
+        0.021832818531233093
+      ],
+      [
+        1.3437179004933344,
+        0.010575791321742193
+      ],
+      [
+        1.3445906613040255,
+        0.009390388422185801
+      ],
+      [
+        1.3554592435190949,
+        0.004177836282046507
+      ],
+      [
+        1.356332004329786,
+        0.002992433382490116
+      ],
+      [
+        1.3745334036274048,
+        0.00294157722850191
+      ],
+      [
+        1.4439173398987122,
+        0.0008873307041425561
+      ]
+    ],
+    "metric_units": [
+      "m",
+      "weighted_joint_units"
+    ],
+    "epsilon": 0,
+    "algorithm": "Exact",
+    "engine": "python",
+    "continuous_clearance": true,
+    "hard_margin": 0.015,
+    "elapsed_s": 0.14089430682361126,
+    "python": "3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]",
+    "platform": "Linux-5.15.0-185-generic-x86_64-with-glibc2.35"
+  },
+  "historical_path_comparison": {
+    "E4": {
+      "valid": true,
+      "new_costs": [
+        0.40982474568168775,
+        0.2822674890022626,
+        1.0834000120194287
+      ],
+      "archived_costs": [
+        0.40982474568168775,
+        0.2822674895839116,
+        1.083400012019429
+      ],
+      "absolute_error": [
+        0.0,
+        5.816490067367397e-10,
+        2.220446049250313e-16
+      ]
+    },
+    "E5": {
+      "valid": true,
+      "new_costs": [
+        0.6917999835001094,
+        0.6358317896838886,
+        2.617009908336434
+      ],
+      "archived_costs": [
+        0.6917999835001094,
+        0.6358317907866737,
+        2.617009908336434
+      ],
+      "absolute_error": [
+        0.0,
+        1.1027850854716803e-09,
+        0.0
+      ]
+    },
+    "E7": {
+      "valid": true,
+      "new_costs": [
+        0.8006598567126435,
+        0.572779574422803,
+        3.7302026033211853
+      ],
+      "archived_costs": [
+        0.8006598567126435,
+        0.572779574551476,
+        3.7302026033211853
+      ],
+      "absolute_error": [
+        0.0,
+        1.2867296117491378e-10,
+        0.0
+      ]
+    }
+  },
+  "tests": {
+    "passed": 38,
+    "seconds": 12.88,
+    "exact_oracle_graphs": 120,
+    "exact_and_epsilon_comparisons": 480,
+    "archived_visibility_states": 144
+  },
+  "isolation": {
+    "installed_package_root": "/tmp/prmkit-clean/lib/python3.10/site-packages/prmkit",
+    "projects_root": "/tmp/prmkit-portability",
+    "core_test_without_robot_extras": true,
+    "runtime_research_paths_in_input_dependencies": false,
+    "original_tracked_diff_sha256": "533e1ad28d687fb8727b9a3455765be93c0b70344faf101dcef945fae142bc68"
+  },
+  "source_archive_installation": {
+    "ordinary_pip_install": true,
+    "build_isolation": true,
+    "outside_repository": true,
+    "complete": true,
+    "paths": 7
+  }
+}

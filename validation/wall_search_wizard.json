@@ -1,0 +1,192 @@
+{
+  "date": "2026-11-22",
+  "scope": "Standalone interactive wall-search user guide; planner and research code unchanged",
+  "ui": {
+    "javascript": "QuickJS with DOM stubs; actual page script and event handlers",
+    "checks": [
+      "six-step navigation",
+      "wall count 1\u20136",
+      "wall/experiment/search controls",
+      "grid preview order",
+      "grid size/budget",
+      "random mode",
+      "metric/ranking consistency",
+      "invalid input blocks generation",
+      "copy and individual downloads",
+      "ZIP CRC32 and exact UTF-8 content",
+      "result loading/empty/malformed data",
+      "candidate-specific commands",
+      "self-contained HTML"
+    ],
+    "generated_cases": [
+      "default",
+      "length_exact",
+      "one_wall",
+      "random_width",
+      "truncated_grid",
+      "walls_1",
+      "walls_2",
+      "walls_3",
+      "walls_4",
+      "walls_5",
+      "walls_6",
+      "width_grid"
+    ]
+  },
+  "browser": {
+    "browser": "Chromium headless 1255",
+    "checks": [
+      "all six steps fit 1280px with no horizontal overflow",
+      "all six steps fit 390px with no horizontal overflow",
+      "all six steps fit 320px with no horizontal overflow",
+      "real 27-candidate sweep summary loaded and selected candidate commands updated",
+      "live inputs update configurations",
+      "negative epsilon and malformed values blocked",
+      "preview slider changes candidate",
+      "grid product 54 after extra width variable",
+      "random mode hides grid preview",
+      "actual ZIP and individual browser downloads",
+      "copy handler",
+      "malformed results handled",
+      "no JavaScript errors",
+      "no external network requests"
+    ],
+    "javascript_errors": [],
+    "external_requests": []
+  },
+  "pipeline": {
+    "workspace": "/tmp/wall-wizard-e2e-60h25h01/wall_study",
+    "runtime": {
+      "python": "3.11.15",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "pinocchio": "4.1.0",
+      "coal": "3.0.4",
+      "note": "Existing conda runtime, separate from pinned release environment; no Isaac or USD importer used."
+    },
+    "cases": {
+      "default": {
+        "configuration_load": "passed",
+        "candidates": 27,
+        "finite_grid_size": 27,
+        "complete": true,
+        "evaluated": 27,
+        "ranked": 27,
+        "statuses": {
+          "complete": 27
+        },
+        "grid_exhausted": true,
+        "first_ranked_path_valid": true
+      },
+      "length_exact": {
+        "configuration_load": "passed",
+        "candidates": 6,
+        "finite_grid_size": null,
+        "complete": true,
+        "evaluated": 6,
+        "ranked": 6,
+        "statuses": {
+          "complete": 6
+        },
+        "grid_exhausted": false,
+        "first_ranked_path_valid": true
+      },
+      "one_wall": {
+        "configuration_load": "passed",
+        "candidates": 3,
+        "finite_grid_size": 3,
+        "complete": true,
+        "evaluated": 3,
+        "ranked": 3,
+        "statuses": {
+          "complete": 3
+        },
+        "grid_exhausted": true,
+        "first_ranked_path_valid": true
+      },
+      "random_width": {
+        "configuration_load": "passed",
+        "candidates": 6,
+        "finite_grid_size": null,
+        "complete": true,
+        "evaluated": 6,
+        "ranked": 6,
+        "statuses": {
+          "complete": 6
+        },
+        "grid_exhausted": false,
+        "first_ranked_path_valid": true
+      },
+      "truncated_grid": {
+        "configuration_load": "passed",
+        "candidates": 6,
+        "finite_grid_size": 54,
+        "complete": true,
+        "evaluated": 6,
+        "ranked": 6,
+        "statuses": {
+          "complete": 6
+        },
+        "grid_exhausted": false,
+        "first_ranked_path_valid": true
+      },
+      "walls_1": {
+        "configuration_load": "passed",
+        "candidates": 6,
+        "finite_grid_size": null
+      },
+      "walls_2": {
+        "configuration_load": "passed",
+        "candidates": 6,
+        "finite_grid_size": null
+      },
+      "walls_3": {
+        "configuration_load": "passed",
+        "candidates": 6,
+        "finite_grid_size": null
+      },
+      "walls_4": {
+        "configuration_load": "passed",
+        "candidates": 6,
+        "finite_grid_size": null
+      },
+      "walls_5": {
+        "configuration_load": "passed",
+        "candidates": 6,
+        "finite_grid_size": null
+      },
+      "walls_6": {
+        "configuration_load": "passed",
+        "candidates": 6,
+        "finite_grid_size": null
+      },
+      "width_grid": {
+        "configuration_load": "passed",
+        "candidates": 54,
+        "finite_grid_size": 54,
+        "complete": true,
+        "evaluated": 54,
+        "ranked": 54,
+        "statuses": {
+          "complete": 54
+        },
+        "grid_exhausted": true,
+        "first_ranked_path_valid": true
+      }
+    }
+  },
+  "total_e2e_candidates": 102,
+  "files": {
+    "docs/WALL_SEARCH_WIZARD_HE.html": "7180098e4363e04357d85fd7049228e2de5762f132f73c00983fcd144b43414f",
+    "examples/wall_search/experiment.yaml": "3d9db277f108d616c81b9bf87d74a718af568068f593fe3878e20ce4188f1ebe",
+    "examples/wall_search/space.yaml": "88f1fbc9a774689081748741cc1107237ae2329ff44ae5f187ff028124b76ecc",
+    "examples/wall_search/walls.json": "8fc40e842ec1187412b431afbf442b12fc0cf0ef4437f27390c464b581af8a18"
+  },
+  "notes": [
+    "Examples generated by the actual HTML JavaScript, then loaded into projects created with init --template ur5e.",
+    "Browser ZIP and file downloads verified byte-for-byte.",
+    "One selected path validated and output manifest verified in each of six completed sweeps.",
+    "Runtime versions differ from pinned 0.2.0 release environment; no new dependency install or Isaac runtime required.",
+    "Screenshots reviewed from /tmp/wall-wizard-validation; no external browser requests."
+  ]
+}

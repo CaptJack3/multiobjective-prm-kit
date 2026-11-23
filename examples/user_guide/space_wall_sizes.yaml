@@ -1,0 +1,14 @@
+schema_version: 1
+experiment: experiment.yaml
+method: grid
+max_evaluations: 8
+parameters:
+  environment.objects.0.dimensions_m.0:
+    values: [0.04, 0.08]
+  environment.objects.0.dimensions_m.1:
+    values: [0.4, 0.8]
+  environment.objects.0.dimensions_m.2:
+    values: [0.6, 0.9]
+rank:
+  by: best.ee_length
+  direction: min

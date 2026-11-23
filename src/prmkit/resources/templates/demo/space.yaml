@@ -1,0 +1,21 @@
+schema_version: 1
+experiment: experiment.yaml
+method: grid
+max_evaluations: 6
+parameters:
+  environment.objects.0.position_m.1:
+    values:
+    - 0.35
+    - 0.5
+    - 0.65
+  environment.objects.0.dimensions_m.1:
+    values:
+    - 0.3
+    - 0.5
+constraints:
+- field: environment.objects.0.dimensions_m.1
+  op: lt
+  value: 0.8
+rank:
+  by: path_count
+  direction: max

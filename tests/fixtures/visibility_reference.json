@@ -1,0 +1,206 @@
+{
+  "E4": [
+    {
+      "indices": [
+        0,
+        97,
+        195,
+        293,
+        390,
+        488,
+        586,
+        683,
+        781,
+        879,
+        976,
+        1074,
+        1172,
+        1270,
+        1367,
+        1465,
+        1563,
+        1660,
+        1758,
+        1856,
+        1953,
+        2051,
+        2149,
+        2247
+      ],
+      "source": "FINAL_ARTIFACTS/environments/E4/selected/01_shortest",
+      "files": {
+        "dense_validation.npz": "f9ce74b3acd542506336ed7517ea283dbd868e38c7fa8a7076cc9d01a587bb62",
+        "dense_visibility.npz": "ad098fd38458a139c0645e362fc1b719f22fe130221fa27b82f44c64fb3d4794"
+      }
+    },
+    {
+      "indices": [
+        0,
+        659,
+        1319,
+        1979,
+        2639,
+        3299,
+        3958,
+        4618,
+        5278,
+        5938,
+        6598,
+        7258,
+        7917,
+        8577,
+        9237,
+        9897,
+        10557,
+        11217,
+        11876,
+        12536,
+        13196,
+        13856,
+        14516,
+        15176
+      ],
+      "source": "FINAL_ARTIFACTS/environments/E4/selected/03_lowest_visibility_cost",
+      "files": {
+        "dense_validation.npz": "e8024e5f5163f403c8e1e98bbf4b90774af1ae74dbb24a33ef6ab0b9ec300f63",
+        "dense_visibility.npz": "228e6c55787cc612a39d194b589ab91e66103bdba9d07e3945459dc808de13cb"
+      }
+    }
+  ],
+  "E5": [
+    {
+      "indices": [
+        0,
+        254,
+        509,
+        764,
+        1019,
+        1274,
+        1528,
+        1783,
+        2038,
+        2293,
+        2548,
+        2803,
+        3057,
+        3312,
+        3567,
+        3822,
+        4077,
+        4332,
+        4586,
+        4841,
+        5096,
+        5351,
+        5606,
+        5861
+      ],
+      "source": "FINAL_ARTIFACTS/environments/E5/selected/01_shortest",
+      "files": {
+        "dense_validation.npz": "8e0ff0dbca8971982091d64715c9028df26bf9fcc3a63d936f8e318537e6e63c",
+        "dense_visibility.npz": "f1048156d3f3c25d261912f3495feb6d9eee7c758122f0488bb4b1856f8e5859"
+      }
+    },
+    {
+      "indices": [
+        0,
+        469,
+        938,
+        1407,
+        1876,
+        2345,
+        2814,
+        3283,
+        3752,
+        4221,
+        4690,
+        5159,
+        5628,
+        6097,
+        6566,
+        7035,
+        7504,
+        7973,
+        8442,
+        8911,
+        9380,
+        9849,
+        10318,
+        10788
+      ],
+      "source": "FINAL_ARTIFACTS/environments/E5/selected/03_lowest_visibility_cost",
+      "files": {
+        "dense_validation.npz": "aa14198073655e941f059ed63bdbecafc60db4a10fa3eff1326a9416627fcea1",
+        "dense_visibility.npz": "34a9668fad71c25439db4d8ff1f7079e557d92e8590b712df12b67acb66e64ab"
+      }
+    }
+  ],
+  "E7": [
+    {
+      "indices": [
+        0,
+        301,
+        603,
+        904,
+        1206,
+        1507,
+        1809,
+        2110,
+        2412,
+        2713,
+        3015,
+        3316,
+        3618,
+        3919,
+        4221,
+        4522,
+        4824,
+        5125,
+        5427,
+        5728,
+        6030,
+        6331,
+        6633,
+        6935
+      ],
+      "source": "FINAL_ARTIFACTS/environments/E7/selected/01_shortest",
+      "files": {
+        "dense_validation.npz": "4da29a0e787cb7daaee01a7e0ee5690d51c636cf99aa3b7cace7e527bddaedd8",
+        "dense_visibility.npz": "7ba23780f67e27911b40ec066d00c58679dd82bdbcb15b79bfb16d758b663c1a"
+      }
+    },
+    {
+      "indices": [
+        0,
+        504,
+        1008,
+        1512,
+        2016,
+        2520,
+        3024,
+        3528,
+        4033,
+        4537,
+        5041,
+        5545,
+        6049,
+        6553,
+        7057,
+        7561,
+        8066,
+        8570,
+        9074,
+        9578,
+        10082,
+        10586,
+        11090,
+        11595
+      ],
+      "source": "FINAL_ARTIFACTS/environments/E7/selected/03_lowest_visibility_cost",
+      "files": {
+        "dense_validation.npz": "d87efc3ab4165fe79bffaa5eb34038fcc87cf2aba4f5cd4a820841841e6c24b0",
+        "dense_visibility.npz": "67afbaa1f3509fb05f39166efa8a887549f609808a54d6c86491b92bdb9709f3"
+      }
+    }
+  ]
+}

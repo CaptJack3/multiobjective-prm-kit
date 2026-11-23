@@ -1,0 +1,46 @@
+{
+  "id": "E4_1_0020",
+  "case": "E4_1",
+  "environment": "E4",
+  "role": "Shortest / minimum O1",
+  "method": "shortcut_plus_cubic",
+  "parameter": 0.1,
+  "parent": "partial_5",
+  "source_path": "apex_000001",
+  "source_sha256": "861d5eedb43dbbbc0e0205e5070f46c1d44a458f996d8a7e703a03953f73a409",
+  "segments": 2,
+  "roughness_256": 3.5145121637356618,
+  "roughness_512": 5.134475159242958,
+  "cost": [
+    0.4081260540793853,
+    0.2494393386365779,
+    0.7079738372024726
+  ],
+  "error": [
+    5.828226706805495e-09,
+    5.357609585143752e-08,
+    2.4613279904495133e-05
+  ],
+  "certificate": 0.010259936823416792,
+  "minimum": 0.015957089260432523,
+  "world": 0.019356945156972172,
+  "samples": 1867,
+  "coarse_cost": [
+    0.40812578501450836,
+    0.2494439151832829,
+    0.7079430081278586
+  ],
+  "coarse_error": [
+    8.129248862120964e-07,
+    1.4231301036185529e-05,
+    0.0003915124060195341
+  ],
+  "fine_cost": [
+    0.4081260386435991,
+    0.24943957524306695,
+    0.70800869499895
+  ],
+  "independent_lower_bound_m": 0.013424459556863583,
+  "chord_intervals": 92,
+  "certificate_method": "Bezier-to-chord deviation + separate Python edge_reference with inflated margin"
+}

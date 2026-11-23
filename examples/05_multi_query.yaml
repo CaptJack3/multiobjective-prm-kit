@@ -1,0 +1,78 @@
+schema_version: 2
+experiment:
+  name: 05_multi_query
+  seed: 7
+robot:
+  preset: mounted_ur5e
+scene:
+  source: generated
+  placement: grid
+  walls_per_scene: 1
+  count: 1
+  grid_points: 1
+  offset_range:
+  - 0
+  - 0
+  wall_sizes:
+    widths:
+    - 0.6
+    heights:
+    - 0.9
+    thicknesses:
+    - 0.08
+queries:
+  mode: cartesian_product
+  starts:
+  - - 0.3490658503988659
+    - -1.6580627893946132
+    - 2.0943951023931953
+    - -2.007128639793479
+    - -1.5707963267948966
+    - 0.0
+  - - 0.3590658503988659
+    - -1.6580627893946132
+    - 2.0943951023931953
+    - -2.007128639793479
+    - -1.5707963267948966
+    - 0.0
+  goals:
+  - - -0.04786182266559802
+    - -1.3714064559664445
+    - 1.7755323790789799
+    - -1.5894737998266182
+    - -1.3306083390982595
+    - 0.3217523649289111
+  - - -0.05786182266559802
+    - -1.3714064559664445
+    - 1.7755323790789799
+    - -1.5894737998266182
+    - -1.3306083390982595
+    - 0.3217523649289111
+roadmap:
+  n_vertices: 24
+  k_neighbors: 6
+  query_k: 12
+  workers: 1
+search:
+  epsilons:
+  - 0.05
+  timeout_seconds: 120
+constraints:
+  min_clearance_m: 0.005
+  clearance_mode: enforce_during_search
+verification:
+  enabled: true
+  backend: coal_mesh
+  scope: all
+  min_clearance_m: 0.005
+  interpolation:
+    method: dense
+    max_joint_step_deg: 0.5
+selection:
+  mode: representative
+  only_verified: true
+  max_per_query: 7
+render:
+  enabled: false
+output:
+  directory: ../runs/05_multi_query

@@ -1,0 +1,54 @@
+{
+  "accept": true,
+  "actual_cubic_curve_certified": true,
+  "margin_m": 0.005,
+  "shared_start_and_goal": true,
+  "shared_duration": true,
+  "routes": [
+    {
+      "route": "route_01",
+      "frames": 504,
+      "continuous_curve_bound_m": 0.005006888462642398,
+      "dense_min_all_pairs_m": 0.00804598656870916,
+      "endpoint_error_m": 2.4015106244145166e-14,
+      "shared_duration_s": 20.958333333333332,
+      "c2_join_derivatives_verified": true,
+      "no_internal_dwell": true,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.5874730062370103,
+      "max_joint_acceleration_rad_s2": 0.9033982181953366,
+      "min_interior_speed_fraction": 0.1282514986184238,
+      "actual_curve_evaluation": true
+    },
+    {
+      "route": "route_02",
+      "frames": 504,
+      "continuous_curve_bound_m": 0.005103162662363223,
+      "dense_min_all_pairs_m": 0.01583315229090477,
+      "endpoint_error_m": 2.404723017566771e-14,
+      "shared_duration_s": 20.958333333333332,
+      "c2_join_derivatives_verified": true,
+      "no_internal_dwell": true,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.41592054246491317,
+      "max_joint_acceleration_rad_s2": 1.1961103320087592,
+      "min_interior_speed_fraction": 0.12693860426325865,
+      "actual_curve_evaluation": true
+    },
+    {
+      "route": "route_03",
+      "frames": 504,
+      "continuous_curve_bound_m": 0.005096821462610793,
+      "dense_min_all_pairs_m": 0.014299251773380572,
+      "endpoint_error_m": 2.4158715510286098e-14,
+      "shared_duration_s": 20.958333333333332,
+      "c2_join_derivatives_verified": true,
+      "no_internal_dwell": true,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.3096029583123169,
+      "max_joint_acceleration_rad_s2": 0.6244855520328012,
+      "min_interior_speed_fraction": 0.1282447495695235,
+      "actual_curve_evaluation": true
+    }
+  ]
+}

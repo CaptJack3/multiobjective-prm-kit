@@ -1,0 +1,54 @@
+{
+  "accept": true,
+  "actual_cubic_curve_certified": true,
+  "margin_m": 0.005,
+  "shared_start_and_goal": true,
+  "shared_duration": true,
+  "routes": [
+    {
+      "route": "route_01",
+      "frames": 193,
+      "continuous_curve_bound_m": 0.005165948304665,
+      "dense_min_all_pairs_m": 0.016136916976304053,
+      "endpoint_error_m": 2.7308005628569783e-10,
+      "shared_duration_s": 8.0,
+      "c2_join_derivatives_verified": true,
+      "no_internal_dwell": true,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.3818474874744311,
+      "max_joint_acceleration_rad_s2": 0.2257307271804727,
+      "min_interior_speed_fraction": 0.12728475060212632,
+      "actual_curve_evaluation": true
+    },
+    {
+      "route": "route_02",
+      "frames": 193,
+      "continuous_curve_bound_m": 0.00515839932982509,
+      "dense_min_all_pairs_m": 0.01607923020263773,
+      "endpoint_error_m": 2.730800728221171e-10,
+      "shared_duration_s": 8.0,
+      "c2_join_derivatives_verified": true,
+      "no_internal_dwell": true,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.5369100511568377,
+      "max_joint_acceleration_rad_s2": 0.521496652158504,
+      "min_interior_speed_fraction": 0.127288437366604,
+      "actual_curve_evaluation": true
+    },
+    {
+      "route": "route_03",
+      "frames": 193,
+      "continuous_curve_bound_m": 0.005028464657268493,
+      "dense_min_all_pairs_m": 0.01595285332045797,
+      "endpoint_error_m": 2.730800728221171e-10,
+      "shared_duration_s": 8.0,
+      "c2_join_derivatives_verified": true,
+      "no_internal_dwell": true,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.40260289813420513,
+      "max_joint_acceleration_rad_s2": 0.3088853648876011,
+      "min_interior_speed_fraction": 0.12728465995779262,
+      "actual_curve_evaluation": true
+    }
+  ]
+}

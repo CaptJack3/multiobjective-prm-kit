@@ -1,0 +1,160 @@
+{
+  "case": "office",
+  "selected": [
+    {
+      "id": "route_01",
+      "method": "bspline",
+      "parameter": null,
+      "path_source": "500K_lazy_PRM",
+      "reused_old_vertices": 0,
+      "old_sources": [],
+      "segments": 1,
+      "costs": [
+        0.2768293843632488,
+        0.012386152358035063,
+        0.1350391491989344
+      ],
+      "continuous_clearance_lower_bound_m": 0.007010846417542868,
+      "sampled_min_all_pairs_m": 0.01614651465430815,
+      "sampled_min_world_m": 0.04676884502825107,
+      "mean_visibility_joint_arc": 0.7396240234375,
+      "weighted_joint_arc": 0.5186313690753261,
+      "continuous_world_clearance_lower_bound_m": 0.037410257004517555,
+      "candidate_id": "candidate_000",
+      "label": "Shortest smooth route",
+      "frames": 193,
+      "duration_s": 8.0,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.11559611801649794,
+      "max_joint_acceleration_rad_s2": 0.04449283827412387,
+      "min_interior_speed_fraction": 0.127284499869065,
+      "actual_curve_evaluation": true
+    },
+    {
+      "id": "route_02",
+      "method": "bspline",
+      "parameter": null,
+      "path_source": "500K_lazy_PRM",
+      "reused_old_vertices": 0,
+      "old_sources": [],
+      "segments": 1,
+      "costs": [
+        0.30435241535914065,
+        0.008672098204993147,
+        0.11406067491974614
+      ],
+      "continuous_clearance_lower_bound_m": 0.005584884926143193,
+      "sampled_min_all_pairs_m": 0.01614651465430815,
+      "sampled_min_world_m": 0.04676884502825107,
+      "mean_visibility_joint_arc": 0.7891417197549028,
+      "weighted_joint_arc": 0.5409352423208824,
+      "continuous_world_clearance_lower_bound_m": 0.03941447886773801,
+      "candidate_id": "candidate_001",
+      "label": "Safer smooth route",
+      "frames": 193,
+      "duration_s": 8.0,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.13177607522578683,
+      "max_joint_acceleration_rad_s2": 0.08663191281144123,
+      "min_interior_speed_fraction": 0.12728459942926362,
+      "actual_curve_evaluation": true
+    },
+    {
+      "id": "route_03",
+      "method": "bspline",
+      "parameter": null,
+      "path_source": "500K_lazy_PRM",
+      "reused_old_vertices": 0,
+      "old_sources": [],
+      "segments": 1,
+      "costs": [
+        0.2819617246939472,
+        0.011249285105421,
+        0.09131300377078448
+      ],
+      "continuous_clearance_lower_bound_m": 0.0057580141833575675,
+      "sampled_min_all_pairs_m": 0.01614651465430815,
+      "sampled_min_world_m": 0.04676884502825107,
+      "mean_visibility_joint_arc": 0.8260808694505214,
+      "weighted_joint_arc": 0.5250313952369179,
+      "continuous_world_clearance_lower_bound_m": 0.03912134296823855,
+      "candidate_id": "candidate_010",
+      "label": "More visible smooth route",
+      "frames": 193,
+      "duration_s": 8.0,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.11432125921231773,
+      "max_joint_acceleration_rad_s2": 0.047787458314019204,
+      "min_interior_speed_fraction": 0.1272835018565541,
+      "actual_curve_evaluation": true
+    }
+  ],
+  "candidates": 16,
+  "eligible_c2_candidates": 8,
+  "candidate_length_cap_m": 0.830482277690396,
+  "front": [
+    {
+      "costs": [
+        0.27682742589679865,
+        0.012477002751520753,
+        0.1329499359201886
+      ]
+    },
+    {
+      "costs": [
+        0.3043264999446851,
+        0.008691618818779591,
+        0.11397846344028396
+      ]
+    },
+    {
+      "costs": [
+        0.34580062839599107,
+        0.009353418021224883,
+        0.13828444179864702
+      ]
+    },
+    {
+      "costs": [
+        0.31404763636360594,
+        0.009114447878449675,
+        0.11351926189917441
+      ]
+    },
+    {
+      "costs": [
+        0.2821513276404921,
+        0.010752495870840019,
+        0.12261267951718419
+      ]
+    },
+    {
+      "costs": [
+        0.279749182418093,
+        0.011883422359224604,
+        0.0991067965840389
+      ]
+    },
+    {
+      "costs": [
+        0.281951584869866,
+        0.011559573375649505,
+        0.09083566706502516
+      ]
+    },
+    {
+      "costs": [
+        0.2895810729199447,
+        0.009052524765972795,
+        0.11510848687517869
+      ]
+    }
+  ],
+  "complete_front_size": null,
+  "scope": "Three objective extrema among collision-certified C2 curves from a 500K lazy PRM; not a complete Pareto frontier",
+  "wall_count": 0,
+  "old_stopping_routes": [],
+  "scene": "office",
+  "vertices": 500000,
+  "neighbors": 48
+}

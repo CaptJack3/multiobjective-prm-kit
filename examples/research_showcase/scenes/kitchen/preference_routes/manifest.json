@@ -1,0 +1,342 @@
+{
+  "case": "kitchen",
+  "selected": [
+    {
+      "id": "route_01",
+      "method": "bspline",
+      "parameter": null,
+      "path_source": "500K_lazy_PRM",
+      "reused_old_vertices": 0,
+      "old_sources": [],
+      "segments": 1,
+      "costs": [
+        0.32851524448670644,
+        0.2528018986909121,
+        0.31496092914977325
+      ],
+      "continuous_clearance_lower_bound_m": 0.009689209238352559,
+      "sampled_min_all_pairs_m": 0.01614651465430815,
+      "sampled_min_world_m": 0.029852727111085366,
+      "mean_visibility_joint_arc": 0.5468750000000002,
+      "weighted_joint_arc": 0.6950861884684654,
+      "continuous_world_clearance_lower_bound_m": 0.015017692740316382,
+      "candidate_id": "candidate_000",
+      "label": "Shortest smooth route",
+      "frames": 193,
+      "duration_s": 8.0,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.11185588213176345,
+      "max_joint_acceleration_rad_s2": 0.04305322496162045,
+      "min_interior_speed_fraction": 0.12728449986905424,
+      "actual_curve_evaluation": true
+    },
+    {
+      "id": "route_02",
+      "method": "cubic",
+      "parameter": 0.3,
+      "path_source": "500K_lazy_PRM",
+      "reused_old_vertices": 0,
+      "old_sources": [],
+      "segments": 8,
+      "costs": [
+        0.4213159292816291,
+        0.017276491111608054,
+        0.2173105043345213
+      ],
+      "continuous_clearance_lower_bound_m": 0.005015472315022329,
+      "sampled_min_all_pairs_m": 0.015951763178527027,
+      "sampled_min_world_m": 0.04887164357536789,
+      "mean_visibility_joint_arc": 0.7664185844134703,
+      "weighted_joint_arc": 0.9303415847054796,
+      "continuous_world_clearance_lower_bound_m": 0.02195601181614108,
+      "candidate_id": "candidate_003",
+      "label": "Safer smooth route",
+      "frames": 193,
+      "duration_s": 8.0,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.15563924844485832,
+      "max_joint_acceleration_rad_s2": 0.39362052782179147,
+      "min_interior_speed_fraction": 0.12728380720703375,
+      "actual_curve_evaluation": true
+    },
+    {
+      "id": "route_03",
+      "method": "bspline",
+      "parameter": null,
+      "path_source": "500K_lazy_PRM",
+      "reused_old_vertices": 0,
+      "old_sources": [],
+      "segments": 3,
+      "costs": [
+        0.35142348087836395,
+        0.053926066308953476,
+        0.12654580842726712
+      ],
+      "continuous_clearance_lower_bound_m": 0.005286540278943553,
+      "sampled_min_all_pairs_m": 0.015978601988974248,
+      "sampled_min_world_m": 0.04862083694205153,
+      "mean_visibility_joint_arc": 0.8411033426444203,
+      "weighted_joint_arc": 0.796403212838407,
+      "continuous_world_clearance_lower_bound_m": 0.024999437922137487,
+      "candidate_id": "candidate_019",
+      "label": "More visible smooth route",
+      "frames": 193,
+      "duration_s": 8.0,
+      "timing": "Single global quintic on continuous weighted joint arc; no waypoint dwell",
+      "max_joint_velocity_rad_s": 0.14853224249975483,
+      "max_joint_acceleration_rad_s2": 0.5290559731783144,
+      "min_interior_speed_fraction": 0.12728401095855227,
+      "actual_curve_evaluation": true
+    }
+  ],
+  "candidates": 58,
+  "eligible_c2_candidates": 34,
+  "candidate_length_cap_m": 0.9855283859543598,
+  "front": [
+    {
+      "costs": [
+        0.3285094619847866,
+        0.25262625752025586,
+        0.3153003267027364
+      ]
+    },
+    {
+      "costs": [
+        0.4208847292056136,
+        0.017450343383897438,
+        0.20638530951134149
+      ]
+    },
+    {
+      "costs": [
+        0.48159524357198646,
+        0.017955071621482507,
+        0.27802763183962254
+      ]
+    },
+    {
+      "costs": [
+        0.4213122634862445,
+        0.017280222202272308,
+        0.21735985408951497
+      ]
+    },
+    {
+      "costs": [
+        0.38144213294069174,
+        0.030104079941526328,
+        0.22604667269244486
+      ]
+    },
+    {
+      "costs": [
+        0.3369699964730968,
+        0.10370295144777561,
+        0.23439410208737013
+      ]
+    },
+    {
+      "costs": [
+        0.36002585524474334,
+        0.04404691354467694,
+        0.1280581505554448
+      ]
+    },
+    {
+      "costs": [
+        0.42572790466504484,
+        0.04971831426804732,
+        0.13107841737679118
+      ]
+    },
+    {
+      "costs": [
+        0.3614967739786739,
+        0.04122408491029278,
+        0.13748144824927921
+      ]
+    },
+    {
+      "costs": [
+        0.34524888670623977,
+        0.06865514150871066,
+        0.17785745337741954
+      ]
+    },
+    {
+      "costs": [
+        0.3385939695483814,
+        0.107778195807292,
+        0.1702641675134589
+      ]
+    },
+    {
+      "costs": [
+        0.3514093619798231,
+        0.05393282854360541,
+        0.12660096186467407
+      ]
+    },
+    {
+      "costs": [
+        0.3930700728407319,
+        0.04122214907882442,
+        0.14273800174222964
+      ]
+    },
+    {
+      "costs": [
+        0.35119795694356093,
+        0.056788865195244745,
+        0.1371148959327514
+      ]
+    },
+    {
+      "costs": [
+        0.33564584429665023,
+        0.09977997614657307,
+        0.1606046566997615
+      ]
+    },
+    {
+      "costs": [
+        0.3303986269425707,
+        0.13234963022359597,
+        0.18182655870015751
+      ]
+    },
+    {
+      "costs": [
+        0.3532720908688557,
+        0.0423988948383158,
+        0.1715854750279298
+      ]
+    },
+    {
+      "costs": [
+        0.38549004151032595,
+        0.02777339761070966,
+        0.17235932537488802
+      ]
+    },
+    {
+      "costs": [
+        0.35344698675113784,
+        0.04364280301040446,
+        0.16234043582128066
+      ]
+    },
+    {
+      "costs": [
+        0.3339300877892485,
+        0.11731086527590617,
+        0.22129336421432405
+      ]
+    },
+    {
+      "costs": [
+        0.334925044490076,
+        0.11435341730535303,
+        0.18628798124845597
+      ]
+    },
+    {
+      "costs": [
+        0.39920652105030646,
+        0.023168424217548132,
+        0.15282901396913415
+      ]
+    },
+    {
+      "costs": [
+        0.4332597866863886,
+        0.019182594511257336,
+        0.15469782963521989
+      ]
+    },
+    {
+      "costs": [
+        0.3999430152987314,
+        0.02373206758329338,
+        0.15214746459823597
+      ]
+    },
+    {
+      "costs": [
+        0.3704604852118155,
+        0.046050361811131625,
+        0.19847582669940167
+      ]
+    },
+    {
+      "costs": [
+        0.33487795246670293,
+        0.10850611744012104,
+        0.16291938476580534
+      ]
+    },
+    {
+      "costs": [
+        0.39370445372896967,
+        0.023285436524367514,
+        0.13143682369460208
+      ]
+    },
+    {
+      "costs": [
+        0.436215571641938,
+        0.02134667994395765,
+        0.1405968962595347
+      ]
+    },
+    {
+      "costs": [
+        0.3924453305045744,
+        0.023387715794688797,
+        0.1330080183114418
+      ]
+    },
+    {
+      "costs": [
+        0.36253456505153503,
+        0.04770011170977161,
+        0.18678413763022084
+      ]
+    },
+    {
+      "costs": [
+        0.355451795009024,
+        0.04129435892513171,
+        0.1683991163216647
+      ]
+    },
+    {
+      "costs": [
+        0.4100373409907096,
+        0.031032632483592268,
+        0.18606577088616097
+      ]
+    },
+    {
+      "costs": [
+        0.3548968576643229,
+        0.042584613751624874,
+        0.15780435931160855
+      ]
+    },
+    {
+      "costs": [
+        0.3346016221117008,
+        0.11959492349250517,
+        0.22120054278665632
+      ]
+    }
+  ],
+  "complete_front_size": null,
+  "scope": "Three objective extrema among collision-certified C2 curves from a 500K lazy PRM; not a complete Pareto frontier",
+  "wall_count": 0,
+  "old_stopping_routes": [],
+  "scene": "kitchen",
+  "vertices": 500000,
+  "neighbors": 48
+}

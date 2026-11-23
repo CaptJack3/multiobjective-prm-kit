@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ארכיטקטורת חבילת PRM: ייבוא סביבות Isaac, רובוטים, מטריקות, גבולות תמיכה ובדיקות.">
+<title>PRM Kit — ארכיטקטורה ויכולות</title>
+<style>
+:root{--ink:#172a37;--muted:#526775;--paper:#f4f6f4;--card:#fff;--line:#dce4e3;--accent:#06736b;--soft:#e4f4ef;--amber:#915b0c;--red:#a93b38;--shadow:0 8px 32px #122e3c08}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.8 Arial,"Noto Sans Hebrew",sans-serif}a{color:var(--accent);text-underline-offset:4px}button{font:inherit;cursor:pointer}header{background:#102f3b;color:#fff;padding:60px max(24px,calc((100vw - 1120px)/2)) 48px}header .eyebrow{font:13px/1.6 monospace;color:#88d6c9;letter-spacing:1px;direction:ltr;text-align:right}h1{font-size:clamp(30px,4vw,48px);line-height:1.25;font-weight:700;margin:20px 0}header p{max-width:800px;color:#d6e4e7;font-size:19px;margin:0 0 20px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chips span{font-size:13px;border:1px solid #49707a;border-radius:30px;padding:4px 13px}.chips .new{border-color:#88d6c9;color:#a5edce}nav{position:sticky;top:0;z-index:2;display:flex;gap:24px;overflow-x:auto;white-space:nowrap;padding:12px max(24px,calc((100vw - 1120px)/2));background:#ffffffef;border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}nav a{font-size:14px;text-decoration:none;color:var(--ink)}main{max-width:1168px;margin:auto;padding:28px 24px 70px}section{margin:28px 0 52px}h2{font-size:27px;margin:0 0 16px}h3{font-size:19px;margin:0 0 10px}p{margin:0 0 14px}.intro{max-width:850px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:23px;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}.card p{font-size:15px;color:var(--muted)}.tag{display:block;font-size:12px;font-weight:bold;color:var(--accent);margin-bottom:10px}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:22px 0}.step{position:relative;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:10px;padding:18px 14px}.step b{font-size:16px;display:block}.step small{display:block;color:var(--muted);line-height:1.6;margin-top:6px}.step .number{font:12px monospace;color:var(--accent)}.step:not(:last-child)::after{content:'←';position:absolute;left:-12px;top:50%;z-index:1;color:var(--accent);background:var(--paper)}.note{padding:17px 20px;border-right:4px solid var(--accent);border-radius:6px;background:var(--soft);font-size:15px}.note.warn{border-color:var(--amber);background:#fff3dc}.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}.mono,code{font-family:Consolas,monospace;direction:ltr;unicode-bidi:isolate;font-size:.88em}code{background:#eaf0f0;border-radius:4px;padding:2px 4px}.codebox{position:relative;margin:14px 0}pre{direction:ltr;text-align:left;overflow:auto;background:#142e3a;color:#def1f3;border-radius:10px;padding:22px;font:13px/1.9 Consolas,monospace;white-space:pre}.codebox button{position:absolute;top:8px;left:8px;border:1px solid #476776;background:#203f4b;color:#e0f3f0;font-size:11px;padding:3px 10px;border-radius:5px}table{width:100%;border-collapse:collapse;font-size:15px;background:#fff}th{background:#eaf0ef;text-align:right;color:var(--muted);font-size:13px}th,td{padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top}.tablewrap{overflow:auto;border:1px solid var(--line);border-radius:12px}td:first-child{font-weight:600;min-width:180px}.status{display:inline-block;font-size:12px;border-radius:20px;padding:2px 10px;white-space:nowrap;font-weight:bold}.yes{background:#dff3e9;color:#176341}.conditional{background:#fff0cf;color:#80500e}.no{background:#fbe9e6;color:#a03431}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}.filters button{border:1px solid #c6d4d3;border-radius:24px;padding:6px 15px;background:#fff;color:var(--ink);font-size:14px}.filters button[aria-pressed="true"]{background:var(--ink);color:white;border-color:var(--ink)}details{border:1px solid var(--line);background:#fff;border-radius:10px;margin:10px 0;padding:16px 20px}summary{cursor:pointer;font-weight:600}details p{margin:12px 0 0;color:var(--muted)}ul{padding-right:22px;margin:10px 0}li{margin:6px 0}.evidence{display:flex;gap:14px;flex-wrap:wrap}.evidence div{flex:1;min-width:180px;border:1px solid var(--line);border-radius:12px;padding:20px;background:#fff}.evidence strong{display:block;font:700 34px/1.3 Arial;color:var(--accent)}.evidence span{font-size:14px;color:var(--muted)}footer{border-top:1px solid var(--line);padding:28px;color:var(--muted);text-align:center;font-size:13px}.small{font-size:13px;color:var(--muted)}[hidden]{display:none!important}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #10a8af;outline-offset:4px}
+@media(max-width:800px){.grid,.two{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.step:not(:last-child)::after{content:'↓';left:50%;top:auto;bottom:-17px}.step{padding:14px 18px}.step small{margin-top:0}header{padding:38px 24px}.tablewrap{font-size:14px}th,td{padding:10px}.evidence div{min-width:140px}nav{gap:20px;padding:12px 24px}section{margin-bottom:36px}}
+@media print{nav,.filters,.codebox button{display:none}body{background:white;font-size:12px}header{background:white;color:var(--ink);padding:20px}header p,header .eyebrow{color:var(--muted)}main{padding:10px}section{break-inside:avoid;margin-bottom:24px}.step,.card{box-shadow:none}.flow{grid-template-columns:repeat(5,1fr)}.step::after{display:none}.chips span{border-color:#999;color:#333!important}tr[hidden]{display:table-row!important}a{color:inherit}pre{white-space:pre-wrap}}
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">MULTIOBJECTIVE PRM KIT / 0.2.0 / 17.11.2026</div>
+  <h1>מסביבה ב־Isaac<br>לתכנון מסלולים רב־מטרות</h1>
+  <p>הארכיטקטורה, החוזה בין הרכיבים וגבולות התמיכה — כדי שחוקר אחד יוכל לבנות סביבה, וחוקר אחר יוכל להריץ עליה ניסוי מתועד.</p>
+  <div class="chips"><span class="new">חדש: ייבוא USD</span><span>חבילת משתמשים עצמאית</span><span>תכנון ב־CPU</span><span>ללא שינוי בקוד המחקר</span></div>
+</header>
+<nav aria-label="ניווט במסמך"><a href="#separation">הפרדת רכיבים</a><a href="#flow">זרימת הנתונים</a><a href="#quickstart">איך מתחילים</a><a href="#costs">חישוב עלויות</a><a href="#support">מה נתמך</a><a href="#evidence">מה נבדק</a></nav>
+<main>
+<section id="separation">
+  <h2>כל חלק בניסוי ניתן להגדרה בנפרד</h2>
+  <p class="intro">סביבה אינה קובעת את הרובוט, והרובוט אינו קובע את המטריקות. הקישור ביניהם נעשה בקובץ ניסוי. להפרדה יש חוזה משותף: יחידות, מערכת צירים, גאומטריה וסדר מפרקים חייבים להתאים.</p>
+  <div class="grid">
+    <article class="card"><span class="tag">01 / סביבת העבודה</span><h3>מה נמצא בעולם</h3><p>מכשולים, צורות, מיקומים וסיבובים. אפשר ליצור JSON ישירות או לייבא USD מסביבה שנבנתה ב־Isaac.</p><code>scene.json + meshes/</code></article>
+    <article class="card"><span class="tag">02 / הרובוט והמשימה</span><h3>מי נע, ומאיפה לאיפה</h3><p>URDF, גבולות מפרקים, כלי ואביזרים, מדיניות התנגשויות, התחלה ויעדים. נתוני הרובוט אינם נלמדים אוטומטית מה־USD.</p><code>robot + query + camera</code></article>
+    <article class="card"><span class="tag">03 / הגדרת הניסוי</span><h3>מה מחפשים ואיך מודדים</h3><p>N, K, אפסילון, seed, מרווח בטיחות, מטריקות ורזולוציית אינטגרציה. אפשר לשנות פרמטרים או להוסיף פונקציית מטריקה.</p><code>experiment.yaml</code></article>
+  </div>
+</section>
+<section id="flow">
+  <h2>הזרימה מקצה לקצה</h2>
+  <div class="flow" aria-label="Isaac אל ייבוא, PRM, חיפוש ותוצאות">
+    <div class="step"><span class="number">01</span><b>בניית סביבה</b><small>Isaac Sim<br>שמירת USD והנכסים הנלווים</small></div>
+    <div class="step"><span class="number">02</span><b>ייבוא ונרמול</b><small>OpenUSD<br>בחירה, יחידות, צירים וגאומטריה</small></div>
+    <div class="step"><span class="number">03</span><b>בניית PRM</b><small>דגימת מצבים וחיבורים<br>בדיקות תנועה וחישוב עלויות</small></div>
+    <div class="step"><span class="number">04</span><b>חיפוש רב־מטרות</b><small>Exact / A*pex<br>לפי אפסילון ותקציב החיפוש</small></div>
+    <div class="step"><span class="number">05</span><b>תוצאות והצגה</b><small>דוח HTML, גרף ומסלולים<br>אפשרות לייצוא USD מונפש</small></div>
+  </div>
+  <div class="note"><b>נקודת המסירה בין החוקרים:</b> תיקיית הסביבה המיובאת. היא כוללת JSON, רשתות מקומיות ודוח ייבוא. לאחר ההמרה, התכנון אינו זקוק ל־Isaac, ל־OpenUSD או לקובץ המקור.</div>
+  <div class="two" style="margin-top:20px">
+    <div class="card"><h3>מה עושה רכיב הייבוא</h3><ul><li>קורא סצנה מורכבת עם הפניות מקומיות, payloads ומופעים רגילים.</li><li>מיישם היררכיית טרנספורמציות וממיר יחידות למטרים.</li><li>בוחר גאומטריית התנגשות פעילה; רושם מה הוחרג או דולג.</li><li>שומר שמות עצמים לפי נתיבי USD, גיבובי קלט והחלטות המרה.</li><li>עוצר במקרה לא נתמך; אינו מפרסם סביבה חלקית לאחר כישלון.</li></ul></div>
+    <div class="card"><h3>מה נשאר באחריות הניסוי</h3><ul><li>בחירת URDF ותיאור אביזרים המותקנים על הרובוט.</li><li>התאמת ראשית וצירי ה־URDF למסגרת הסביבה.</li><li>הגדרת התחלה ויעדים תקפים, ומצלמה אם נדרשת נראות.</li><li>בחירת מדיניות ההתנגשות, מרווחים ומטריקות.</li><li>בדיקת דוח הייבוא לפני בניית גרף גדול.</li></ul></div>
+  </div>
+  <details><summary>מפת קבצים למי שרוצה לשנות את המימוש</summary><p><code>usd_import.py</code> מייבא; <code>config.py</code> פותר ומאמת הגדרות; <code>backends/</code> מספק רובוט וגאומטריה; <code>geometry.py</code> בודק תנועה; <code>metrics.py</code> מחשב עלויות; <code>roadmap.py</code> בונה PRM; <code>search.py</code> מחפש מסלולים; <code>pipeline.py</code> מתזמר ושומר; <code>spaces.py</code> משווה מועמדי סביבה. <code>usd.py</code> מייצא המחשה מונפשת.</p></details>
+</section>
+<section id="quickstart">
+  <h2>הרצה ראשונה, ואז הסביבה שלכם</h2>
+  <p>מתוך תיקיית ההפצה, בסביבת Python פעילה. דוגמת <code>isaac</code> כוללת USD קטן ורובוט UR5e ללא אביזרים, כדי לבדוק את כל השרשרת.</p>
+  <div class="codebox"><button type="button" data-copy="commands" aria-label="העתקת פקודות ההפעלה">העתקה</button><pre id="commands">python -m pip install '.[robot,usd]'
+prmkit init my_project --template isaac
+prmkit import-usd my_project/scene.usda --output my_project/imported
+prmkit check my_project/experiment.yaml
+prmkit run my_project/experiment.yaml --output my_project/run</pre></div>
+  <p>בסביבה שלכם מחליפים את קובץ המקור בפקודת הייבוא, ומעדכנים את הרובוט והמשימה בקובץ הניסוי. פותחים את <code>run/report.html</code> לצפייה בתוצאות.</p>
+  <div class="two">
+    <div><h3>אם גם הרובוט מופיע ב־USD</h3><pre>prmkit import-usd saved_scene.usdc \
+  --output my_project/imported \
+  --exclude /World/Robot \
+  --robot-frame /World/Robot/Base</pre><p class="small">הנתיבים הם דוגמאות. בחרו את המסגרת שתואמת לבסיס ה־URDF; היא חייבת להיות קשיחה, ללא scale. התכנון משתמש ברובוט מה־URDF בנפרד.</p></div>
+    <div><h3>אם יש מישור קרקע</h3><pre>prmkit import-usd saved_scene.usdc \
+  --output my_project/imported \
+  --plane-size 10 10 \
+  --plane-thickness 0.1</pre><p class="small">הקרקע מומרת ללוח מוגבל במטרים, מתחת למישור. יש לבחור גבולות שמכילים את כל תנועת הרובוט; מחוץ להם אין מישור אינסופי.</p></div>
+  </div>
+  <p><a href="ISAAC_IMPORT.md">מדריך הייבוא המלא</a> · <a href="../START_HERE_HE.md">הוראות הכניסה בעברית</a> · <a href="CONFIGURATION.md">הגדרות הניסוי והמטריקות</a></p>
+</section>
+<section id="costs">
+  <h2>איך מחושבות העלויות כיום</h2>
+  <p class="intro">בכל חיבור בגרף נדגמים מצבי רובוט לאורך אינטרפולציה במפרקים. העלויות מחושבות מהגאומטריה ומהקינמטיקה, ונצברות לאורך המסלול. אין צורך להריץ סימולציית פיזיקה או להפיק תמונות מ־Isaac.</p>
+  <div class="tablewrap"><table><thead><tr><th>חישוב</th><th>מקור המידע</th><th>משמעות</th></tr></thead><tbody>
+    <tr><td>אורך תנועה</td><td>מפרקים, או מיקום קצה הרובוט מחישובי Pinocchio</td><td>אורך במרחב המפרקים המשוקלל, או סכום מרחקי קצה הרובוט בין דגימות.</td></tr>
+    <tr><td>קרבה למכשולים</td><td>מרחקים גאומטריים באמצעות Coal</td><td>אינטגרציה של קנס לפי סף וחזקה. אפשר לבחור מרחק לעולם או לכל זוגות ההתנגשות הפעילים.</td></tr>
+    <tr><td>נראות</td><td>שדה ראייה וקרניים גאומטריות ב־CPU</td><td>אינטגרציה של אובדן נראות. משתמש בגאומטריית ההתנגשות המיובאת, ללא תאורה, שקיפות או מדידה פוטומטרית.</td></tr>
+    <tr><td>מטריקה מותאמת</td><td>פונקציית Python שמקבלת דגימות והקשר</td><td>אפשר להחליף נוסחה או להוסיף יעד. העלות חייבת להיות סופית, אי־שלילית ואדיטיבית בין קשתות.</td></tr>
+  </tbody></table></div>
+  <div class="note" style="margin-top:18px"><b>בדיקת תנועה נפרדת מהמטריקות.</b> חיבור נפסל אם הוא מתנגש, מפר את המרווח המוגדר או לא ניתן לאשר אותו עם חסמי התנועה. שינוי משקל עלות הקרבה אינו משנה אוטומטית את מרווח התקפות.</div>
+  <details><summary>מה משמעות האפסילון ומה הוא לא מבטיח</summary><p><code>epsilon=0</code> בוחר חיפוש Exact, ואפסילון חיובי בוחר חיפוש מקורב. התוצאה מתייחסת לגרף הסופי ולמטריקות שהוגדרו. אין כאן הבטחת אופטימום בכל מרחב התנועה הרציף. מגבלת זמן או תוויות יכולה להחזיר תוצאה חלקית, והיא מסומנת כך בתוצרים.</p></details>
+</section>
+<section id="support">
+  <h2>מה התכן מאפשר, ובאילו תנאים</h2>
+  <div class="filters" role="group" aria-label="סינון יכולות"><button type="button" data-filter="all" aria-pressed="true">הכול</button><button type="button" data-filter="yes" aria-pressed="false">נתמך</button><button type="button" data-filter="conditional" aria-pressed="false">בתנאים מוגדרים</button><button type="button" data-filter="no" aria-pressed="false">אינו כלול</button></div>
+  <div class="tablewrap"><table id="capabilities"><thead><tr><th>יכולת</th><th>מצב</th><th>החוזה או הגבול</th></tr></thead><tbody>
+    <tr data-status="yes"><td>ייבוא USD סטטי</td><td><span class="status yes">נתמך</span></td><td>קובץ מקומי USD / USDA / USDC / USDZ, עם הפניות גאומטריה שניתנות לפתרון.</td></tr>
+    <tr data-status="yes"><td>יחידות והיררכיה</td><td><span class="status yes">נתמך</span></td><td>מטרים, Y-up או Z-up, טרנספורמציות מקוננות ומסגרת בסיס רובוט מפורשת.</td></tr>
+    <tr data-status="yes"><td>סביבות שונות</td><td><span class="status yes">נתמך</span></td><td>מייבאים כל סביבה לתיקייה נפרדת ומשתמשים בה בניסוי עצמאי.</td></tr>
+    <tr data-status="yes"><td>N / K / אפסילון</td><td><span class="status yes">נתמך</span></td><td>שינוי YAML או דגלי <code>--set</code>; שינוי הגדרות דורש תיקיית תוצאה חדשה.</td></tr>
+    <tr data-status="yes"><td>החלפת מטריקות</td><td><span class="status yes">נתמך</span></td><td>פרמטרים ומספר יעדים ניתנים לשינוי. חישוב חדש ניתן להוסיף כתוסף Python.</td></tr>
+    <tr data-status="conditional"><td>צורות וקנה מידה</td><td><span class="status conditional">בתנאים</span></td><td>קוביות, רשתות, כדורים, גלילים וקפסולות. צורות מעוגלות דורשות סקלות נתמכות; צורות אחרות יש לייצא כרשת.</td></tr>
+    <tr data-status="conditional"><td>קירובי התנגשות</td><td><span class="status conditional">בתנאים</span></td><td>רשת משולשים או convex hull יחיד. פירוק קמור/SDF דורש אפייה לרשתות או בחירת המרה מפורשת שמשנה את המודל.</td></tr>
+    <tr data-status="conditional"><td>קרקע</td><td><span class="status conditional">בתנאים</span></td><td>מישור דורש גודל ועובי מוגדרים, והופך ללוח סופי. נבדקת תנועה ביחס ללוח הזה.</td></tr>
+    <tr data-status="conditional"><td>אובייקטים נעים</td><td><span class="status conditional">צילום מצב בלבד</span></td><td><code>--snapshot-time</code> מקפיא מצב שנכתב ב־USD; אין תכנון מכשולים נעים או הרצת פיזיקה.</td></tr>
+    <tr data-status="conditional"><td>רובוט אחר</td><td><span class="status conditional">בתנאים</span></td><td>URDF עם בסיס קבוע ומפרקים חסומים חד־ממדיים. רובוט שונה מהותית דורש backend מותאם.</td></tr>
+    <tr data-status="conditional"><td>חיפוש במרחב סביבות</td><td><span class="status conditional">מרחב מוגדר</span></td><td>Grid או דגימה אקראית על שדות וטווחים שהחוקר מגדיר. אין הסקה אוטומטית של מרחב מסצנה.</td></tr>
+    <tr data-status="conditional"><td>מיליוני צמתים</td><td><span class="status conditional">ללא אימות ביצועים</span></td><td>N גדול ניתן להגדרה, אך חבילת CPU זו לא הוסמכה מחדש בניסויי 5M/10M ואינה כוללת את כל האצות המחקר.</td></tr>
+    <tr data-status="no"><td>PhysX / RTX כחלק מהעלות</td><td><span class="status no">אינו כלול</span></td><td>אין סימולציה דינמית, רינדור מצלמה או הבטחת זהות לקירובי PhysX ולהגדרות המגע שלו.</td></tr>
+    <tr data-status="no"><td>ייבוא רובוט אוטומטי מה־USD</td><td><span class="status no">אינו כלול</span></td><td>מחריגים את הרובוט מהסביבה ומגדירים אותו ב־URDF, עם האביזרים והמצלמה הדרושים.</td></tr>
+    <tr data-status="no"><td>בדים, חלקיקים ו־PointInstancer</td><td><span class="status no">אינו כלול</span></td><td>יש להחריג או לאפות לגאומטריה סטטית נתמכת; לא מדלגים עליהם בשקט.</td></tr>
+    <tr data-status="no"><td>בקרת רובוט אמיתי</td><td><span class="status no">אינו כלול</span></td><td>הפלט הוא מסלול גאומטרי. תזמון, בקרה, כיול והפעלה פיזית דורשים מערכת נוספת.</td></tr>
+  </tbody></table></div>
+  <p class="small" style="margin-top:12px">רשת משולשים מתארת משטח; היא אינה בדיקת תפוסה כללית של נפח פנימי. Convex hull מתאר מכשול קמור מלא וממלא שקעים. קנה מידה, מדיניות זוגות וגאומטריית המודל משפיעים על משמעות בדיקת התקפות.</p>
+</section>
+<section id="evidence">
+  <h2>מה נבדק בפועל</h2>
+  <div class="evidence"><div><strong>28</strong><span>בדיקות ייבוא ושילוב חדשות</span></div><div><strong>480</strong><span>השוואות חיפוש בגרפים קטנים מול מנייה מלאה</span></div><div><strong>144 / 144</strong><span>דגימות נראות תואמות לנתוני Warp השמורים</span></div></div>
+  <div class="two" style="margin-top:20px">
+    <div class="card"><h3>ראיות ליכולת החדשה</h3><ul><li>OpenUSD: יחידות וצירים, היררכיות, הפניות, מופעים ו־USDZ.</li><li>פוליגונים קעורים, רשתות משוקפות, קוביות עם shear וצורות אנליטיות.</li><li>עצירה על גאומטריה לא נתמכת, הפניות חסרות ותנועה ללא צילום מצב מפורש.</li><li>מכשול דק מיובא פוסל מעבר גם כשהקצוות חופשיים.</li><li>חישובי עלות ונראות צורכים את הסביבה המיובאת.</li><li>תבנית UR5e עוברת ייבוא, PRM, חיפוש ואימות מסלול.</li></ul></div>
+    <div class="card"><h3>גבולות הראיות</h3><p>הבדיקות החדשות משתמשות בקובצי USD שנוצרו באמצעות OpenUSD. לא בוצעה כאן הפעלה חדשה של ממשק Isaac, רינדור RTX או השוואת מגעים ל־PhysX. טרם נבדקה סצנת USD אמיתית שסיפק המשתמש.</p><p>מיליוני צמתים, מערכת הפעלה אחרת ורובוט פיזי אינם מכוסים בבדיקות ההרחבה. תוצאה תקפה מתייחסת לגאומטריה ולכללי ההתנגשות שהוגדרו.</p><a href="../VALIDATION.md">דוח הבדיקות והראיות המלא</a></div>
+  </div>
+  <div class="note" style="margin-top:18px"><b>בדיקת מסירה בין חוקרים הושלמה:</b> החבילה הותקנה מחוץ למאגר, סביבה עם שלושה מכשולים יובאה, והפרויקט הועבר לתיקייה חדשה בלי ה־USD במיקומו המקורי. ה־PRM הפיק מסלול שעבר אימות, ויוצא גם replay בן 10 פריימים.</div>
+</section>
+<section>
+  <h2>שלושה דברים לבדוק בסביבה חדשה</h2>
+  <details open><summary>1. האם העולם הועתק כפי שהתכוונתם?</summary><p>בדקו את <code>import_report.json</code>: מה יובא, מה הוחרג, מה דולג והאם נבחר קירוב גאומטרי. ודאו מידות במטרים ומיקום נכון של בסיס הרובוט. במקרה של רשתות, העבירו את התיקייה בשלמותה.</p></details>
+  <details open><summary>2. האם הגדרתם משימה שמתאימה לסביבה?</summary><p>כוונו התחלה ויעדים, אביזרי רובוט ומדיניות התנגשויות. הפעילו <code>prmkit check</code> ובנייה קטנה לפני הגדלת N. מצלמה ומטרת נראות דורשות הגדרה נפרדת.</p></details>
+  <details open><summary>3. האם תוצאת החיפוש שלמה?</summary><p>בדקו את סטטוס ההשלמה, גבולות החיפוש והעלויות. היעדר מסלול ב־PRM מסוים אינו הוכחה שאין מסלול בעולם. שמרו את ההגדרות ואת תיקיית התוצאות לצורך שחזור.</p></details>
+</section>
+</main>
+<footer>מסמך עצמאי, ללא חיבור לאינטרנט או ספריות חיצוניות · חבילת משתמשים 0.2.0<br><a href="../ARCHITECTURE.md">תכן ומפת רכיבים</a> · <a href="../README.md">מדריך התקנה</a> · <a href="ISAAC_IMPORT.md">ייבוא Isaac / USD</a></footer>
+<script>
+document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
+  document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+  document.querySelectorAll('#capabilities tbody tr').forEach(row=>{row.hidden=button.dataset.filter!=='all'&&row.dataset.status!==button.dataset.filter;});
+}));
+document.querySelectorAll('[data-copy]').forEach(button=>button.addEventListener('click',async()=>{
+  const content=document.getElementById(button.dataset.copy).textContent;
+  try{await navigator.clipboard.writeText(content);button.textContent='הועתק';}
+  catch(e){const range=document.createRange();range.selectNodeContents(document.getElementById(button.dataset.copy));const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);button.textContent='הטקסט סומן להעתקה';}
+}));
+</script>
+</body>
+</html>

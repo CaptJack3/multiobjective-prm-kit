@@ -1,0 +1,75 @@
+{
+  "scene": "shelves",
+  "checker": "Existing NativeAssemblyChecker: conservative robot visual/collision convex envelopes + wrist camera/bracket/cable + conservative household object AABBs",
+  "validation": "Continuous adaptive lower-bound certificate on all joint-space linear edges; quintic timing preserves those edges. No dynamics, grasp, payload, or PF optimization.",
+  "minimum_required_clearance_m": 0.01,
+  "selected_motion_target": "Target_A",
+  "initial_q": [
+    0.0,
+    -1.3,
+    1.5,
+    -1.5,
+    -1.57,
+    0.0
+  ],
+  "initial_clearance_world_self_hardware_m": [
+    0.10757390689075619,
+    0.016146514654308153,
+    0.04645135991874517
+  ],
+  "targets": [
+    {
+      "target": "Target_A",
+      "tcp_world_m": [
+        0.55,
+        0.28,
+        0.989
+      ],
+      "collision_free_IK_candidates": 8,
+      "motion_found": true,
+      "continuous_clearance_lower_bound_m": 0.010242793319181022,
+      "sampled_world_clearance_min_m": 0.0167188300096976,
+      "tool_path_length_m": 0.3360317531009425,
+      "world_exposure_cost": 0.1536484956670688,
+      "goal_error_m": 1.61679659969611e-07,
+      "waypoints": 2,
+      "states": 97
+    },
+    {
+      "target": "Target_B",
+      "tcp_world_m": [
+        0.65,
+        0.29,
+        1.27
+      ],
+      "collision_free_IK_candidates": 8,
+      "motion_found": true,
+      "continuous_clearance_lower_bound_m": 0.010085005148805002,
+      "sampled_world_clearance_min_m": 0.013231710704225939,
+      "tool_path_length_m": 0.2574157711370175,
+      "world_exposure_cost": 0.12488753416331325,
+      "goal_error_m": 7.604357512254917e-08,
+      "waypoints": 2,
+      "states": 97
+    },
+    {
+      "target": "Target_C",
+      "tcp_world_m": [
+        0.42,
+        -0.08,
+        0.953
+      ],
+      "collision_free_IK_candidates": 8,
+      "motion_found": true,
+      "continuous_clearance_lower_bound_m": 0.010723064970179488,
+      "sampled_world_clearance_min_m": 0.04692219954428999,
+      "tool_path_length_m": 0.3533288649199465,
+      "world_exposure_cost": 0.06496987824220511,
+      "goal_error_m": 6.156053572805615e-07,
+      "waypoints": 2,
+      "states": 97
+    }
+  ],
+  "elapsed_seconds": 5.178318512160331,
+  "states_evaluated": 205
+}

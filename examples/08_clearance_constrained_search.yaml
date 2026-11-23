@@ -1,0 +1,53 @@
+schema_version: 2
+experiment:
+  name: 08_clearance_constrained_search
+  seed: 7
+robot:
+  preset: mounted_ur5e
+scene:
+  source: generated
+  placement: grid
+  walls_per_scene: 1
+  count: 1
+  grid_points: 1
+  offset_range:
+  - 0
+  - 0
+  wall_sizes:
+    widths:
+    - 0.6
+    heights:
+    - 0.9
+    thicknesses:
+    - 0.08
+queries:
+  mode: fixed
+  count: 1
+roadmap:
+  n_vertices: 24
+  k_neighbors: 6
+  query_k: 12
+  workers: 1
+search:
+  epsilons:
+  - 0.05
+  timeout_seconds: 120
+constraints:
+  min_clearance_m: 0.01
+  clearance_mode: enforce_during_search
+verification:
+  enabled: true
+  backend: coal_mesh
+  scope: all
+  min_clearance_m: 0.01
+  interpolation:
+    method: dense
+    max_joint_step_deg: 0.5
+selection:
+  mode: representative
+  only_verified: true
+  max_per_query: 7
+render:
+  enabled: false
+output:
+  directory: ../runs/08_clearance_constrained_search

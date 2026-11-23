@@ -1,0 +1,17 @@
+{
+  "environment_id": "two_routes",
+  "objects": [
+    {
+      "name": "wall",
+      "position_m": [
+        0.5,
+        0.52
+      ],
+      "dimensions_m": [
+        0.16,
+        0.48
+      ],
+      "collider": true
+    }
+  ]
+}

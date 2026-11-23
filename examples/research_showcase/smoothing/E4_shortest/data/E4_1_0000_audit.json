@@ -1,0 +1,46 @@
+{
+  "id": "E4_1_0000",
+  "case": "E4_1",
+  "environment": "E4",
+  "role": "Shortest / minimum O1",
+  "method": "original",
+  "parameter": 0,
+  "parent": "original",
+  "source_path": "apex_000001",
+  "source_sha256": "861d5eedb43dbbbc0e0205e5070f46c1d44a458f996d8a7e703a03953f73a409",
+  "segments": 2,
+  "roughness_256": 34.10865251813426,
+  "roughness_512": 61.428513692340935,
+  "cost": [
+    0.40984047074733343,
+    0.28255534244763175,
+    1.0842974432794277
+  ],
+  "error": [
+    1.1541249567148526e-08,
+    3.50330472423388e-07,
+    3.595717903170925e-05
+  ],
+  "certificate": 0.010338403419002148,
+  "minimum": 0.01595506809125039,
+  "world": 0.02026356146577525,
+  "samples": 2557,
+  "coarse_cost": [
+    0.4098399258559031,
+    0.2825414745220563,
+    1.084804610728436
+  ],
+  "coarse_error": [
+    1.6462095815683586e-06,
+    2.3902019348764902e-05,
+    0.0011451505398273332
+  ],
+  "fine_cost": [
+    0.4098404402613708,
+    0.282554723632311,
+    1.0843036073672616
+  ],
+  "independent_lower_bound_m": 0.010338403419002148,
+  "chord_intervals": 2,
+  "certificate_method": "Bezier-to-chord deviation + separate Python edge_reference with inflated margin"
+}

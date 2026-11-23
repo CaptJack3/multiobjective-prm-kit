@@ -1,0 +1,50 @@
+schema_version: 1
+seed: 20260921
+robot: assets/ur5e/robot.yaml
+environment: assets/E5/scene.json
+query:
+  file: assets/E5/queries.npz
+prm:
+  n: 1000
+  k: 24
+  query_k: 64
+  max_draws: 1000000
+validation:
+  margin: 0.01
+  intervals: 16
+  max_depth: 18
+metrics:
+- name: ee_length
+  intervals: 16
+- name: clearance
+  threshold: 0.1
+  power: 2
+  scope: world
+  intervals: 16
+- name: visibility
+  intervals: 32
+camera:
+  frame: tool0
+  offset_m:
+  - 0.1
+  - 0
+  - 0.03
+  rotation:
+  - - 0.0
+    - 0.0
+    - 1.0
+  - - 1.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  fov_deg:
+  - 90
+  - 90
+  rays: 64
+  target_object: goal
+search:
+  epsilon: 0.05
+  timeout_s: 300
+  max_labels: 500000

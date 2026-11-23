@@ -1,0 +1,22 @@
+[
+  {
+    "file": "scene.usdc",
+    "prims": 310,
+    "external_references": [],
+    "robot_time_samples": 0,
+    "time_codes_per_second": 60.0,
+    "frames_per_second": 24.0,
+    "end_time_code": 1000000.0,
+    "trajectory_guides": "Three optional hidden colored curves under /World/TrajectoryGuides"
+  },
+  {
+    "file": "motion_scene.usdc",
+    "prims": 310,
+    "external_references": [],
+    "robot_time_samples": 396,
+    "time_codes_per_second": 24.0,
+    "frames_per_second": 24.0,
+    "end_time_code": 395.0,
+    "trajectory_guides": "Three optional hidden colored curves under /World/TrajectoryGuides"
+  }
+]

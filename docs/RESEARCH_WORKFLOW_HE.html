@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>מדריך המחקר · PRM Kit 0.4</title>
+<style>
+:root{--ink:#173d43;--accent:#087b6b;--paper:#f1f5f2;--line:#d7e3dc}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.7 Arial,sans-serif}main{max-width:1080px;margin:auto;padding:32px 20px 70px}header{padding:30px;background:#123e43;color:white;border-radius:18px}header p{max-width:800px}h1{font-size:clamp(27px,4vw,40px);line-height:1.25;margin:12px 0}h2{margin:0 0 12px;font-size:26px}h3{font-size:19px;margin-bottom:8px}p{margin:10px 0}.eyebrow{color:#a9dac9;font-size:14px;letter-spacing:.8px}.pill{display:inline-block;border:1px solid #a8caba;padding:3px 10px;border-radius:20px;font-size:13px;margin:4px}.flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;direction:ltr;margin:20px 0}.flow span{padding:12px 5px;border:1px solid var(--line);border-radius:8px;text-align:center;font:14px monospace;background:white}nav{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0 14px}button{font:inherit;cursor:pointer;border:1px solid #b1c8bf;border-radius:8px;padding:9px 14px;background:white;color:var(--ink)}button[aria-current=step],.primary{background:var(--accent);color:white;border-color:var(--accent)}button:disabled{opacity:.4;cursor:default}button:focus-visible,a:focus-visible{outline:3px solid #b17e12;outline-offset:3px}.panel{background:white;padding:28px;border:1px solid var(--line);border-radius:14px;margin:16px 0}.panel[hidden]{display:none}.step{font-size:13px;color:#446c60}.note{border-right:4px solid #c29435;background:#fff4d8;padding:14px;margin:18px 0;font-size:15px}.good{background:#e7f5ee;border-color:#248a69}pre{direction:ltr;text-align:left;white-space:pre;overflow:auto;background:#102f35;color:#e5f4ed;padding:18px;border-radius:10px;font:13px/1.7 Consolas,monospace;max-width:100%}code{direction:ltr;unicode-bidi:isolate;font-size:.86em;overflow-wrap:anywhere}pre code{font-size:inherit;overflow-wrap:normal}.copy{font-size:13px;padding:5px 12px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{padding:16px;background:#f0f5f2;border-radius:10px;min-width:0}.scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{border-bottom:1px solid var(--line);padding:12px;text-align:right;vertical-align:top}th{background:#f0f5f2}a{color:#087b6b}ol,ul{padding-right:24px}li{margin:8px 0}.footer{display:flex;justify-content:space-between;gap:12px;align-items:center}.muted{font-size:14px;color:#55746d}#progress{height:6px;background:#d6e5de;border-radius:10px;overflow:hidden}#bar{height:100%;background:var(--accent);width:16.666%}#feedback{min-height:24px;font-size:14px}.details{margin-top:18px}summary{cursor:pointer;font-weight:bold}footer{margin-top:30px;font-size:14px} @media(max-width:700px){main{padding:16px 12px 40px}.panel,header{padding:20px}.grid{grid-template-columns:1fr}.flow{grid-template-columns:repeat(3,minmax(0,1fr))}nav button{flex:1 1 130px;font-size:14px}.footer{flex-wrap:wrap}th,td{padding:8px}}@media print{nav,.footer,.copy,#feedback{display:none}.panel[hidden]{display:block}body{background:white}pre{white-space:pre-wrap}header{color:black;background:white}}
+</style></head><body><main>
+<header><span class="eyebrow">PARETO MANIPULATION RESEARCH TOOLKIT · 0.4.0 · 23.11.2026</span><h1>מגדירים ניסוי אחד.<br>בוחנים, בוחרים ומייצאים את התוצאות.</h1><p>מדריך מעשי לחבילת המשתמשים: אותו PRM ואותו מנוע חיפוש, עם הרובוט המעודכן ועם שלבים עצמאיים לבדיקת מסלולים ולעיון בתוצאות.</p><span class="pill">UR5e + Robotiq 2F-85</span><span class="pill">D435 + מתאם PickNik</span><span class="pill">קובץ HTML עצמאי, ללא אינטרנט</span></header>
+<div class="flow" aria-label="שלבי התהליך"><span>GENERATE</span><span>RUN</span><span>VERIFY</span><span>EXPLORE</span><span>SELECT</span><span>EXPORT / RENDER</span></div>
+<nav aria-label="שלבי המדריך"><button data-step="0" aria-current="step">1 · מתחילים</button><button data-step="1">2 · מרחב הקירות</button><button data-step="2">3 · סביבה קיימת</button><button data-step="3">4 · אימות ובחירה</button><button data-step="4">5 · מסירה וסרטונים</button><button data-step="5">6 · הארכיטקטורה</button></nav><div id="progress"><div id="bar"></div></div>
+<section class="panel" id="step-0"><div class="step">שלב 1 / 6</div><h2>איזה קובץ פותחים?</h2><p>פותחים את <code>run_experiment.py</code> בתיקיית החבילה. משנים את <code>CASE_ID</code> ואת המילון <code>SETTINGS</code>. כל קובצי הסביבה, השאילתות וההגדרות נוצרים עבורכם.</p>
+<ol><li>מחלצים את ארכיון המקור ומגיעים לתיקיית <code>multiobjective-prm-kit-0.4.0</code>.</li><li>ב־Linux או WSL מתקינים פעם אחת, רצוי עם Python 3.11:</li></ol>
+<pre id="install"><code>python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e '.[robot,render]'</code></pre><button class="copy" data-copy="install">העתקת ההתקנה</button>
+<p>בודקים את כמות ההרצות ואז מפעילים:</p><pre id="first"><code>python run_experiment.py --plan
+python run_experiment.py --output runs/my_walls</code></pre><button class="copy" data-copy="first">העתקת הפקודות</button>
+<p>ברירת המחדל היא שני קירות, ארבע סביבות, שאילתה אחת, <code>N=24</code>, <code>K=6</code> ושני אפסילונים: שמונה חיפושים. זו דוגמת התקנה קטנה.</p>
+<div class="note good">נבחר במפורש <code>profile="mounted_ur5e"</code>: האסמבלי הקפוא מהניסוי האחר, כולל TCP בגובה 165.9 מ״מ, המצלמה והתושבת. הגריפר פתוח וקבוע. הקריאה הישירה <code>run_case()</code> עדיין משתמשת בזרוע החשופה לצורכי תאימות, ולכן יש לציין את ה־profile.</div>
+<p>חלופה נוחה לשיתוף הגדרות: <code>prmkit run examples/01_single_wall.yaml</code>. קובץ הניסוי המאוחד משתמש באותו מנוע. אין חובה לעבור ל־YAML.</p>
+</section>
+<section class="panel" id="step-1" hidden><div class="step">שלב 2 / 6</div><h2>מגדירים את מרחב הקירות</h2><p>ב־<code>run_experiment.py</code> מחליפים את הגדרות המקרה. למשל, שלושה קירות עם בחירה בין רוחבים וגבהים:</p>
+<pre id="walls"><code>CASE_ID = "wall_random"
+SETTINGS = dict(
+    profile="mounted_ur5e",
+    wall_count=3, max_environments=12,
+    grid_points=3, offset_range=(-0.2, 0.2),
+    widths=[0.4, 0.6], heights=[0.7, 0.9],
+    thicknesses=[0.08], yaw_offsets=[-15, 0, 15],
+    n=[250, 1000], k=[8, 16], epsilons=[0, 0.05],
+    num_queries=3, query_k=16, seed=7,
+    constraints=dict(min_clearance_m=0.005,
+                     clearance_mode="enforce_during_search"),
+    verification=dict(enabled=True, backend="coal_mesh", scope="all",
+                      min_clearance_m=0.005),
+    selection=dict(only_verified=True, max_per_query=7),
+    render=dict(enabled=False),
+)</code></pre><button class="copy" data-copy="walls">העתקת ההגדרות</button>
+<p>זה כבר ניסוי של <strong>288 חיפושים</strong>: 12 סביבות × 3 שאילתות × שני N × שני K × שני אפסילונים. התחילו בדוגמה הקטנה ובדקו <code>--plan</code> לפני ההפעלה.</p>
+<div class="scroll"><table><thead><tr><th>CASE_ID</th><th>מה קורה</th></tr></thead><tbody><tr><td><code>wall_grid</code></td><td>מכפלת הבחירות לכל קיר; <code>max_environments</code> מגביל לתחילת הרשימה.</td></tr><tr><td><code>wall_random</code></td><td>דגימה אקראית עם seed. אפשר טווחים כגון <code>widths={"min":0.3,"max":0.9}</code>.</td></tr><tr><td><code>wall_sobol</code></td><td>דגימת Sobol של אותם פרמטרים, כולל טווחים רציפים.</td></tr><tr><td><code>fixed_environment</code></td><td>סביבה אחת מוגדרת או שמורה; מתאימה להשוואת צפיפויות PRM.</td></tr></tbody></table></div>
+<details class="details"><summary>לכל קיר הגדרות שונות</summary><p>מחליפים את <code>wall_count</code> ברשימת <code>walls</code>. שאר הפרמטרים נשארים ב־SETTINGS. המידות במטרים והזוויות כאן במעלות:</p><pre><code>walls=[
+    dict(center_xy=[1, 0], move_axis=[1, 0], offsets=[-0.2, 0, 0.2],
+         widths=[0.4, 0.8], heights=[0.9], yaw_degs=[0, 15]),
+    dict(center_xy=[0, 1], move_axis=[0, 1], offsets=[-0.1, 0.1],
+         widths=[0.5], heights=[0.6, 1.0], yaw_degs=[90]),
+]</code></pre></details>
+<div class="note">בנק השאילתות משותף להשוואות. קירות אינם מסוננים אוטומטית מחפיפה; סביבה יכולה להפוך שאילתה ללא אפשרית. דגימות Random/Sobol עשויות לחזור על צירופים בדידים. אין עדיין חיפוש מודרך או טווח משתנה של מספר הקירות בתוך מקרה יחיד.</div>
+<p>ליצירת סביבות ותצוגות XY בלי בניית גרף: <code>prmkit generate examples/03_multi_wall_random.yaml --output runs/scene_bank</code>.</p>
+</section>
+<section class="panel" id="step-2" hidden><div class="step">שלב 3 / 6</div><h2>משנים N/K לסביבה מסוימת</h2><p>מעתיקים את הנתיב לסביבה שנוצרה ושומרים גם את השאילתות המקוריות. זה משווה את אותה משימה בצפיפויות שונות:</p>
+<pre id="fixed"><code>CASE_ID = "fixed_environment"
+SETTINGS = dict(
+    profile="mounted_ur5e",
+    environment="runs/my_walls/environments/env_00000/scene.json",
+    queries="runs/my_walls/queries.json",
+    n=[1000, 5000], k=[16, 32], epsilons=[0, 0.05], query_k=32,
+    constraints=dict(min_clearance_m=0.005,
+                     clearance_mode="enforce_during_search"),
+    verification=dict(enabled=True, backend="coal_mesh"),
+    selection=dict(only_verified=True),
+)</code></pre><button class="copy" data-copy="fixed">העתקת ההגדרות</button>
+<p>מפעילים עם תיקיית פלט חדשה: <code>python run_experiment.py --output runs/denser_one</code>. עבור כל הסביבות במחקר קיים אפשר להשתמש ב־<code>prmkit rerun runs/my_walls --output runs/denser_all --n 1000 --k 16</code>; אחריו מפעילים אימות עצמאי לפי הסף הרצוי.</p>
+<h3>ואם הסביבה נבנתה ב־Isaac Sim?</h3><ol><li>שומרים USD מקומי עם קובצי ההפניות והנכסים שלו; עדיף סביבה סטטית.</li><li>מתקינים את תוסף הייבוא וממירים לקובץ הסביבה של החבילה:</li></ol>
+<pre id="import"><code>python -m pip install -e '.[usd]'
+prmkit import-usd my_scene.usd --output imported/scene \
+  --exclude /World/Robot</code></pre><button class="copy" data-copy="import">העתקת הייבוא</button>
+<p>יש להתאים את <code>--exclude</code> לנתיב הרובוט האמיתי בסצנה. אם בסיס הרובוט אינו בראשית, מוסיפים <code>--robot-frame /World/Robot/base_link</code> עם ה־prim המתאים. בודקים את דוח הייבוא.</p><ol start="3"><li>מציבים <code>environment="imported/scene/scene.json"</code> בהגדרות ומגדירים שאילתות, מטרת מצלמה ורובוט מתאים.</li><li>מפעילים כרגיל: ה־PRM, המרחקים והעלויות מחושבים ב־CPU עם Pinocchio/COAL; Isaac אינו נדרש להרצתם.</li></ol>
+<div class="note">הייבוא מעביר גאומטריה סטטית נתמכת, לא סימולציית PhysX שלמה. רובוט מגיע בנפרד מ־URDF. צורות/קירובים לא נתמכים דורשים טיפול מפורש; לא מובטחת זהות לבדיקות המגע של Isaac. להעברת הסביבה לחוקר אחר יש להעביר את תיקיית הייבוא כולה עם הרשתות.</div>
+</section>
+<section class="panel" id="step-3" hidden><div class="step">שלב 4 / 6</div><h2>בודקים את המועמדים ובוחרים מסלולים</h2><div class="grid"><div class="card"><h3>אילוץ בזמן החיפוש</h3><p><code>enforce_during_search</code> קובע מרווח קשיח ב־PRM. שינויו דורש בנייה ובדיקת גרף בהתאם למרווח החדש.</p></div><div class="card"><h3>בדיקה אחרי החיפוש</h3><p><code>postcheck_only</code> בודק מסלולים שכבר נמצאו. הוא יכול לפסול מסלול, אך אינו מגלה מעצמו חלופה חדשה.</p></div></div>
+<p>לדוגמה, לבדיקת Mesh מחודשת בסף של 2 ס״מ, בלי להריץ שוב את ה־Solver:</p><pre id="verify"><code>prmkit verify runs/my_walls --backend coal_mesh --scope all \
+  --min-clearance-m 0.02 --max-joint-step-deg 0.5
+prmkit explore runs/my_walls</code></pre><button class="copy" data-copy="verify">העתקת הבדיקה</button>
+<p>פותחים <code>runs/my_walls/explorer/explore.html</code>. בוחרים קבוצה, מסננים לפי אימות/עלות/מרווח, ולוחצים על נקודות או תיבות בטבלה. הבחירה מקושרת בין שלוש ההקרנות. מורידים <code>selected_paths.json</code> ומעבירים אותו למחשב שמריץ את החבילה.</p>
+<p>לבחירה אוטומטית של קצוות, פתרון מאוזן ופשרות זוגיות מתוך המועמדים שעברו בדיקה:</p><pre id="select"><code>prmkit select runs/my_walls --output selected_paths.json</code></pre><button class="copy" data-copy="select">העתקת הבחירה</button>
+<div class="scroll"><table><thead><tr><th>סטטוס</th><th>משמעות</th></tr></thead><tbody><tr><td><code>discrete_verified</code></td><td>כל הדגימות שנבדקו עברו; זו אינה הוכחת בטיחות רציפה או פיזית.</td></tr><tr><td><code>collision_found</code></td><td>נמצאה התנגשות או נגיעה בדגימה.</td></tr><tr><td><code>clearance_violation</code></td><td>המרווח שנמדד קטן מהנדרש.</td></tr><tr><td><code>validation_error</code></td><td>שגיאת בדיקה, שינוי נכסים או חריגה מתקציב; לעולם אינה נחשבת מעבר.</td></tr><tr><td><code>unverified</code></td><td>המסלול לא נכלל בבדיקה.</td></tr></tbody></table></div>
+<div class="note">Verified candidate PF מחושב רק מתוך המועמדים שעברו. הוא אינו חזית גלובלית מוכחת. בדיקת 2 ס״מ עלולה לפסול אפילו את תנוחת ההתחלה בשל מרווח עצמי. התוצאות המקוריות והעלויות שלהן נשמרות.</div>
+</section>
+<section class="panel" id="step-4" hidden><div class="step">שלב 5 / 6</div><h2>מרנדרים רק מה שנבחר</h2><pre id="deliver"><code>prmkit export runs/my_walls --selection selected_paths.json --only-verified
+prmkit render runs/my_walls --selection selected_paths.json --only-verified
+
+# Optional: animated USD for opening in Isaac Sim
+prmkit export runs/my_walls --selection selected_paths.json --only-verified --usd</code></pre><button class="copy" data-copy="deliver">העתקת הייצוא</button>
+<p>אף אחת מהפקודות האלה אינה מפעילה חיפוש מחדש. הרינדור יוצר MP4 של תנועת הרובוט והגאומטריה ב־CPU. ה־USD כולל את המכלול המעודכן ומצלמת שורש כף היד, לפתיחה ב־Isaac.</p>
+<div class="scroll"><table><thead><tr><th>קובץ / תיקייה במחקר</th><th>מה מקבלים</th></tr></thead><tbody><tr><td><code>report.html / results.csv</code></td><td>סיכום כל ההרצות, הצלחות, כשלים ודירוג.</td></tr><tr><td><code>runs/run_XXXXXXX/</code></td><td>גרף, עלויות, מסלולי מועמדים והגדרות פתורות.</td></tr><tr><td><code>analysis/catalog.json</code></td><td>מזהי מסלול יציבים וקישור לריצה המקורית.</td></tr><tr><td><code>verification/&lt;job_id&gt;/</code></td><td>JSON/CSV עם ראיות וסטטוס לכל מועמד.</td></tr><tr><td><code>explorer/explore.html</code></td><td>HTML יחיד, שאפשר להוריד ולפתוח לבד.</td></tr><tr><td><code>exports/&lt;job_id&gt;/</code></td><td>NPZ, CSV, JSON, ו־USD לפי בקשה.</td></tr><tr><td><code>videos/&lt;job_id&gt;/</code></td><td>MP4 נבחרים עם סטטוס אימות ומטא־דאטה.</td></tr></tbody></table></div>
+<div class="note">הסרטון הוא המחשה גאומטרית עם זמן תצוגה, לא מסלול ביצוע עם מגבלות מהירות/תאוצה. אין כאן סגירת גריפר, סימולציית אחיזה או רינדור RTX אוטומטי. קובץ בחירה קשור לקטלוג המסוים שממנו נוצר.</div>
+<p>שינוי אפסילון יכול להשתמש באותו גרף ובאותן עלויות. שינוי N/K, סביבה, שאילתה או אילוץ קשיח בונה גרף מחדש. באותה מערכת קבצים הגרפים המשותפים מקושרים ב־hardlink; אין לערוך אותם ידנית.</p>
+</section>
+<section class="panel" id="step-5" hidden><div class="step">שלב 6 / 6</div><h2>מה השתנה בארכיטקטורה?</h2><p>הליבה הקיימת נשמרה. נוספו שכבות מסביב לה, כולן בתוך <code>user_distribution/</code>. קוד המחקר והתוצאות ההיסטוריות נשארו במקומם.</p>
+<div class="scroll"><table><thead><tr><th>אחריות</th><th>קבצים עיקריים</th></tr></thead><tbody><tr><td>קובץ כניסה / הגדרות ניסוי</td><td><code>run_experiment.py · experiment.py · cases.py</code></td></tr><tr><td>סביבה, רובוט וגאומטריה</td><td><code>config.py · usd_import.py · backends/urdf.py</code></td></tr><tr><td>PRM, חיפוש ועלויות</td><td><code>roadmap.py · pipeline.py · search.py · metrics.py · visibility.py</code></td></tr><tr><td>זהות מועמדים ואימות עצמאי</td><td><code>artifacts.py · verification.py</code></td></tr><tr><td>חזיתות, בחירה ותצוגה</td><td><code>selection.py · explorer.py</code></td></tr><tr><td>ייצוא ורינדור לפי בחירה</td><td><code>delivery.py · usd.py · workflow.py</code></td></tr></tbody></table></div>
+<h3>שלוש העלויות בתצורה החדשה</h3><ul><li><strong>O1 — אורך TCP:</strong> תנועת נקודת הכלי במטרים, כולל היסט הגריפר.</li><li><strong>O2 — חשיפה לקרבה:</strong> אינטגרל של קנס מרחק מהסביבה; סף ברירת מחדל 10 ס״מ וחזקה 2. אינו המרווח המינימלי.</li><li><strong>O3 — אובדן נראות:</strong> אינטגרל של החלק הלא נראה במטרה, לפי 64 קרניים, שדה ראייה וחסימות גאומטריות.</li></ul>
+<p>O2/O3 משוקללים לאורך תנועת המפרקים. האורך המפרקי הוא מידת אינטגרציה ומרחק בגרף; הוא אינו מטרה רביעית אוטומטית. את <code>metrics</code> ואת <code>camera</code> אפשר לשנות ב־SETTINGS; נוסחה חדשה נכתבת כתוסף מטריקה. יש להגדיר מטרת צילום מתאימה לסביבה — ברירת המחדל היא מטרה וירטואלית קטנה לדוגמה.</p>
+<details class="details" open><summary>מה עדיין לא ממומש?</summary><ul><li>חיפוש סביבות מודרך, אילוצי XYZ כלליים, replan אוטומטי אחרי פסילות ועיבוי אינקרמנטלי של PRM.</li><li>גרף בסיס משותף לכל השאילתות/הסביבות; כיום השיתוף הוא בין אפסילונים בעלי אותם קלטי גרף.</li><li>סגירה דינמית של הגריפר, כיול מצלמה פיזי, תצוגת רובוט 3D בתוך ה־Explorer, לַאסוֹ וייצוא מערך VLA מלא.</li><li>זהות מספרית לניסוי 5M ההיסטורי או אישור ביצועים בקנה המידה הזה. כאן נבדקו ניסויים קטנים.</li></ul></details>
+<div class="note">החבילה עצמאית; תוצאות ריצה שומרות גם נתיבי נכסים פתורים. כדי לבצע אימות מחדש במחשב אחר צריך לשחזר/להתאים את נתיבי הנכסים. ה־Explorer עצמו, המדריך הזה וייצוא המסלולים אינם דורשים את תיקיית המחקר המקורית.</div>
+<p class="muted">לפרטים נוספים בתוך הארכיון: <code>docs/WORKFLOW.md</code>, <code>docs/OBJECTIVES.md</code>, <code>docs/VERIFICATION_AND_CLEARANCE.md</code>, <code>docs/SPEC_ALIGNMENT_20261123.md</code> ו־<code>VALIDATION.md</code>.</p>
+</section>
+<div class="footer"><button id="prev" disabled>הקודם</button><span id="position" class="muted" aria-live="polite">שלב 1 מתוך 6</span><button id="next" class="primary">הבא</button></div><p id="feedback" role="status"></p>
+<footer>המדריך פועל מקומית ואינו מריץ Python מתוך הדפדפן. פקודות ההרצה מיועדות לטרמינל בתיקיית החבילה, לאחר הפעלת ה־venv. אפשר להדפיס כדי לקבל את כל ששת השלבים יחד.</footer>
+</main><script>
+'use strict';let current=0;const panels=[...document.querySelectorAll('.panel')],buttons=[...document.querySelectorAll('[data-step]')];function show(i){current=i;panels.forEach((p,j)=>p.hidden=j!==i);buttons.forEach((b,j)=>{if(j===i)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current')});document.getElementById('prev').disabled=i===0;document.getElementById('next').disabled=i===panels.length-1;document.getElementById('position').textContent=`שלב ${i+1} מתוך ${panels.length}`;document.getElementById('bar').style.width=((i+1)*100/panels.length)+'%';document.getElementById('feedback').textContent=''}buttons.forEach(b=>b.addEventListener('click',()=>show(Number(b.dataset.step))));document.getElementById('prev').addEventListener('click',()=>show(current-1));document.getElementById('next').addEventListener('click',()=>show(current+1));for(const b of document.querySelectorAll('[data-copy]'))b.addEventListener('click',async()=>{const text=document.getElementById(b.dataset.copy).textContent;let ok=false;try{if(navigator.clipboard){await navigator.clipboard.writeText(text);ok=true}}catch(e){}if(!ok){const t=document.createElement('textarea');t.value=text;t.style.position='fixed';t.style.opacity='0';document.body.append(t);t.select();try{ok=document.execCommand('copy')}catch(e){}t.remove()}document.getElementById('feedback').textContent=ok?'הועתק. יש להדביק בקובץ או בטרמינל בהתאם לשלב.':'העתקה אוטומטית אינה זמינה; סמנו והעתיקו את הטקסט מהתיבה.'});
+</script></body></html>

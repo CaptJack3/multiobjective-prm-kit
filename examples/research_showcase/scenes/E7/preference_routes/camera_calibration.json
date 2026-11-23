@@ -1,0 +1,86 @@
+{
+  "config": {
+    "parent_prim_path": "/World/Robot/wrist_3_link",
+    "translation_m": [
+      -0.0325,
+      -0.07832352198146629,
+      0.028948537881749364
+    ],
+    "rotation_rpy_deg": [
+      -5.999999999999991,
+      -1.2722218725854067e-14,
+      -1.987846675914698e-15
+    ],
+    "resolution_wh": [
+      640,
+      360
+    ],
+    "horizontal_fov_deg": 69.4,
+    "clipping_range_m": [
+      0.005,
+      5.0
+    ],
+    "description": "Official D435 mesh and nominal RGB optical frame on PickNik 6-degree UR adapter; ideal pinhole RGB, not physical stereo/noise simulation",
+    "gripper": "Robotiq 2F-85 fixed open, actual CAD coupling",
+    "tcp_offset_tool0_m": [
+      0.0,
+      0.0,
+      0.1659000001
+    ]
+  },
+  "mount_path": "/World/Robot/wrist_3_link/wrist_camera_mount",
+  "camera_path": "/World/Robot/wrist_3_link/wrist_camera_mount/wrist_camera",
+  "K": [
+    [
+      462.138671875,
+      0.0,
+      320.0
+    ],
+    [
+      0.0,
+      462.138671875,
+      180.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "T_wrist_camera_cv": [
+    [
+      1.0,
+      5.77143909150526e-17,
+      -2.1720166176357804e-16,
+      -0.0325
+    ],
+    [
+      -3.469446951953614e-17,
+      0.9945218953682734,
+      0.1045284632676533,
+      -0.07832352198146629
+    ],
+    [
+      2.220446049250313e-16,
+      -0.1045284632676533,
+      0.9945218953682734,
+      0.028948537881749364
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "optical_axes": "CV: +X right, +Y down, +Z forward",
+  "usd_axes": "USD: +X right, +Y up, -Z forward",
+  "transform_convention": "column vectors; T_world_camera = T_world_wrist @ T_wrist_camera",
+  "rpy_convention": "degrees; R = Rz(yaw) @ Ry(pitch) @ Rx(roll)",
+  "horizontal_fov_deg": 69.40000208870535,
+  "vertical_fov_deg": 42.561178592883174,
+  "depth": "Aligned ideal pinhole Z-depth in meters; NaN invalid; not Euclidean ray distance",
+  "model": "Ideal RGB-D; no stereo baseline, noise, lens distortion or real-device calibration",
+  "pixel_coordinates": "Origin at upper-left image edge; pixel centers (column+0.5,row+0.5)",
+  "backprojection": "X_cv = wrist_depth * inv(K) @ [u,v,1]"
+}

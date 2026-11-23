@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-22",
+  "scope": "User-guide examples and HTML controls; research implementation unchanged",
+  "environment": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pinocchio": "4.1.0",
+    "coal": "3.0.4",
+    "note": "Existing conda runtime; separate from the pinned 0.2.0 release validation environment."
+  },
+  "examples": {
+    "date": "2026-11-22",
+    "workspace": "/tmp/prmkit-guide-obgg59i9",
+    "json_example_paths": 1,
+    "sweeps": {
+      "space_one_wall.yaml": {
+        "evaluated": 3,
+        "ranked": 3,
+        "statuses": {
+          "complete": 3
+        }
+      },
+      "space_random_walls.yaml": {
+        "evaluated": 12,
+        "ranked": 11,
+        "statuses": {
+          "filtered": 1,
+          "complete": 11
+        }
+      },
+      "space_three_walls.yaml": {
+        "evaluated": 27,
+        "ranked": 27,
+        "statuses": {
+          "complete": 27
+        }
+      },
+      "space_wall_sizes.yaml": {
+        "evaluated": 8,
+        "ranked": 8,
+        "statuses": {
+          "complete": 8
+        }
+      },
+      "space_wall_variants.yaml": {
+        "evaluated": 3,
+        "ranked": 3,
+        "statuses": {
+          "complete": 3
+        }
+      }
+    }
+  },
+  "html": {
+    "scenarios": {
+      "existing": 4,
+      "isaac": 4,
+      "one": 5,
+      "many": 5,
+      "sizes": 5,
+      "random": 5
+    },
+    "downloaded_files_verified": [
+      "experiment.yaml",
+      "space_one_wall.yaml",
+      "space_random_walls.yaml",
+      "space_three_walls.yaml",
+      "space_wall_sizes.yaml",
+      "space_wall_variants.yaml",
+      "walls.json"
+    ],
+    "navigation_copy_download_handlers": "passed in QuickJS with DOM stubs",
+    "browser_rendering": "not tested"
+  },
+  "files": {
+    "docs/USER_GUIDE_HE.html": "44a0faf153659c401aaa1678fd7e867addae90a52bb351139b3f0646c4c8bd39",
+    "examples/user_guide/space_one_wall.yaml": "97ec05bf4f59065b281fc3d6701644d0a49e1cb8d1e5ea28ffa210f882e3d166",
+    "examples/user_guide/space_random_walls.yaml": "5dd6458b6d8b27d8b8539e71ceabe81510959ea061a58f64dc6654fd8f5bc738",
+    "examples/user_guide/space_three_walls.yaml": "c98e3254039feef8180db567a7f51706840e43fc35a3a315fb54f4e49912b61c",
+    "examples/user_guide/space_wall_sizes.yaml": "8cb234959c5c5f5488faeedb005cbf4f634cb415a18d07c51ed3ad414b6fae32",
+    "examples/user_guide/space_wall_variants.yaml": "212d47814e6f4cb0da8913e14fd443d69826ef856e31d832b5a9456cf923be5a",
+    "examples/user_guide/walls.json": "589988a0dff52c497ce4f9d56a8fca1c53d7a124787c9953601b850ebf7b04ed"
+  }
+}

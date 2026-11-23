@@ -1,0 +1,14 @@
+schema_version: 1
+experiment: "experiment.yaml"
+method: "grid"
+max_evaluations: 27
+parameters:
+  environment.objects.0.position_m.0:
+    values: [0.7,0.9,1.1]
+  environment.objects.1.position_m.1:
+    values: [0.7,0.9,1.1]
+  environment.objects.2.position_m.1:
+    values: [-1.1,-0.9,-0.7]
+rank:
+  by: "best.ee_length"
+  direction: "min"

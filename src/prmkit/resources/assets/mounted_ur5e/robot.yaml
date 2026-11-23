@@ -1,0 +1,163 @@
+backend: urdf
+urdf: ../ur5e/ur5e_reference.urdf
+convex_file: ../ur5e/robot_convex_envelopes.npz
+pair_policy: ../ur5e/self_pair_policy.json
+tool_frame: tool0
+tcp_offset_m:
+- 0.0
+- 0.0
+- 0.1659000001
+weights:
+- 1
+- 1
+- 0.85
+- 0.65
+- 0.45
+- 0.35
+attachments:
+- name: hand_visual
+  parent: wrist_3_link
+  shape: mesh
+  mesh: assembly_meshes.npz
+  mesh_key: c00
+  convex: true
+  visual_mesh_keys:
+  - p00
+  role: gripper
+- name: left_outer_knuckle_visual
+  parent: wrist_3_link
+  shape: mesh
+  mesh: assembly_meshes.npz
+  mesh_key: c01
+  convex: true
+  visual_mesh_keys:
+  - p01
+  role: gripper
+- name: left_outer_finger_visual
+  parent: wrist_3_link
+  shape: mesh
+  mesh: assembly_meshes.npz
+  mesh_key: c02
+  convex: true
+  visual_mesh_keys:
+  - p02
+  role: gripper
+- name: left_inner_finger_visual
+  parent: wrist_3_link
+  shape: mesh
+  mesh: assembly_meshes.npz
+  mesh_key: c03
+  convex: true
+  visual_mesh_keys:
+  - p03
+  role: gripper
+- name: left_fingertip_visual
+  parent: wrist_3_link
+  shape: mesh
+  mesh: assembly_meshes.npz
+  mesh_key: c04
+  convex: true
+  visual_mesh_keys:
+  - p04
+  role: gripper
+- name: left_inner_knuckle_visual
+  parent: wrist_3_link
+  shape: mesh
+  mesh: assembly_meshes.npz
+  mesh_key: c05
+  convex: true
+  visual_mesh_keys:
+  - p05
+  role: gripper
+- name: right_outer_knuckle_visual
+  parent: wrist_3_link
+  shape: mesh
+  mesh: assembly_meshes.npz
+  mesh_key: c06
+  convex: true
+  visual_mesh_keys:
+  - p06
+  role: gripper
+- name: right_outer_finger_visual
+  parent: wrist_3_link
+  shape: mesh
+  mesh: assembly_meshes.npz
+  mesh_key: c07
+  convex: true
+  visual_mesh_keys:
+  - p07
+  role: gripper
+- name: right_inner_finger_visual
+  parent: wrist_3_link
+  shape: mesh
+  mesh: assembly_meshes.npz
+  mesh_key: c08
+  convex: true
+  visual_mesh_keys:
+  - p08
+  role: gripper
+- name: right_fingertip_visual
+  parent: wrist_3_link
+  shape: mesh
+  mesh: assembly_meshes.npz
+  mesh_key: c09
+  convex: true
+  visual_mesh_keys:
+  - p09
+  role: gripper
+- name: right_inner_knuckle_visual
+  parent: wrist_3_link
+  shape: mesh
+  mesh: assembly_meshes.npz
+  mesh_key: c10
+  convex: true
+  visual_mesh_keys:
+  - p10
+  role: gripper
+- name: robotiq_coupling
+  parent: wrist_3_link
+  shape: mesh
+  mesh: assembly_meshes.npz
+  mesh_key: c11
+  convex: true
+  visual_mesh_keys:
+  - p11
+  role: mount
+- name: picknik_mount_envelope
+  parent: wrist_3_link
+  shape: mesh
+  mesh: assembly_meshes.npz
+  mesh_key: c12
+  convex: true
+  visual_mesh_keys:
+  - p12
+  - p13
+  role: mount
+- name: d435_camera_envelope
+  parent: wrist_3_link
+  shape: mesh
+  mesh: assembly_meshes.npz
+  mesh_key: c13
+  convex: true
+  visual_mesh_keys:
+  - p14
+  - p15
+  - p16
+  - p17
+  - p18
+  - p19
+  - p20
+  - p21
+  - p22
+  - p23
+  - p24
+  - p25
+  - p26
+  - p27
+  - p28
+  - p29
+  - p30
+  - p31
+  - p32
+  - p33
+  role: camera

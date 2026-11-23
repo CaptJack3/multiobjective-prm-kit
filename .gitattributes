@@ -1,0 +1,18 @@
+* text=auto
+*.py text eol=lf
+*.sh text eol=lf
+*.sbatch text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.npz binary
+*.usdc binary
+*.pdf binary
+*.mp4 binary
+*.png binary
+*.jpg binary
+*.stl binary
+# Preserve the exact bytes of attributed assets and archived datasets.
+src/prmkit/resources/** -text
+examples/research_showcase/** -text

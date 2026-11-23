@@ -1,0 +1,50 @@
+{
+  "environment_id": "wall_search_tutorial",
+  "objects": [
+    {
+      "name": "Wall_A",
+      "shape": "box",
+      "position_m": [
+        1,
+        0,
+        0.45
+      ],
+      "dimensions_m": [
+        0.08,
+        0.6,
+        0.9
+      ],
+      "collider": true
+    },
+    {
+      "name": "Wall_B",
+      "shape": "box",
+      "position_m": [
+        0,
+        1,
+        0.45
+      ],
+      "dimensions_m": [
+        0.6,
+        0.08,
+        0.9
+      ],
+      "collider": true
+    },
+    {
+      "name": "Wall_C",
+      "shape": "box",
+      "position_m": [
+        0,
+        -1,
+        0.45
+      ],
+      "dimensions_m": [
+        0.6,
+        0.08,
+        0.9
+      ],
+      "collider": true
+    }
+  ]
+}
